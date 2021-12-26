@@ -18,6 +18,15 @@ _global_script_class_icons={
 config/name="Godot-prototype"
 run/main_scene="res://main.tscn"
 
+[display]
+
+window/stretch/mode="2d"
+
+[layer_names]
+
+2d_physics/layer_1="scene"
+2d_physics/layer_2="player"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

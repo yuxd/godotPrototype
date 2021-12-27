@@ -1,34 +1,26 @@
 # GodotPrototype
 
-#### 介绍
+## 介绍
 GamePrototypes make by godot editor 
 用godot开发的游戏原型合集
 
-#### 软件架构
-软件架构说明
+## 分支策略
 
+- 本项目包含多个godot游戏原型，可在对应 `feature` 分支下查看
+- `dev` 分支包含所有正在制作的 godot prototype
+- `release` 分支包括所有已制作完成且发布的 godot prototype
 
-#### 安装教程
+## 美术素材声明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+本项目使用到的美术素材均来源于[KENNEY](https://www.kenney.nl/)
 
-#### 使用说明
+作者发布了很多适合拿来进行原型开发的美术素材和工具，大家有需要请直接访问作者主页
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+本项目使用到的美术素材已获得原作者授权使用，请不要转发或二次售卖。
 
-#### 参与贡献
+如果要用于商业行为请获得原作者授权。
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
+## 特技
 
 1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
 2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)

@@ -8,6 +8,7 @@
 [node name="main" type="Node2D"]
 
 [node name="background" type="Node2D" parent="."]
+scale = Vector2( 0.8, 0.8 )
 
 [node name="blue_desert" type="Sprite" parent="background"]
 texture = ExtResource( 1 )

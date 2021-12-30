@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/colored_desert.png-0f0e461ae748c3f95bfec52a57467a00.stex"
+path="res://.import/colored_desert.png-70925336c3b760edeaf50f64854d3bfd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/colored_desert.png"
-dest_files=[ "res://.import/colored_desert.png-0f0e461ae748c3f95bfec52a57467a00.stex" ]
+source_file="res://backgrounds/colored_desert.png"
+dest_files=[ "res://.import/colored_desert.png-70925336c3b760edeaf50f64854d3bfd.stex" ]
 
 [params]
 

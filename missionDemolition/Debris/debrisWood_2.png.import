@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/debrisWood_2.png-0c6267406b6c5add8ec18df3914f7238.stex"
+path="res://.import/debrisWood_2.png-037bef26ad14c169b9212c41add920e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Debris/debrisWood_2.png"
-dest_files=[ "res://.import/debrisWood_2.png-0c6267406b6c5add8ec18df3914f7238.stex" ]
+source_file="res://debris/debrisWood_2.png"
+dest_files=[ "res://.import/debrisWood_2.png-037bef26ad14c169b9212c41add920e7.stex" ]
 
 [params]
 

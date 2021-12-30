@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/starSilver.png-689033c4d94f2d81b1944ae3139d3e9d.stex"
+path="res://.import/starSilver.png-284f75cb25afa74bd161f84841c3b727.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Other/starSilver.png"
-dest_files=[ "res://.import/starSilver.png-689033c4d94f2d81b1944ae3139d3e9d.stex" ]
+source_file="res://other/starSilver.png"
+dest_files=[ "res://.import/starSilver.png-284f75cb25afa74bd161f84841c3b727.stex" ]
 
 [params]
 

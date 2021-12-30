@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alienGreen_suit.png-eee19e3ce63ae917953e8b941a7fc967.stex"
+path="res://.import/alienGreen_suit.png-c5651a409d4ce37eb13ec33a65ae4681.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Aliens/alienGreen_suit.png"
-dest_files=[ "res://.import/alienGreen_suit.png-eee19e3ce63ae917953e8b941a7fc967.stex" ]
+source_file="res://aliens/alienGreen_suit.png"
+dest_files=[ "res://.import/alienGreen_suit.png-c5651a409d4ce37eb13ec33a65ae4681.stex" ]
 
 [params]
 

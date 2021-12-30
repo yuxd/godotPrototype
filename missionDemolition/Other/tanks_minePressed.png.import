@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tanks_minePressed.png-f8c5ce7e420d608da5772522d69cada3.stex"
+path="res://.import/tanks_minePressed.png-a1f6d370a98d0abd098b62917b82ee74.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Other/tanks_minePressed.png"
-dest_files=[ "res://.import/tanks_minePressed.png-f8c5ce7e420d608da5772522d69cada3.stex" ]
+source_file="res://other/tanks_minePressed.png"
+dest_files=[ "res://.import/tanks_minePressed.png-a1f6d370a98d0abd098b62917b82ee74.stex" ]
 
 [params]
 

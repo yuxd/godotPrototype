@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alienBlue_square.png-c4a66e8cb3bf0f91699e671f43d08dc8.stex"
+path="res://.import/alienBlue_square.png-2bdae6e3fbaebd565af80cb777f1a2e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Aliens/alienBlue_square.png"
-dest_files=[ "res://.import/alienBlue_square.png-c4a66e8cb3bf0f91699e671f43d08dc8.stex" ]
+source_file="res://aliens/alienBlue_square.png"
+dest_files=[ "res://.import/alienBlue_square.png-2bdae6e3fbaebd565af80cb777f1a2e6.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flagGreen.png-ccfdeaae94cb5d46a6a43997710ab469.stex"
+path="res://.import/flagGreen.png-f335c45c19d411104acf50a5896879de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Other/flagGreen.png"
-dest_files=[ "res://.import/flagGreen.png-ccfdeaae94cb5d46a6a43997710ab469.stex" ]
+source_file="res://other/flagGreen.png"
+dest_files=[ "res://.import/flagGreen.png-f335c45c19d411104acf50a5896879de.stex" ]
 
 [params]
 

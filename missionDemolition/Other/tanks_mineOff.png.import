@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tanks_mineOff.png-4abf3efad1fec24687a33b14b6161406.stex"
+path="res://.import/tanks_mineOff.png-6d07b992a97b11035ad656a60951956c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Other/tanks_mineOff.png"
-dest_files=[ "res://.import/tanks_mineOff.png-4abf3efad1fec24687a33b14b6161406.stex" ]
+source_file="res://other/tanks_mineOff.png"
+dest_files=[ "res://.import/tanks_mineOff.png-6d07b992a97b11035ad656a60951956c.stex" ]
 
 [params]
 

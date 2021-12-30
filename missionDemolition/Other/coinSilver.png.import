@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/coinSilver.png-1782493038dd9d54f386d5f62630d99d.stex"
+path="res://.import/coinSilver.png-6cfbf10a7fbdcdf2f622e9c0934976b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Other/coinSilver.png"
-dest_files=[ "res://.import/coinSilver.png-1782493038dd9d54f386d5f62630d99d.stex" ]
+source_file="res://other/coinSilver.png"
+dest_files=[ "res://.import/coinSilver.png-6cfbf10a7fbdcdf2f622e9c0934976b7.stex" ]
 
 [params]
 

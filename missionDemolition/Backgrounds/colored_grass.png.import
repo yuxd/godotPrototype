@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/colored_grass.png-c02511aeda40f7699088a88e33af434e.stex"
+path="res://.import/colored_grass.png-a0a5a07f5e88264e97735f08e44635cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/colored_grass.png"
-dest_files=[ "res://.import/colored_grass.png-c02511aeda40f7699088a88e33af434e.stex" ]
+source_file="res://backgrounds/colored_grass.png"
+dest_files=[ "res://.import/colored_grass.png-a0a5a07f5e88264e97735f08e44635cd.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/colored_shroom.png-261037efbf413df0296fcc7d1b0974c8.stex"
+path="res://.import/colored_shroom.png-ec945b91879efded7bb7aa4e643f1de2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/colored_shroom.png"
-dest_files=[ "res://.import/colored_shroom.png-261037efbf413df0296fcc7d1b0974c8.stex" ]
+source_file="res://backgrounds/colored_shroom.png"
+dest_files=[ "res://.import/colored_shroom.png-ec945b91879efded7bb7aa4e643f1de2.stex" ]
 
 [params]
 

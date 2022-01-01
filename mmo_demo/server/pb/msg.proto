@@ -1,0 +1,4 @@
+syntax = "proto3";            // Proto协议
+package pb;                   // 当前包名
+option csharp_namespace="Pb"; // 给C#提供的选项
+option go_package="./;pb";    // 在windows下编译需要这个设置

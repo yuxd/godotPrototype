@@ -27,7 +27,7 @@ type TcpClient struct {
 	Y        float32
 	Z        float32
 	V        float32
-	PID      int32
+	Pid      int32
 	isOnline chan bool
 }
 
@@ -100,7 +100,7 @@ func (this *TcpClient) AIRobotAction() {
 	//随机获得动作
 	tp := rand.Intn(2)
 	if tp == 0 {
-		content := fmt.Sprintf("hello 我是player %d, 你是谁?", this.PID)
+		content := fmt.Sprintf("hello 我是player %d, 你是谁?", this.Pid)
 		msg := &pb.Talk{
 			Content: content,
 		}
@@ -148,7 +148,7 @@ func (this *TcpClient) AIRobotAction() {
 			V: v,
 		}
 
-		fmt.Println(fmt.Sprintf("player ID: %d. Walking...", this.PID))
+		fmt.Println(fmt.Sprintf("player ID: %d. Walking...", this.Pid))
 		//发送移动MsgID:3的指令
 		this.SendMsg(3, msg)
 	}
@@ -164,11 +164,11 @@ func (this *TcpClient) DoMsg(msg *Message) {
 		//服务器回执给客户端 分配ID
 
 		//解析proto
-		syncpID := &pb.SyncPID{}
-		_ = proto.Unmarshal(msg.Data, syncpID)
+		SyncPid := &pb.SyncPid{}
+		_ = proto.Unmarshal(msg.Data, SyncPid)
 
 		//给当前客户端ID进行赋值
-		this.PID = syncpID.PID
+		this.Pid = SyncPid.Pid
 	} else if msg.MsgID == 200 {
 		//服务器回执客户端广播数据
 
@@ -177,20 +177,20 @@ func (this *TcpClient) DoMsg(msg *Message) {
 		_ = proto.Unmarshal(msg.Data, bdata)
 
 		//初次玩家上线 广播位置消息
-		if bdata.Tp == 2 && bdata.PID == this.PID {
+		if bdata.Tp == 2 && bdata.Pid == this.Pid {
 			//本人
 			//更新客户端坐标
 			this.X = bdata.GetP().X
 			this.Y = bdata.GetP().Y
 			this.Z = bdata.GetP().Z
 			this.V = bdata.GetP().V
-			fmt.Println(fmt.Sprintf("player ID: %d online.. at(%f,%f,%f,%f)", bdata.PID, this.X, this.Y, this.Z, this.V))
+			fmt.Println(fmt.Sprintf("player ID: %d online.. at(%f,%f,%f,%f)", bdata.Pid, this.X, this.Y, this.Z, this.V))
 
 			//玩家已经成功上线
 			this.isOnline <- true
 
 		} else if bdata.Tp == 1 {
-			fmt.Println(fmt.Sprintf("世界聊天,玩家%d说的话是: %s", bdata.PID, bdata.GetContent()))
+			fmt.Println(fmt.Sprintf("世界聊天,玩家%d说的话是: %s", bdata.Pid, bdata.GetContent()))
 		}
 	}
 }
@@ -198,7 +198,7 @@ func (this *TcpClient) DoMsg(msg *Message) {
 func (this *TcpClient) Start() {
 	go func() {
 		for {
-			//读取服务端发来的数据 ==》 SyncPID
+			//读取服务端发来的数据 ==》 SyncPid
 			//1.读取8字节
 			//第一次读取，读取数据头
 			headData := make([]byte, 8)
@@ -250,7 +250,7 @@ func NewTcpClient(ip string, port int) *TcpClient {
 
 	client := &TcpClient{
 		conn:     conn,
-		PID:      0,
+		Pid:      0,
 		X:        0,
 		Y:        0,
 		Z:        0,

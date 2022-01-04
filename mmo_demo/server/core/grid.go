@@ -15,7 +15,7 @@ type GrID struct {
 	MinY      int          //格子上边界坐标
 	MaxY      int          //格子下边界坐标
 	playerIDs map[int]bool //当前格子内的玩家或者物体成员ID
-	pIDLock   sync.RWMutex //playerIDs的保护map的锁
+	PidLock   sync.RWMutex //playerIDs的保护map的锁
 }
 
 //初始化一个格子
@@ -32,24 +32,24 @@ func NewGrID(gID, minX, maxX, minY, maxY int) *GrID {
 
 //向当前格子中添加一个玩家
 func (g *GrID) Add(playerID int) {
-	g.pIDLock.Lock()
-	defer g.pIDLock.Unlock()
+	g.PidLock.Lock()
+	defer g.PidLock.Unlock()
 
 	g.playerIDs[playerID] = true
 }
 
 //从格子中删除一个玩家
 func (g *GrID) Remove(playerID int) {
-	g.pIDLock.Lock()
-	defer g.pIDLock.Unlock()
+	g.PidLock.Lock()
+	defer g.PidLock.Unlock()
 
 	delete(g.playerIDs, playerID)
 }
 
 //得到当前格子中所有的玩家
 func (g *GrID) GetPlyerIDs() (playerIDs []int) {
-	g.pIDLock.RLock()
-	defer g.pIDLock.RUnlock()
+	g.PidLock.RLock()
+	defer g.PidLock.RUnlock()
 
 	for k, _ := range g.playerIDs {
 		playerIDs = append(playerIDs, k)

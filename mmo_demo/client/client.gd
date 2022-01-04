@@ -23,12 +23,32 @@ func send_message(msg):
 
 func revice(_all):
 	while true:
-		var rev_bytes = conn.get_u8()
-		if rev_bytes > 0:
-			print("rev_num : ",rev_bytes)
-			var data = conn.get_utf8_string(rev_bytes)
-			print("data : ",data)
-			continue
+		var msg_len = conn.get_u32()
+		var msg_id = conn.get_u32()
+		
+		var msg : PoolByteArray
+		for i in range(0,msg_len):
+			msg.append(conn.get_u8())
+
+		print("msgID: ",msg_id," msg: ",msg)
+		
+		if msg_id == 1:
+			var data = MyProto.SyncPID.new()
+			var result_code = data.from_bytes(msg)
+			if result_code == MyProto.PB_ERR.NO_ERRORS:
+				print("OK")
+			else:
+				return
+			# Use class 'a' fields. Example, get field f1
+			var player_id = data.get_PID()
+			print("player ID: ",player_id)
+		else:
+			pass
+		# if rev_bytes > 0:
+		# 	print("rev_num : ",rev_bytes)
+		# 	var data = conn.get_utf8_string(rev_bytes)
+		# 	print("data : ",data)
+		# 	continue
 
 func _exit_tree():
 	# 退出

@@ -15,7 +15,7 @@ func OnConnecionAdd(conn ziface.IConnection) {
 	player := core.NewPlayer(conn)
 
 	//同步当前的PlayerID给客户端， 走MsgID:1 消息
-	player.SyncPID()
+	player.SyncPid()
 
 	//同步当前玩家的初始化坐标信息给客户端，走MsgID:200消息
 	player.BroadCastStartPosition()
@@ -23,29 +23,29 @@ func OnConnecionAdd(conn ziface.IConnection) {
 	//将当前新上线玩家添加到worldManager中
 	core.WorldMgrObj.AddPlayer(player)
 
-	//将该连接绑定属性PID
-	conn.SetProperty("pID", player.PID)
+	//将该连接绑定属性Pid
+	conn.SetProperty("Pid", player.Pid)
 
 	//同步周边玩家上线信息，与现实周边玩家信息
 	player.SyncSurrounding()
 
-	fmt.Println("=====> Player pIDID = ", player.PID, " arrived ====")
+	fmt.Println("=====> Player PidID = ", player.Pid, " arrived ====")
 }
 
 //当客户端断开连接的时候的hook函数
 func OnConnectionLost(conn ziface.IConnection) {
-	//获取当前连接的PID属性
-	pID, _ := conn.GetProperty("pID")
+	//获取当前连接的Pid属性
+	Pid, _ := conn.GetProperty("Pid")
 
-	//根据pID获取对应的玩家对象
-	player := core.WorldMgrObj.GetPlayerByPID(pID.(int32))
+	//根据Pid获取对应的玩家对象
+	player := core.WorldMgrObj.GetPlayerByPid(Pid.(int32))
 
 	//触发玩家下线业务
-	if pID != nil {
+	if Pid != nil {
 		player.LostConnection()
 	}
 
-	fmt.Println("====> Player ", pID, " left =====")
+	fmt.Println("====> Player ", Pid, " left =====")
 
 }
 

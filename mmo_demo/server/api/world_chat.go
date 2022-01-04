@@ -24,15 +24,15 @@ func (*WorldChatApi) Handle(request ziface.IRequest) {
 		return
 	}
 
-	//2. 得知当前的消息是从哪个玩家传递来的,从连接属性pID中获取
-	pID, err := request.GetConnection().GetProperty("pID")
+	//2. 得知当前的消息是从哪个玩家传递来的,从连接属性Pid中获取
+	Pid, err := request.GetConnection().GetProperty("Pid")
 	if err != nil {
-		fmt.Println("GetProperty pID error", err)
+		fmt.Println("GetProperty Pid error", err)
 		request.GetConnection().Stop()
 		return
 	}
-	//3. 根据pID得到player对象
-	player := core.WorldMgrObj.GetPlayerByPID(pID.(int32))
+	//3. 根据Pid得到player对象
+	player := core.WorldMgrObj.GetPlayerByPid(Pid.(int32))
 
 	//4. 让player对象发起聊天广播请求
 	player.Talk(msg.Content)

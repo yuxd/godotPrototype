@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Resource",
+"base": "Reference",
 "class": "Message",
 "language": "GDScript",
 "path": "res://client/message.gd"
@@ -27,7 +27,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Client="*res://client.gd"
-GameInstance="*res://gameInstance.gd"
 
 [editor_plugins]
 

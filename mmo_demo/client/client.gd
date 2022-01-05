@@ -57,13 +57,13 @@ func revice(_all):
 				match msg_type:
 					1: # 世界聊天	
 						var content = data.get_Content()
-						emit_signal("broadcast_world_chat",content)
+						emit_signal("broadcast_world_chat",player_id,content)
 					2: # 玩家位置	
 						var position = data.get_P()
-						emit_signal("broadcast_player_position",position)
+						emit_signal("broadcast_player_position",player_id,position)
 					3: # 动作	
 						var action = data.get_ActionData()
-						emit_signal("broadcast_action",action)
+						emit_signal("broadcast_action",player_id,action)
 					4: # 移动之后坐标信息更新	
 						print("移动后更新坐标信息，暂未实现")
 					_: # 其他情况	

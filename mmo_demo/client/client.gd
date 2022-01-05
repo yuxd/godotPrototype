@@ -5,6 +5,13 @@ const server_IP = '127.0.0.1'
 const server_port = 8999
 const MyProto  = preload("res://pb/msg.proto.gd")
 
+signal create_player
+signal broadcast_world_chat
+signal broadcast_player_position
+signal broadcast_action
+signal broadcast_delect_player 
+signal sync_players
+
 var revice_thread : Thread
 
 func _ready():
@@ -18,41 +25,74 @@ func _ready():
 	else:
 		print("连接服务器失败")
 		
-func send_message(msg):
-	conn.put_data(msg.to_utf8())
-
 func revice(_all):
 	while true:
-		var rev_bytes = conn.get_u8()
-		# if rev_bytes > 0:
-		print("rev_num : ",rev_bytes)
-			# continue
+		var msg_len = conn.get_u32()
+		var msg_id = conn.get_u32()
+		
+		var msg : PoolByteArray
+		for i in range(0,msg_len):
+			msg.append(conn.get_u8())
+
+		print("msgID: ",msg_id," msg: ",msg)
+		
+		match  msg_id:
+			1: # 分配玩家ID
+				var data = MyProto.SyncPID.new()
+				var result_code = data.from_bytes(msg)
+				if result_code != MyProto.PB_ERR.NO_ERRORS:
+					return
+				# Use class 'a' fields. Example, get field f1
+				var player_id = data.get_PID()
+				emit_signal("create_player",player_id)
+			200:
+				var data = MyProto.BroadCast.new()
+				var result_code = data.from_bytes(msg)
+				if result_code != MyProto.PB_ERR.NO_ERRORS:
+					return
+				# Use class 'a' fields. Example, get field f1
+				var player_id = data.get_PID()
+				var msg_type = data.get_Tp()
+				print("msg_ID:200 , msg_type :",msg_type)
+				match msg_type:
+					1: # 世界聊天	
+						var content = data.get_Content()
+						emit_signal("broadcast_world_chat",player_id,content)
+					2: # 玩家位置	
+						var position = data.get_P()
+						emit_signal("broadcast_player_position",player_id,position)
+					3: # 动作	
+						var action = data.get_ActionData()
+						emit_signal("broadcast_action",player_id,action)
+					4: # 移动之后坐标信息更新	
+						print("移动后更新坐标信息，暂未实现")
+					_: # 其他情况	
+						print("未定义消息类型！")
+			201: # 广播消息 掉线/aoi 消失在视野		
+				var data = MyProto.SyncPid.new()	
+				var result_code = data.from.bytes(msg)	
+				if result_code == MyProto.PB_ERR.NO_ERRORS:	
+					var player_id = data.get_PID()
+					emit_signal("broadcast_delect_player", player_id)
+			202: # 同步周围的人位置信息		
+				var data = MyProto.SyncPlayers.new()	
+				var result_code = data.from.bytes(msg)	
+				if result_code == MyProto.PB_ERR.NO_ERRORS:	
+					var players = data.get_ps()
+					emit_signal("sync_players", players)
+			_:
+				print("未定义的协议ID！")
+
 
 func _exit_tree():
 	# 退出
 	conn.disconnect_from_host()
 
-# Unpack 拆包方法(解压数据)
-func unpack(binaryData : PoolByteArray) ->  Dictionary :
-	
-	# 创建一个从输入二进制数据的ioReader
-	var dataBuff : PoolByteArray
-
-	# 只解压head的信息，得到dataLen和msgID
-	var msg = {}
-
-	# 读dataLen
-	# binary.Read(dataBuff, binary.LittleEndian, msg.DataLen)
-
-	# 读msgID
-	# binary.Read(dataBuff, binary.LittleEndian, msg.ID)
-
-	# 判断dataLen的长度是否超出我们允许的最大包长度
-	# if utils.GlobalObject.MaxPacketSize > 0 && msg.DataLen > utils.GlobalObject.MaxPacketSize 
-	# return nil, errors.New("too large msg data received")
-
-	# 这里只需要把head的数据拆包出来就可以了，然后再通过head的长度，再从conn读取一次数据
-	return msg
-
-
+func send_message(msg_id,msg_data):		
+	var packed_bytes : PoolByteArray = msg_data.to_bytes()
+	var msg_len = packed_bytes.size()
+	conn.put_u32(msg_len)
+	conn.put_u32(msg_id)
+	for p in packed_bytes:
+		conn.put_u8(p)
 

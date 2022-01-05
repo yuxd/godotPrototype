@@ -1,6 +1,6 @@
 class_name Message
 
-extends Reference
+extends Resource
 
 var DataLen : int # 消息的长度
 var ID   :   int # 消息的ID

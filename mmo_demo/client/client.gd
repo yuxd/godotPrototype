@@ -25,9 +25,6 @@ func _ready():
 	else:
 		print("连接服务器失败")
 		
-func send_message(msg):
-	conn.put_data(msg.to_utf8())
-
 func revice(_all):
 	while true:
 		var msg_len = conn.get_u32()
@@ -62,7 +59,7 @@ func revice(_all):
 						var content = data.get_Content()
 						emit_signal("broadcast_world_chat",content)
 					2: # 玩家位置	
-						var position = data.get_Position()
+						var position = data.get_P()
 						emit_signal("broadcast_player_position",position)
 					3: # 动作	
 						var action = data.get_ActionData()
@@ -91,5 +88,11 @@ func _exit_tree():
 	# 退出
 	conn.disconnect_from_host()
 
-
+func send_message(msg_id,msg_data):		
+	var packed_bytes : PoolByteArray = msg_data.to_bytes()
+	var msg_len = packed_bytes.size()
+	conn.put_u32(msg_len)
+	conn.put_u32(msg_id)
+	for p in packed_bytes:
+		conn.put_u8(p)
 

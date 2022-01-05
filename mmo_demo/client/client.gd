@@ -44,7 +44,6 @@ func revice(_all):
 					return
 				# Use class 'a' fields. Example, get field f1
 				var player_id = data.get_PID()
-				print("player ID: ",player_id)
 				emit_signal("create_player",player_id)
 			200:
 				var data = MyProto.BroadCast.new()
@@ -53,7 +52,8 @@ func revice(_all):
 					return
 				# Use class 'a' fields. Example, get field f1
 				var player_id = data.get_PID()
-				var msg_type = data.get_tp
+				var msg_type = data.get_Tp()
+				print("msg_ID:200 , msg_type :",msg_type)
 				match msg_type:
 					1: # 世界聊天	
 						var content = data.get_Content()

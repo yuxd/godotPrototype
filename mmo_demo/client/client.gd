@@ -24,11 +24,9 @@ func send_message(msg):
 func revice(_all):
 	while true:
 		var rev_bytes = conn.get_u8()
-		if rev_bytes > 0:
-			print("rev_num : ",rev_bytes)
-			var data = conn.get_utf8_string(rev_bytes)
-			print("data : ",data)
-			continue
+		# if rev_bytes > 0:
+		print("rev_num : ",rev_bytes)
+			# continue
 
 func _exit_tree():
 	# 退出

@@ -57,6 +57,7 @@ func revice(_all):
 				match msg_type:
 					1: # 世界聊天	
 						var content = data.get_Content()
+						print("世界聊天:",content)
 						emit_signal("broadcast_world_chat",player_id,content)
 					2: # 玩家位置	
 						var position = data.get_P()
@@ -90,9 +91,23 @@ func _exit_tree():
 
 func send_message(msg_id,msg_data):		
 	var packed_bytes : PoolByteArray = msg_data.to_bytes()
+	var msg : PoolByteArray
 	var msg_len = packed_bytes.size()
-	conn.put_u32(msg_len)
-	conn.put_u32(msg_id)
-	for p in packed_bytes:
-		conn.put_u8(p)
+	# conn.put_u32(msg_len)
+	# conn.put_u32(msg_id)
+	# for p in packed_bytes:
+	# 	conn.put_u8(p)
+	# var bytes_msg_len : PoolByteArray = msg_len
+
+	msg.append(msg_len)
+	msg.append(0)
+	msg.append(0)	
+	msg.append(0)
+	msg.append(msg_id)
+	msg.append(0)
+	msg.append(0)
+	msg.append(0)
+	msg.append_array(packed_bytes)
+	conn.put_partial_data(msg)
+
 

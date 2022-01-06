@@ -24,7 +24,7 @@ func OnConnecionAdd(conn ziface.IConnection) {
 	core.WorldMgrObj.AddPlayer(player)
 
 	//将该连接绑定属性Pid
-	conn.SetProperty("Pid", player.Pid)
+	conn.SetProperty("pid", player.Pid)
 
 	//同步周边玩家上线信息，与现实周边玩家信息
 	player.SyncSurrounding()
@@ -35,7 +35,7 @@ func OnConnecionAdd(conn ziface.IConnection) {
 //当客户端断开连接的时候的hook函数
 func OnConnectionLost(conn ziface.IConnection) {
 	//获取当前连接的Pid属性
-	Pid, _ := conn.GetProperty("Pid")
+	Pid, _ := conn.GetProperty("pid")
 
 	//根据Pid获取对应的玩家对象
 	player := core.WorldMgrObj.GetPlayerByPid(Pid.(int32))

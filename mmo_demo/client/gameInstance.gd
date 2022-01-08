@@ -6,11 +6,12 @@ var players = {}
 func _ready():
 	
 	Client.connect("create_player",self,"on_create_player")
-	Client.connect( "broadcast_world_chat",self,"on_broadcast_world_chat")
+	# Client.connect( "broadcast_world_chat",self,"_on_broadcast_world_chat")
 	Client.connect( "broadcast_player_position",self,"on_broadcast_player_position")
 	# Client.connect( "broadcast_action",self,"on_broadcast_action")
 	# Client.connect( "broadcast_delect_player",self, "on_broadcast_delect_player")
-	# Client.connect( "sync_players",self,"on_sync_players")
+	Client.connect( "sync_players",self,"on_sync_players")
+
 
 func on_create_player(player_id):
 	print("开始创建了玩家对象,玩家ID：",player_id)
@@ -20,8 +21,9 @@ func on_create_player(player_id):
 	print("成功创建了玩家对象,玩家ID：",player_id)
 
 
-func on_broadcast_world_chat(player_id,content):	
-	print("ID",player_id,"的玩家世界聊天，说了：",content)	
+# func _on_broadcast_world_chat(player_id,content):	
+# 	print("ID",player_id,"的玩家世界聊天，说了：",content)	
+# 	var label = get_tree().get_child("")
 		
 func on_broadcast_player_position(player_id,position):
 	print("尝试移动ID: ",player_id,"的玩家位置，x:",position.get_X(),	
@@ -42,4 +44,5 @@ func on_broadcast_player_position(player_id,position):
 		"z:",position.get_Z(),	
 		"v:",position.get_V())	
 		
-
+func on_sync_players(palyers):
+	print("同步其他玩家的方法")

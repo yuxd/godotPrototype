@@ -27,6 +27,8 @@ func _ready():
 		
 func revice(_all):
 	while true:
+		print("...")
+
 		var msg_len = conn.get_u32()
 		var msg_id = conn.get_u32()
 		
@@ -35,7 +37,12 @@ func revice(_all):
 			msg.append(conn.get_u8())
 
 		print("msgID: ",msg_id," msg: ",msg)
+		# for i in msg:
+		# 	print(i)
 		
+		# if msg_id == 0:
+		# 	_exit_tree()
+
 		match  msg_id:
 			1: # 分配玩家ID
 				var data = MyProto.SyncPID.new()
@@ -57,8 +64,8 @@ func revice(_all):
 				match msg_type:
 					1: # 世界聊天	
 						var content = data.get_Content()
-						print("世界聊天:",content)
-						emit_signal("broadcast_world_chat",player_id,content)
+						emit_signal("broadcast_world_chat", player_id, content)
+						print("Client 世界聊天: ", player_id, "content: ", content)
 					2: # 玩家位置	
 						var position = data.get_P()
 						emit_signal("broadcast_player_position",player_id,position)
@@ -76,14 +83,21 @@ func revice(_all):
 					var player_id = data.get_PID()
 					emit_signal("broadcast_delect_player", player_id)
 			202: # 同步周围的人位置信息		
+				print("开始同步周围的人位置信息	")
 				var data = MyProto.SyncPlayers.new()	
-				var result_code = data.from.bytes(msg)	
-				if result_code == MyProto.PB_ERR.NO_ERRORS:	
-					var players = data.get_ps()
-					emit_signal("sync_players", players)
+				print("2...开始同步周围的人位置信息	")
+				# var result_code = data.from.bytes(msg)	
+				# print("3...开始同步周围的人位置信息	")
+				# if result_code == MyProto.PB_ERR.NO_ERRORS:	
+				# 	var players = data.get_ps()
+				# 	print("尝试同步周围的人位置信息	")
+				# 	emit_signal("sync_players", players)
+				# 	print("广播同步周围的人位置信息	")
+				# else:
+				# 	print(result_code)
 			_:
 				print("未定义的协议ID！")
-
+		
 
 func _exit_tree():
 	# 退出
@@ -91,23 +105,24 @@ func _exit_tree():
 
 func send_message(msg_id,msg_data):		
 	var packed_bytes : PoolByteArray = msg_data.to_bytes()
-	var msg : PoolByteArray
+	# var msg : PoolByteArray
 	var msg_len = packed_bytes.size()
-	# conn.put_u32(msg_len)
-	# conn.put_u32(msg_id)
+	conn.put_u32(msg_len)
+	conn.put_u32(msg_id)
+	conn.put_partial_data(packed_bytes)
 	# for p in packed_bytes:
 	# 	conn.put_u8(p)
 	# var bytes_msg_len : PoolByteArray = msg_len
 
-	msg.append(msg_len)
-	msg.append(0)
-	msg.append(0)	
-	msg.append(0)
-	msg.append(msg_id)
-	msg.append(0)
-	msg.append(0)
-	msg.append(0)
-	msg.append_array(packed_bytes)
-	conn.put_partial_data(msg)
+	# msg.append(msg_len)
+	# msg.append(0)
+	# msg.append(0)	
+	# msg.append(0)
+	# msg.append(msg_id)
+	# msg.append(0)
+	# msg.append(0)
+	# msg.append(0)
+	# msg.append_array(packed_bytes)
+	# conn.put_partial_data(msg)
 
 

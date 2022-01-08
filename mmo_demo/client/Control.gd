@@ -19,5 +19,5 @@ func _on_Button_pressed():
 func broadcast_world_chat(player_id,content):
 	print("content: ", content)
 	var t = lable_chat.text
-	lable_chat.text = t + "player ID: " + player_id + " connent : " + content + "/n"
+	lable_chat.text = t + "player ID: " + String(player_id) + " connent : " + content + "\n"
 	

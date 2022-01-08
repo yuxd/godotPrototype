@@ -77,10 +77,10 @@ func revice(_all):
 					emit_signal("broadcast_delect_player", player_id)
 			202: # 同步周围的人位置信息		
 				var data = MyProto.SyncPlayers.new()	
-				var result_code = data.from.bytes(msg)	
-				if result_code == MyProto.PB_ERR.NO_ERRORS:	
-					var players = data.get_ps()
-					emit_signal("sync_players", players)
+#				var result_code = data.from.bytes(msg)	
+#				if result_code == MyProto.PB_ERR.NO_ERRORS:	
+#					var players = data.get_ps()
+#					emit_signal("sync_players", players)
 			_:
 				print("未定义的协议ID！")
 
@@ -91,23 +91,24 @@ func _exit_tree():
 
 func send_message(msg_id,msg_data):		
 	var packed_bytes : PoolByteArray = msg_data.to_bytes()
-	var msg : PoolByteArray
+#	var msg : PoolByteArray
 	var msg_len = packed_bytes.size()
-	# conn.put_u32(msg_len)
-	# conn.put_u32(msg_id)
+	conn.put_u32(msg_len)
+	conn.put_u32(msg_id)
+	conn.put_partial_data(packed_bytes)
 	# for p in packed_bytes:
 	# 	conn.put_u8(p)
 	# var bytes_msg_len : PoolByteArray = msg_len
 
-	msg.append(msg_len)
-	msg.append(0)
-	msg.append(0)	
-	msg.append(0)
-	msg.append(msg_id)
-	msg.append(0)
-	msg.append(0)
-	msg.append(0)
-	msg.append_array(packed_bytes)
-	conn.put_partial_data(msg)
+#	msg.append(msg_len)
+#	msg.append(0)
+#	msg.append(0)	
+#	msg.append(0)
+#	msg.append(msg_id)
+#	msg.append(0)
+#	msg.append(0)
+#	msg.append(0)
+#	msg.append_array(packed_bytes)
+#	conn.put_partial_data(msg)
 
 

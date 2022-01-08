@@ -16,7 +16,7 @@ type WorldChatApi struct {
 }
 
 func (*WorldChatApi) Handle(request ziface.IRequest) {
-	//1. 将客户端传来的proto协议解码
+	fmt.Println("1. 将客户端传来的proto协议解码")
 	msg := &pb.Talk{}
 	fmt.Println("world chat: ", msg)
 	err := proto.Unmarshal(request.GetData(), msg)
@@ -25,16 +25,16 @@ func (*WorldChatApi) Handle(request ziface.IRequest) {
 		return
 	}
 
-	//2. 得知当前的消息是从哪个玩家传递来的,从连接属性Pid中获取
+	fmt.Println("2. 得知当前的消息是从哪个玩家传递来的,从连接属性Pid中获取")
 	Pid, err := request.GetConnection().GetProperty("pid")
 	if err != nil {
 		fmt.Println("GetProperty Pid error", err)
 		request.GetConnection().Stop()
 		return
 	}
-	//3. 根据Pid得到player对象
+	fmt.Println("3. 根据Pid得到player对象")
 	player := core.WorldMgrObj.GetPlayerByPid(Pid.(int32))
 
-	//4. 让player对象发起聊天广播请求
+	fmt.Println("4. 让player对象发起聊天广播请求")
 	player.Talk(msg.Content)
 }

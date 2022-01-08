@@ -344,7 +344,7 @@ func (p *Player) SendMsg(msgID uint32, data proto.Message) {
 		fmt.Println("marshal msg err: ", err)
 		return
 	}
-	//fmt.Printf("after Marshal data = %+v\n", msg)
+	fmt.Printf("after Marshal data = %+v\n", msg)
 
 	if p.Conn == nil {
 		fmt.Println("connection in player is nil")

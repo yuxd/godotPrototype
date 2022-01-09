@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tanks_crateArmor.png-d62b4404550a43b482f2f736dcf3562c.stex"
+path="res://.import/tanks_crateArmor.png-da0ef93e61ca9cb2cf1a572246db0907.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Other/tanks_crateArmor.png"
-dest_files=[ "res://.import/tanks_crateArmor.png-d62b4404550a43b482f2f736dcf3562c.stex" ]
+source_file="res://other/tanks_crateArmor.png"
+dest_files=[ "res://.import/tanks_crateArmor.png-da0ef93e61ca9cb2cf1a572246db0907.stex" ]
 
 [params]
 

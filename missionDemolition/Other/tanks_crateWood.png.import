@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tanks_crateWood.png-78caa6c48009327878f06a17ca5da6b0.stex"
+path="res://.import/tanks_crateWood.png-bbe03a5389eed82a5f30172155c36ba0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Other/tanks_crateWood.png"
-dest_files=[ "res://.import/tanks_crateWood.png-78caa6c48009327878f06a17ca5da6b0.stex" ]
+source_file="res://other/tanks_crateWood.png"
+dest_files=[ "res://.import/tanks_crateWood.png-bbe03a5389eed82a5f30172155c36ba0.stex" ]
 
 [params]
 

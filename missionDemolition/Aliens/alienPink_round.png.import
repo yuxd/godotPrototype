@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alienPink_round.png-d722d4b5aea6b518f7623b497f936e7a.stex"
+path="res://.import/alienPink_round.png-016eb9a436ced8997454e66273c0f180.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Aliens/alienPink_round.png"
-dest_files=[ "res://.import/alienPink_round.png-d722d4b5aea6b518f7623b497f936e7a.stex" ]
+source_file="res://aliens/alienPink_round.png"
+dest_files=[ "res://.import/alienPink_round.png-016eb9a436ced8997454e66273c0f180.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue_land.png-ab0769152923849d1d3565406923a6ad.stex"
+path="res://.import/blue_land.png-323a0f688effd678995c671bebfa2555.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/blue_land.png"
-dest_files=[ "res://.import/blue_land.png-ab0769152923849d1d3565406923a6ad.stex" ]
+source_file="res://backgrounds/blue_land.png"
+dest_files=[ "res://.import/blue_land.png-323a0f688effd678995c671bebfa2555.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/colored_land.png-bfabc3da6124932d7dc91d182a58a01f.stex"
+path="res://.import/colored_land.png-02f18056269c10ded81cef6318a30725.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/colored_land.png"
-dest_files=[ "res://.import/colored_land.png-bfabc3da6124932d7dc91d182a58a01f.stex" ]
+source_file="res://backgrounds/colored_land.png"
+dest_files=[ "res://.import/colored_land.png-02f18056269c10ded81cef6318a30725.stex" ]
 
 [params]
 

@@ -1006,7 +1006,12 @@ class SyncPlayers:
 	func _init():
 		var service
 		
-		_ps = PBField.new("ps", PB_DATA_TYPE.MESSAGE, PB_RULE.REPEATED, 1, true, [])
+		_ps = PBField.new("ps", 
+			PB_DATA_TYPE.MESSAGE, 
+			PB_RULE.REPEATED, 
+			1, 
+			true, 
+			[])
 		service = PBServiceField.new()
 		service.field = _ps
 		service.func_ref = funcref(self, "add_ps")

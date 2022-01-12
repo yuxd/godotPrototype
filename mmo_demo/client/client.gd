@@ -72,13 +72,14 @@ func revice(_all):
 					3: # 动作	
 						var action = data.get_ActionData()
 						emit_signal("broadcast_action",player_id,action)
-					4: # 移动之后坐标信息更新	
-						print("移动后更新坐标信息，暂未实现")
+					4: # 移动之后坐标信息更新
+						var position = data.get_P()
+						emit_signal("broadcast_player_position",player_id,position)
 					_: # 其他情况	
 						print("未定义消息类型！")
 			201: # 广播消息 掉线/aoi 消失在视野		
 				var data = MyProto.SyncPid.new()	
-				var result_code = data.from.bytes(msg)	
+				var result_code = data.from_bytes(msg)	
 				if result_code == MyProto.PB_ERR.NO_ERRORS:	
 					var player_id = data.get_PID()
 					emit_signal("broadcast_delect_player", player_id)
@@ -86,15 +87,15 @@ func revice(_all):
 				print("开始同步周围的人位置信息	")
 				var data = MyProto.SyncPlayers.new()	
 				print("2...开始同步周围的人位置信息	")
-				# var result_code = data.from.bytes(msg)	
-				# print("3...开始同步周围的人位置信息	")
-				# if result_code == MyProto.PB_ERR.NO_ERRORS:	
-				# 	var players = data.get_ps()
-				# 	print("尝试同步周围的人位置信息	")
-				# 	emit_signal("sync_players", players)
-				# 	print("广播同步周围的人位置信息	")
-				# else:
-				# 	print(result_code)
+				var result_code = data.from_bytes(msg)	
+				print("3...开始同步周围的人位置信息	")
+				if result_code == MyProto.PB_ERR.NO_ERRORS:	
+					var players = data.get_ps()
+					print("尝试同步周围的人位置信息	")
+					emit_signal("sync_players", players)
+					print("广播同步周围的人位置信息	")
+				else:
+					print(result_code)
 			_:
 				print("未定义的协议ID！")
 		

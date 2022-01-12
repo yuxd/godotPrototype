@@ -1,7 +1,7 @@
 extends Node
 
 var t_player = load("res://Player.tscn")
-var players = {}
+var _players = {}
 
 func _ready():
 	
@@ -17,7 +17,7 @@ func on_create_player(player_id):
 	print("开始创建了玩家对象,玩家ID：",player_id)
 	var instance = t_player.instance()
 	add_child(instance)
-	players[player_id] = instance
+	_players[player_id] = instance
 	print("成功创建了玩家对象,玩家ID：",player_id)
 
 
@@ -30,8 +30,8 @@ func on_broadcast_player_position(player_id,position):
 		"y:",position.get_Y(),	
 		"z:",position.get_Z(),	
 		"v:",position.get_V())		
-	if players.has(player_id):	
-		var player = players[player_id]
+	if _players.has(player_id):	
+		var player = _players[player_id]
 		print("找到对应player，尝试移动位置")
 		player.position.x = position.get_X()
 		player.position.y = position.get_Z()
@@ -45,4 +45,12 @@ func on_broadcast_player_position(player_id,position):
 		"v:",position.get_V())	
 		
 func on_sync_players(palyers):
+	# print(_players)
+	for p in palyers:
+		# print(p)
+		if _players.has(p.get_PID()):	
+			var player = _players[p.get_PID()]
+			player.position.x = p.get_P().get_X()
+			player.position.y = p.get_P().get_Z()
 	print("同步其他玩家的方法")
+	

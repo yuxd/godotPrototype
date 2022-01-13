@@ -11,6 +11,7 @@ func _ready():
 	# Client.connect( "broadcast_action",self,"on_broadcast_action")
 	# Client.connect( "broadcast_delect_player",self, "on_broadcast_delect_player")
 	Client.connect( "sync_players",self,"on_sync_players")
+	Client.connect( "broadcast_player_move_position",self,"on_broadcast_player_move_position")
 
 
 func on_create_player(player_id):
@@ -54,3 +55,6 @@ func on_sync_players(palyers):
 			player.position.y = p.get_P().get_Z()
 	print("同步其他玩家的方法")
 	
+func on_broadcast_player_move_position(player_id,position):
+	var player = _players[player_id]
+	# player.move_toward(

@@ -8,6 +8,7 @@ const MyProto  = preload("res://pb/msg.proto.gd")
 signal create_player
 signal broadcast_world_chat
 signal broadcast_player_position
+signal broadcast_player_move_position
 signal broadcast_action
 signal broadcast_delect_player 
 signal sync_players
@@ -74,7 +75,7 @@ func revice(_all):
 						emit_signal("broadcast_action",player_id,action)
 					4: # 移动之后坐标信息更新
 						var position = data.get_P()
-						emit_signal("broadcast_player_position",player_id,position)
+						emit_signal("broadcast_player_move_position",player_id,position)
 					_: # 其他情况	
 						print("未定义消息类型！")
 			201: # 广播消息 掉线/aoi 消失在视野		

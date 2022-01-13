@@ -27,4 +27,4 @@ func _on_btn_Setting_pressed():
 
 
 func _on_btn_Start_pressed():
-	pass # Replace with function body.
+	GameInstance.goto_scene("res://Scenes/Main.tscn")

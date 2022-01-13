@@ -6,3 +6,4 @@
 [node name="Apple" type="Sprite"]
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+drop_speed = null

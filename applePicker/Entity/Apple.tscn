@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Entity/apple.png" type="Texture" id=1]
+
+[node name="Apple" type="Sprite"]
+texture = ExtResource( 1 )

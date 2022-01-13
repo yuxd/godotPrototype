@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Entity/background.png" type="Texture" id=1]
 [ext_resource path="res://Entity/Basket.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Entity/Tree.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="CanvasLayer"]
 
@@ -15,3 +16,6 @@ __meta__ = {
 [node name="Basket" parent="." instance=ExtResource( 2 )]
 position = Vector2( 33, 544 )
 speed = 300
+
+[node name="Tree" parent="." instance=ExtResource( 3 )]
+position = Vector2( 76, 175 )

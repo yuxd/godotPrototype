@@ -10,5 +10,8 @@ func _process(delta):
 	if position.y >= 550:
 		self.queue_free()
 
-func _on_Area2D_area_entered():
-	pass
+
+
+func _on_Area2D_body_entered(body:Node):
+	print("!",body.name)
+	pass # Replace with function body.

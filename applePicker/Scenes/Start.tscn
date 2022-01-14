@@ -1,0 +1,271 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://background.png" type="Texture" id=1]
+[ext_resource path="res://UI/bannerHanging.png" type="Texture" id=2]
+[ext_resource path="res://Font/DiaoYuShaoTi.tres" type="DynamicFont" id=3]
+[ext_resource path="res://UI/button_rectangleWood.png" type="Texture" id=4]
+[ext_resource path="res://Font/Start.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Scenes/Start.gd" type="Script" id=6]
+[ext_resource path="res://Entity/Tree/foliageTree__03@2.png" type="Texture" id=7]
+[ext_resource path="res://Entity/Tree/foliageTree__04@2.png" type="Texture" id=8]
+[ext_resource path="res://Entity/Tree/foliageTree_01@2.png" type="Texture" id=9]
+[ext_resource path="res://Entity/Tree/foliageTree_02@2.png" type="Texture" id=10]
+[ext_resource path="res://Entity/Items/present_large_blue.png" type="Texture" id=11]
+[ext_resource path="res://Entity/Items/topdownTile_48.png" type="Texture" id=12]
+[ext_resource path="res://Entity/Items/present_small_orange.png" type="Texture" id=13]
+[ext_resource path="res://Entity/Items/present_small_blue.png" type="Texture" id=14]
+[ext_resource path="res://Entity/Items/topdownTile_37.png" type="Texture" id=15]
+[ext_resource path="res://Entity/Items/RTSobject_10.png" type="Texture" id=16]
+[ext_resource path="res://Entity/Items/topdownTile_40.png" type="Texture" id=17]
+[ext_resource path="res://Entity/Items/present_small_green.png" type="Texture" id=18]
+[ext_resource path="res://Entity/Items/present_large_red.png" type="Texture" id=19]
+[ext_resource path="res://Entity/Items/lollipopRed.png" type="Texture" id=20]
+[ext_resource path="res://Entity/Items/lollipopWhiteGreen.png" type="Texture" id=21]
+[ext_resource path="res://Entity/Items/lollipopWhiteRed.png" type="Texture" id=22]
+[ext_resource path="res://Entity/Items/present_large_green.png" type="Texture" id=23]
+[ext_resource path="res://Entity/Items/present_large_lightBlue.png" type="Texture" id=24]
+[ext_resource path="res://Entity/Items/present_long_blue.png" type="Texture" id=25]
+[ext_resource path="res://Entity/Items/present_long_lightBlue.png" type="Texture" id=26]
+[ext_resource path="res://Entity/Items/RTSobject_05.png" type="Texture" id=27]
+[ext_resource path="res://Music/Cheerful Annoyance.ogg" type="AudioStream" id=28]
+[ext_resource path="res://UI/Popup/Popup_Setting.tscn" type="PackedScene" id=29]
+
+[node name="Start" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="T_BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TopdownTile48" type="Sprite" parent="T_BG"]
+position = Vector2( 253, 538 )
+texture = ExtResource( 12 )
+
+[node name="TopdownTile40" type="Sprite" parent="T_BG"]
+position = Vector2( 50, 573 )
+texture = ExtResource( 17 )
+flip_h = true
+
+[node name="RtSobject10" type="Sprite" parent="T_BG"]
+position = Vector2( 858, 514 )
+texture = ExtResource( 16 )
+
+[node name="FoliageTree012" type="Sprite" parent="T_BG"]
+position = Vector2( 100, 404 )
+texture = ExtResource( 9 )
+
+[node name="FoliageTree022" type="Sprite" parent="T_BG"]
+position = Vector2( 201, 449 )
+texture = ExtResource( 10 )
+
+[node name="FoliageTree042" type="Sprite" parent="T_BG"]
+position = Vector2( 955, 408 )
+texture = ExtResource( 8 )
+
+[node name="FoliageTree032" type="Sprite" parent="T_BG"]
+position = Vector2( 829, 439 )
+texture = ExtResource( 7 )
+
+[node name="PresentLargeBlue" type="Sprite" parent="T_BG"]
+position = Vector2( 136, 521 )
+texture = ExtResource( 11 )
+
+[node name="PresentSmallBlue" type="Sprite" parent="T_BG"]
+position = Vector2( 878, 516 )
+texture = ExtResource( 14 )
+
+[node name="PresentSmallGreen" type="Sprite" parent="T_BG"]
+position = Vector2( 94, 526 )
+texture = ExtResource( 18 )
+
+[node name="PresentSmallOrange" type="Sprite" parent="T_BG"]
+position = Vector2( 941, 521 )
+texture = ExtResource( 13 )
+
+[node name="LollipopRed" type="Sprite" parent="T_BG"]
+position = Vector2( 185, 164 )
+texture = ExtResource( 20 )
+
+[node name="LollipopWhiteGreen" type="Sprite" parent="T_BG"]
+position = Vector2( 240, 264 )
+texture = ExtResource( 21 )
+
+[node name="LollipopWhiteRed" type="Sprite" parent="T_BG"]
+position = Vector2( 884, 88 )
+texture = ExtResource( 22 )
+
+[node name="LollipopWhiteRed2" type="Sprite" parent="T_BG"]
+position = Vector2( 746, 291 )
+texture = ExtResource( 22 )
+
+[node name="PresentLargeBlue2" type="Sprite" parent="T_BG"]
+position = Vector2( 857, 200 )
+texture = ExtResource( 11 )
+
+[node name="PresentLargeGreen" type="Sprite" parent="T_BG"]
+position = Vector2( 208, 62 )
+texture = ExtResource( 23 )
+
+[node name="PresentLargeLightBlue" type="Sprite" parent="T_BG"]
+position = Vector2( 787, 55 )
+texture = ExtResource( 24 )
+
+[node name="PresentLargeRed" type="Sprite" parent="T_BG"]
+position = Vector2( 53, 206 )
+texture = ExtResource( 19 )
+
+[node name="PresentLongBlue" type="Sprite" parent="T_BG"]
+position = Vector2( 87, 92 )
+texture = ExtResource( 25 )
+
+[node name="PresentLongLightBlue" type="Sprite" parent="T_BG"]
+position = Vector2( 951, 164 )
+texture = ExtResource( 26 )
+
+[node name="RtSobject05" type="Sprite" parent="T_BG"]
+position = Vector2( 683, 109 )
+texture = ExtResource( 27 )
+
+[node name="TopdownTile41" type="Sprite" parent="T_BG"]
+position = Vector2( 980, 565 )
+texture = ExtResource( 17 )
+
+[node name="TopdownTile37" type="Sprite" parent="T_BG"]
+position = Vector2( 309, 523 )
+texture = ExtResource( 15 )
+
+[node name="T_Tile" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -268.0
+margin_top = 100.0
+margin_right = 268.0
+margin_bottom = 118.0
+rect_pivot_offset = Vector2( 268, 0 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="T_Tile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "圣诞节的礼物"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.878
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -256.8
+margin_right = 100.0
+margin_bottom = -82.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Start" type="TextureButton" parent="VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 200, 80 )
+rect_pivot_offset = Vector2( 85, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/btn_Start"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 5 )
+text = "开始"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="btn_Setting" type="TextureButton" parent="VBoxContainer"]
+margin_top = 84.0
+margin_right = 200.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 200, 80 )
+rect_pivot_offset = Vector2( 85, 0 )
+disabled = true
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/btn_Setting"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 5 )
+text = "设置"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="btn_Exit" type="TextureButton" parent="VBoxContainer"]
+margin_top = 168.0
+margin_right = 200.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 200, 80 )
+rect_pivot_offset = Vector2( 85, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/btn_Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 5 )
+text = "退出"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+volume_db = -10.0
+autoplay = true
+
+[node name="Popup_Setting" parent="." instance=ExtResource( 29 )]
+margin_left = 279.0
+margin_top = 148.0
+margin_right = 740.0
+margin_bottom = 468.0
+
+[connection signal="pressed" from="VBoxContainer/btn_Start" to="." method="_on_btn_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_Setting" to="." method="_on_btn_Setting_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_Exit" to="." method="_on_btn_Exit_pressed"]

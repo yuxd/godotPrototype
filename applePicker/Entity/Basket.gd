@@ -8,7 +8,7 @@ var velocity = Vector2()
 
 func _ready():
 	pass
-
+	
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed('ui_right'):
@@ -20,6 +20,7 @@ func get_input():
 	# if Input.is_action_pressed('move_up'):
 	# 	velocity.y -= 1
 	velocity = velocity.normalized() * speed
+	GameInstance.connect("changeHP",self,"_changeHP")
 
 func _physics_process(_delta):
 	get_input()
@@ -28,3 +29,7 @@ func _physics_process(_delta):
 		position.x = x_max
 	elif position.x <= x_min:
 		position.x = x_min
+
+func _changeHP(n:int):
+	if GameInstance.HP <= 0:
+		self.queue_free()

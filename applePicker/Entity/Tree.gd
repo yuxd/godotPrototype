@@ -21,7 +21,8 @@ func dropApple():
 	var r = rand_range(0,5000)
 	if r < 10:
 		var instance = apple.instance()
-		self.add_child(instance)
+		instance.position = self.position
+		get_parent().add_child(instance)
 
 func checkDirection():
 	if position.x <= 33||position.x >= 990:

@@ -3,7 +3,9 @@ extends Container
 export(float) var offset_x_proportion = 0.2
 export(float) var rotation_proportion = 10
 
-var cards
+onready var t_card = preload("res://card.tscn")
+
+var cards = []
 var card_amount : int = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -24,8 +26,23 @@ func update_card_position():
 		# 位置偏移
 		cards[i].rect_position.x = card_offset * offset_x * offset_x_proportion
 		# 旋转偏移
-		print(card_amount * -0.5 + 0.5 + 1* i)
+#		print(card_amount * -0.5 + 0.5 + 1* i)
 		cards[i].rect_rotation = card_offset * rotation_proportion
 
 func add_card(from:Vector2):
-	pass
+	var card = t_card.instance()
+	cards.append(card)
+	self.add_child(card)
+	update_card_position()
+
+func remove_card(card):
+	cards.erase(card)
+	self.remove_child(card)
+	update_card_position()
+
+func _on_Button_pressed():
+	add_card(Vector2(0,0))
+
+
+func _on_Button2_pressed():
+	remove_card(cards[0])

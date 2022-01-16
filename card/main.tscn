@@ -9,3 +9,28 @@ margin_left = 463.0
 margin_top = 466.0
 margin_right = 503.0
 margin_bottom = 506.0
+
+[node name="btn_add_card" type="Button" parent="."]
+margin_left = 104.118
+margin_top = 166.855
+margin_right = 205.118
+margin_bottom = 199.855
+rect_pivot_offset = Vector2( 20.4934, 64.4198 )
+text = "add card"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_remove_card" type="Button" parent="."]
+margin_left = 104.118
+margin_top = 222.918
+margin_right = 205.118
+margin_bottom = 255.918
+rect_pivot_offset = Vector2( 20.4934, 64.4198 )
+text = "remove card"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="btn_add_card" to="HandCards" method="_on_Button_pressed"]
+[connection signal="pressed" from="btn_remove_card" to="HandCards" method="_on_Button2_pressed"]

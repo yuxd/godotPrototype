@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/8C.png-a0c12471484e135c6825dba3332fe0aa.stex"
+path="res://.import/8C.png-b1d36e590f4104e118cb911cd8c5534f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cards/8C.png"
-dest_files=[ "res://.import/8C.png-a0c12471484e135c6825dba3332fe0aa.stex" ]
+source_file="res://Cards/8C.png"
+dest_files=[ "res://.import/8C.png-b1d36e590f4104e118cb911cd8c5534f.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

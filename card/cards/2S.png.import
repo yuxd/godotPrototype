@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2S.png-ac75d0bdf7e5000b9922a8f6f71643ef.stex"
+path="res://.import/2S.png-d7685da45179e0431489bab94b265230.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cards/2S.png"
-dest_files=[ "res://.import/2S.png-ac75d0bdf7e5000b9922a8f6f71643ef.stex" ]
+source_file="res://cards/2S.png"
+dest_files=[ "res://.import/2S.png-d7685da45179e0431489bab94b265230.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

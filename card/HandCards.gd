@@ -25,10 +25,17 @@ func update_card_position():
 		cards[i].rect_pivot_offset.y = cards[i].rect_min_size.y
 		
 		# 位置偏移
-		cards[i].rect_position.x = card_offset * offset_x * offset_x_proportion
+		var card_position = Vector2(card_offset * offset_x * offset_x_proportion,cards[i].rect_position.y)
+		# cards[i].rect_position.x = card_offset * offset_x * offset_x_proportion
 		# 旋转偏移
 #		print(card_amount * -0.5 + 0.5 + 1* i)
-		cards[i].rect_rotation = card_offset * rotation_proportion
+		var card_rotation = card_offset * rotation_proportion
+		# cards[i].rect_rotation = card_offset * rotation_proportion
+		cards[i].tween.interpolate_property(self,"rect_position",self.rect_position,card_position,1.0,Tween.TRANS_BACK,Tween.EASE_IN)
+		# cards[i].tween.interpolate_property(self,"rect_rotation",self.rect_rotation,card_rotation,1.0,Tween.TRANS_BACK,Tween.EASE_IN)
+		cards[i].tween.start()
+
+
 
 func add_card(pos:Vector2):
 	var card = t_card.instance()

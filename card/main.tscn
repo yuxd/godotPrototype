@@ -13,7 +13,7 @@ margin_right = 503.0
 margin_bottom = 506.0
 
 [node name="deck" type="Node2D" parent="."]
-position = Vector2( 106, 350 )
+position = Vector2( 769, 263 )
 
 [node name="btn_add_card" type="Button" parent="."]
 margin_left = 104.118

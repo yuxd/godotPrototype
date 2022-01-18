@@ -28,3 +28,7 @@ func update_card_position(target_position:Vector2):
 func update_card_rotation(target_rotation : float):
 	tween.interpolate_property(self,"rect_rotation",self.rect_rotation,target_rotation,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 	tween.start()
+
+func update_card_scale(target_scale: Vector2):
+	tween.interpolate_property(self,"rect_scale",self.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+	tween.start()

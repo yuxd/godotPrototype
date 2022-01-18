@@ -31,16 +31,19 @@ func update_card_position():
 		var target_rotation = card_offset * rotation_proportion
 		cards[i].update_card_position(target_position)
 		cards[i].update_card_rotation(target_rotation)
+		cards[i].update_card_scale(Vector2(1,1))
 		# cards[i].tween.start()
-
-
 
 func add_card(pos:Vector2):
 	var card = t_card.instance()
-	card.rect_position = rect_position - pos	
-	cards.append(card)
 	self.add_child(card)
-	# update_card_position()
+	cards.append(card)
+	card.rect_scale = Vector2(0,0)
+	# print(self.rect_position)
+	# print(pos)
+	# print(pos - self.rect_position)
+	card.rect_position = pos - self.rect_position	
+	update_card_position()
 
 func remove_card(card):
 	cards.erase(card)

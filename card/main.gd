@@ -14,3 +14,4 @@ func _on_btn_remove_card_pressed():
 func _on_btn_add_card_pressed():
 	for i in range(1,3):
 		hand_cards.add_card(deck.position)
+

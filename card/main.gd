@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 func _on_btn_remove_card_pressed():
-	hand_cards.remove_card(hand_cards.cards[0])
+	hand_cards.remove_card(hand_cards.cards[1])
 
 
 func _on_btn_add_card_pressed():

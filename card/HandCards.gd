@@ -17,31 +17,30 @@ func update_card_position():
 	cards = get_children()
 	card_amount = cards.size()
 	offset_x = cards[0].rect_min_size.x
-	print(offset_x)
 	for i in range(0, card_amount):
 		var card_offset = card_amount * -0.5 + 0.5 + 1* i
-#		print(card_amount * -0.5 + 0.5 + 1* i)
 		cards[i].rect_pivot_offset.x = cards[i].rect_min_size.x/2
 		cards[i].rect_pivot_offset.y = cards[i].rect_min_size.y
 		
 		# 位置偏移
-		# var card_position = Vector2(card_offset * offset_x * offset_x_proportion , cards[i].rect_position.y)
-		cards[i].rect_position.x = card_offset * offset_x * offset_x_proportion
+		# cards[i].rect_position.x = card_offset * offset_x * offset_x_proportion
 		# 旋转偏移
-#		print(card_amount * -0.5 + 0.5 + 1* i)
-		# var card_rotation = card_offset * rotation_proportion
-		cards[i].rect_rotation = card_offset * rotation_proportion
-		# cards[i].tween.interpolate_property(self,"rect_position",self.rect_position,card_position,1.0,Tween.TRANS_BACK,Tween.EASE_IN)
-		# cards[i].tween.interpolate_property(self,"rect_rotation",self.rect_rotation,card_rotation,1.0,Tween.TRANS_BACK,Tween.EASE_IN)
+		# cards[i].rect_rotation = card_offset * rotation_proportion
+
+		var target_position = Vector2(card_offset * offset_x * offset_x_proportion , 0)
+		var target_rotation = card_offset * rotation_proportion
+		cards[i].update_card_position(target_position)
+		cards[i].update_card_rotation(target_rotation)
 		# cards[i].tween.start()
 
 
 
 func add_card(pos:Vector2):
 	var card = t_card.instance()
+	card.rect_position = pos	
 	cards.append(card)
 	self.add_child(card)
-	update_card_position()
+	# update_card_position()
 
 func remove_card(card):
 	cards.erase(card)

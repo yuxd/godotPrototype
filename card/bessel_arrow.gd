@@ -2,13 +2,16 @@ extends Node2D
 
 var list=[] #数组，用来保存20节小箭头
 
+onready var t_arrow_head = preload("res://UI/right.png")
+onready var t_arrow_body = preload("res://UI/fightJ.png")
+
 func _ready():
 	#生成19节尾巴小箭头，用箭头1的图片
 	for i in range(19):
 		var sprite=Sprite.new()    #新建 Sprite 节点
 		add_child(sprite)          #添加到场景里
 		list.append(sprite)        #添加到数组里
-		sprite.texture=load("res://UI/fightJ")  #把图片换成箭头1
+		sprite.texture = t_arrow_head #把图片换成箭头1
 		sprite.scale=Vector2(1,1)*(0.2+float(i)/18*0.8) #改变缩放，根据杀戮尖塔，箭头是一节节越来越大的
 		sprite.offset=Vector2(-25,0)  #由于我画的图片中心点在箭头中间，
 									  #这里改变一下图片偏移，把图片中心点移动到箭头头部
@@ -16,7 +19,7 @@ func _ready():
 	var sprite=Sprite.new()   
 	add_child(sprite)
 	list.append(sprite)
-	sprite.texture=load("res://UI/fightJ.png")
+	sprite.texture = t_arrow_body
 	sprite.offset=Vector2(-25,0)
 
 func reset(startPos,endPos):

@@ -4,10 +4,11 @@ var list=[] #数组，用来保存20节小箭头
 
 onready var t_arrow_head = preload("res://UI/right.png")
 onready var t_arrow_body = preload("res://UI/fightJ.png")
+const arrow_num = 15
 
 func _ready():
 	#生成19节尾巴小箭头，用箭头1的图片
-	for i in range(19):
+	for i in range(arrow_num - 1):
 		var sprite=Sprite.new()    #新建 Sprite 节点
 		add_child(sprite)          #添加到场景里
 		list.append(sprite)        #添加到数组里
@@ -31,15 +32,15 @@ func reset(startPos,endPos):
 	ctrlBPos.y=endPos.y+(endPos.y-startPos.y)*0.3
 	ctrlBPos.x=startPos.x-(startPos.x-endPos.x)*0.3
 	#根据贝塞尔曲线重新设置所有小箭头的位置
-	for i in range(20):
-		var t=float(i)/19 
+	for i in range(arrow_num):
+		var t=float(i)/(arrow_num - 1) 
 		var pos=startPos*(1-t)*(1-t)*(1-t)+3*ctrlAPos*t*(1-t)*(1-t)+3*ctrlBPos*t*t*(1-t)+endPos*t*t*t
 		list[i].position=pos 
 	#虽然更改了箭头的位置，不过还需要重新计算箭头的方向   
 	updateAngle()   #重新计算所有箭头的方向
 	
 func updateAngle():
-	for i in range(20):
+	for i in range(arrow_num):
 		if i==0:
 			list[0].rotation_degrees=270    #第一个小箭头就让他固定朝上好了
 		else:

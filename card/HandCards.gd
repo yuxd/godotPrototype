@@ -37,7 +37,7 @@ func update_card_position():
 
 func add_card(pos:Vector2):
 	var card = t_card.instance()
-	card.rect_position = pos	
+	card.rect_position = rect_position - pos	
 	cards.append(card)
 	self.add_child(card)
 	# update_card_position()

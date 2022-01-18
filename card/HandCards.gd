@@ -39,9 +39,6 @@ func add_card(pos:Vector2):
 	self.add_child(card)
 	cards.append(card)
 	card.rect_scale = Vector2(0,0)
-	# print(self.rect_position)
-	# print(pos)
-	# print(pos - self.rect_position)
 	card.rect_position = pos - self.rect_position	
 	update_card_position()
 

@@ -17,6 +17,7 @@ var offset_x
 
 var dragging = false
 var click_pisition
+var card_wait_for_add = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -61,13 +62,18 @@ func update_card_position():
 		tween.interpolate_property(cards[i],"rect_scale",cards[i].rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 		tween.start()
 
-func add_card(pos:Vector2):
+func _add_card(pos:Vector2):
 	var card = t_card.instance()
 	hand_card.add_child(card)
 	cards.append(card)
 	card.rect_scale = Vector2(0,0)
 	card.rect_position = pos - hand_card.rect_position
 	update_card_position()
+	card_wait_for_add -= 1
+
+func add_cards(n:int,pos:Vector2):
+	card_wait_for_add = n
+	_add_card(pos)
 
 func remove_card(card):
 	if cards.size() == 0:
@@ -109,10 +115,15 @@ func _on_card_dragging(card):
 	card.rect_position = get_viewport().get_mouse_position() - hand_card.rect_position
 
 func _on_btn_add_card_pressed():
-	add_card(deck.position)
+	add_cards(2,deck.position)
 
 func _on_btn_remove_card_pressed():
 	remove_card(cards[1])
 
 func _on_btn_preview_pressed():
 	_on_card_preview(cards[2])
+
+
+func _on_Tween_tween_completed(object, key):
+	if card_wait_for_add != 0:
+		_add_card(deck.position)

@@ -10,6 +10,7 @@ onready var hand_card = $hand_card
 onready var deck = $deck
 onready var card_preview = $card_preview
 onready var tween = $Tween
+onready var arrow = $bessel_arrow
 
 var cards = []
 var card_amount : int = 0
@@ -18,6 +19,7 @@ var offset_x
 var dragging = false
 var click_pisition
 var card_wait_for_add = 0
+var selected_card
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,19 +28,29 @@ func _ready():
 	update_card_position()
 
 func _process(delta):
-	if dragging:
-		_on_card_dragging(cards[1])
+	if dragging and selected_card != null:
+		if selected_card != null:
+			_on_card_dragging(selected_card)
+			if selected_card.ability_target == selected_card.AbilityTargetType.all or selected_card.ability_target == selected_card.AbilityTargetType.our_all or selected_card.ability_target == selected_card.AbilityTargetType.they_all:
+				# _on_card_dragging(selected_card)
+				pass
+			else:
+				arrow.reset(click_pisition,get_viewport().get_mouse_position())
+				selected_card.card.hide()
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if not dragging and event.pressed:
 			dragging = true
+			# arrow.show()
 			click_pisition =  event.position
 		# Stop dragging if the button is released.
 		if dragging and not event.pressed:
 			dragging = false
+			arrow.hide()
 			update_card_position()
-			
+			if selected_card:
+				selected_card = null
 
 func update_card_position():
 	cards = hand_card.get_children()
@@ -61,6 +73,12 @@ func update_card_position():
 		tween.interpolate_property(cards[i],"rect_rotation",cards[i].rect_rotation,target_rotation,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 		tween.interpolate_property(cards[i],"rect_scale",cards[i].rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 		tween.start()
+
+		if cards[i].card_manager == null:
+			cards[i].card_manager = self
+		cards[i].card_state = cards[i].CardState.normal
+		cards[i].card.show()
+		
 
 func _add_card(pos:Vector2):
 	var card = t_card.instance()
@@ -97,7 +115,7 @@ func get_card_position(card_index : int) -> Vector2:
 
 ###################### 回调函数 ###################
 
-func _on_card_preview(card):
+func on_card_preview(card):
 	if tween.is_active():
 		return
 	var preview_position = card_preview.rect_position - hand_card.rect_position
@@ -108,6 +126,7 @@ func _on_card_preview(card):
 	tween.interpolate_property(card,"rect_scale",
 		card.rect_scale,card_preview.rect_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 	tween.start()
+	card.card_state = card.CardState.preview
 
 func _on_card_dragging(card):
 	card.rect_rotation = 0
@@ -121,8 +140,7 @@ func _on_btn_remove_card_pressed():
 	remove_card(cards[1])
 
 func _on_btn_preview_pressed():
-	_on_card_preview(cards[2])
-
+	on_card_preview(cards[2])
 
 func _on_Tween_tween_completed(object, key):
 	if card_wait_for_add != 0:

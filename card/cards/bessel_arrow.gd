@@ -24,6 +24,7 @@ func _ready():
 	sprite.offset=Vector2(-25,0)
 
 func reset(startPos,endPos):
+	self.show()
 	#根据传入的起点和终点来计算两个控制点
 	var ctrlAPos=Vector2()
 	var ctrlBPos=Vector2()

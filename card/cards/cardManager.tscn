@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://cards/handCards.tscn" type="PackedScene" id=1]
+[ext_resource path="res://cards/texture/1C.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+
+onready var hand_cards = $HandCards
+onready var deck = $deck
+onready var card_preview = $card_preview
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	card_preview.hide()
+	
+func _on_btn_remove_card_pressed():
+	hand_cards.remove_card(hand_cards.cards[1])
+
+
+func _on_btn_add_card_pressed():
+	for i in range(1,3):
+		hand_cards.add_card(deck.position)
+"
+
+[node name="CardManager" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HandCards" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -25.0
+margin_top = -111.0
+margin_right = 15.0
+margin_bottom = -71.0
+
+[node name="btn_add_card" type="Button" parent="."]
+margin_left = 104.118
+margin_top = 166.855
+margin_right = 205.118
+margin_bottom = 199.855
+rect_pivot_offset = Vector2( 20.4934, 64.4198 )
+text = "add card"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_remove_card" type="Button" parent="."]
+margin_left = 104.118
+margin_top = 222.918
+margin_right = 205.118
+margin_bottom = 255.918
+rect_pivot_offset = Vector2( 20.4934, 64.4198 )
+text = "remove card"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="deck" type="Node2D" parent="."]
+position = Vector2( 769, 263 )
+
+[node name="card_preview" type="TextureRect" parent="."]
+margin_left = 351.0
+margin_top = 133.0
+margin_right = 415.0
+margin_bottom = 222.0
+rect_min_size = Vector2( 64, 89 )
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="btn_add_card" to="." method="_on_btn_add_card_pressed"]
+[connection signal="pressed" from="btn_remove_card" to="." method="_on_btn_remove_card_pressed"]

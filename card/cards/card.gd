@@ -5,10 +5,10 @@ export (bool) var is_back
 export (float) var tween_speed = 0.2
 
 onready var card = $t_card
-onready var card_back_resource = preload("res://Cards/backB.png")
+onready var card_back_resource = preload("res://cards/texture/backB.png")
 onready var tween : Tween = $Tween
 
-var card_resource_path = "res://Cards/"
+var card_resource_path = "res://Cards/texture/"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,4 +39,4 @@ func _on_Card_mouse_entered():
 
 
 func _on_Card_mouse_exited():
-	pass # Replace with function body.
+	pass

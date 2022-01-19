@@ -2,37 +2,18 @@
 
 [ext_resource path="res://cards/handCards.tscn" type="PackedScene" id=1]
 [ext_resource path="res://cards/texture/1C.png" type="Texture" id=2]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Control
-
-
-onready var hand_cards = $HandCards
-onready var deck = $deck
-onready var card_preview = $card_preview
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	card_preview.hide()
-	
-func _on_btn_remove_card_pressed():
-	hand_cards.remove_card(hand_cards.cards[1])
-
-
-func _on_btn_add_card_pressed():
-	for i in range(1,3):
-		hand_cards.add_card(deck.position)
-"
+[ext_resource path="res://cards/CardManager.gd" type="Script" id=3]
 
 [node name="CardManager" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = SubResource( 1 )
+script = ExtResource( 3 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="HandCards" parent="." instance=ExtResource( 1 )]
+[node name="hand_card" parent="." instance=ExtResource( 1 )]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -42,42 +23,68 @@ margin_top = -111.0
 margin_right = 15.0
 margin_bottom = -71.0
 
-[node name="btn_add_card" type="Button" parent="."]
-margin_left = 104.118
-margin_top = 166.855
-margin_right = 205.118
-margin_bottom = 199.855
+[node name="deck" type="Node2D" parent="."]
+position = Vector2( 769, 263 )
+
+[node name="card_preview" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -221.0
+margin_top = 38.0
+margin_right = -157.0
+margin_bottom = 127.0
+rect_min_size = Vector2( 64, 89 )
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 32, 89 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button" type="VBoxContainer" parent="."]
+margin_left = 61.0
+margin_top = 187.0
+margin_right = 168.0
+margin_bottom = 294.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_add_card" type="Button" parent="button"]
+margin_top = 19.0
+margin_right = 107.0
+margin_bottom = 39.0
 rect_pivot_offset = Vector2( 20.4934, 64.4198 )
 text = "add card"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btn_remove_card" type="Button" parent="."]
-margin_left = 104.118
-margin_top = 222.918
-margin_right = 205.118
-margin_bottom = 255.918
+[node name="btn_remove_card" type="Button" parent="button"]
+margin_top = 43.0
+margin_right = 107.0
+margin_bottom = 63.0
 rect_pivot_offset = Vector2( 20.4934, 64.4198 )
 text = "remove card"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="deck" type="Node2D" parent="."]
-position = Vector2( 769, 263 )
-
-[node name="card_preview" type="TextureRect" parent="."]
-margin_left = 351.0
-margin_top = 133.0
-margin_right = 415.0
-margin_bottom = 222.0
-rect_min_size = Vector2( 64, 89 )
-rect_scale = Vector2( 3, 3 )
-texture = ExtResource( 2 )
+[node name="btn_preview" type="Button" parent="button"]
+margin_top = 67.0
+margin_right = 107.0
+margin_bottom = 87.0
+rect_pivot_offset = Vector2( 20.4934, 64.4198 )
+text = "preview card"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="btn_add_card" to="." method="_on_btn_add_card_pressed"]
-[connection signal="pressed" from="btn_remove_card" to="." method="_on_btn_remove_card_pressed"]
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="pressed" from="button/btn_add_card" to="." method="_on_btn_add_card_pressed"]
+[connection signal="pressed" from="button/btn_remove_card" to="." method="_on_btn_remove_card_pressed"]
+[connection signal="pressed" from="button/btn_preview" to="." method="_on_btn_preview_pressed"]

@@ -1,14 +1,18 @@
 extends Control
 
+enum CardState { zoomIn, zoomOut, returning, dragging, move, settle }
+
 export (String) var card_name
 export (bool) var is_back
 export (float) var tween_speed = 0.2
+export (CardState) var card_state = CardState.dragging
 
 onready var card = $t_card
 onready var card_back_resource = preload("res://cards/texture/backB.png")
 onready var tween : Tween = $Tween
 
 var card_resource_path = "res://Cards/texture/"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,19 +24,6 @@ func _ready():
 	else:
 		var card_res_file = card_resource_path + card_name + ".png"
 		card.texture = load(card_res_file)
-
-func update_card_position(target_position:Vector2):
-	tween.interpolate_property(self,"rect_position",self.rect_position,target_position,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-	tween.start()
-
-func update_card_rotation(target_rotation : float):
-	tween.interpolate_property(self,"rect_rotation",self.rect_rotation,target_rotation,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-	tween.start()
-
-func update_card_scale(target_scale: Vector2):
-	tween.interpolate_property(self,"rect_scale",self.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-	tween.start()
-
 
 func _on_Card_mouse_entered():
 	print(self.name)

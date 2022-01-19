@@ -62,8 +62,6 @@ func update_card_position():
 		tween.start()
 
 func add_card(pos:Vector2):
-	if tween.is_active():
-		return
 	var card = t_card.instance()
 	hand_card.add_child(card)
 	cards.append(card)

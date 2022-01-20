@@ -155,8 +155,16 @@ func _on_btn_add_card_pressed():
 func _on_btn_remove_card_pressed():
 	remove_card(cards[1])
 
-func _on_btn_preview_pressed():
-	on_card_preview(cards[2])
+func _on_release_area_mouse_exited():
+	if selected_card !=  null and selected_card.is_all_target():
+		pass
+
+func _on_release_area_mouse_entered():
+	if selected_card !=  null and selected_card.is_all_target():
+		# var target_scale = Vector2(2,2)
+		# tween.interpolate_property(selected_card,"rect_scale",selected_card.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+		# tween.start()
+		pass
 
 func _on_Tween_tween_completed(object, key):
 	if card_wait_for_add != 0:

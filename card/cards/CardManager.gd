@@ -113,7 +113,7 @@ func get_card_position(card_index : int) -> Vector2:
 	
 	return Vector2(0,0)
 
-###################### 回调函数 ###################
+#########################################
 
 func on_card_preview(card):
 	card.preview()

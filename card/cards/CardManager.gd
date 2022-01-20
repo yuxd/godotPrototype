@@ -35,7 +35,10 @@ func _process(delta):
 			# _on_card_dragging(selected_card)
 			if selected_card.is_all_target():
 				_on_card_dragging(selected_card)
-				# pass
+				if get_viewport_rect().size.y * 0.8 > get_viewport().get_mouse_position().y:
+					selected_card.prerelease();
+				else:
+					pass
 			else:
 				# 否则，不拖拽，显示选择目标的箭头曲线
 				arrow.reset(click_pisition,get_viewport().get_mouse_position())
@@ -154,17 +157,6 @@ func _on_btn_add_card_pressed():
 
 func _on_btn_remove_card_pressed():
 	remove_card(cards[1])
-
-func _on_release_area_mouse_exited():
-	if selected_card !=  null and selected_card.is_all_target():
-		pass
-
-func _on_release_area_mouse_entered():
-	if selected_card !=  null and selected_card.is_all_target():
-		# var target_scale = Vector2(2,2)
-		# tween.interpolate_property(selected_card,"rect_scale",selected_card.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-		# tween.start()
-		pass
 
 func _on_Tween_tween_completed(object, key):
 	if card_wait_for_add != 0:

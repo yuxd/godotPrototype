@@ -1,6 +1,6 @@
 extends Control
 
-enum CardState { normal, dragging, preview, selected }
+enum CardState { normal, dragging, preview, prerelease }
 enum AbilityTargetType {all, our_all, they_all, our_single, they_single}
 
 export (String) var card_name
@@ -80,6 +80,14 @@ func preview():
 
 func predragging():
 	pass
+
+func prerelease():
+	if card_state != CardState.prerelease:
+		print("prerelease")
+		tween.interpolate_property(card,"rect_scale",
+			card.rect_scale, Vector2(2,2),tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+		tween.start()
+		card_state = CardState.prerelease
 
 func is_all_target() -> bool :
 	match ability_target:

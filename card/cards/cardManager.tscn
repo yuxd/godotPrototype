@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://cards/handCards.tscn" type="PackedScene" id=1]
-[ext_resource path="res://cards/texture/1C.png" type="Texture" id=2]
 [ext_resource path="res://cards/CardManager.gd" type="Script" id=3]
 [ext_resource path="res://cards/bessel_arrow.tscn" type="PackedScene" id=4]
 
@@ -13,8 +12,6 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-offset_x_proportion = 0.4
-rotation_proportion = 5.0
 
 [node name="bessel_arrow" parent="." instance=ExtResource( 4 )]
 
@@ -31,23 +28,6 @@ margin_bottom = 0.0
 [node name="deck" type="Node2D" parent="."]
 position = Vector2( 769, 263 )
 
-[node name="card_preview" type="TextureRect" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -221.0
-margin_top = 38.0
-margin_right = -157.0
-margin_bottom = 127.0
-rect_min_size = Vector2( 64, 89 )
-rect_scale = Vector2( 3, 3 )
-rect_pivot_offset = Vector2( 32, 89 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="button" type="VBoxContainer" parent="."]
 margin_left = 61.0
 margin_top = 187.0
@@ -59,9 +39,9 @@ __meta__ = {
 }
 
 [node name="btn_add_card" type="Button" parent="button"]
-margin_top = 19.0
+margin_top = 31.0
 margin_right = 107.0
-margin_bottom = 39.0
+margin_bottom = 51.0
 rect_pivot_offset = Vector2( 20.4934, 64.4198 )
 text = "add card"
 __meta__ = {
@@ -69,9 +49,9 @@ __meta__ = {
 }
 
 [node name="btn_remove_card" type="Button" parent="button"]
-margin_top = 43.0
+margin_top = 55.0
 margin_right = 107.0
-margin_bottom = 63.0
+margin_bottom = 75.0
 rect_pivot_offset = Vector2( 20.4934, 64.4198 )
 text = "remove card"
 __meta__ = {
@@ -79,6 +59,7 @@ __meta__ = {
 }
 
 [node name="btn_preview" type="Button" parent="button"]
+visible = false
 margin_top = 67.0
 margin_right = 107.0
 margin_bottom = 87.0

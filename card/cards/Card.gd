@@ -8,7 +8,7 @@ export (bool) var is_back
 export (float) var tween_speed = 0.2
 export (CardState) var card_state = CardState.normal
 export (AbilityTargetType) var ability_target = AbilityTargetType.all
-export (Vector2) var preview_scale = Vector2(0.5,0.5)
+export (Vector2) var preview_scale = Vector2(1,1)
 export (Vector2) var preview_position = Vector2(0,10)
 
 onready var card = $t_card
@@ -35,7 +35,10 @@ func _on_Card_mouse_entered():
 
 func _on_Card_mouse_exited():
 	timer.stop()
-	card_manager.selected_card = null
+	if self.is_all_target():
+		card_manager.selected_card = null
+	else:
+		pass
 	if card_state == CardState.preview:
 		preview()
 
@@ -74,6 +77,9 @@ func preview():
 			tween.start()
 			self.card_state = CardState.normal
 			VisualServer.canvas_item_set_z_index(item, 0)
+
+func predragging():
+	pass
 
 func is_all_target() -> bool :
 	match ability_target:

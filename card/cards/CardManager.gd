@@ -11,6 +11,7 @@ onready var deck = $deck
 onready var card_preview = $card_preview
 onready var tween = $Tween
 onready var arrow = $bessel_arrow
+onready var max_card_amount : int = 13
 
 var cards = []
 var card_amount : int = 0
@@ -21,10 +22,12 @@ var click_pisition
 var card_wait_for_add = 0
 var selected_card
 
+var can_release_card : bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	card_preview.rect_pivot_offset = Vector2(card_preview.rect_size.x/2,card_preview.rect_size.y)
-	card_preview.hide()
+#	card_preview.rect_pivot_offset = Vector2(card_preview.rect_size.x/2,card_preview.rect_size.y)
+#	card_preview.hide()
 	update_card_position()
 
 func _process(delta):
@@ -34,23 +37,31 @@ func _process(delta):
 				_on_card_dragging(selected_card)
 				# pass
 			else:
-				# 否则，不拖拽
+				# 否则，不拖拽，显示选择目标的箭头曲线
 				arrow.reset(click_pisition,get_viewport().get_mouse_position())
-				selected_card.card.hide()
+				# selected_card.card.hide()
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if not dragging and event.pressed:
 			dragging = true
-			# arrow.show()
 			click_pisition =  event.position
+			if selected_card !=  null and selected_card.is_all_target():
+				if selected_card.card_state == selected_card.CardState.normal:
+					selected_card.predragging()
 		# Stop dragging if the button is released.
 		if dragging and not event.pressed:
-			dragging = false
 			arrow.hide()
+			# 松开鼠标按键，判断是否可释放
+			dragging = false
 			update_card_position()
 			if selected_card:
+				if selected_card.is_all_target():
+					pass
+				else:
+					pass
 				selected_card = null
+				
 
 func update_card_position():
 	cards = hand_card.get_children()
@@ -65,7 +76,7 @@ func update_card_position():
 		# cards[i].rect_position.x = card_offset * offset_x * offset_x_proportion
 		# 旋转偏移
 		# cards[i].rect_rotation = card_offset * rotation_proportion
-		var target_position = Vector2(card_offset * offset_x * offset_x_proportion , 0)
+		var target_position = Vector2(card_offset * offset_x * offset_x_proportion * max_card_amount/card_amount , 0)
 		var target_rotation = card_offset * rotation_proportion
 		var target_scale = Vector2(1,1)
 

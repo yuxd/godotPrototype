@@ -13,6 +13,8 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+offset_x_proportion = 0.4
+rotation_proportion = 5.0
 
 [node name="bessel_arrow" parent="." instance=ExtResource( 4 )]
 

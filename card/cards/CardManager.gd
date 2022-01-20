@@ -1,7 +1,7 @@
 extends Control
 
-export(float) var offset_x_proportion = 0.2
-export(float) var rotation_proportion = 10
+export(float) var offset_x_proportion = 0.4
+export(float) var rotation_proportion = 5
 export(float) var tween_speed = 0.2
 
 onready var t_card = preload("res://cards/card.tscn")
@@ -29,12 +29,12 @@ func _ready():
 
 func _process(delta):
 	if dragging and selected_card != null:
-		if selected_card != null:
-			_on_card_dragging(selected_card)
-			if selected_card.ability_target == selected_card.AbilityTargetType.all or selected_card.ability_target == selected_card.AbilityTargetType.our_all or selected_card.ability_target == selected_card.AbilityTargetType.they_all:
-				# _on_card_dragging(selected_card)
-				pass
+			# _on_card_dragging(selected_card)
+			if selected_card.is_all_target():
+				_on_card_dragging(selected_card)
+				# pass
 			else:
+				# 否则，不拖拽
 				arrow.reset(click_pisition,get_viewport().get_mouse_position())
 				selected_card.card.hide()
 
@@ -76,7 +76,7 @@ func update_card_position():
 
 		if cards[i].card_manager == null:
 			cards[i].card_manager = self
-		cards[i].card_state = cards[i].CardState.normal
+		# cards[i].card_state = cards[i].CardState.normal
 		cards[i].card.show()
 		
 
@@ -116,20 +116,24 @@ func get_card_position(card_index : int) -> Vector2:
 ###################### 回调函数 ###################
 
 func on_card_preview(card):
-	if tween.is_active():
-		return
-	var target_position = card.rect_position + card.preview_position
-	var target_scale = card.rect_scale + card.preview_scale
-	tween.interpolate_property(card,"rect_position",
-		card.rect_position, target_position,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-	tween.interpolate_property(card,"rect_rotation",
-		card.rect_rotation,0.0,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-	tween.interpolate_property(card,"rect_scale",
-		card.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-	tween.start()
-	card.card_state = card.CardState.preview
+	card.preview()
+	# if tween.is_active():
+	# 	return
+	# var target_position = card.rect_position + card.preview_position
+	# var target_scale = card.rect_scale + card.preview_scale
+	# tween.interpolate_property(card,"rect_position",
+	# 	card.rect_position, target_position,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+	# tween.interpolate_property(card,"rect_rotation",
+	# 	card.rect_rotation,0.0,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+	# tween.interpolate_property(card,"rect_scale",
+	# 	card.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+	# tween.start()
+	# card.card_state = card.CardState.preview
 
 func _on_card_dragging(card):
+	if card.card_state == card.CardState.preview:
+		# 如果当前是预览状态，需要还原一下
+		card.preview()
 	card.rect_rotation = 0
 	card.rect_scale = Vector2(1.2,1.2)
 	card.rect_position = get_viewport().get_mouse_position() - hand_card.rect_position

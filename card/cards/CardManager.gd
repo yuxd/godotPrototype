@@ -118,13 +118,14 @@ func get_card_position(card_index : int) -> Vector2:
 func on_card_preview(card):
 	if tween.is_active():
 		return
-	var preview_position = card_preview.rect_position - hand_card.rect_position
+	var target_position = card.rect_position + card.preview_position
+	var target_scale = card.rect_scale + card.preview_scale
 	tween.interpolate_property(card,"rect_position",
-		card.rect_position, preview_position,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+		card.rect_position, target_position,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 	tween.interpolate_property(card,"rect_rotation",
-		card.rect_rotation,card_preview.rect_rotation,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+		card.rect_rotation,0.0,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 	tween.interpolate_property(card,"rect_scale",
-		card.rect_scale,card_preview.rect_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+		card.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 	tween.start()
 	card.card_state = card.CardState.preview
 

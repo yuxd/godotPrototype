@@ -14,15 +14,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="bessel_arrow" parent="." instance=ExtResource( 4 )]
+
 [node name="hand_card" parent="." instance=ExtResource( 1 )]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -25.0
-margin_top = -111.0
-margin_right = 15.0
-margin_bottom = -71.0
+margin_left = -32.0
+margin_top = -89.0
+margin_right = 32.0
+margin_bottom = 0.0
 
 [node name="deck" type="Node2D" parent="."]
 position = Vector2( 769, 263 )
@@ -85,8 +87,6 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="."]
-
-[node name="bessel_arrow" parent="." instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="button/btn_add_card" to="." method="_on_btn_add_card_pressed"]
 [connection signal="pressed" from="button/btn_remove_card" to="." method="_on_btn_remove_card_pressed"]

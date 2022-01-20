@@ -9,10 +9,11 @@ script/source = "extends Container
 "
 
 [node name="HandCards" type="Container"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 64.0
+margin_bottom = 89.0
 script = SubResource( 1 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 

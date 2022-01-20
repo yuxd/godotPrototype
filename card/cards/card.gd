@@ -8,6 +8,8 @@ export (bool) var is_back
 export (float) var tween_speed = 0.2
 export (CardState) var card_state = CardState.normal
 export (AbilityTargetType) var ability_target = AbilityTargetType.all
+export (Vector2) var preview_scale = Vector2(0.5,0.5)
+export (Vector2) var preview_position = Vector2(0,10)
 
 onready var card = $t_card
 onready var card_back_resource = preload("res://cards/texture/backB.png")
@@ -30,16 +32,27 @@ func _on_Card_mouse_entered():
 	# timer.start()
 	card_manager.selected_card = self
 
-
 func _on_Card_mouse_exited():
 	# timer.stop()
 	card_manager.selected_card = null
 
-
 func _on_Timer_timeout():
+	# preview()
 	if card_state == CardState.normal:
 		card_manager.on_card_preview(self)
 
-
 func _on_Card_gui_input(event:InputEvent):
 	pass
+
+# func preview():
+# 	var target_position = preview_position + rect_position
+# 	var target_scale = rect_scale + preview_scale
+# 	print("preview",target_position,target_scale)
+# 	tween.interpolate_property(self,"rect_position",
+# 		self.rect_position, target_position,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+# 	tween.interpolate_property(self,"rect_rotation",
+# 		self.rect_rotation,0,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+# 	tween.interpolate_property(self,"rect_scale",
+# 		self.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+# 	tween.start()
+# 	card_state = CardState.preview

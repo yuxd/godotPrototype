@@ -12,6 +12,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 card_name = "10S"
+is_back = null
+tween_speed = null
+card_state = null
+ability_target = null
+preview_scale = null
 preview_position = Vector2( 50, 0 )
 
 [node name="t_card" type="TextureRect" parent="."]
@@ -27,10 +32,13 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="Timer" type="Timer" parent="."]
+[node name="timer_preview" type="Timer" parent="."]
 wait_time = 0.3
+
+[node name="timer_release" type="Timer" parent="."]
 
 [connection signal="gui_input" from="." to="." method="_on_Card_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_Card_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Card_mouse_exited"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="timer_preview" to="." method="_on_timer_preview_timeout"]
+[connection signal="timeout" from="timer_release" to="." method="_on_timer_release_timeout"]

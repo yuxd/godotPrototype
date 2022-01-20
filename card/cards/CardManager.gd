@@ -36,9 +36,9 @@ func _process(delta):
 			if selected_card.is_all_target():
 				_on_card_dragging(selected_card)
 				if get_viewport_rect().size.y * 0.8 > get_viewport().get_mouse_position().y:
-					selected_card.prerelease();
+					selected_card.prerelease()
 				else:
-					pass
+					selected_card.predragging()
 			else:
 				# 否则，不拖拽，显示选择目标的箭头曲线
 				arrow.reset(click_pisition,get_viewport().get_mouse_position())
@@ -57,14 +57,17 @@ func _input(event):
 			arrow.hide()
 			# 松开鼠标按键，判断是否可释放
 			dragging = false
-			update_card_position()
 			if selected_card:
 				if selected_card.is_all_target():
-					pass
+					if selected_card.can_release:
+						selected_card.release()
+					else:
+						selected_card.predragging()
 				else:
-					pass
+					pass 
 				selected_card = null
 				
+			update_card_position()			
 
 func update_card_position():
 	cards = hand_card.get_children()

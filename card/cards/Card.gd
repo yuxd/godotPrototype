@@ -14,10 +14,12 @@ export (Vector2) var preview_position = Vector2(0,10)
 onready var card = $t_card
 onready var card_back_resource = preload("res://cards/texture/backB.png")
 onready var tween : Tween = $Tween
-onready var timer = $Timer
+onready var timer_preview = $timer_preview
+onready var timer_release = $timer_release
 
 var card_resource_path = "res://Cards/texture/"
 var card_manager
+var can_release : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,11 +32,11 @@ func _ready():
 		card.texture = load(card_res_file)
 
 func _on_Card_mouse_entered():
-	timer.start()
+	timer_preview.start()
 	card_manager.selected_card = self
 
 func _on_Card_mouse_exited():
-	timer.stop()
+	timer_preview.stop()
 	if self.is_all_target():
 		card_manager.selected_card = null
 	else:
@@ -42,10 +44,6 @@ func _on_Card_mouse_exited():
 	if card_state == CardState.preview:
 		preview()
 
-func _on_Timer_timeout():
-	# preview()
-	if card_state == CardState.normal:
-		card_manager.on_card_preview(self)
 
 func _on_Card_gui_input(event:InputEvent):
 	pass
@@ -79,15 +77,33 @@ func preview():
 			VisualServer.canvas_item_set_z_index(item, 0)
 
 func predragging():
-	pass
+	if card_state != CardState.dragging:
+		# print("prerelease")
+		tween.interpolate_property(card,"rect_scale",
+			card.rect_scale, Vector2(1,1),tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+		tween.start()
+		card_state = CardState.dragging
 
 func prerelease():
 	if card_state != CardState.prerelease:
-		print("prerelease")
+		# print("prerelease")
 		tween.interpolate_property(card,"rect_scale",
-			card.rect_scale, Vector2(2,2),tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+			card.rect_scale, Vector2(1.5,1.5),tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
 		tween.start()
 		card_state = CardState.prerelease
+
+func release():
+	pass
+
+
+func _on_timer_preview_timeout():
+	# preview()
+	if card_state == CardState.normal:
+		card_manager.on_card_preview(self)
+	
+func _on_timer_release_timeout():
+	pass # Replace with function body.
+
 
 func is_all_target() -> bool :
 	match ability_target:
@@ -99,7 +115,8 @@ func is_all_target() -> bool :
 			return true
 		AbilityTargetType.our_single:
 			return false
-		AbilityTargetType.they_ingle:
+		AbilityTargetType.they_single:
 			return false
 		_:
 			return false
+	return false

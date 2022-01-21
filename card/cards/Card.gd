@@ -32,8 +32,9 @@ func _ready():
 		card.texture = load(card_res_file)
 
 func _on_Card_mouse_entered():
-	timer_preview.start()
-	card_manager.selected_card = self
+	if card_manager != null:
+		timer_preview.start()
+		card_manager.selected_card = self
 
 func _on_Card_mouse_exited():
 	timer_preview.stop()
@@ -44,11 +45,8 @@ func _on_Card_mouse_exited():
 	if card_state == CardState.preview:
 		preview()
 
-
-func _on_Card_gui_input(event:InputEvent):
-	pass
-
 func preview():
+	print("preview")
 	var item = card.get_canvas_item()
 	match card_state:
 		CardState.normal:
@@ -77,7 +75,7 @@ func preview():
 			VisualServer.canvas_item_set_z_index(item, 0)
 
 func predragging():
-	if card_state != CardState.dragging:
+	if card_state == CardState.prerelease:
 		# print("prerelease")
 		tween.interpolate_property(card,"rect_scale",
 			card.rect_scale, Vector2(1,1),tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
@@ -98,6 +96,8 @@ func release():
 
 func _on_timer_preview_timeout():
 	# preview()
+	print(card_state)
+	timer_preview.stop()
 	if card_state == CardState.normal:
 		card_manager.on_card_preview(self)
 	
@@ -119,4 +119,3 @@ func is_all_target() -> bool :
 			return false
 		_:
 			return false
-	return false

@@ -8,7 +8,7 @@ onready var t_card = preload("res://cards/card.tscn")
 
 onready var hand_card = $hand_card
 onready var deck = $deck
-onready var card_preview = $card_preview
+# onready var card_preview = $card_preview
 onready var tween = $Tween
 onready var arrow = $bessel_arrow
 onready var max_card_amount : int = 13
@@ -59,10 +59,7 @@ func _input(event):
 			dragging = false
 			if selected_card:
 				if selected_card.is_all_target():
-					if selected_card.can_release:
-						selected_card.release()
-					else:
-						selected_card.predragging()
+					pass
 				else:
 					pass 
 				selected_card = null

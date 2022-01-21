@@ -16,8 +16,7 @@ is_back = null
 tween_speed = null
 card_state = null
 ability_target = null
-preview_scale = null
-preview_position = Vector2( 50, 0 )
+preview_position = Vector2( 0, 0 )
 
 [node name="t_card" type="TextureRect" parent="."]
 margin_right = 64.0
@@ -37,7 +36,6 @@ wait_time = 0.3
 
 [node name="timer_release" type="Timer" parent="."]
 
-[connection signal="gui_input" from="." to="." method="_on_Card_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_Card_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Card_mouse_exited"]
 [connection signal="timeout" from="timer_preview" to="." method="_on_timer_preview_timeout"]

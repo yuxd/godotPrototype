@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://cards/CardRosource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+card_name = "4D"
+tween_speed = 0.2
+preview_scale = Vector2( 1, 1 )
+preview_position = Vector2( 0, 10 )

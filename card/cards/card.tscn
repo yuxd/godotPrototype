@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://cards/Card.gd" type="Script" id=1]
 [ext_resource path="res://cards/texture/1C.png" type="Texture" id=2]
+[ext_resource path="res://cards/CardRosource.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+card_name = "11S"
+tween_speed = 0.2
+preview_scale = Vector2( 1, 1 )
+preview_position = Vector2( 0, 10 )
 
 [node name="Card" type="Control"]
 margin_right = 64.0
@@ -11,8 +19,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-card_name = "10S"
-preview_position = Vector2( 0, 0 )
+card_resource = SubResource( 1 )
 
 [node name="t_card" type="TextureRect" parent="."]
 margin_right = 64.0

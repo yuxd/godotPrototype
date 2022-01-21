@@ -12,10 +12,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 card_name = "10S"
-is_back = null
-tween_speed = null
-card_state = null
-ability_target = null
 preview_position = Vector2( 0, 0 )
 
 [node name="t_card" type="TextureRect" parent="."]

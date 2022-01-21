@@ -46,7 +46,7 @@ func _on_Card_mouse_exited():
 		preview()
 
 func preview():
-	print("preview")
+	# print("preview")
 	var item = card.get_canvas_item()
 	match card_state:
 		CardState.normal:
@@ -96,7 +96,7 @@ func release():
 
 func _on_timer_preview_timeout():
 	# preview()
-	print(card_state)
+	# print(card_state)
 	timer_preview.stop()
 	if card_state == CardState.normal:
 		card_manager.on_card_preview(self)

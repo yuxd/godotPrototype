@@ -1,4 +1,5 @@
 extends Control
+class_name CardManager
 
 export(float) var offset_x_proportion = 0.4
 export(float) var rotation_proportion = 5

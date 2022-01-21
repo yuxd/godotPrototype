@@ -8,6 +8,34 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "AbilityTargetType",
+"language": "GDScript",
+"path": "res://cards/Types/ability_target_type.gd"
+}, {
+"base": "Control",
+"class": "CardManager",
+"language": "GDScript",
+"path": "res://cards/CardManager.gd"
+}, {
+"base": "Resource",
+"class": "CardResource",
+"language": "GDScript",
+"path": "res://cards/CardRosource.gd"
+}, {
+"base": "Reference",
+"class": "CardState",
+"language": "GDScript",
+"path": "res://cards/Types/card_state.gd"
+} ]
+_global_script_class_icons={
+"AbilityTargetType": "",
+"CardManager": "",
+"CardResource": "",
+"CardState": ""
+}
+
 [application]
 
 config/name="Card"

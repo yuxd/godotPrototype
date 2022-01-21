@@ -1,16 +1,19 @@
 extends Resource
+class_name CardResource
 
+var name : String
+export (String) var card_name
+export (bool) var is_back
+export (float) var tween_speed = 0.2
+export (CardState) var card_state = CardState.normal
+export (AbilityTargetType) var ability_target = AbilityTargetType.all
+export (Vector2) var preview_scale = Vector2(1,1)
+export (Vector2) var preview_position = Vector2(0,10)
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var card = $t_card
+onready var card_back_resource = preload("res://cards/texture/backB.png")
+onready var tween : Tween = $Tween
+onready var timer_preview = $timer_preview
+onready var timer_release = $timer_release
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+var card_resource_path = "res://Cards/texture/"

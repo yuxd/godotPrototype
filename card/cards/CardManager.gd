@@ -3,14 +3,18 @@ extends Control
 export(float) var offset_x_proportion = 0.4
 export(float) var rotation_proportion = 5
 export(float) var tween_speed = 0.2
+export(Vector2) var hand_card_position = Vector2(480,510)
 
 onready var t_card = preload("res://cards/card.tscn")
 
 onready var hand_card = $hand_card
 onready var deck = $deck
+onready var cemetery = $cemetery
 # onready var card_preview = $card_preview
 onready var tween = $Tween
 onready var arrow = $bessel_arrow
+onready var tween_remove_card = $tween_remove_card
+
 onready var max_card_amount : int = 13
 
 var cards = []
@@ -59,7 +63,10 @@ func _input(event):
 			dragging = false
 			if selected_card:
 				if selected_card.is_all_target():
-					pass
+					if selected_card.can_release:
+						selected_card.release()
+					else:
+						selected_card.predragging()
 				else:
 					pass 
 				selected_card = null
@@ -110,9 +117,14 @@ func add_cards(n:int,pos:Vector2):
 func remove_card(card):
 	if cards.size() == 0:
 		return
-	cards.erase(card)
-	hand_card.remove_child(card)
-	update_card_position()
+	var target_position = cemetery.rect_position - hand_card.rect_position
+	# var target_rotation = card_offset * rotation_proportion
+	var target_scale = Vector2(0,0)
+	tween_remove_card.interpolate_property(card,"rect_position",card.rect_position,target_position,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+	# tween.interpolate_property(card,"rect_rotation",card.rect_rotation,target_rotation,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+	tween_remove_card.interpolate_property(card,"rect_scale",card.rect_scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+	tween_remove_card.start()
+
 
 func get_card_position(card_index : int) -> Vector2:
 	card_amount = cards.size()
@@ -153,11 +165,18 @@ func _on_card_dragging(card):
 	card.rect_position = get_viewport().get_mouse_position() - hand_card.rect_position
 
 func _on_btn_add_card_pressed():
-	add_cards(2,deck.position)
+	add_cards(2,deck.rect_position)
 
 func _on_btn_remove_card_pressed():
 	remove_card(cards[1])
 
 func _on_Tween_tween_completed(object, key):
 	if card_wait_for_add != 0:
-		_add_card(deck.position)
+		_add_card(deck.rect_position)
+
+
+func _on_tween_remove_card_tween_completed(object, key):
+	if object is Card:
+		cards.erase(object)
+		hand_card.remove_child(object)
+		update_card_position()

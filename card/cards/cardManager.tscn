@@ -12,6 +12,7 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+tween_speed = 0.3
 
 [node name="bessel_arrow" parent="." instance=ExtResource( 4 )]
 
@@ -22,11 +23,32 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -32.0
 margin_top = -89.0
-margin_right = 32.0
-margin_bottom = 0.0
+margin_right = -32.0
+margin_bottom = -89.0
 
-[node name="deck" type="Node2D" parent="."]
-position = Vector2( 769, 263 )
+[node name="cemetery" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -147.0
+margin_top = -179.0
+margin_right = -107.0
+margin_bottom = -139.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="deck" type="Control" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 104.0
+margin_top = -177.0
+margin_right = 104.0
+margin_bottom = -177.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="button" type="VBoxContainer" parent="."]
 margin_left = 61.0
@@ -58,20 +80,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btn_preview" type="Button" parent="button"]
-visible = false
-margin_top = 67.0
-margin_right = 107.0
-margin_bottom = 87.0
-rect_pivot_offset = Vector2( 20.4934, 64.4198 )
-text = "preview card"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Tween" type="Tween" parent="."]
+
+[node name="tween_remove_card" type="Tween" parent="."]
 
 [connection signal="pressed" from="button/btn_add_card" to="." method="_on_btn_add_card_pressed"]
 [connection signal="pressed" from="button/btn_remove_card" to="." method="_on_btn_remove_card_pressed"]
-[connection signal="pressed" from="button/btn_preview" to="." method="_on_btn_preview_pressed"]
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
+[connection signal="tween_completed" from="tween_remove_card" to="." method="_on_tween_remove_card_tween_completed"]

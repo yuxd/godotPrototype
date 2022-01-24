@@ -15,5 +15,15 @@ func _ready():
 	else:
 		print("连接服务器失败")
 
+	send_message(1,{"username":123456})
+
 func revice():
 	pass
+
+func send_message(msg_id : int,msg_data:Dictionary):
+	var json_packed : String = JSON.print(msg_data)
+	# var msg : PoolByteArray
+	var msg_len : int = json_packed.length()
+	conn.put_u32(msg_len)
+	conn.put_u32(msg_id)
+	conn.put_partial_data(json_packed.to_ascii())

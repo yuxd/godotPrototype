@@ -10,3 +10,8 @@ export_presets.cfg
 .mono/
 data_*/
 /mmo_demo/client/.vscode
+/card/.vscode
+/mmo_demo/server/.vscode
+/mmo_demo/server/.idea
+/mmo_demo/client/.vscode
+/mmo_demo/client/.import

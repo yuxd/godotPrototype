@@ -35,6 +35,16 @@ _global_script_classes=[ {
 "path": "res://addons/godot-gameplay-attributes/premade_gameplay_effects/DamageGameplayEffect.gd"
 }, {
 "base": "Node",
+"class": "EventComponent",
+"language": "GDScript",
+"path": "res://event_bus/event_compoent.gd"
+}, {
+"base": "Resource",
+"class": "EventResource",
+"language": "GDScript",
+"path": "res://event_bus/event_res.gd"
+}, {
+"base": "Node",
 "class": "GameplayAttribute",
 "language": "GDScript",
 "path": "res://addons/godot-gameplay-attributes/nodes/GameplayAttribute.gd"
@@ -64,7 +74,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://behavior_tree/composite/composite_Parallel.gd"
 }, {
-"base": "Node",
+"base": "Node2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://player.gd"
@@ -120,6 +130,8 @@ _global_script_class_icons={
 "AttributeRegenGameplayEffect": "",
 "Counter": "",
 "DamageGameplayEffect": "",
+"EventComponent": "",
+"EventResource": "",
 "GameplayAttribute": "",
 "GameplayAttributeMap": "",
 "GameplayEffect": "",

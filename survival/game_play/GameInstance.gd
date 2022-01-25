@@ -3,6 +3,7 @@ extends Node
 var current_scene = null
 var player : Player
 var world_manager : WorldManager
+var entity_manager : EntityManager
 var game_speed = 1
 
 func _ready():
@@ -48,6 +49,12 @@ func _deferred_goto_scene(path):
 
 func get_world_manager() -> WorldManager:
 	if !world_manager:
-		print("cannot found world manager!")
+		printerr("cannot found world manager!")
 		return null
 	return world_manager
+
+func get_entity_manager() -> EntityManager:
+	if !entity_manager:
+		printerr("cannot found entity manager!")
+		return null
+	return entity_manager

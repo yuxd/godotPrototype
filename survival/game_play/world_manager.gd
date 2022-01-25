@@ -8,14 +8,16 @@ const one_day_hour = 24
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameInstance.world_manager = self
+	GameInstance.entity_manager.create_entity()
+	GameInstance.entity_manager.create_build()
 
 func _physics_process(delta):
 	world_time += delta * GameInstance.game_speed
-	print(world_time,"天数：", get_day(),"小时：",get_hour())
+#	print(world_time,"天数：", get_day(),"小时：",get_hour())
 
 func get_day() -> int:
 	return int(world_time / (one_day_hour*hour_second))
 
-func get_hour() ->int:
+func get_hour() -> int:
 	var day = get_day()
-	return (day * one_day_hour - world_time/hour_second) * -1
+	return int((day * one_day_hour - world_time/hour_second) * -1)

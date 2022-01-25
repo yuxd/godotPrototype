@@ -64,6 +64,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://behavior_tree/composite/composite_Parallel.gd"
 }, {
+"base": "Node",
+"class": "Player",
+"language": "GDScript",
+"path": "res://player.gd"
+}, {
+"base": "State",
+"class": "PlayerState",
+"language": "GDScript",
+"path": "res://state_machie/player_state.gd"
+}, {
 "base": "Task",
 "class": "RandomSelector",
 "language": "GDScript",
@@ -116,6 +126,8 @@ _global_script_class_icons={
 "Invert": "",
 "Leaf": "",
 "Parallel": "",
+"Player": "",
+"PlayerState": "",
 "RandomSelector": "",
 "Repeat": "",
 "RestoreGameplayEffect": "",

@@ -57,7 +57,7 @@ _global_script_classes=[ {
 "base": "Task",
 "class": "Leaf",
 "language": "GDScript",
-"path": "res://behavior_tree/leaf_task.gd"
+"path": "res://behavior_tree/leaf/leaf_task.gd"
 }, {
 "base": "Task",
 "class": "Parallel",
@@ -97,7 +97,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "State",
 "language": "GDScript",
-"path": "res://state.gd"
+"path": "res://state_machie/state.gd"
 }, {
 "base": "Node",
 "class": "StateMachine",

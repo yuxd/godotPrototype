@@ -1,21 +1,12 @@
 extends Node
 
 var current_scene = null
-var HP = 3
-var Score = 0
-
-signal change_score
-signal changeHP
+var player : Player
+var world_manager : WorldManager
+var game_speed = 1
 
 func _ready():
-	
-	var random = RandomNumberGenerator.new()
-	random.randomize()
-
-	var root = get_tree().get_root()
-	current_scene = root.get_child(root.get_child_count() - 1)
-	connect("change_score",self,"_change_score")
-	connect("changeHP",self,"_changeHP")	
+	pass
 	
 func goto_scene(path):
 	# This function will usually be called from a signal callback,
@@ -54,11 +45,3 @@ func _deferred_goto_scene(path):
 	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	#（可选）使其与SceneTree.change_scene（）API兼容。
 	get_tree().set_current_scene(current_scene)
-
-func _change_score(n:int):
-	Score += n
-
-func _changeHP(n : int):
-	if HP <= 0:
-		return	
-	HP += n

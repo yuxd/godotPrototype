@@ -35,6 +35,11 @@ _global_script_classes=[ {
 "path": "res://addons/godot-gameplay-attributes/premade_gameplay_effects/DamageGameplayEffect.gd"
 }, {
 "base": "Node",
+"class": "EntityBase",
+"language": "GDScript",
+"path": "res://entities/entity_base.gd"
+}, {
+"base": "Node",
 "class": "EventComponent",
 "language": "GDScript",
 "path": "res://game_play/event_bus/event_compoent.gd"
@@ -79,7 +84,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://entities/player.gd"
 }, {
-"base": "Reference",
+"base": "State",
 "class": "PlayerState",
 "language": "GDScript",
 "path": "res://game_play/state_machie/player_state.gd"
@@ -104,15 +109,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://game_play/behavior_tree/composite/composite_sequence.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "State",
 "language": "GDScript",
 "path": "res://game_play/state_machie/state.gd"
 }, {
-"base": "Reference",
+"base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://game_play/state_machie/state_machine.gd"
+}, {
+"base": "Resource",
+"class": "SurvivalPlayerState",
+"language": "GDScript",
+"path": "res://entities/player_state.gd"
 }, {
 "base": "Node",
 "class": "Task",
@@ -123,6 +133,11 @@ _global_script_classes=[ {
 "class": "TimedGameplayEffect",
 "language": "GDScript",
 "path": "res://addons/godot-gameplay-attributes/nodes/TimedGameplayEffect.gd"
+}, {
+"base": "CanvasLayer",
+"class": "WorldManager",
+"language": "GDScript",
+"path": "res://game_play/world_manager.gd"
 } ]
 _global_script_class_icons={
 "AlwaysFail": "",
@@ -130,6 +145,7 @@ _global_script_class_icons={
 "AttributeRegenGameplayEffect": "",
 "Counter": "",
 "DamageGameplayEffect": "",
+"EntityBase": "",
 "EventComponent": "",
 "EventResource": "",
 "GameplayAttribute": "",
@@ -146,14 +162,20 @@ _global_script_class_icons={
 "Sequence": "",
 "State": "",
 "StateMachine": "",
+"SurvivalPlayerState": "",
 "Task": "",
-"TimedGameplayEffect": ""
+"TimedGameplayEffect": "",
+"WorldManager": ""
 }
 
 [application]
 
 config/name="Survival"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameInstance="*res://game_play/GameInstance.gd"
 
 [editor_plugins]
 

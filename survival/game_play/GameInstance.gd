@@ -45,3 +45,9 @@ func _deferred_goto_scene(path):
 	# Optionally, to make it compatible with the SceneTree.change_scene() API.
 	#（可选）使其与SceneTree.change_scene（）API兼容。
 	get_tree().set_current_scene(current_scene)
+
+func get_world_manager() -> WorldManager:
+	if !world_manager:
+		print("cannot found world manager!")
+		return null
+	return world_manager

@@ -1,5 +1,5 @@
 # Virtual base class for all states.
-class_name State
+class_name StateBase
 extends Node
 
 # Reference to the state machine, to call its `transition_to()` method directly.

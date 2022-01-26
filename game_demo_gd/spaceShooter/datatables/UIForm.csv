@@ -1,0 +1,5 @@
+Id,,AssetName,UIGroupName,AllowMultiInstance,PauseCoveredUIForm
+1,弹出框,DialogForm,Default,TRUE,TRUE
+100,主菜单,MenuForm,Default,FALSE,TRUE
+101,设置,SettingForm,Default,FALSE,TRUE
+102,关于,AboutForm,Default,FALSE,TRUE

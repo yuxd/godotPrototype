@@ -1,0 +1,6 @@
+Id,,AssetName,Priority,Loop,Volume,SpatialBlend,MaxDistance
+10000,玩家子弹,weapon_player,0,FALSE,1,0,100
+10001,敌人子弹,weapon_enemy,0,FALSE,1,0,100
+20000,玩家爆炸,explosion_player,0,FALSE,1,0,100
+20001,敌人爆炸,explosion_enemy,0,FALSE,1,0,100
+20002,小行星爆炸,explosion_asteroid,0,FALSE,1,0,100

@@ -34,3 +34,8 @@ func enter(_msg := {}) -> void:
 # to clean up the state.
 func exit() -> void:
 	pass
+
+func change_state(target_state_name: String, msg: Dictionary = {}) -> void:
+	if !state_machine:
+		return
+	state_machine.transition_to(target_state_name , msg)

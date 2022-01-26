@@ -32,3 +32,6 @@ func _preload_resources() -> void:
     for d in DataTableNames:
         datatable_manager.load_datatable(d,datatable_path)
     print(datatable_manager._datatable_dics)
+
+func update(_delta: float) -> void:
+    state_machine.transition_to("change_scene")

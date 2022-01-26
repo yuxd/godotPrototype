@@ -15,3 +15,7 @@ func load_datatable(name : String, path : String) :
 
 func set_datatable_path(path:String) -> void:
 	_datatable_path = path
+
+#TODO 异步加载数据表
+func load_datatable_asyn(name : String, path : String) :
+	pass

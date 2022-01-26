@@ -8,10 +8,41 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "EntityManager",
+"language": "GDScript",
+"path": "res://addons/QFramework/managers/manager_entity.gd"
+}, {
+"base": "Node",
+"class": "TimeManager",
+"language": "GDScript",
+"path": "res://addons/QFramework/managers/manager_time.gd"
+}, {
+"base": "CanvasLayer",
+"class": "WorldManager",
+"language": "GDScript",
+"path": "res://addons/QFramework/managers/manager_scene.gd"
+} ]
+_global_script_class_icons={
+"EntityManager": "",
+"TimeManager": "",
+"WorldManager": ""
+}
+
 [application]
 
 config/name="Space Shooter"
 config/icon="res://icon.png"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[global]
+
+window=false
 
 [physics]
 
@@ -19,4 +50,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+2d/snapping/use_gpu_pixel_snap=true
+quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"

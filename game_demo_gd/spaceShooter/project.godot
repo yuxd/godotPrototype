@@ -40,6 +40,11 @@ _global_script_classes=[ {
 "path": "res://addons/QFramework/procedure/manager_procedure.gd"
 }, {
 "base": "Node",
+"class": "SceneManager",
+"language": "GDScript",
+"path": "res://addons/QFramework/manager_scene.gd"
+}, {
+"base": "Node",
 "class": "StateBase",
 "language": "GDScript",
 "path": "res://addons/QFramework/state_machie/state_base.gd"
@@ -53,11 +58,6 @@ _global_script_classes=[ {
 "class": "TimeManager",
 "language": "GDScript",
 "path": "res://addons/QFramework/manager_time.gd"
-}, {
-"base": "CanvasLayer",
-"class": "WorldManager",
-"language": "GDScript",
-"path": "res://addons/QFramework/manager_scene.gd"
 } ]
 _global_script_class_icons={
 "CSVDatatableManager": "",
@@ -66,10 +66,10 @@ _global_script_class_icons={
 "PlayerState": "",
 "ProcedureBase": "",
 "ProcedureManager": "",
+"SceneManager": "",
 "StateBase": "",
 "StateMachine": "",
-"TimeManager": "",
-"WorldManager": ""
+"TimeManager": ""
 }
 
 [application]

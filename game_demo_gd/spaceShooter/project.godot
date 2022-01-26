@@ -42,7 +42,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "StateBase",
 "language": "GDScript",
-"path": "res://addons/QFramework/state_machie/state.gd"
+"path": "res://addons/QFramework/state_machie/state_base.gd"
 }, {
 "base": "Node",
 "class": "StateMachine",
@@ -75,11 +75,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Space Shooter"
+run/main_scene="res://scene/main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 QInstance="*res://addons/QFramework/q_instance.gd"
+GameInstance="*res://game_play/game_instance.gd"
 
 [display]
 

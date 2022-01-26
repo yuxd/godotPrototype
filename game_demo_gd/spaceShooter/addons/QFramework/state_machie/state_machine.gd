@@ -7,31 +7,50 @@ extends Node
 signal transitioned(state_name)
 
 # Path to the initial active state. We export it to be able to pick the initial state in the inspector.
-export var initial_state := NodePath()
-
+var initial_state 
 # The current active state. At the start of the game, we get the `initial_state`.
-onready var state: State = get_node(initial_state)
+var current_state: StateBase
+var states = {}
 
+# func _ready() -> void:
+# 	# yield(owner, "ready")
+# 	# The state machine assigns itself to the State objects' state_machine property.
+# 	for child in get_children():
+# 		states[child.name] = child
+# 		child.state_machine = self
+# 	# state.enter()
+func add_state(name,state) -> void:
+	var s = state.new()
+	self.add_child(s)
+	states[name] = s
 
-func _ready() -> void:
-	yield(owner, "ready")
-	# The state machine assigns itself to the State objects' state_machine property.
+func set_initial_state(name) -> void:
+	initial_state = states[name]
+
+func launch() -> void:
+	# 需要手动启动状态机
+	current_state = initial_state
 	for child in get_children():
 		child.state_machine = self
-	state.enter()
-
+	current_state.enter()
 
 # The state machine subscribes to node callbacks and delegates them to the state objects.
 func _unhandled_input(event: InputEvent) -> void:
-	state.handle_input(event)
+	if !current_state:
+		return
+	current_state.handle_input(event)
 
 
 func _process(delta: float) -> void:
-	state.update(delta)
+	if !current_state:
+		return
+	current_state.update(delta)
 
 
 func _physics_process(delta: float) -> void:
-	state.physics_update(delta)
+	if !current_state:
+		return
+	current_state.physics_update(delta)
 
 
 # This function calls the current state's exit() function, then changes the active state,
@@ -41,10 +60,11 @@ func transition_to(target_state_name: String, msg: Dictionary = {}) -> void:
 	# Safety check, you could use an assert() here to report an error if the state name is incorrect.
 	# We don't use an assert here to help with code reuse. If you reuse a state in different state machines
 	# but you don't want them all, they won't be able to transition to states that aren't in the scene tree.
-	if not has_node(target_state_name):
+	if not states.has(target_state_name):
 		return
-
-	state.exit()
-	state = get_node(target_state_name)
-	state.enter(msg)
-	emit_signal("transitioned", state.name)
+	if !current_state:
+		return
+	current_state.exit()
+	current_state = states[target_state_name]
+	current_state.enter(msg)
+	emit_signal("transitioned", target_state_name)

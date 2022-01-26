@@ -8,3 +8,14 @@
 extends StateMachine
 class_name ProcedureManager
 
+func add_procedure(name,procedure):
+	self.add_state(name, procedure)
+
+func add_procedures(procedures:Dictionary):
+	pass
+
+func set_initial_procedure(name):
+	set_initial_state(name)
+
+# func launch_procedure():
+#     self.launch()

@@ -1,0 +1,1 @@
+protoc --go out=. *.proto

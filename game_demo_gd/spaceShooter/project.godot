@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "DatatableManager",
 "language": "GDScript",
-"path": "res://addons/QFramework/managers/manager_datatable.gd"
+"path": "res://addons/QFramework/managers/datatable/manager_datatable.gd"
 }, {
 "base": "Node",
 "class": "EntityManager",
@@ -49,7 +49,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-GameInstance="*res://game_play/game_instance.gd"
+QInstance="*res://addons/QFramework/q_instance.gd"
 
 [display]
 

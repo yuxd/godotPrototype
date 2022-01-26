@@ -1,6 +1,6 @@
 # 在这里完成资源的预加载
-
 extends ProcedureBase
+
 
 var DataTableNames : Array = [
         "Aircraft",
@@ -21,6 +21,9 @@ func enter(_msg := {}) -> void:
 
 func _preload_resources() -> void:
     # TODO 加载配置
+    var err = QInstance.config.load("res://configs/default.cfg")
+    if err != OK:
+        printerr(err)
 
     # 加载数据表
     var datatable_manager = QInstance.get_datatable_manager()

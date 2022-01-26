@@ -5,6 +5,8 @@ const procedure_manager_class = preload("res://addons/QFramework/procedure/manag
 
 var _datatable_manager : DatatableManager
 var _procedure_manager : ProcedureManager
+var config = ConfigFile.new()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass

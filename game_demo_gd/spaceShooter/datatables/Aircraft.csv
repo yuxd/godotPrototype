@@ -1,0 +1,3 @@
+﻿ID,,ThrusterId,WeaponId0,WeaponId1,WeaponId2,ArmorId0,ArmorId1,ArmorId2,DeadEffectId,DeadSoundId
+10000,玩家战机,20000,30000,0,0,40000,0,0,70000,20000
+10002,敌人战机,20001,30001,0,0,40001,0,0,70001,20001

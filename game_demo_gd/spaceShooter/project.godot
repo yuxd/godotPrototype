@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "DatatableManager",
+"class": "CSVDatatableManager",
+"language": "GDScript",
+"path": "res://addons/QFramework/managers/datatable/csv_datatable_manager.gd"
+}, {
+"base": "Node",
+"class": "DatatableManager",
+"language": "GDScript",
+"path": "res://addons/QFramework/managers/manager_datatable.gd"
+}, {
 "base": "Node",
 "class": "EntityManager",
 "language": "GDScript",
@@ -25,6 +35,8 @@ _global_script_classes=[ {
 "path": "res://addons/QFramework/managers/manager_scene.gd"
 } ]
 _global_script_class_icons={
+"CSVDatatableManager": "",
+"DatatableManager": "",
 "EntityManager": "",
 "TimeManager": "",
 "WorldManager": ""

@@ -1,16 +1,17 @@
 extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var _datatable_manager : DatatableManager
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	_datatable_manager = CSVDatatableManager.new()
+	self.add_child(_datatable_manager)
+	_datatable_manager.set_datatable_path("res://datatables/")
+	var d = _datatable_manager.get_datatable("Aircraft")
+	print(d)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func get_datatable_manager() -> DatatableManager:
+	if !_datatable_manager:
+		_datatable_manager = CSVDatatableManager.new()
+		self.add_child(_datatable_manager)
+	return _datatable_manager

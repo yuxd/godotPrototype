@@ -1,5 +1,5 @@
-Id,,AssetName,UIGroupName,AllowMultiInstance,PauseCoveredUIForm
-1,µ¯³ö¿ò,DialogForm,Default,TRUE,TRUE
-100,Ö÷²Ëµ¥,MenuForm,Default,FALSE,TRUE
-101,ÉèÖÃ,SettingForm,Default,FALSE,TRUE
-102,¹ØÓÚ,AboutForm,Default,FALSE,TRUE
+ID,,AssetName,UIGroupName,AllowMultiInstance,PauseCoveredUIForm
+1,å¼¹å‡ºæ¡†,DialogForm,Default,TRUE,TRUE
+100,ä¸»èœå•,MenuForm,Default,FALSE,TRUE
+101,è®¾ç½®,SettingForm,Default,FALSE,TRUE
+102,å…³äº,AboutForm,Default,FALSE,TRUE

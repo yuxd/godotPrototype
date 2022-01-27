@@ -2,19 +2,11 @@ extends KinematicBody2D
 
 var velocity : Vector2
 export (int) var speed = 200
+onready var player_controller = $PlayerController
 
-func get_input():
-	velocity = Vector2()
-	if Input.is_action_pressed("ui_right"):
-		velocity.x += 1
-	if Input.is_action_pressed('ui_left'):
-		velocity.x -= 1
-	if Input.is_action_pressed('ui_down'):
-		velocity.y += 1
-	if Input.is_action_pressed('ui_up'):
-		velocity.y -= 1
-	velocity = velocity.normalized() * speed
-
-func _physics_process(delta):
-	get_input()
+func _ready():
+	player_controller.connect("update_position",self, "_on_upate_position")
+	
+func _on_upate_position(dreciton) -> void:
+	velocity = dreciton * speed
 	velocity = move_and_slide(velocity)

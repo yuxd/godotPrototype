@@ -1,0 +1,2 @@
+extends ProcedureBase
+class_name ProcedureMenu

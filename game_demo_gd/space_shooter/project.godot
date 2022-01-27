@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://addons/QFramework/datatable/csv_datatable_manager.gd"
 }, {
 "base": "Node",
+"class": "ComponentBase",
+"language": "GDScript",
+"path": "res://addons/QFramework/components/component_base.gd"
+}, {
+"base": "Node",
 "class": "DatatableManager",
 "language": "GDScript",
 "path": "res://addons/QFramework/datatable/manager_datatable.gd"
@@ -23,6 +28,11 @@ _global_script_classes=[ {
 "class": "EntityManager",
 "language": "GDScript",
 "path": "res://addons/QFramework/manager_entity.gd"
+}, {
+"base": "Node",
+"class": "PlayerControllerComponent",
+"language": "GDScript",
+"path": "res://addons/QFramework/components/component_player_controller.gd"
 }, {
 "base": "StateBase",
 "class": "PlayerState",
@@ -34,10 +44,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/QFramework/procedure/procedure_base.gd"
 }, {
+"base": "ProcedureBase",
+"class": "ProcedureMain",
+"language": "GDScript",
+"path": "res://game_play/procedures/procedure_main.gd"
+}, {
 "base": "StateMachine",
 "class": "ProcedureManager",
 "language": "GDScript",
 "path": "res://addons/QFramework/procedure/manager_procedure.gd"
+}, {
+"base": "ProcedureBase",
+"class": "ProcedureMenu",
+"language": "GDScript",
+"path": "res://game_play/procedures/procedure_menu.gd"
 }, {
 "base": "Node",
 "class": "SceneManager",
@@ -61,11 +81,15 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "CSVDatatableManager": "",
+"ComponentBase": "",
 "DatatableManager": "",
 "EntityManager": "",
+"PlayerControllerComponent": "",
 "PlayerState": "",
 "ProcedureBase": "",
+"ProcedureMain": "",
 "ProcedureManager": "",
+"ProcedureMenu": "",
 "SceneManager": "",
 "StateBase": "",
 "StateMachine": "",
@@ -91,6 +115,37 @@ window/stretch/aspect="keep"
 [global]
 
 window=false
+
+[input]
+
+ui_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [physics]
 

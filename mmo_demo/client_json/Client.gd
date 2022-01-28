@@ -6,6 +6,9 @@ const server_port : int = 8999
 
 var revice_thread : Thread
 
+const REQ_LOGIN_ID = 1
+
+
 func _ready():
 	conn.connect_to_host(server_IP,server_port)
 	if conn.is_connected_to_host():
@@ -15,9 +18,9 @@ func _ready():
 	else:
 		print("连接服务器失败")
 	
-	var d = {}
-	d["username"] = "weimin"
-	send_message(1,d)
+	# var d = {}
+	# d["username"] = "weimin"
+	# send_message(1,d)
 	
 func revice():
 	pass

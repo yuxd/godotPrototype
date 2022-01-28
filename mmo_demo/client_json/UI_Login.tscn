@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI_Login.gd" type="Script" id=1]
+
+[node name="UI_Login" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lab_username" type="Label" parent="."]
+margin_left = 257.0
+margin_top = 246.0
+margin_right = 358.0
+margin_bottom = 277.0
+text = "username : 
+"
+align = 2
+
+[node name="lab_password" type="Label" parent="."]
+margin_left = 257.0
+margin_top = 277.0
+margin_right = 358.0
+margin_bottom = 308.0
+text = "password : 
+"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lab_error_data" type="Label" parent="."]
+visible = false
+margin_left = 261.0
+margin_top = 217.0
+margin_right = 536.0
+margin_bottom = 248.0
+text = "message_data"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_username" type="TextEdit" parent="."]
+margin_left = 370.0
+margin_top = 240.0
+margin_right = 530.0
+margin_bottom = 266.0
+rect_pivot_offset = Vector2( 80, 14 )
+text = "username"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="te_password" type="TextEdit" parent="."]
+margin_left = 370.0
+margin_top = 271.0
+margin_right = 530.0
+margin_bottom = 297.0
+rect_pivot_offset = Vector2( 80, 14 )
+text = "*****"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_login" type="Button" parent="."]
+margin_left = 448.0
+margin_top = 306.0
+margin_right = 529.0
+margin_bottom = 332.0
+text = "login"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="btn_login" to="." method="_on_btn_login_pressed"]

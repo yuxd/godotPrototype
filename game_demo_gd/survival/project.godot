@@ -47,7 +47,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "EntityManager",
 "language": "GDScript",
-"path": "res://game_play/managers/manager_entity.gd"
+"path": "res://addons/QFramework/managers/manager_entity.gd"
 }, {
 "base": "Node",
 "class": "EventComponent",
@@ -142,7 +142,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "TimeManager",
 "language": "GDScript",
-"path": "res://game_play/managers/manager_time.gd"
+"path": "res://addons/QFramework/managers/manager_time.gd"
 }, {
 "base": "GameplayEffect",
 "class": "TimedGameplayEffect",
@@ -152,7 +152,7 @@ _global_script_classes=[ {
 "base": "CanvasLayer",
 "class": "WorldManager",
 "language": "GDScript",
-"path": "res://game_play/managers/manager_scene.gd"
+"path": "res://addons/QFramework/managers/manager_scene.gd"
 } ]
 _global_script_class_icons={
 "AlwaysFail": "",

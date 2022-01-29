@@ -49,7 +49,7 @@ margin_top = 240.0
 margin_right = 530.0
 margin_bottom = 266.0
 rect_pivot_offset = Vector2( 80, 14 )
-text = "username"
+text = "weimin"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,7 +60,7 @@ margin_top = 271.0
 margin_right = 530.0
 margin_bottom = 297.0
 rect_pivot_offset = Vector2( 80, 14 )
-text = "*****"
+text = "123"
 __meta__ = {
 "_edit_use_anchors_": false
 }

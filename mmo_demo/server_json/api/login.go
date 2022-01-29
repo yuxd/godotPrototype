@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"github.com/aceld/zinx/ziface"
 	"github.com/aceld/zinx/znet"
+	"server_json/core"
+	"server_json/message"
 )
 
 type Login struct {
@@ -15,7 +17,7 @@ func (*Login) Handle(request ziface.IRequest) {
 	msg := string(request.GetData())
 	fmt.Println(msg)
 
-	info := loginInfo{}
+	info := message.LoginInfo{}
 	err := json.Unmarshal(request.GetData(), &info)
 	if err != nil {
 		fmt.Println(err)
@@ -23,18 +25,18 @@ func (*Login) Handle(request ziface.IRequest) {
 	}
 	//fmt.Println(info.UserName)
 	if canLogin(info) {
-
+		acount := core.NewAcount(info.UserName, request.GetConnection())
+		request.GetConnection().SetProperty("Acount", acount)
+		d := &message.RspLogin{
+			CanLogin: true,
+		}
+		acount.SendMessage(101, d)
 	} else {
-		
+
 	}
 }
 
-type loginInfo struct {
-	UserName string `json:"username"`
-	Password string `json:"password"`
-}
-
-func canLogin(info loginInfo) bool {
+func canLogin(info message.LoginInfo) bool {
 	// 正常处理这里需要跟第三方sdk或者数据库交互，这里教学目的，所以省略
 	userInfoMap := make(map[string]string)
 	userInfoMap["weimin"] = "12345"

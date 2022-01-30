@@ -17,5 +17,5 @@ func add_procedures(procedures:Dictionary):
 func set_initial_procedure(name):
 	set_initial_state(name)
 
-# func launch_procedure():
-#     self.launch()
+func get_current_procedure() -> ProcedureBase:
+	return self.current_state as ProcedureBase

@@ -83,6 +83,16 @@ _global_script_classes=[ {
 "class": "TimeManager",
 "language": "GDScript",
 "path": "res://addons/QFramework/manager_time.gd"
+}, {
+"base": "Control",
+"class": "UIFormBase",
+"language": "GDScript",
+"path": "res://addons/QFramework/UI/UI_form_base.gd"
+}, {
+"base": "Node",
+"class": "UIManager",
+"language": "GDScript",
+"path": "res://addons/QFramework/UI/manager_UI.gd"
 } ]
 _global_script_class_icons={
 "CSVDatatableManager": "",
@@ -99,7 +109,9 @@ _global_script_class_icons={
 "SceneManager": "",
 "StateBase": "",
 "StateMachine": "",
-"TimeManager": ""
+"TimeManager": "",
+"UIFormBase": "",
+"UIManager": ""
 }
 
 [application]

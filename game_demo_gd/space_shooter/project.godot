@@ -52,7 +52,7 @@ _global_script_classes=[ {
 "base": "ProcedureBase",
 "class": "ProcedureMain",
 "language": "GDScript",
-"path": "res://game_play/procedures/procedure_main.gd"
+"path": "res://procedures/procedure_main.gd"
 }, {
 "base": "StateMachine",
 "class": "ProcedureManager",
@@ -62,7 +62,7 @@ _global_script_classes=[ {
 "base": "ProcedureBase",
 "class": "ProcedureMenu",
 "language": "GDScript",
-"path": "res://game_play/procedures/procedure_menu.gd"
+"path": "res://procedures/procedure_menu.gd"
 }, {
 "base": "Node",
 "class": "SceneManager",

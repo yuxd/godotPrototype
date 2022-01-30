@@ -3,11 +3,11 @@ extends Node
 
 var procedure_manager : ProcedureManager
 
-const procedure_launch = preload("res://game_play/procedures/procedure_launch.gd")
-const procedure_preload = preload("res://game_play/procedures/procedure_preload.gd")
-const procedure_change_scene = preload("res://game_play/procedures/procedure_change_scene.gd")
-const procedure_main = preload("res://game_play/procedures/procedure_main.gd")
-const procedure_menu = preload("res://game_play/procedures/procedure_menu.gd")
+const procedure_launch = preload("res://procedures/procedure_launch.gd")
+const procedure_preload = preload("res://procedures/procedure_preload.gd")
+const procedure_change_scene = preload("res://procedures/procedure_change_scene.gd")
+const procedure_main = preload("res://procedures/procedure_main.gd")
+const procedure_menu = preload("res://procedures/procedure_menu.gd")
 
 func _ready():
 	procedure_manager = QInstance.get_procedure_manager()

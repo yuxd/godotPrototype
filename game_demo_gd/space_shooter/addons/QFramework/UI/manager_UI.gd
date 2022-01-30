@@ -2,6 +2,7 @@
 extends Node
 class_name UIManager
 
-func show_form(form_path : String) -> void:
+func show_form(form_path : String) -> UIFormBase:
 	var ui_instance = load(form_path).instance()
 	self.add_child(ui_instance)
+	return ui_instance

@@ -1,0 +1,8 @@
+﻿ID,Name,AssetID,Health
+ID,名称,资源ID,生命值
+string,string,string,int
+villager,村民,villager,10
+warrior,战士,warrior,10
+pikeman,枪兵,pikeman,10
+archer,弓箭手,archer,10
+knight,骑士,knight,10

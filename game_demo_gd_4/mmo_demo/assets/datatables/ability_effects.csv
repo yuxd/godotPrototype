@@ -1,0 +1,5 @@
+﻿ID,effect_type,args,effects
+ID,效果类型,参数集,效果集
+string,int,string[],string[]
+damage,0,,
+attackpower10,1,attack_power*10,

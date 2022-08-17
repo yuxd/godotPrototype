@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://chae2pu0ftqfx"]
+
+[ext_resource type="Script" path="res://addons/gd-ecs/Entity.gd" id="1_dd7dy"]
+[ext_resource type="Script" path="res://source/components/c_sprite.gd" id="2_j0xdg"]
+[ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="3_tujud"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ujeu"]
+
+[node name="character" type="CharacterBody2D"]
+script = ExtResource("1_dd7dy")
+
+[node name="C_Sprite" type="Sprite2D" parent="."]
+script = ExtResource("2_j0xdg")
+
+[node name="C_AnimationPlayer" type="AnimationPlayer" parent="."]
+script = ExtResource("3_tujud")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_6ujeu")

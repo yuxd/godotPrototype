@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://bwl0ruxinxkbl"]
+
+[ext_resource type="Script" path="res://addons/gd-ecs/SystemManager.gd" id="1_mybdw"]
+[ext_resource type="Script" path="res://source/systems/s_game_manager.gd" id="2_gfwhs"]
+[ext_resource type="Script" path="res://source/systems/s_building.gd" id="3_q22pp"]
+[ext_resource type="Script" path="res://source/systems/s_order.gd" id="4_r4n1t"]
+[ext_resource type="Script" path="res://source/systems/s_player_input.gd" id="5_tuigl"]
+[ext_resource type="Script" path="res://source/systems/s_action_event_emitter.gd" id="6_6pu6w"]
+[ext_resource type="Script" path="res://source/systems/s_locomotion.gd" id="7_0kmc1"]
+[ext_resource type="Script" path="res://source/systems/s_animation_listener.gd" id="8_024oh"]
+[ext_resource type="Script" path="res://source/systems/s_locomotion_animation.gd" id="9_slls1"]
+
+[node name="SystemManager" type="Node"]
+script = ExtResource("1_mybdw")
+
+[node name="GameManagerSystem" type="Node" parent="."]
+script = ExtResource("2_gfwhs")
+
+[node name="BuildingSystem" type="Node" parent="."]
+script = ExtResource("3_q22pp")
+
+[node name="OrderSystem" type="Node" parent="."]
+script = ExtResource("4_r4n1t")
+
+[node name="PlayerInputSystem" type="Node" parent="."]
+script = ExtResource("5_tuigl")
+
+[node name="ActionEventEmitterSystem" type="Node" parent="."]
+script = ExtResource("6_6pu6w")
+
+[node name="LocomotionSystem" type="Node" parent="."]
+script = ExtResource("7_0kmc1")
+
+[node name="AnimationListenerSystem" type="Node" parent="."]
+script = ExtResource("8_024oh")
+
+[node name="LocomotionAnimationSystem" type="Node" parent="."]
+script = ExtResource("9_slls1")

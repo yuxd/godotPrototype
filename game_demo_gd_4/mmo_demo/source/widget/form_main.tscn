@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj7j2gsmvgmfn"]
+
+[ext_resource type="Script" path="res://source/widget/form_main.gd" id="1_51i1s"]
+[ext_resource type="Script" path="res://source/widget/w_main_body.gd" id="2_pm7im"]
+[ext_resource type="PackedScene" path="res://source/widget/w_buildings.tscn" id="3_cdq8s"]
+
+[sub_resource type="SystemFont" id="SystemFont_kirxs"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
+
+[node name="form_main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_51i1s")
+
+[node name="vb" type="VBoxContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="mc3" type="MarginContainer" parent="vb"]
+custom_minimum_size = Vector2(0, 30)
+offset_right = 1024.0
+offset_bottom = 30.0
+
+[node name="w_main_body" type="MarginContainer" parent="vb"]
+offset_top = 34.0
+offset_right = 1024.0
+offset_bottom = 556.0
+size_flags_vertical = 3
+script = ExtResource("2_pm7im")
+
+[node name="tc_main" type="TabContainer" parent="vb/w_main_body"]
+offset_right = 1024.0
+offset_bottom = 522.0
+tabs_visible = false
+
+[node name="w_buildings" parent="vb/w_main_body/tc_main" instance=ExtResource("3_cdq8s")]
+
+[node name="w_heros" type="MarginContainer" parent="vb/w_main_body/tc_main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="w_world" type="MarginContainer" parent="vb/w_main_body/tc_main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="mc" type="MarginContainer" parent="vb"]
+custom_minimum_size = Vector2(0, 40)
+offset_top = 560.0
+offset_right = 1024.0
+offset_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="hb" type="HBoxContainer" parent="vb/mc"]
+offset_right = 1024.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="tb_main" type="TabBar" parent="vb/mc/hb"]
+offset_right = 1024.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("SystemFont_kirxs")
+tab_count = 3
+tab_0/title = "建筑"
+tab_1/title = "世界"
+tab_2/title = "人事"

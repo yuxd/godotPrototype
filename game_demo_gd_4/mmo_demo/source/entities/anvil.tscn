@@ -1,0 +1,87 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://addons/gd-ecs/Entity.gd" id="1_6507p"]
+[ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_blacksmith_anvil_work.png" id="1_tcmfk"]
+[ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_blacksmith_anvil_work_sd.png" id="2_ht7t4"]
+
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6sna"]
+atlas = ExtResource("1_tcmfk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbjyh"]
+atlas = ExtResource("1_tcmfk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xy4w"]
+atlas = ExtResource("1_tcmfk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7be0"]
+atlas = ExtResource("1_tcmfk")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrnks"]
+atlas = ExtResource("1_tcmfk")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8tii"]
+atlas = ExtResource("1_tcmfk")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjypg"]
+animations = [{
+"frames": [SubResource("AtlasTexture_u6sna"), SubResource("AtlasTexture_cbjyh"), SubResource("AtlasTexture_5xy4w"), SubResource("AtlasTexture_b7be0"), SubResource("AtlasTexture_wrnks"), SubResource("AtlasTexture_j8tii")],
+"loop": true,
+"name": &"work",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vakbp"]
+atlas = ExtResource("2_ht7t4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6vh7"]
+atlas = ExtResource("2_ht7t4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaqsd"]
+atlas = ExtResource("2_ht7t4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgtph"]
+atlas = ExtResource("2_ht7t4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfx1p"]
+atlas = ExtResource("2_ht7t4")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6e0y"]
+atlas = ExtResource("2_ht7t4")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lprsk"]
+animations = [{
+"frames": [SubResource("AtlasTexture_vakbp"), SubResource("AtlasTexture_g6vh7"), SubResource("AtlasTexture_jaqsd"), SubResource("AtlasTexture_qgtph"), SubResource("AtlasTexture_yfx1p"), SubResource("AtlasTexture_h6e0y")],
+"loop": true,
+"name": &"work",
+"speed": 5.0
+}]
+
+[node name="Anvil" type="Node2D"]
+script = ExtResource("1_6507p")
+
+[node name="body" type="AnimatedSprite2D" parent="."]
+frames = SubResource("SpriteFrames_xjypg")
+animation = &"work"
+frame = 4
+playing = true
+metadata/_edit_group_ = true
+
+[node name="shadow" type="AnimatedSprite2D" parent="body"]
+frames = SubResource("SpriteFrames_lprsk")
+animation = &"work"
+frame = 3
+playing = true
+metadata/_edit_lock_ = true

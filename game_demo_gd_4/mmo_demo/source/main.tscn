@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://6ijldb424yxi"]
+
+[ext_resource type="Script" path="res://addons/gd-ecs/Entity.gd" id="1_igumk"]
+[ext_resource type="Script" path="res://source/game_mode.gd" id="1_vhn0y"]
+[ext_resource type="Script" path="res://source/components/c_game_mode.gd" id="2_2ppna"]
+[ext_resource type="PackedScene" path="res://source/procedure/procedure.tscn" id="3_i0235"]
+[ext_resource type="PackedScene" uid="uid://dj7j2gsmvgmfn" path="res://source/widget/form_main.tscn" id="5_hxj4s"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_vhn0y")
+
+[node name="GameMode" type="Node" parent="."]
+script = ExtResource("1_igumk")
+
+[node name="GameModeComponent" type="Node" parent="GameMode"]
+script = ExtResource("2_2ppna")
+
+[node name="ProcedureManager" parent="." instance=ExtResource("3_i0235")]
+
+[node name="form_main" parent="." instance=ExtResource("5_hxj4s")]
+visible = false
+
+[node name="order_group" type="Node" parent="."]
+
+[editable path="ProcedureManager"]

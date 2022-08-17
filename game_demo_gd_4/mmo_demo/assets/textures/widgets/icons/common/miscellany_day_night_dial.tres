@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/common/miscellany_day_night_dial.png" id="1_7ohxf"]
+
+[resource]
+atlas = ExtResource("1_7ohxf")
+region = Rect2(16, 0, 384, 16)

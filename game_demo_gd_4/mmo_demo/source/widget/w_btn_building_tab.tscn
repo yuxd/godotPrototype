@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://source/widget/w_btn_building_tab.gd" id="1_ibuas"]
+
+
+[sub_resource type="SystemFont" id="SystemFont_mtq8g"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
+
+[node name="w_btn_building_tab" type="TextureButton"]
+custom_minimum_size = Vector2(0, 30)
+offset_top = 348.0
+offset_right = 120.0
+offset_bottom = 378.0
+script = ExtResource("1_ibuas")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+offset_right = 120.0
+offset_bottom = 30.0
+alignment = 1
+
+[node name="img_building_icon" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(15, 15)
+offset_left = 34.0
+offset_top = 7.0
+offset_right = 49.0
+offset_bottom = 22.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="lab_buidling_name" type="Label" parent="MarginContainer/HBoxContainer"]
+offset_left = 53.0
+offset_top = 5.0
+offset_right = 85.0
+offset_bottom = 25.0
+size_flags_horizontal = 8
+theme_override_fonts/font = SubResource("SystemFont_mtq8g")
+text = "伐木"
+horizontal_alignment = 1

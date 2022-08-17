@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/cursor_click_effects/cursor_click_effects.png" id="1_vp7v6"]
+
+[resource]
+atlas = ExtResource("1_vp7v6")
+region = Rect2(0, 16, 64, 16)

@@ -603,8 +603,8 @@ Globals="*res://source/globals.gd"
 
 [display]
 
-window/size/viewport_width=384
-window/size/viewport_height=216
+window/size/viewport_width=1296
+window/size/viewport_height=729
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 window/stretch/scale=4.0

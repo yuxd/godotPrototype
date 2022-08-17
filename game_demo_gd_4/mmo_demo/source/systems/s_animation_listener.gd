@@ -41,4 +41,4 @@ func play_animation(entity: Entity, anim_name: String, animation_priority := 0) 
 static func safe_play_animation(anim: AnimationPlayerComponent, anim_name: String) -> void:
 	if anim.has_animation(anim_name):
 		anim.play(anim_name)
-		printerr("safe_play_animation ", anim_name)
+#		printerr("safe_play_animation ", anim_name)

@@ -16,33 +16,23 @@ func _system_physics_process(entities: Array, delta: float) -> void:
 	for e in entities:
 		var input: InputComponent = e.get_component("C_Input")
 		var motion: LocomotionComponent = e.get_component("C_Locomotion")
-
-		var velocity: Vector2 = motion.velocity
+#		var velocity: Vector2 = motion.velocity
 #		var acceleration: Vector2 = motion.acceleration
-		var max_speed: Vector2 = motion.max_speed
-		var direction: Vector2 = get_direction(input)
-		if direction != Vector2.ZERO:
-			direction = direction.normalized()
-#			printerr(direction, e)
+#		var max_speed: Vector2 = motion.max_speed
+		var direction: Vector2 = get_direction(input).normalized()
 		if direction.x > 0:
 			motion.facing = LocomotionComponent.Facing.RIGHT
 		elif direction.x < 0:
 			motion.facing = LocomotionComponent.Facing.LEFT
-#		acceleration += gravity
-		e.velocity =  Utils.calculate_velocity(velocity, max_speed, motion.speed, delta, direction)
-		e.max_slides = max_slides
-		velocity = e.velocity
+#		e.velocity =  Utils.calculate_velocity(velocity, max_speed, motion.speed, delta, direction)
+		e.motion_mode = CharacterBody2D.MotionMode.MOTION_MODE_FLOATING
+		e.velocity = direction * motion.speed
+#		e.max_slides = max_slides
+#		velocity = e.velocity
 #		e.infinite_inertia = infinite_inertia
 		e.move_and_slide()
-		# Apply FRICTION if no player input
-		if direction.x == 0:
-#			velocity.x = lerp(velocity.x, 0, friction * delta)
-#			if abs(velocity.x) < 5:
-				velocity = Vector2.ZERO
-		motion.velocity = velocity
-		if velocity != Vector2.ZERO:
-			printerr(velocity)
-#		motion.max_speed = max_speed
+		motion.velocity = e.velocity
+		printerr(e.velocity)
 
 static func get_direction(input: InputComponent, _top_down := true) -> Vector2:
 	if not input:

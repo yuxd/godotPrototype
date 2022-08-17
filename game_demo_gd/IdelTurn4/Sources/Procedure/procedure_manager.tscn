@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqg6svfod41iq"]
+
+[ext_resource type="Script" path="res://addons/QFramework/procedure/manager_procedure.gd" id="1_2c5c3"]
+
+[node name="ProcedureManager" type="Node"]
+script = ExtResource( "1_2c5c3" )

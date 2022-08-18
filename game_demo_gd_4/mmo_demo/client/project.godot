@@ -600,6 +600,7 @@ config/icon="res://icon.png"
 QInstance="*res://addons/q_framework/q_instance.tscn"
 GameInstance="*res://source/game_instance.gd"
 Globals="*res://source/globals.gd"
+Gateway="*res://server/gateway.gd"
 
 [display]
 

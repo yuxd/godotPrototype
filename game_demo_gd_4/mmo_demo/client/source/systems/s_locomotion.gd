@@ -32,7 +32,7 @@ func _system_physics_process(entities: Array, delta: float) -> void:
 #		e.infinite_inertia = infinite_inertia
 		e.move_and_slide()
 		motion.velocity = e.velocity
-		printerr(e.velocity)
+#		printerr(e.velocity)
 
 static func get_direction(input: InputComponent, _top_down := true) -> Vector2:
 	if not input:

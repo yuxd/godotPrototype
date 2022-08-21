@@ -9,3 +9,11 @@ func _ready():
 
 func _on_tb_main_tab_changed(tab: int):
 	w_main.set_tc_main(tab)
+
+
+func _on_btn_server_pressed():
+	Network.start_server()
+
+
+func _on_btn_client_pressed():
+	Network.start_client()

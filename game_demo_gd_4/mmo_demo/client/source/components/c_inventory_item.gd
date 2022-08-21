@@ -1,20 +1,19 @@
 extends Node
 class_name InventoryItemComponent
 
-var component_name = "c_inventory_item"
-var inst : EntityBase
+var component_name = "C_InventoryItem"
+var inst : Entity
 
 # export (Resource) var _item_resource = null
-export (String) var item_ID := "" setget , _item_ID_get
-export (String) var item_name : String= "item name" setget , _item_name_get
-export (Texture) var item_icon : Texture = null
-export (bool) var can_stack : bool = false
-export (String) var item_type : String = "item type"
-export (String) var item_describe : String = "如果你看到这段文字，证明 item 没有正确加载"
-export (int) var max_stacked :int = 20 # 最大堆叠上限，如果can_stack = false 则无效
-var item_count := 1
-var can_pickup := false setget set_can_pickup
-
+@export var item_ID := ""
+@export var item_name : String= "item name"
+@export var item_icon : Texture = null
+@export var can_stack : bool = false
+@export var item_type : String = "item type"
+@export var item_describe : String = "如果你看到这段文字，证明 item 没有正确加载"
+@export var max_stacked :int = 20 # 最大堆叠上限，如果can_stack = false 则无效
+var item_count : int = 1
+var can_pickup : bool = false
 # signal on_pickup(Initiator)
 # signal on_active_item(Initiator)
 # signal on_dropped(Initiator)
@@ -39,18 +38,6 @@ func init_by_resource(res : Resource):
 
 func init_by_dic(data: Dictionary):
 	pass
-
-func _component_ready():
-	self.connect("on_pickup",self,"on_pickup")
-	# if _item_resource == null:
-	# 	print_debug("_item_resource is null")
-		
-	# 	if not _item_resource is ItemResource:
-	# 		print_debug("_item_resource is not ItemResource class")
-	
-	# var component_manager : EntityBase = self.get_parent()
-	if self.inst:
-		inst.add_tag("inventory_item")
 
 # func get_item_resource() -> Resource:
 # 	if not _item_resource is ItemResource:
@@ -104,9 +91,6 @@ func on_pickup(pickup_guy):
 	# var pickup_guy_inventory = pickup_guy.get_component("inventory")
 	# var is_success : bool = pickup_guy_inventory.give_item_empty_slot(self.owner)
 	# if is_success:
-
-func on_used(initiator):
-	self.emit_signal("on_used", initiator)
 
 func _item_name_get() -> String:
 	return item_name

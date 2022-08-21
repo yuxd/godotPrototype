@@ -1,0 +1,41 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dpr4vyjsgabwv"]
+
+[sub_resource type="GDScript" id="GDScript_5xieh"]
+script/source = "class_name EventResource # , 'res://EventResource/event_icon.svg'
+# 自定义资源
+extends Resource
+
+# 自定义信号
+signal custom_event
+# signal custom_action(invobject,target,doer,message)
+@export var destination : String = null
+
+func subscribe_signal(subscribe_func : Callable):
+	self.custom_event.connect(subscribe_func)
+
+
+func unsubscribe_signal(unsubscribe_func : Callable):
+	self.custom_event.disconnect(unsubscribe_func)
+
+
+func push_signal(message) -> void:
+	self.custom_event.emit(message)
+
+# Subscribes to a destination. callback_name is the method to be called.
+func subscribe(callback: Callable) -> void:
+	var dest_signal: String = get_destination_signal()
+	if not is_connected(dest_signal, callback):
+		# warning-ignore: return_value_discarded
+		connect(dest_signal, callback)
+
+
+func get_destination_signal() -> String:
+	var dest_signal: String = \"EventBus|%s\" % destination
+	if not has_user_signal(dest_signal):
+		add_user_signal(dest_signal)
+	return dest_signal
+"
+
+[resource]
+script = SubResource("GDScript_5xieh")
+destination = "add_item"

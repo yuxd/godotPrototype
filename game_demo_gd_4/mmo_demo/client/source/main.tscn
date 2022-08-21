@@ -22,4 +22,6 @@ visible = false
 
 [node name="order_group" type="Node" parent="."]
 
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+
 [editable path="ProcedureManager"]

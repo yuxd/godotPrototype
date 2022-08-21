@@ -2,18 +2,19 @@ package main
 
 import (
 	"fmt"
+	"server_json/api"
+
 	"github.com/aceld/zinx/ziface"
 	"github.com/aceld/zinx/znet"
-	"server_json/api"
 )
 
 func OnConnectionAdd(conn ziface.IConnection) {
-	fmt.Println("=====> Player PidID = ", " arrived ====")
+	fmt.Println("=====> Player PidID = ", conn.GetConnID(), " arrived ====")
 
 }
 
 func OnConnectionLost(conn ziface.IConnection) {
-	fmt.Println("====> Player ", " left =====")
+	fmt.Println("====> Player ", conn.GetConnID(), " left =====")
 }
 
 func main() {

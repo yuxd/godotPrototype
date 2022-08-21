@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/aceld/zinx/ziface"
 	"github.com/aceld/zinx/znet"
+	"server_json/api"
 )
 
 func OnConnectionAdd(conn ziface.IConnection) {
@@ -22,6 +23,9 @@ func main() {
 	// 注册客户端链接 建立和丢失的HOOK处理函数
 	s.SetOnConnStart(OnConnectionAdd)
 	s.SetOnConnStop(OnConnectionLost)
+
+	// 注册路由
+	s.AddRouter(1, &api.Login{})
 
 	// 运行服务器
 	s.Serve()

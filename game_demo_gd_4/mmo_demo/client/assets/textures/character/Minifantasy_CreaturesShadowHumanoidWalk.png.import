@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1fdvwx4n5eox"
-path="res://.godot/imported/Minifantasy_CreaturesShadowHumanoidWalk.png-ab73a1660a684b1e19dd7f77cdd19eb3.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowHumanoidWalk.png-1641c662821c2aa3d5e7345e79dab868.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/dungeon/_Shadows/Human, Orc/Minifantasy_CreaturesShadowHumanoidWalk.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowHumanoidWalk.png-ab73a1660a684b1e19dd7f77cdd19eb3.ctex"]
+source_file="res://assets/textures/character/Minifantasy_CreaturesShadowHumanoidWalk.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowHumanoidWalk.png-1641c662821c2aa3d5e7345e79dab868.ctex"]
 
 [params]
 

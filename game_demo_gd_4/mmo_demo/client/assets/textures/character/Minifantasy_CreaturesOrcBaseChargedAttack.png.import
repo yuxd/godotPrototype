@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhvtlxlp6wj83"
-path="res://.godot/imported/Minifantasy_CreaturesOrcBaseChargedAttack.png-501ebc9456808b48012cb627345cf474.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesOrcBaseChargedAttack.png-728c73d4999aee3b6d8f8a865ef08022.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/dungeon/Orc/Minifantasy_CreaturesOrcBaseChargedAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesOrcBaseChargedAttack.png-501ebc9456808b48012cb627345cf474.ctex"]
+source_file="res://assets/textures/character/Minifantasy_CreaturesOrcBaseChargedAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesOrcBaseChargedAttack.png-728c73d4999aee3b6d8f8a865ef08022.ctex"]
 
 [params]
 

@@ -1,1 +1,6 @@
 res://source/main.tscn
+res://source/network/client.gd
+res://source/entities/character.tscn
+res://source/network/network.gd
+res://source/components/c_sprite.gd
+res://source/game_mode.gd

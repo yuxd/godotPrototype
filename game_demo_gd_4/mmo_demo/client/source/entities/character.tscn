@@ -17,3 +17,5 @@ script = ExtResource("3_tujud")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6ujeu")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]

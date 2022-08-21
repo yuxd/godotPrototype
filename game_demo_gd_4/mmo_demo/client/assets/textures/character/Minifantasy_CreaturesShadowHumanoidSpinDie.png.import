@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx8rmctbj4apy"
-path="res://.godot/imported/Minifantasy_CreaturesShadowHumanoidSpinDie.png-cc9ed651e543c215098478929f260219.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowHumanoidSpinDie.png-807122c353f458ad8673ce074bc237f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/dungeon/_Shadows/Human, Orc/Minifantasy_CreaturesShadowHumanoidSpinDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowHumanoidSpinDie.png-cc9ed651e543c215098478929f260219.ctex"]
+source_file="res://assets/textures/character/Minifantasy_CreaturesShadowHumanoidSpinDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowHumanoidSpinDie.png-807122c353f458ad8673ce074bc237f7.ctex"]
 
 [params]
 

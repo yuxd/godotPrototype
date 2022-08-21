@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddutpoteg3krt"
-path="res://.godot/imported/Minifantasy_CreaturesOrcBaseWalk.png-a2f759eea22b641fabe08ab149b2af90.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesOrcBaseWalk.png-388a66ce2fc5db3fc6b94bb8ac43e34e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/dungeon/Orc/Minifantasy_CreaturesOrcBaseWalk.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesOrcBaseWalk.png-a2f759eea22b641fabe08ab149b2af90.ctex"]
+source_file="res://assets/textures/character/Minifantasy_CreaturesOrcBaseWalk.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesOrcBaseWalk.png-388a66ce2fc5db3fc6b94bb8ac43e34e.ctex"]
 
 [params]
 

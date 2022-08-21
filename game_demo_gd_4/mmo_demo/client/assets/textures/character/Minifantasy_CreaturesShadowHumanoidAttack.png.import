@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv615wehcy3e"
-path="res://.godot/imported/Minifantasy_CreaturesShadowHumanoidAttack.png-d012e2f9771acc51d38debaa9e8c9e1c.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowHumanoidAttack.png-216f9f57e8b028ff0b22693f6ab47cfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/dungeon/_Shadows/Human, Orc/Minifantasy_CreaturesShadowHumanoidAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowHumanoidAttack.png-d012e2f9771acc51d38debaa9e8c9e1c.ctex"]
+source_file="res://assets/textures/character/Minifantasy_CreaturesShadowHumanoidAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowHumanoidAttack.png-216f9f57e8b028ff0b22693f6ab47cfb.ctex"]
 
 [params]
 

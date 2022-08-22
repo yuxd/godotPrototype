@@ -1,5 +1,4 @@
-
-extends Reference
+extends RefCounted
 
 const Utils = preload("./Utils.gd")
 const Callback = preload("./Callback.gd")

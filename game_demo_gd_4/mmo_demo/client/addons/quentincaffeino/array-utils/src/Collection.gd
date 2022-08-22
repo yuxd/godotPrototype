@@ -1,4 +1,3 @@
-
 extends "Utils.gd"
 
 const Iterator = preload("res://addons/quentincaffeino/iterator/src/Iterator.gd")
@@ -11,7 +10,7 @@ var _collection
 var _iterationCurrent = 0
 
 # @var  int
-var length setget _set_readonly, length
+var length : set = _set_readonly, get = _length_getter
 
 
 # @param  Variant  collection
@@ -291,7 +290,7 @@ func get_collection():
 
 
 # @returns  int
-func length():
+func _length_getter():
 	return self._collection.size()
 
 

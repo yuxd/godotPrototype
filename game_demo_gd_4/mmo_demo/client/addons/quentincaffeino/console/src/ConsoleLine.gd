@@ -26,7 +26,8 @@ func _ready():
 	# Console keyboard control
 	self.set_process_input(true)
 
-	self.connect('text_entered', self, 'execute')
+	self.connect('text_entered', self.execute)
+#	self.text_entered.connect(self.execute)
 
 
 # @param  InputEvent
@@ -139,7 +140,7 @@ static func _parse_commands(input):
 # @returns  Dictionary
 static func _parse_command(rawCommand):
 	var name = ''
-	var arguments = PoolStringArray([])
+	var arguments = PackedStringArray([])
 
 	var beginning = 0  # int
 	var openQuote  # String|null

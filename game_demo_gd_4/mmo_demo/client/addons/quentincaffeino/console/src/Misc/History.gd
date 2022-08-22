@@ -1,4 +1,3 @@
-
 extends 'res://addons/quentincaffeino/array-utils/src/QueueCollection.gd'
 
 

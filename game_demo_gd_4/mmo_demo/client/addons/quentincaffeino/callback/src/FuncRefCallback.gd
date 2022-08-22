@@ -1,9 +1,9 @@
-
 extends "./AbstractCallback.gd"
 
 
 # @param  FuncRef  target
-func _init(target).(target, Utils.Type.METHOD):
+func _init(target):
+	super(target, Utils.Type.METHOD)
 	pass
 
 

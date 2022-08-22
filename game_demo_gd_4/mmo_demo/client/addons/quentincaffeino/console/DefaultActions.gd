@@ -1,4 +1,3 @@
-
 # @const  String
 const CONSOLE_TOGGLE = "quentincaffeino_console_toggle"
 # @const  Dictionary

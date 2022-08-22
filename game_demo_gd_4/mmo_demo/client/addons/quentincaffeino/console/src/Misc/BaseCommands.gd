@@ -1,5 +1,4 @@
-
-extends Reference
+extends RefCounted
 
 
 # @var  Console

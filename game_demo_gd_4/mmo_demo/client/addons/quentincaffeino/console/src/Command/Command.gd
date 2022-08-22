@@ -1,5 +1,4 @@
-
-extends Reference
+extends RefCounted
 
 const Argument = preload('../Argument/Argument.gd')
 

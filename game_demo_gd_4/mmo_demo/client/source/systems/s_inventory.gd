@@ -1,7 +1,7 @@
 extends System
 class_name InventorySystem
 
-var event_item_changed : EventResource = load("res://source/events/event_item_changed.tres").new()
+@onready var event_item_changed : EventResource = preload("res://source/events/event_item_changed.tres")
 
 signal item_chanage(slot_index, item, new_item)
 signal item_swap(old_slot_index, new_slot_index)

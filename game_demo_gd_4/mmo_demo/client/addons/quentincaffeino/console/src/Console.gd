@@ -1,4 +1,3 @@
-
 extends CanvasLayer
 
 const BaseCommands = preload('Misc/BaseCommands.gd')
@@ -26,10 +25,10 @@ signal command_executed(command)
 signal command_not_found(name)
 
 # @var  History
-var History = preload('Misc/History.gd').new(100) setget _set_readonly
+var History = preload('Misc/History.gd').new(100) : set = _set_readonly
 
 # @var  Logger
-var Log = preload('Misc/Logger.gd').new() setget _set_readonly
+var Log = preload('Misc/Logger.gd').new() : set = _set_readonly
 
 # @var  Command/CommandService
 var _command_service
@@ -39,7 +38,8 @@ var _command_service
 var _erase_bb_tags_regex
 
 # @var  bool
-var is_console_shown = true setget _set_readonly
+var is_console_shown = true :
+	set = _set_readonly
 
 # @var  bool
 var consume_input = true
@@ -49,10 +49,10 @@ var previous_focus_owner = null
 
 
 ### Console nodes
-onready var _console_box = $ConsoleBox
-onready var Text = $ConsoleBox/Container/ConsoleText setget _set_readonly
-onready var Line = $ConsoleBox/Container/ConsoleLine setget _set_readonly
-onready var _animation_player = $ConsoleBox/AnimationPlayer
+@onready var _console_box = $ConsoleBox
+@onready var Text = $ConsoleBox/Container/ConsoleText : set = _set_readonly
+@onready var Line = $ConsoleBox/Container/ConsoleLine : set = _set_readonly
+@onready var _animation_player = $ConsoleBox/AnimationPlayer
 
 
 func _init():
@@ -68,11 +68,12 @@ func _ready():
 	# Follow console output (for scrolling)
 	self.Text.set_scroll_follow(true)
 	# React to clicks on console urls
-	self.Text.connect('meta_clicked', self.Line, 'set_text')
+	self.Text.connect('meta_clicked', self.Line.set_text)
 
 	# Hide console by default
 	self._console_box.hide()
-	self._animation_player.connect("animation_finished", self, "_toggle_animation_finished")
+	self._animation_player.animation_finished.connect(self._toggle_animation_finished)
+#	self._animation_player.connect("animation_finished", self._toggle_animation_finished)
 	self.toggle_console()
 
 	# Console keyboard control
@@ -138,7 +139,7 @@ func remove_command(name):
 func write(message):
 	message = str(message)
 	if self.Text:
-		self.Text.append_bbcode(message)
+		self.Text.append_text(message)
 	print(self._erase_bb_tags_regex.sub(message, '', true))
 
 # @param    String  message
@@ -146,7 +147,7 @@ func write(message):
 func write_line(message = ''):
 	message = str(message)
 	if self.Text:
-		self.Text.append_bbcode(message + '\n')
+		self.Text.append_text(message + '\n')
 	print(self._erase_bb_tags_regex.sub(message, '', true))
 
 

@@ -620,11 +620,12 @@ GameInstance="*res://source/game_instance.gd"
 Globals="*res://source/globals.gd"
 Client="*res://source/network/client.gd"
 Network="*res://source/network/network.gd"
+Console="*res://addons/quentincaffeino/console/src/Console.tscn"
 
 [display]
 
-window/size/viewport_width=1296
-window/size/viewport_height=729
+window/size/viewport_width=1037
+window/size/viewport_height=583
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 window/stretch/scale=4.0
@@ -633,7 +634,7 @@ window/size/test_height=600
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/q_framework/plugin.cfg")
+enabled=PackedStringArray("res://addons/q_framework/plugin.cfg", "res://addons/quentincaffeino/console/plugin.cfg")
 
 [importer_defaults]
 
@@ -672,6 +673,26 @@ ui_down={
 jump={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"unicode":0,"echo":false,"script":null)
+]
+}
+quentincaffeino_console_toggle={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
+}
+quentincaffeino_console_autocomplete={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
+}
+quentincaffeino_console_history_up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
+}
+quentincaffeino_console_history_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 

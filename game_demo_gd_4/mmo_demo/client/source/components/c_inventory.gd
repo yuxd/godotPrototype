@@ -2,6 +2,7 @@ extends Node
 class_name InventoryComponent
 
 var component_name = "C_Inventory"
+
 var inst : Entity = null
 
 const MAX_SLOTS = 12
@@ -20,11 +21,6 @@ var ignore_scan_go_in_container : bool = true
 var open_containers : Dictionary = {}
 var selected_slot_index : int = 0 
 #	: set = _set_selected_slot
-
-
-func _init():
-	self.resource_name = "inventory"
-
 
 func _ready():
 #	yield(owner,"_enter_tree")

@@ -17,3 +17,6 @@ func enter(_msg := {}) -> void:
 	var system_manager = p_system_manager.instantiate()
 	game_main.add_child(system_manager)
 	form_main = GameInstance.ui_manager.show_form("form_main", game_main)
+
+	var game_main : GameMode = owner.get_parent()
+	game_main.start_game()

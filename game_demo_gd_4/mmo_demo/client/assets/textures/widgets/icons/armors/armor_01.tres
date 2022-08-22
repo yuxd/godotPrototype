@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/armors/icons_armor.png" id="1_m1sim"]
 
+
 [resource]
 atlas = ExtResource("1_m1sim")
 region = Rect2(8, 24, 8, 8)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" path="res://assets/textures/widgets/cursors/cursors.png" id="1_mc4pk"]
 
+
 [resource]
 atlas = ExtResource("1_mc4pk")
 region = Rect2(35, 3, 16, 16)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" path="res://assets/textures/widgets/menus/sources/menus_switches.png" id="1_hc7v4"]
 
+
 [resource]
 atlas = ExtResource("1_hc7v4")
 region = Rect2(0, 0, 16, 16)

@@ -9,6 +9,7 @@ signal custom_event
 
 # Emits a payload to a destination. Any subscribed components will receive the payload
 func emit(payload) -> void:
+	printerr("EventReource emit: ", self.destination)
 	if not payload is Array:
 		payload = [payload]
 	payload.insert(0, get_destination_signal())
@@ -22,7 +23,8 @@ func unsubscribe(unsubscribe_func : Callable):
 
 
 # Subscribes to a destination. callback_name is the method to be called.
-func subscribe(callback: Callable) -> void:
+func subscribe(callback : Callable):
+	printerr("EventReource subscribe: ", self.destination)	
 	var dest_signal: String = get_destination_signal()
 	if not is_connected(dest_signal, callback):
 		# warning-ignore: return_value_discarded

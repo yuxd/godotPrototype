@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_alchemy_idle_sd.png" id="3_6yt85"]
 [ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_alchemy_work_sd.png" id="4_4k7oi"]
 
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfp1k"]
 atlas = ExtResource("1_hitge")
 region = Rect2(0, 0, 32, 32)

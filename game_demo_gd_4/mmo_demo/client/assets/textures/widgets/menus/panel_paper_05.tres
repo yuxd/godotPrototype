@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" path="res://assets/textures/widgets/menus/sources/menus_panels_and_slots.png" id="1_ecwi1"]
 
+
 [resource]
 atlas = ExtResource("1_ecwi1")
 region = Rect2(160, 48, 48, 48)

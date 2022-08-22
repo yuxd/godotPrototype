@@ -15,8 +15,9 @@ func init_qramework():
 	ui_manager = QInstance.ui_manager
 	ui_manager.init_ui_manager(Globals.widget_path, Globals.widget_path)
 
-func create_player_character():
+func create_player_character() -> Entity:
 	player_character = create_entity("player_character")
+	return player_character
 
 func create_building(building_id : String) -> Entity:
 	var building : Entity = load("res://entities/building.tscn").instantiate()

@@ -5,7 +5,15 @@ var buildings : Dictionary = {}
 var persons : Dictionary = {}
 
 @onready var order_group : Node = $order_group
+var event_add_item : EventResource = load("res://source/events/event_add_item.tres")
 
-func _ready():
+func start_game():
 	GameInstance.game_main = self
-	GameInstance.create_player_character()
+	var player = GameInstance.create_player_character()
+	var tool = GameInstance.create_entity("tool")
+	GameInstance.game_main.add_child(tool)
+#	event_add_item.subscribe(_add_item)	
+	event_add_item.emit([player, tool])
+
+func _add_item(player, tool):
+	printerr("game mode _add_item")

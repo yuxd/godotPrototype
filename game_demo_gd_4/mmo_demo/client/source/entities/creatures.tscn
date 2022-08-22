@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" path="res://assets/textures/creatures/creature_beast_bat_dmg.png" id="4_fwqhf"]
 [ext_resource type="Texture2D" path="res://assets/textures/creatures/creature_beast_bat_die.png" id="5_l8key"]
 
+
 [sub_resource type="Animation" id="Animation_77dxx"]
 length = 0.001
 tracks/0/type = "value"

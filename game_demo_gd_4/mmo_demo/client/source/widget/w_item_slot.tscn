@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://8djgnvgm0g5n"]
+
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/menus/panel_01.tres" id="1_ucjji"]
+
+[node name="item_slot" type="MarginContainer"]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+metadata/_edit_use_custom_anchors = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("1_ucjji")

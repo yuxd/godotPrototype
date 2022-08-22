@@ -2,6 +2,7 @@ extends System
 class_name InventorySystem
 
 @onready var event_item_changed : EventResource = preload("res://source/events/event_item_changed.tres")
+var event_add_item : EventResource = load("res://source/events/event_add_item.tres")
 
 signal item_chanage(slot_index, item, new_item)
 signal item_swap(old_slot_index, new_slot_index)
@@ -10,6 +11,16 @@ signal seleced_slot_change(old_slot_index, new_slot_index)
 func _init():
 	system_name = "S_Inventory"
 	requirements = ["C_Inventory"]
+
+
+func _system_ready():
+	printerr("system_ready inventory system!")
+	event_add_item.subscribe(_add_item)
+
+
+func _add_item(inventory_entity, item_entity):
+	printerr("inventorySystem _add_item: ", inventory_entity, item_entity)
+	
 
 static func add_item(inventory_entity : Entity, item_entity : Entity) -> bool:
 	'''

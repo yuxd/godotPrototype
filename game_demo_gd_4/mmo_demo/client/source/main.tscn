@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://source/game_mode.gd" id="1_vhn0y"]
 [ext_resource type="Script" path="res://source/components/c_game_mode.gd" id="2_2ppna"]
 [ext_resource type="PackedScene" path="res://source/procedure/procedure.tscn" id="3_i0235"]
-[ext_resource type="PackedScene" uid="uid://dj7j2gsmvgmfn" path="res://source/widget/form_main.tscn" id="5_hxj4s"]
+[ext_resource type="PackedScene" uid="uid://k654tutgnp8h" path="res://source/widget/form_main.tscn" id="5_hxj4s"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_vhn0y")

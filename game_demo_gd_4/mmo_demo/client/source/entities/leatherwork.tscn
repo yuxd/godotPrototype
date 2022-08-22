@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_leatherwork_prop_work_sd.png" id="4_03hhn"]
 
 
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vfnk"]
 atlas = ExtResource("2_g7lqh")
 region = Rect2(0, 0, 32, 32)

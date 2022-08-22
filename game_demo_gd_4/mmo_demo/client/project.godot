@@ -624,11 +624,9 @@ Console="*res://addons/quentincaffeino/console/src/Console.tscn"
 
 [display]
 
-window/size/viewport_width=1037
-window/size/viewport_height=583
-window/stretch/mode="viewport"
-window/stretch/aspect="ignore"
-window/stretch/scale=4.0
+window/size/viewport_width=311
+window/size/viewport_height=175
+window/stretch/mode="canvas_items"
 window/size/test_width=1024
 window/size/test_height=600
 

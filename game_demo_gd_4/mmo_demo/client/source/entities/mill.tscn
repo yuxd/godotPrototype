@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" path="res://assets/textures/tilesets/wooden_plank_windmill/Indoor/Minifantasy_TownsIIWindmillPremadeIndoorMill.png" id="1_5ahhn"]
 
 
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_sq6qq"]
 atlas = ExtResource("1_5ahhn")
 region = Rect2(0, 0, 56, 72)

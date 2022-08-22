@@ -1,6 +1,6 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bcrxplfst1svt"]
+[gd_resource type="AtlasTexture" load_steps=2 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cgxc3lld0c32s" path="res://assets/textures/gathering/mining/gather_mining_sd.png" id="1_ir3gk"]
+[ext_resource type="Texture2D" path="res://assets/textures/gathering/mining/gather_mining_sd.png" id="1_ir3gk"]
 
 [resource]
 atlas = ExtResource("1_ir3gk")

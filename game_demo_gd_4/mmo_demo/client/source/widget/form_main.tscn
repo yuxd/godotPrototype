@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj7j2gsmvgmfn"]
+[gd_scene load_steps=6 format=3 uid="uid://k654tutgnp8h"]
 
 [ext_resource type="Script" path="res://source/widget/form_main.gd" id="1_51i1s"]
 [ext_resource type="Script" path="res://source/widget/w_main_body.gd" id="2_pm7im"]
 [ext_resource type="PackedScene" path="res://source/widget/w_buildings.tscn" id="3_cdq8s"]
+[ext_resource type="PackedScene" uid="uid://g8ig3t3yy8f" path="res://source/widget/w_item_slot.tscn" id="4_jwq76"]
 
 [sub_resource type="SystemFont" id="SystemFont_kirxs"]
 font_names = PackedStringArray("SimSun")
@@ -99,6 +100,69 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "client"
 metadata/_edit_layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 59.5
+offset_top = -16.0
+offset_right = -59.5
+metadata/_edit_group_ = true
+metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = true
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+offset_right = 192.0
+offset_bottom = 16.0
+theme_override_constants/separation = 0
+
+[node name="item_slot" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+
+[node name="item_slot2" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 16.0
+offset_right = 32.0
+
+[node name="item_slot3" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 32.0
+offset_right = 48.0
+
+[node name="item_slot4" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 48.0
+offset_right = 64.0
+
+[node name="item_slot5" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 64.0
+offset_right = 80.0
+
+[node name="item_slot6" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 80.0
+offset_right = 96.0
+
+[node name="item_slot7" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 96.0
+offset_right = 112.0
+
+[node name="item_slot8" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 112.0
+offset_right = 128.0
+
+[node name="item_slot9" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 128.0
+offset_right = 144.0
+
+[node name="item_slot10" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 144.0
+offset_right = 160.0
+
+[node name="item_slot11" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 160.0
+offset_right = 176.0
+
+[node name="item_slot12" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 176.0
+offset_right = 192.0
 
 [connection signal="pressed" from="btn_server" to="." method="_on_btn_server_pressed"]
 [connection signal="pressed" from="btn_client" to="." method="_on_btn_client_pressed"]

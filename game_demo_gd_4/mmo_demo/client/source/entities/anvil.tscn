@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_blacksmith_anvil_work_sd.png" id="2_ht7t4"]
 
 
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6sna"]
 atlas = ExtResource("1_tcmfk")
 region = Rect2(0, 0, 32, 32)

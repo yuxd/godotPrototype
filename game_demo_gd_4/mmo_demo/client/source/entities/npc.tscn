@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" path="res://assets/textures/NPCs/_shadow/npc_walk_sd.png" id="5_3yyr4"]
 [ext_resource type="Texture2D" path="res://assets/textures/NPCs/_shadow/npc_die_sd.png" id="6_c26d2"]
 
+
 [sub_resource type="Animation" id="Animation_doo2s"]
 length = 0.001
 tracks/0/type = "value"

@@ -21,10 +21,6 @@ var can_pickup : bool = false
 # signal on_remove(Initiator)
 signal on_used(Initiator)
 
-func _init():
-	self.resource_name = "inventory_item"
-	# self.name = "inventory_item"
-
 func init_by_resource(res : Resource):
 	if res == null or not res is ItemData:
 		assert(false)

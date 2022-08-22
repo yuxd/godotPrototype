@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl8ynadlneqrm"
-path="res://.godot/imported/Minifantasy_DungeonCandleLight.png-0be9f7e8d4d9b6869cc4f521798c4bf2.ctex"
+path="res://.godot/imported/Minifantasy_DungeonCandleLight.png-e00f1983ac88ce69e58b1e576136a214.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/dungeon/Decoration/Minifantasy_DungeonCandleLight.png"
-dest_files=["res://.godot/imported/Minifantasy_DungeonCandleLight.png-0be9f7e8d4d9b6869cc4f521798c4bf2.ctex"]
+source_file="res://assets/textures/decoration/Minifantasy_DungeonCandleLight.png"
+dest_files=["res://.godot/imported/Minifantasy_DungeonCandleLight.png-e00f1983ac88ce69e58b1e576136a214.ctex"]
 
 [params]
 

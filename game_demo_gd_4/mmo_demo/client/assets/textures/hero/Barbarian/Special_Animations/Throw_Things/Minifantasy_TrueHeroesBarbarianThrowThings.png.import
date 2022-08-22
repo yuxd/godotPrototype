@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhsygtu2xgnf8"
-path="res://.godot/imported/gather_mining.png-73ff4c97e6002baedb88ad4211fdfa34.ctex"
+uid="uid://biupb04y4spsm"
+path="res://.godot/imported/Minifantasy_TrueHeroesBarbarianThrowThings.png-224bcbe8d32f00602dd0c25730de426f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/gathering/gather_mining.png"
-dest_files=["res://.godot/imported/gather_mining.png-73ff4c97e6002baedb88ad4211fdfa34.ctex"]
+source_file="res://assets/textures/hero/Barbarian/Special_Animations/Throw_Things/Minifantasy_TrueHeroesBarbarianThrowThings.png"
+dest_files=["res://.godot/imported/Minifantasy_TrueHeroesBarbarianThrowThings.png-224bcbe8d32f00602dd0c25730de426f.ctex"]
 
 [params]
 

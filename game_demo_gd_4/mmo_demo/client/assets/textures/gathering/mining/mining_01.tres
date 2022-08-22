@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dxi7flik6e2k7"]
+
+[ext_resource type="Texture2D" uid="uid://dhsygtu2xgnf8" path="res://assets/textures/gathering/mining/gather_mining.png" id="1_41bkg"]
+
+[resource]
+atlas = ExtResource("1_41bkg")
+region = Rect2(24, 8, 8, 8)

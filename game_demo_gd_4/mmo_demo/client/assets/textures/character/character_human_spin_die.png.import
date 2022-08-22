@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmpemqcl8vbd3"
-path="res://.godot/imported/character_humain_spin_die.png-09f3bdba6aa92bafa42842eccedb16a2.ctex"
+path="res://.godot/imported/character_human_spin_die.png-c185cd902672d730bdc1da8bffd5a50c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/character/character_humain_spin_die.png"
-dest_files=["res://.godot/imported/character_humain_spin_die.png-09f3bdba6aa92bafa42842eccedb16a2.ctex"]
+source_file="res://assets/textures/character/character_human_spin_die.png"
+dest_files=["res://.godot/imported/character_human_spin_die.png-c185cd902672d730bdc1da8bffd5a50c.ctex"]
 
 [params]
 

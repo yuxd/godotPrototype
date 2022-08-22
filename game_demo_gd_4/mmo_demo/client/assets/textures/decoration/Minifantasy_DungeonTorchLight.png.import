@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7uh0se0dpoa6"
-path="res://.godot/imported/Minifantasy_DungeonTorchLight.png-34a7f2a7da1065f4f3833f6f6af04668.ctex"
+path="res://.godot/imported/Minifantasy_DungeonTorchLight.png-20272978647566bd8626dbf212ba508a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/dungeon/Decoration/Minifantasy_DungeonTorchLight.png"
-dest_files=["res://.godot/imported/Minifantasy_DungeonTorchLight.png-34a7f2a7da1065f4f3833f6f6af04668.ctex"]
+source_file="res://assets/textures/decoration/Minifantasy_DungeonTorchLight.png"
+dest_files=["res://.godot/imported/Minifantasy_DungeonTorchLight.png-20272978647566bd8626dbf212ba508a.ctex"]
 
 [params]
 

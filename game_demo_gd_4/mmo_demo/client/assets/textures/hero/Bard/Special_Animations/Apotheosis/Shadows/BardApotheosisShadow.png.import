@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgxc3lld0c32s"
-path="res://.godot/imported/gather_mining_sd.png-67184f8e4b2332eeba8f10ded89bb46e.ctex"
+uid="uid://dd34onouksbx4"
+path="res://.godot/imported/BardApotheosisShadow.png-3bb63900aa0ddefbb9f506d076d6b9d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/gathering/gather_mining_sd.png"
-dest_files=["res://.godot/imported/gather_mining_sd.png-67184f8e4b2332eeba8f10ded89bb46e.ctex"]
+source_file="res://assets/textures/hero/Bard/Special_Animations/Apotheosis/Shadows/BardApotheosisShadow.png"
+dest_files=["res://.godot/imported/BardApotheosisShadow.png-3bb63900aa0ddefbb9f506d076d6b9d1.ctex"]
 
 [params]
 

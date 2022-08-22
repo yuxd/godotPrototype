@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8cc5nsfdagm6"
-path="res://.godot/imported/icons_tools.png-593dc8d43ed4bb1d41cb2a7c2ad5cd38.ctex"
+uid="uid://bt4t71bvt8d6x"
+path="res://.godot/imported/Minifantasy_TrueHeroesRogueDmg.png-93edc182644d9a66a0a424b9269bbb18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/widgets/icons/icons_tools.png"
-dest_files=["res://.godot/imported/icons_tools.png-593dc8d43ed4bb1d41cb2a7c2ad5cd38.ctex"]
+source_file="res://assets/textures/hero/Rogue/General_Animations/Minifantasy_TrueHeroesRogueDmg.png"
+dest_files=["res://.godot/imported/Minifantasy_TrueHeroesRogueDmg.png-93edc182644d9a66a0a424b9269bbb18.ctex"]
 
 [params]
 

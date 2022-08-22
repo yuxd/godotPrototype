@@ -1,7 +1,0 @@
-res://source/widget/form_main.tscn
-res://source/systems/system_manager.tscn
-res://source/systems/s_inventory.gd
-res://source/components/c_inventory.gd
-res://addons/q_framework/event/event_resource.gd
-res://source/events/event_add_item.tres
-res://source/components/c_inventory_item.gd

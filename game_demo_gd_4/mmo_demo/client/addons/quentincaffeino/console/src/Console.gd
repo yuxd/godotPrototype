@@ -72,8 +72,8 @@ func _ready():
 
 	# Hide console by default
 	self._console_box.hide()
-	self._animation_player.animation_finished.connect(self._toggle_animation_finished)
-#	self._animation_player.connect("animation_finished", self._toggle_animation_finished)
+#	self._animation_player.animation_finished.connect(self._toggle_animation_finished)
+	self._animation_player.connect("animation_finished", self._toggle_animation_finished)
 	self.toggle_console()
 
 	# Console keyboard control
@@ -175,7 +175,6 @@ func toggle_console():
 
 	is_console_shown = !self.is_console_shown
 	emit_signal("toggled", is_console_shown)
-
 	return self
 
 

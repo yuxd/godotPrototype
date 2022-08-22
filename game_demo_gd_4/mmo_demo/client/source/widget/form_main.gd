@@ -12,8 +12,9 @@ func _on_tb_main_tab_changed(tab: int):
 
 
 func _on_btn_server_pressed():
-	Network.start_server()
-
+#	Network.start_server()
+	pass
 
 func _on_btn_client_pressed():
-	Network.start_client()
+#	Network.start_client()
+	pass

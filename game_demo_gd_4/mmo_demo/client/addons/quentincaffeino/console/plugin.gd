@@ -15,7 +15,6 @@ const ACTIONS = [
 	DefaultActions.console_history_down_props
 ]
 
-
 func _enter_tree():
 	self.add_autoload_singleton(PLUGIN_NAME, PLUGIN_PATH)
 

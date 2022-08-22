@@ -100,6 +100,7 @@ static func create_resource(resource_name : String, data_row : String) -> Resour
 static func load_datatables(datatables : Array) -> void:
 	await QInstance.datatable_manager.load_datatables_async(datatables)
 
+
 static func create_entity(entity_name : String) -> Entity:
 	var entity_path := Globals.entity_path + entity_name + ".tscn"
 	assert(ResourceLoader.exists(entity_path))

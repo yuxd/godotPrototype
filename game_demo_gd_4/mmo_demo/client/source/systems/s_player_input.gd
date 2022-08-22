@@ -21,4 +21,4 @@ static func update_input_state(input: InputComponent) -> void:
 	input.state[Globals.InputAction.MOVE_DOWN] = Input.is_action_pressed("ui_down")
 	input.state[Globals.InputAction.MOVE_LEFT] = Input.is_action_pressed("ui_left")
 	input.state[Globals.InputAction.MOVE_RIGHT] = Input.is_action_pressed("ui_right")
-	input.state[Globals.InputAction.JUMP] = Input.is_action_pressed("jump")
+#	input.state[Globals.InputAction.JUMP] = Input.is_action_pressed("jump")

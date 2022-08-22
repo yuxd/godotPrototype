@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwl0ruxinxkbl"]
+[gd_scene load_steps=11 format=3 uid="uid://ckbxk3ofnndxd"]
 
-[ext_resource type="Script" path="res://addons/gd-ecs/SystemManager.gd" id="1_mybdw"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/SystemManager.gd" id="1_mybdw"]
 [ext_resource type="Script" path="res://source/systems/s_game_manager.gd" id="2_gfwhs"]
 [ext_resource type="Script" path="res://source/systems/s_building.gd" id="3_q22pp"]
 [ext_resource type="Script" path="res://source/systems/s_player_input.gd" id="5_tuigl"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://source/systems/s_animation_listener.gd" id="8_024oh"]
 [ext_resource type="Script" path="res://source/systems/s_locomotion_animation.gd" id="9_slls1"]
 [ext_resource type="Script" path="res://source/systems/s_inventory.gd" id="10_8rb7u"]
+[ext_resource type="Script" path="res://source/systems/s_scene_manager.gd" id="10_bhoeo"]
 
 [node name="SystemManager" type="Node"]
 script = ExtResource("1_mybdw")
@@ -36,3 +37,6 @@ script = ExtResource("9_slls1")
 
 [node name="InventorySystem" type="Node" parent="."]
 script = ExtResource("10_8rb7u")
+
+[node name="SceneManagerSystem" type="Node" parent="."]
+script = ExtResource("10_bhoeo")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://chae2pu0ftqfx"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://addons/gd-ecs/Entity.gd" id="1_dd7dy"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_dd7dy"]
 [ext_resource type="Script" path="res://source/components/c_sprite.gd" id="2_j0xdg"]
 [ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="3_tujud"]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=22 format=3]
 
-[ext_resource type="Script" path="res://addons/gd-ecs/Entity.gd" id="1_61bi2"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_61bi2"]
 [ext_resource type="Script" path="res://source/components/c_quest_system.gd" id="1_kwdo3"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/character_human_idle.png" id="2_x5e6l"]
+[ext_resource type="Texture2D" uid="uid://3r3hrbnhwawg" path="res://assets/textures/character/character_human_idle.png" id="2_x5e6l"]
 [ext_resource type="Script" path="res://source/components/c_input.gd" id="3_8uvn8"]
 [ext_resource type="Script" path="res://source/components/c_player.gd" id="4_utbpu"]
 [ext_resource type="Script" path="res://source/components/c_locomotion.gd" id="5_fm4yf"]
@@ -10,8 +10,8 @@
 [ext_resource type="Script" path="res://source/components/c_locomotion_animation.gd" id="7_74ufu"]
 [ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="7_sg47u"]
 [ext_resource type="Script" path="res://source/components/c_jump.gd" id="10_dx7w0"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/character_human_walk.png" id="10_enhka"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/character_human_mining.png" id="11_faop7"]
+[ext_resource type="Texture2D" uid="uid://huc7fq36mrj7" path="res://assets/textures/character/character_human_walk.png" id="10_enhka"]
+[ext_resource type="Texture2D" uid="uid://cyi4hr2lbfr8j" path="res://assets/textures/character/character_human_mining.png" id="11_faop7"]
 [ext_resource type="Script" path="res://source/components/c_inventory.gd" id="13_2358o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gk6o1"]

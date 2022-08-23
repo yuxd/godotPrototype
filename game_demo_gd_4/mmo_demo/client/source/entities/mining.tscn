@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://bb48pyxb25hpi"]
 
 [ext_resource type="Texture2D" path="res://assets/textures/gathering/mining/mining_01.tres" id="1_h4li8"]
 [ext_resource type="Script" path="res://source/components/c_sprite.gd" id="2_7gnm3"]
 [ext_resource type="Texture2D" path="res://assets/textures/gathering/mining/mining_01_sd.tres" id="3_fcbkk"]
 
-[node name="mining" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_uafvi"]
+radius = 4.12311
+
+[node name="mining" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="SpriteComponent" type="Sprite2D" parent="."]
 texture = ExtResource("1_h4li8")
@@ -12,3 +16,6 @@ script = ExtResource("2_7gnm3")
 
 [node name="shadow" type="Sprite2D" parent="SpriteComponent"]
 texture = ExtResource("3_fcbkk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uafvi")

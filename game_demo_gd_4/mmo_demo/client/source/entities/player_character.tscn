@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://blsxtodgcjt6a"]
+[gd_scene load_steps=23 format=3 uid="uid://blsxtodgcjt6a"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_61bi2"]
 [ext_resource type="Script" path="res://source/components/c_quest_system.gd" id="1_kwdo3"]
@@ -316,6 +316,8 @@ _data = {
 "walk": SubResource("Animation_etx3x")
 }
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ubfp6"]
+
 [node name="player_character" type="CharacterBody2D"]
 script = ExtResource("1_61bi2")
 metadata/_edit_group_ = true
@@ -359,3 +361,6 @@ script = ExtResource("7_sg47u")
 
 [node name="C_Inventory" type="Node" parent="."]
 script = ExtResource("13_2358o")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_ubfp6")

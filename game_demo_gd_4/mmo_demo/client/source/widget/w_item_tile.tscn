@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://db1yga2r1uwws"]
+
+[ext_resource type="Texture2D" uid="uid://b1lux3ik22qip" path="res://assets/textures/widgets/icons/tools/tool_01.tres" id="1_nrivw"]
+[ext_resource type="Script" path="res://source/widget/w_item_tile.gd" id="1_w6irh"]
+
+[sub_resource type="SystemFont" id="SystemFont_jvbvf"]
+font_names = PackedStringArray("SimSun")
+
+[node name="w_item_tile" type="MarginContainer"]
+offset_right = 32.0
+offset_bottom = 32.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_w6irh")
+
+[node name="CenterContainer" type="MarginContainer" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="img_item" type="TextureRect" parent="CenterContainer"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 26.0
+offset_bottom = 26.0
+texture = ExtResource("1_nrivw")
+
+[node name="lab_item_count" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 12.0
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = SubResource("SystemFont_jvbvf")
+theme_override_font_sizes/font_size = 0
+text = "1"
+vertical_alignment = 2

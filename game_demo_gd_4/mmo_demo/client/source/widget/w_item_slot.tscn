@@ -1,17 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://8djgnvgm0g5n"]
+[gd_scene load_steps=6 format=3 uid="uid://b5u2yv4sdnxsk"]
 
+[ext_resource type="Script" path="res://source/widget/w_item_slot.gd" id="1_3foy4"]
 [ext_resource type="Texture2D" path="res://assets/textures/widgets/menus/panel_01.tres" id="1_ucjji"]
+[ext_resource type="PackedScene" uid="uid://db1yga2r1uwws" path="res://source/widget/w_item_tile.tscn" id="3_r3cff"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dtgrb"]
+
+[sub_resource type="SystemFont" id="SystemFont_nvhmx"]
+font_names = PackedStringArray("SimSun")
 
 [node name="item_slot" type="MarginContainer"]
-custom_minimum_size = Vector2(16, 16)
-offset_right = 16.0
-offset_bottom = 16.0
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 size_flags_vertical = 3
+script = ExtResource("1_3foy4")
 metadata/_edit_use_custom_anchors = true
+metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 16.0
-offset_bottom = 16.0
+offset_right = 32.0
+offset_bottom = 32.0
 texture = ExtResource("1_ucjji")
+
+[node name="lab_key" type="Label" parent="."]
+material = SubResource("CanvasItemMaterial_dtgrb")
+offset_right = 8.0
+offset_bottom = 20.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_nvhmx")
+text = "+"
+
+[node name="selected" type="MarginContainer" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="w_item_tile" parent="." instance=ExtResource("3_r3cff")]
+scale = Vector2(1, 1)
+
+[node name="img_invalid" type="TextureRect" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0

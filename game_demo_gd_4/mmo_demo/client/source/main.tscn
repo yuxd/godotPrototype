@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_igumk"]
 [ext_resource type="Script" path="res://source/game_mode.gd" id="1_vhn0y"]
 [ext_resource type="Script" path="res://source/components/c_game_mode.gd" id="2_2ppna"]
-[ext_resource type="PackedScene" path="res://source/procedure/procedure.tscn" id="3_i0235"]
+[ext_resource type="PackedScene" uid="uid://cybyi8amkkles" path="res://source/procedure/procedure.tscn" id="3_i0235"]
 [ext_resource type="PackedScene" uid="uid://k654tutgnp8h" path="res://source/widget/form_main.tscn" id="5_hxj4s"]
 
 [node name="main" type="Node2D"]
@@ -23,5 +23,6 @@ visible = false
 [node name="order_group" type="Node" parent="."]
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("..")
 
 [editable path="ProcedureManager"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://cybyi8amkkles"]
 
 [ext_resource type="Script" path="res://addons/q_framework/state_machie/state_machine.gd" id="1_ti2r4"]
 [ext_resource type="Script" path="res://source/procedure/procedure_launch.gd" id="2_8wsur"]

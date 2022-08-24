@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://fa26v7wvxq60"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_gh7ix"]
-[ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/tools/tool_01.tres" id="2_driln"]
+[ext_resource type="Texture2D" uid="uid://b1lux3ik22qip" path="res://assets/textures/widgets/icons/tools/tool_01.tres" id="2_driln"]
 [ext_resource type="Script" path="res://source/components/c_inventory_item.gd" id="2_thl21"]
 [ext_resource type="Script" path="res://source/components/c_sprite.gd" id="3_1ovrw"]
 
@@ -15,8 +15,12 @@ script = ExtResource("1_gh7ix")
 texture = ExtResource("2_driln")
 script = ExtResource("3_1ovrw")
 
-[node name="InventoryItemComponent" type="Node" parent="."]
-script = ExtResource("2_thl21")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jm8eo")
+
+[node name="InventoryItemComponent" type="Node" parent="."]
+script = ExtResource("2_thl21")
+item_name = "锤子"
+item_icon = ExtResource("2_driln")
+item_type = "tool"
+item_describe = "锤子，一种工具，或者一种语气助词"

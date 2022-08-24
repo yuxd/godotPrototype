@@ -144,11 +144,11 @@ static func give_item(inventory_entity : Entity, item_entity : Entity, slot_inde
 	# active_item = inventory_item
 #	emit_signal("item_chanage", slot_index, old_item, inventory_item)
 	var event_item_changed : EventResource = load("res://source/events/event_item_changed.tres")
-	event_item_changed.emit([inventory_entity, slot_index, old_item, item_entity])
+	event_item_changed.emit([inventory_entity, slot_index, old_item, item])
 	var event_remove_from_scene :EventResource = load("res://source/events/event_remove_from_scene.tres")
 	event_remove_from_scene.emit(item_entity)
 	# 获得道具，指定slot
-	print_debug("give item ", item, " on ", inventory,"slot_index: ", slot_index)
+	print_debug("give item ", item, " on ", inventory, "slot_index: ", slot_index)
 
 
 static func remove_selected_item(inventory_entity : Entity):

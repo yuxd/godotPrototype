@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyi7yqx6fi6wa"
-path="res://.godot/imported/keyboard_mouse.png-8c90d408df17a786aa6af256c84c7a3c.ctex"
+uid="uid://vkebferrh5h6"
+path="res://.godot/imported/miscellany_clock.png-df80662bd9be8052ca7df5a83bf644b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/widgets/icons/common/keyboard_mouse.png"
-dest_files=["res://.godot/imported/keyboard_mouse.png-8c90d408df17a786aa6af256c84c7a3c.ctex"]
+source_file="res://assets/textures/widgets/icons/common/source/miscellany_clock.png"
+dest_files=["res://.godot/imported/miscellany_clock.png-df80662bd9be8052ca7df5a83bf644b2.ctex"]
 
 [params]
 

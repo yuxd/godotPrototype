@@ -2,8 +2,6 @@
 
 [ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/common/source/icons_GUI.png" id="1_wetsk"]
 
-
-
 [resource]
 atlas = ExtResource("1_wetsk")
-region = Rect2(24, 8, 8, 8)
+region = Rect2(40, 47, 8, 8)

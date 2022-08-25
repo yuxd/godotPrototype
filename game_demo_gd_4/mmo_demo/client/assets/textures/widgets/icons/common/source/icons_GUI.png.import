@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://220os0mb2d6b"
-path="res://.godot/imported/miscellany_day_night_dial.png-3b58ffe92a92df073c92d8e9d72e074d.ctex"
+uid="uid://0mpl8mje2luu"
+path="res://.godot/imported/icons_GUI.png-ffeeaf0bff698ad943b7cf72568a319c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/widgets/icons/common/miscellany_day_night_dial.png"
-dest_files=["res://.godot/imported/miscellany_day_night_dial.png-3b58ffe92a92df073c92d8e9d72e074d.ctex"]
+source_file="res://assets/textures/widgets/icons/common/source/icons_GUI.png"
+dest_files=["res://.godot/imported/icons_GUI.png-ffeeaf0bff698ad943b7cf72568a319c.ctex"]
 
 [params]
 

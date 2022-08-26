@@ -3,7 +3,7 @@ extends Node
 var ui_manager : UIManager
 var game_main : GameMode
 
-var player_character : Entity
+var player_character : Entity : set = _on_player_cha_changed
 
 func _enter_tree():
 	pass
@@ -113,3 +113,9 @@ static func create_entity(entity_name : String) -> Entity:
 static func create_order() -> void:
 	var order = Node.new()
 	GameInstance.game_main.order_group.add_child(order)
+
+
+func _on_player_cha_changed(value : Entity):
+	var event : EventResource = load("res://source/events/event_player_cha_changed.tres")
+	event.emit([player_character, value])
+	player_character = value

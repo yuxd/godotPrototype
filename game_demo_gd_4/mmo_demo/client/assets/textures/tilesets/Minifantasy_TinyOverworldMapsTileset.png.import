@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lgg72w44q3fb"
-path="res://.godot/imported/Minifantasy_MapsMountains.png-acd55825c6729851bef0a85befcd63f0.ctex"
+uid="uid://8m2oatl8b8vo"
+path="res://.godot/imported/Minifantasy_TinyOverworldMapsTileset.png-e44354e3c5e547bc5639b3b2efe871ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/tilesets/Minifantasy_MapsMountains.png"
-dest_files=["res://.godot/imported/Minifantasy_MapsMountains.png-acd55825c6729851bef0a85befcd63f0.ctex"]
+source_file="res://assets/textures/tilesets/Minifantasy_TinyOverworldMapsTileset.png"
+dest_files=["res://.godot/imported/Minifantasy_TinyOverworldMapsTileset.png-e44354e3c5e547bc5639b3b2efe871ad.ctex"]
 
 [params]
 

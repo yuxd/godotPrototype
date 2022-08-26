@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bph48fp1p3j7u"]
+
+[ext_resource type="Script" path="res://source/components/c_camera.gd" id="1_8wyps"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_dexrv"]
+
+[node name="camera" type="Node2D"]
+script = ExtResource("1_dexrv")
+
+[node name="CameraComponent" type="Camera2D" parent="."]
+current = true
+script = ExtResource("1_8wyps")

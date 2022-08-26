@@ -1,4 +1,4 @@
 class_name CameraComponent
-extends Node
+extends Camera2D
 
 const component_name := "C_Camera"

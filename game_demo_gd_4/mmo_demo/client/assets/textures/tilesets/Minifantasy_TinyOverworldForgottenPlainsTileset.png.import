@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bscua1vaw1f6"
-path="res://.godot/imported/Minifantasy_MapsLandAndSea.png-7c02b813d178c09dd1c2992e9935a82c.ctex"
+uid="uid://b2jjm7iihykuq"
+path="res://.godot/imported/Minifantasy_TinyOverworldForgottenPlainsTileset.png-2a5b9abfc546718a9ad540b931b2422a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/tilesets/Minifantasy_MapsLandAndSea.png"
-dest_files=["res://.godot/imported/Minifantasy_MapsLandAndSea.png-7c02b813d178c09dd1c2992e9935a82c.ctex"]
+source_file="res://assets/textures/tilesets/Minifantasy_TinyOverworldForgottenPlainsTileset.png"
+dest_files=["res://.godot/imported/Minifantasy_TinyOverworldForgottenPlainsTileset.png-2a5b9abfc546718a9ad540b931b2422a.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckbxk3ofnndxd"]
+[gd_scene load_steps=12 format=3 uid="uid://ckbxk3ofnndxd"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/SystemManager.gd" id="1_mybdw"]
 [ext_resource type="Script" path="res://source/systems/s_game_manager.gd" id="2_gfwhs"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://source/systems/s_locomotion_animation.gd" id="9_slls1"]
 [ext_resource type="Script" path="res://source/systems/s_inventory.gd" id="10_8rb7u"]
 [ext_resource type="Script" path="res://source/systems/s_scene_manager.gd" id="10_bhoeo"]
+[ext_resource type="Script" path="res://source/systems/s_camera_manager.gd" id="11_xai0k"]
 
 [node name="SystemManager" type="Node"]
 script = ExtResource("1_mybdw")
@@ -40,3 +41,6 @@ script = ExtResource("10_8rb7u")
 
 [node name="SceneManagerSystem" type="Node" parent="."]
 script = ExtResource("10_bhoeo")
+
+[node name="CameraManagerSystem" type="Node" parent="."]
+script = ExtResource("11_xai0k")

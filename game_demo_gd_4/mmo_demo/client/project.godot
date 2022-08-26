@@ -264,10 +264,15 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://addons/q_framework/datatable/csv_datatable_manager.gd"
 }, {
-"base": "Node",
+"base": "Camera2D",
 "class": &"CameraComponent",
 "language": &"GDScript",
 "path": "res://source/components/c_camera.gd"
+}, {
+"base": "Node",
+"class": &"CameraManagerSystem",
+"language": &"GDScript",
+"path": "res://source/systems/s_camera_manager.gd"
 }, {
 "base": "Task",
 "class": &"Counter",
@@ -582,6 +587,7 @@ _global_script_class_icons={
 "BuildingSystem": "",
 "CSVDatatableManager": "",
 "CameraComponent": "",
+"CameraManagerSystem": "",
 "Counter": "",
 "DatatableManager": "",
 "ECS": "",

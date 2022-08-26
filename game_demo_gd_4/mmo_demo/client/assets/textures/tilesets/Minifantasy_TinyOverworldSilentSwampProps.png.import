@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnpo0tv4r0ydg"
-path="res://.godot/imported/Minifantasy_MapsRiver.png-6937932470dd7065fa29fccf6820c1ce.ctex"
+uid="uid://bnorcbrkot6hc"
+path="res://.godot/imported/Minifantasy_TinyOverworldSilentSwampProps.png-1343d309b7a7cd3a2a42c3acaa0d2e7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/tilesets/Minifantasy_MapsRiver.png"
-dest_files=["res://.godot/imported/Minifantasy_MapsRiver.png-6937932470dd7065fa29fccf6820c1ce.ctex"]
+source_file="res://assets/textures/tilesets/Minifantasy_TinyOverworldSilentSwampProps.png"
+dest_files=["res://.godot/imported/Minifantasy_TinyOverworldSilentSwampProps.png-1343d309b7a7cd3a2a42c3acaa0d2e7c.ctex"]
 
 [params]
 

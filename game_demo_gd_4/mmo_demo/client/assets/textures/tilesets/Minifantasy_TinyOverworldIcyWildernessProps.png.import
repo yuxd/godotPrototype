@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4w304phrwcds"
-path="res://.godot/imported/Minifantasy_MapsRoads.png-83cdf442d354bf4edf8b57d553036d25.ctex"
+uid="uid://cbiq3mle8w46d"
+path="res://.godot/imported/Minifantasy_TinyOverworldIcyWildernessProps.png-84b74721e6b14ba03d0fae60b0a9184d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/tilesets/Minifantasy_MapsRoads.png"
-dest_files=["res://.godot/imported/Minifantasy_MapsRoads.png-83cdf442d354bf4edf8b57d553036d25.ctex"]
+source_file="res://assets/textures/tilesets/Minifantasy_TinyOverworldIcyWildernessProps.png"
+dest_files=["res://.godot/imported/Minifantasy_TinyOverworldIcyWildernessProps.png-84b74721e6b14ba03d0fae60b0a9184d.ctex"]
 
 [params]
 

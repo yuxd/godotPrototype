@@ -456,6 +456,7 @@ _data = {
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ubfp6"]
 
 [node name="player_character" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 collision_mask = 3
 script = ExtResource("1_61bi2")
 

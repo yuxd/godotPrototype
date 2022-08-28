@@ -469,6 +469,16 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://addons/q_framework/behavior_tree/composite/composite_random_selector.gd"
 }, {
+"base": "System",
+"class": &"RefreshSystem",
+"language": &"GDScript",
+"path": "res://source/systems/s_refresh.gd"
+}, {
+"base": "Node",
+"class": &"RefreshableComponent",
+"language": &"GDScript",
+"path": "res://source/components/c_refreshable.gd"
+}, {
 "base": "Node",
 "class": &"ResourceAsyncLoader",
 "language": &"GDScript",
@@ -627,6 +637,8 @@ _global_script_class_icons={
 "QuestData": "",
 "QuestSystemComponent": "",
 "RandomSelector": "",
+"RefreshSystem": "",
+"RefreshableComponent": "",
 "ResourceAsyncLoader": "",
 "SceneBase": "",
 "SceneManager": "",
@@ -658,8 +670,8 @@ Console="*res://addons/quentincaffeino/console/src/Console.tscn"
 
 [display]
 
-window/size/viewport_width=324
-window/size/viewport_height=183
+window/size/viewport_width=648
+window/size/viewport_height=366
 window/stretch/mode="viewport"
 window/size/test_width=1024
 window/size/test_height=600

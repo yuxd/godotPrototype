@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://fa26v7wvxq60"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_gh7ix"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/abstract_entity.gd" id="1_gh7ix"]
 [ext_resource type="Texture2D" uid="uid://b1lux3ik22qip" path="res://assets/textures/widgets/icons/tools/tool_01.tres" id="2_driln"]
 [ext_resource type="Script" path="res://source/components/c_inventory_item.gd" id="2_thl21"]
 [ext_resource type="Script" path="res://source/components/c_sprite.gd" id="3_1ovrw"]

@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvrpvt5obrbbm"]
+[gd_scene load_steps=8 format=3]
 
-[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_igumk"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/abstract_entity.gd" id="1_igumk"]
 [ext_resource type="Script" path="res://source/game_mode.gd" id="1_vhn0y"]
 [ext_resource type="Script" path="res://source/components/c_game_mode.gd" id="2_2ppna"]
 [ext_resource type="PackedScene" uid="uid://cybyi8amkkles" path="res://source/procedure/procedure.tscn" id="3_i0235"]
 [ext_resource type="PackedScene" uid="uid://k654tutgnp8h" path="res://source/widget/form_main.tscn" id="5_hxj4s"]
 [ext_resource type="PackedScene" uid="uid://bph48fp1p3j7u" path="res://source/entities/camera.tscn" id="6_0l7gl"]
 [ext_resource type="PackedScene" uid="uid://8rhr6g6r4pn7" path="res://source/scenes/main_map.tscn" id="7_xuq5w"]
+
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_vhn0y")

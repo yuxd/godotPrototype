@@ -1,8 +1,9 @@
 [gd_scene load_steps=22 format=3]
 
-[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_35ten"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/abstract_entity.gd" id="1_35ten"]
 [ext_resource type="Texture2D" uid="uid://di4ae5tg028h6" path="res://assets/textures/crafting/crafting_blacksmith_furnace_work.png" id="1_rvhxj"]
 [ext_resource type="Texture2D" uid="uid://boa7058bn5tvn" path="res://assets/textures/crafting/crafting_blacksmith_furnace_work_sd.png" id="2_263p0"]
+
 
 
 

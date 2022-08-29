@@ -425,6 +425,11 @@ _global_script_classes=[{
 "path": "res://source/systems/s_player_input.gd"
 }, {
 "base": "Node",
+"class": &"PresceneComponent",
+"language": &"GDScript",
+"path": "res://source/components/c_prescene.gd"
+}, {
+"base": "Node",
 "class": &"ProcedureBase",
 "language": &"GDScript",
 "path": "res://source/procedure/ProcedureBase.gd"
@@ -628,6 +633,7 @@ _global_script_class_icons={
 "OrderSystem": "",
 "PlayerComponent": "",
 "PlayerInputSystem": "",
+"PresceneComponent": "",
 "ProcedureBase": "",
 "ProcedureLaunch": "",
 "ProcedureLoadResource": "",

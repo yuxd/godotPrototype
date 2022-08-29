@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://blsxtodgcjt6a"]
+[gd_scene load_steps=26 format=3 uid="uid://chv3akci5lxnq"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_61bi2"]
 [ext_resource type="Script" path="res://source/components/c_quest_system.gd" id="1_kwdo3"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cyi4hr2lbfr8j" path="res://assets/textures/character/character_human_mining.png" id="11_faop7"]
 [ext_resource type="Script" path="res://source/components/c_inventory.gd" id="13_2358o"]
 [ext_resource type="Texture2D" uid="uid://bl65m8dqfnw7d" path="res://assets/textures/character/character_human_attack.png" id="13_fv1go"]
+[ext_resource type="Script" path="res://source/components/c_prescene.gd" id="15_wk67e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cny4j"]
 size = Vector2(5, 6)
@@ -496,6 +497,9 @@ script = ExtResource("10_dx7w0")
 
 [node name="C_Inventory" type="Node" parent="."]
 script = ExtResource("13_2358o")
+
+[node name="PresceneComponent" type="Node" parent="."]
+script = ExtResource("15_wk67e")
 
 [node name="C_AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

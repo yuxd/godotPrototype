@@ -23,7 +23,7 @@ func _add_item(inventory_entity, item_entity):
 	add_item(inventory_entity, item_entity)
 
 
-static func add_item(inventory_entity : AbstractEntity, item_entity : AbstractEntity) -> bool:
+static func add_item(inventory_entity : Entity, item_entity : Entity) -> bool:
 	'''
 	添加道具
 	'''
@@ -62,7 +62,7 @@ static func add_item(inventory_entity : AbstractEntity, item_entity : AbstractEn
 	else:
 		return give_item_empty_slot(inventory_entity, item_entity)
 
-static func found_empty_slot(e : AbstractEntity) -> int:
+static func found_empty_slot(e : Entity) -> int:
 	var inventory : InventoryComponent = e.get_component("C_Inventory")
 	var item_slots = inventory.item_slots
 	for i in range(item_slots.size()):
@@ -110,7 +110,7 @@ static func get_item_by_index(inventory_entity : Entity, index:int) -> Entity:
 		return null
 	return inventory.item_slots[index]
 
-static func give_item_empty_slot(inventory_entity : AbstractEntity, item_entity : AbstractEntity) -> bool:
+static func give_item_empty_slot(inventory_entity : Entity, item_entity : Entity) -> bool:
 	# 将道具添加到空闲的位置
 	var slot = InventorySystem.found_empty_slot(inventory_entity)
 	if slot == -1 :
@@ -119,7 +119,7 @@ static func give_item_empty_slot(inventory_entity : AbstractEntity, item_entity 
 	give_item(inventory_entity, item_entity, slot)
 	return true
 
-static func give_item(inventory_entity : AbstractEntity, item_entity : AbstractEntity, slot_index : int):	
+static func give_item(inventory_entity : Entity, item_entity : Entity, slot_index : int):	
 	var inventory : InventoryComponent = inventory_entity.get_component("C_Inventory")
 	var item : InventoryItemComponent = item_entity.get_component("C_InventoryItem")
 	if slot_index > inventory.max_slots :

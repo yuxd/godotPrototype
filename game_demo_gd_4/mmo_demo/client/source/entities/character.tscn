@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://dokb2dngomxrl"]
 
-[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/abstract_entity.gd" id="1_dd7dy"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_dd7dy"]
 [ext_resource type="Script" path="res://source/components/c_sprite.gd" id="2_j0xdg"]
 [ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="3_tujud"]
-
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ujeu"]
 

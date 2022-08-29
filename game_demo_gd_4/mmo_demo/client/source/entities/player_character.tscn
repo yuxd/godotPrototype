@@ -1,6 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://chv3akci5lxnq"]
+[gd_scene load_steps=25 format=3 uid="uid://blsxtodgcjt6a"]
 
-[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/abstract_entity.gd" id="1_61bi2"]
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_61bi2"]
 [ext_resource type="Script" path="res://source/components/c_quest_system.gd" id="1_kwdo3"]
 [ext_resource type="Texture2D" uid="uid://3r3hrbnhwawg" path="res://assets/textures/character/character_human_idle.png" id="2_x5e6l"]
 [ext_resource type="Script" path="res://source/components/c_input.gd" id="3_8uvn8"]

@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://source/components/c_building.gd" id="1_goetq"]
-[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/abstract_entity.gd" id="1_m0jsq"]
-
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_m0jsq"]
 
 
 [node name="building" type="Node2D"]

@@ -2,7 +2,7 @@ extends Node
 class_name InventoryItemComponent
 
 var component_name = "C_InventoryItem"
-var inst : AbstractEntity
+var inst : Entity
 
 # export (Resource) var _item_resource = null
 @export var item_ID := ""

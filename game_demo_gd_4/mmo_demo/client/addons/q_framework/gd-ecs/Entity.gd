@@ -1,5 +1,5 @@
 @tool
-class_name AbstractEntity
+class_name Entity
 extends Node
 
 var components := []

@@ -45,7 +45,7 @@ func register_requirements(system_requirements: Array) -> void:
 
 # Update the component_group cache for a given entity. Adds/removes an entity from the cache depending on whether it meets the group's requirements.
 # The number of unique component groups should be <= number of unique systems
-func update_component_groups(entity: AbstractEntity) -> void:
+func update_component_groups(entity: Entity) -> void:
 	for component_group in component_groups:
 		var entity_list: Array = component_groups[component_group]
 		# TODO: keep the entity list sorted? for faster searching
@@ -57,7 +57,7 @@ func update_component_groups(entity: AbstractEntity) -> void:
 
 func _on_node_added(node: Node) -> void:
 	if ECS.is_component(node):
-		var entity: AbstractEntity = node.get_parent()
+		var entity: Entity = node.get_parent()
 		entity.register_component(node)
 		update_component_groups(entity)
 	elif ECS.is_entity(node):
@@ -65,7 +65,7 @@ func _on_node_added(node: Node) -> void:
 
 func _on_node_removed(node: Node) -> void:
 	if ECS.is_component(node):
-		var entity: AbstractEntity = node.get_parent()
+		var entity: Entity = node.get_parent()
 		if not entity:
 			return
 		entity.unregister_component(node)

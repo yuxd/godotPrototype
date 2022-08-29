@@ -4,7 +4,7 @@ class_name CameraManagerSystem
 const system_name := "S_CameraManager"
 var requirements = ["C_Camera"]
 var system_manager : SystemManager
-var player_cha : AbstractEntity
+var player_cha : Entity
 
 var event_player_cha_changed : EventResource = preload("res://source/events/event_player_cha_changed.tres")
 
@@ -29,7 +29,7 @@ func _system_process(_entities: Array, _delta: float) -> void:
 #		e.position = player_cha.position
 
 
-static func auto_set_limits(camera_entity : AbstractEntity) -> void:
+static func auto_set_limits(camera_entity : Entity) -> void:
 	var camera : CameraComponent = camera_entity.get_component("C_Camera")
 	camera.limit_left = 0
 	camera.limit_right = 0

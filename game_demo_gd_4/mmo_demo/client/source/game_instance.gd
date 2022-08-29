@@ -3,7 +3,7 @@ extends Node
 var ui_manager : UIManager
 var game_main : GameMode
 
-var player_character : AbstractEntity : set = _on_player_cha_changed
+var player_character : Entity : set = _on_player_cha_changed
 
 func _enter_tree():
 	pass
@@ -15,12 +15,12 @@ func init_qramework():
 	ui_manager = QInstance.ui_manager
 	ui_manager.init_ui_manager(Globals.widget_path, Globals.widget_path)
 
-func create_player_character() -> AbstractEntity:
+func create_player_character() -> Entity:
 	player_character = create_entity("player_character")
 	return player_character
 
-func create_building(building_id : String) -> AbstractEntity:
-	var building : AbstractEntity = load("res://entities/building.tscn").instantiate()
+func create_building(building_id : String) -> Entity:
+	var building : Entity = load("res://entities/building.tscn").instantiate()
 	game_main.add_child(building)	
 	var building_data = get_datatable_row(data_model.building, building_id)
 	var building_res : BuildingData = BuildingData.new()
@@ -102,11 +102,11 @@ static func load_datatables(datatables : Array) -> void:
 	await QInstance.datatable_manager.load_datatables_async(datatables)
 
 
-static func create_entity(entity_name : String) -> AbstractEntity:
+static func create_entity(entity_name : String) -> Entity:
 	var entity_path := Globals.entity_path + entity_name + ".tscn"
 	assert(ResourceLoader.exists(entity_path))
 	var entity_scene : PackedScene =  ResourceLoader.load(entity_path)
-	var entity : AbstractEntity = entity_scene.instantiate()
+	var entity : Entity = entity_scene.instantiate()
 	GameInstance.game_main.add_child(entity)
 	return entity
 	
@@ -115,7 +115,7 @@ static func create_order() -> void:
 	GameInstance.game_main.order_group.add_child(order)
 
 
-func _on_player_cha_changed(value : AbstractEntity):
+func _on_player_cha_changed(value : Entity):
 	var event : EventResource = load("res://source/events/event_player_cha_changed.tres")
 	event.emit([player_character, value])
 	player_character = value

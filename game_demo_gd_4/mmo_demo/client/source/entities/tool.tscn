@@ -14,6 +14,7 @@ radius = 3.0
 radius = 15.0
 
 [node name="tool" type="StaticBody2D"]
+collision_layer = 2
 script = ExtResource("1_gh7ix")
 
 [node name="C_Sprite" type="Sprite2D" parent="."]

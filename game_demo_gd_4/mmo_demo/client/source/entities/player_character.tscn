@@ -16,12 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://bl65m8dqfnw7d" path="res://assets/textures/character/character_human_attack.png" id="13_fv1go"]
 [ext_resource type="Script" path="res://source/components/c_prescene.gd" id="15_wk67e"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cny4j"]
-size = Vector2(5, 6)
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gk6o1"]
 radius = 2.0
 height = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cny4j"]
+size = Vector2(5, 6)
 
 [sub_resource type="Animation" id="Animation_icl1a"]
 length = 0.001
@@ -457,14 +457,8 @@ _data = {
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ubfp6"]
 
 [node name="player_character" type="CharacterBody2D"]
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_61bi2")
-
-[node name="Area2D_attack_ranged" type="Area2D" parent="."]
-
-[node name="attack_ranged_collision" type="CollisionShape2D" parent="Area2D_attack_ranged"]
-position = Vector2(7, 0)
-shape = SubResource("RectangleShape2D_cny4j")
 
 [node name="C_Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_x5e6l")
@@ -476,6 +470,14 @@ script = ExtResource("6_68exr")
 shape = SubResource("CapsuleShape2D_gk6o1")
 
 [node name="Position2D" type="Position2D" parent="."]
+
+[node name="Area2D_attack_ranged" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 9
+
+[node name="attack_ranged_collision" type="CollisionShape2D" parent="Area2D_attack_ranged"]
+position = Vector2(7, 0)
+shape = SubResource("RectangleShape2D_cny4j")
 
 [node name="QuestSystemComponent" type="Node" parent="."]
 script = ExtResource("1_kwdo3")

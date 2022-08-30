@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqyppfnlyo2od"]
+[gd_scene load_steps=9 format=3 uid="uid://bqyppfnlyo2od"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_gh7ix"]
 [ext_resource type="Texture2D" uid="uid://b1lux3ik22qip" path="res://assets/textures/widgets/icons/tools/tool_01.tres" id="2_driln"]
 [ext_resource type="Script" path="res://source/components/c_inventory_item.gd" id="2_thl21"]
 [ext_resource type="Script" path="res://source/components/c_sprite.gd" id="3_1ovrw"]
 [ext_resource type="Script" path="res://source/components/c_prescene.gd" id="5_2kido"]
+[ext_resource type="Script" path="res://source/components/c_pickable.gd" id="6_spnvg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jm8eo"]
 radius = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_unw2w"]
+radius = 15.0
 
 [node name="tool" type="StaticBody2D"]
 script = ExtResource("1_gh7ix")
@@ -28,3 +32,13 @@ item_describe = "锤子，一种工具，或者一种语气助词"
 
 [node name="PresceneComponent" type="Node" parent="."]
 script = ExtResource("5_2kido")
+
+[node name="PickableComponent" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("6_spnvg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickableComponent"]
+shape = SubResource("CircleShape2D_unw2w")
+
+[connection signal="body_entered" from="PickableComponent" to="PickableComponent" method="_on_pickable_component_body_entered"]
+[connection signal="body_exited" from="PickableComponent" to="PickableComponent" method="_on_pickable_component_body_exited"]

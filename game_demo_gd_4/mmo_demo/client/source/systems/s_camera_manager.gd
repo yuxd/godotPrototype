@@ -20,13 +20,13 @@ func _system_ready() -> void:
 
 
 func _system_process(_entities: Array, _delta: float) -> void:
-#	print_debug(_entities)
 	if(player_cha == null):
 		printerr("player_cha is null!") 
 		return
 	for e in _entities:
-		e.position = lerp(e.position, player_cha.position, _delta)
-#		e.position = player_cha.position
+		if e.position.distance_to(player_cha.position) >= 5.0:
+			var camera : CameraComponent = e.get_component("C_Camera")
+			e.position = e.position.lerp(player_cha.position, _delta * camera.speed)
 
 
 static func auto_set_limits(camera_entity : Entity) -> void:
@@ -47,3 +47,4 @@ static func auto_set_limits(camera_entity : Entity) -> void:
 
 func _on_player_cha_changed(old_player, new_player) -> void:
 	player_cha = new_player
+

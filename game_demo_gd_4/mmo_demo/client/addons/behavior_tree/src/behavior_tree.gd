@@ -20,7 +20,7 @@ var tick_result
 
 func _ready() -> void:
 	assert(get_child_count() == 1, "A Behavior Tree can only have one entry point.")
-	bt_root.propagate_call("connect", ["abort_tree", self, "abort"])
+	bt_root.propagate_call("connect", ["tree_aborted", self, "abort"])
 	start()
 
 func _process(delta: float) -> void:
@@ -29,11 +29,10 @@ func _process(delta: float) -> void:
 		return
 	if debug:
 		print()
-	tick_result = bt_root.tick(agent, blackboard)
 	
 #	if tick_result is GDScriptFunctionState:
 	set_process(false)
-	await tick_result.completed
+	tick_result = await bt_root.tick(agent, blackboard)
 	set_process(true)
 
 func _physics_process(delta: float) -> void:
@@ -44,11 +43,9 @@ func _physics_process(delta: float) -> void:
 	if debug:
 		print()
 	
-	tick_result = bt_root.tick(agent, blackboard)
-	
 #	if tick_result is GDScriptFunctionState:
 	set_physics_process(false)
-	await tick_result.completed
+	tick_result = await bt_root.tick(agent, blackboard)
 	set_physics_process(true)
 
 func start() -> void:

@@ -86,7 +86,6 @@ func set_state(rhs: int) -> bool:
 func run():
 	state = BTNodeState.RUNNING
 
-
 # You can use the following to recover the state of the node
 func succeeded() -> bool:
 	return state == BTNodeState.SUCCESS
@@ -122,7 +121,7 @@ func tick(agent: Node, blackboard: Blackboard) -> bool:
 	
 	run() 
 	
-	var result = _tick(agent, blackboard)
+	var result = await _tick(agent, blackboard)
 	
 #	if result is GDScriptFunctionState:
 	assert(running(), "BTNode execution was suspended but it's not running. Did you succeed() or fail() before yield?")

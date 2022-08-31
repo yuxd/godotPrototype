@@ -7,16 +7,11 @@ extends BTComposite
 
 func _tick(agent: Node, blackboard: Blackboard) -> bool:
 	var result
-	
 	for c in children:
 		bt_child = c
-		
 		result = bt_child.tick(agent, blackboard)
-		
-		if result is GDScriptFunctionState:
-			result = yield(result, "completed")
-		
+#		if result is GDScriptFunctionState:
+#			result = yield(result, "completed")
 		if bt_child.failed():
 			return fail()
-	
 	return succeed()

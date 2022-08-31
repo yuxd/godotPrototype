@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://1pcjwwxa5gh7"]
+[gd_scene load_steps=20 format=3 uid="uid://1pcjwwxa5gh7"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_80yai"]
 [ext_resource type="Texture2D" uid="uid://dxcx12jb35wa2" path="res://assets/textures/creatures/creature_beast_bat_idle.png" id="1_eunoi"]
@@ -10,6 +10,12 @@
 [ext_resource type="Animation" uid="uid://bns3fgj7n35pa" path="res://assets/animations/creature_bat_idle.res" id="8_lmqat"]
 [ext_resource type="Animation" uid="uid://br8t10p6lcjle" path="res://assets/animations/creature_bat_sleep.res" id="9_my8xk"]
 [ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="10_8b7e5"]
+[ext_resource type="Script" path="res://addons/behavior_tree/src/blackboard.gd" id="11_r54yg"]
+[ext_resource type="Script" path="res://addons/behavior_tree/src/behavior_tree.gd" id="12_vhar8"]
+[ext_resource type="Script" path="res://addons/behavior_tree/src/btnodes/composites/bt_selector.gd" id="13_uhh1h"]
+[ext_resource type="Script" path="res://addons/behavior_tree/src/btnodes/composites/bt_sequence.gd" id="14_sepgi"]
+[ext_resource type="Script" path="res://addons/behavior_tree/src/btnodes/leaves/bt_wait.gd" id="14_wnnjp"]
+[ext_resource type="Script" path="res://source/BTNodes/bt_test.gd" id="16_rjnuy"]
 
 [sub_resource type="Animation" id="Animation_77dxx"]
 length = 0.001
@@ -148,3 +154,29 @@ script = ExtResource("10_8b7e5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_kk7y2")
+
+[node name="Blackboard" type="Node" parent="."]
+script = ExtResource("11_r54yg")
+data = {}
+
+[node name="BehaviorTree" type="Node" parent="."]
+script = ExtResource("12_vhar8")
+is_active = true
+_blackboard = NodePath("../Blackboard")
+_agent = NodePath("..")
+
+[node name="BTSelector" type="Node" parent="BehaviorTree"]
+script = ExtResource("13_uhh1h")
+
+[node name="BTSequence" type="Node" parent="BehaviorTree/BTSelector"]
+script = ExtResource("14_sepgi")
+
+[node name="BTWait" type="Node" parent="BehaviorTree/BTSelector/BTSequence"]
+script = ExtResource("14_wnnjp")
+wait_time = 1.0
+
+[node name="BTTest" type="Node" parent="BehaviorTree/BTSelector/BTSequence"]
+script = ExtResource("16_rjnuy")
+
+[node name="BTTest" type="Node" parent="BehaviorTree/BTSelector"]
+script = ExtResource("16_rjnuy")

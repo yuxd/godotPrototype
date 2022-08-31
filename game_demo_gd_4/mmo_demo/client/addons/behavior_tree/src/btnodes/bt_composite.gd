@@ -13,7 +13,7 @@ extends BTNode
 # 对你来说，但你可能在游戏中有一些特定的流程。那样的话
 # 您可以扩展这个脚本并自己定义它
 
-onready var children: Array = get_children() as Array
+@onready var children: Array = get_children() as Array
 
 var bt_child: BTNode # Used to iterate over children
 
@@ -26,8 +26,6 @@ func _tick(agent: Node, blackboard: Blackboard) -> bool:
 	for c in children:
 		bt_child = c
 		result = bt_child.tick(agent, blackboard)
-		
-		if result is GDScriptFunctionState:
-			result = yield(result, "completed")
-	
+#		if result is GDScriptFunctionState:
+#			result = yield(result, "completed")
 	return succeed()

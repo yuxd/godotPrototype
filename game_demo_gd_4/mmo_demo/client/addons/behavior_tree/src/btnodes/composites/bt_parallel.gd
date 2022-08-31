@@ -9,4 +9,3 @@ func _tick(agent: Node, blackboard: Blackboard) -> bool:
 		bt_child.tick(agent, blackboard)
 	
 	return succeed()
-

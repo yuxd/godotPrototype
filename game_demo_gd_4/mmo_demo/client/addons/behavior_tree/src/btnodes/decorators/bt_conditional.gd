@@ -8,7 +8,7 @@ extends BTDecorator
 # 如果你想知道条件的结果，把它存储在黑板上
 # 在_pre_tick（）期间。
 
-export(bool) var reverse: bool = false
+@export var reverse: bool = false
 
 var verified: bool = false
 var ignore_reverse: bool = false
@@ -21,7 +21,7 @@ func _tick(agent: Node, blackboard: Blackboard) -> bool:
 		verified = not verified
 	
 	if verified:
-		return ._tick(agent, blackboard)
+		return super._tick(agent, blackboard)
 	return fail()
 
 func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:

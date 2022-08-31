@@ -194,6 +194,31 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://source/ability_sysem/core/config/attribute_set_config.gd"
 }, {
+"base": "BTDecorator",
+"class": &"BTAlways",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/decorators/bt_always.gd"
+}, {
+"base": "BTNode",
+"class": &"BTComposite",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/bt_composite.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTConditional",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/decorators/bt_conditional.gd"
+}, {
+"base": "BTNode",
+"class": &"BTDecorator",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/bt_decorator.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTGuard",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/decorators/bt_guard.gd"
+}, {
 "base": "BTNode",
 "class": &"BTLeaf",
 "language": &"GDScript",
@@ -218,6 +243,41 @@ _global_script_classes=[{
 "class": &"BTRandomSequence",
 "language": &"GDScript",
 "path": "res://addons/behavior_tree/src/btnodes/composites/bt_random_sequence.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRepeat",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/decorators/bt_repeat.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRepeatUntil",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/decorators/bt_repeat_until.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRevert",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/decorators/bt_revert.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTSelector",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/composites/bt_selector.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTSequence",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/composites/bt_sequence.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTTest",
+"language": &"GDScript",
+"path": "res://source/BTNodes/bt_test.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTWait",
+"language": &"GDScript",
+"path": "res://addons/behavior_tree/src/btnodes/leaves/bt_wait.gd"
 }, {
 "base": "AbilityManager",
 "class": &"BattleAbilityManager",
@@ -607,11 +667,23 @@ _global_script_class_icons={
 "AttributeModifierCollector": "",
 "AttributeModifierEffect": "",
 "AttributeSetConfig": "",
+"BTAlways": "res://addons/behavior_tree/icons/btalways.svg",
+"BTComposite": "res://addons/behavior_tree/icons/btcomposite.svg",
+"BTConditional": "res://addons/behavior_tree/icons/btconditional.png",
+"BTDecorator": "res://addons/behavior_tree/icons/btdecorator.svg",
+"BTGuard": "res://addons/behavior_tree/icons/btguard.svg",
 "BTLeaf": "res://addons/behavior_tree/icons/btleaf.svg",
 "BTNode": "res://addons/behavior_tree/icons/btnode.svg",
 "BTParallel": "res://addons/behavior_tree/icons/btparallel.svg",
 "BTRandomSelector": "res://addons/behavior_tree/icons/btrndselector.svg",
 "BTRandomSequence": "res://addons/behavior_tree/icons/btrndsequence.svg",
+"BTRepeat": "res://addons/behavior_tree/icons/btrepeat.svg",
+"BTRepeatUntil": "res://addons/behavior_tree/icons/btrepeatuntil.svg",
+"BTRevert": "res://addons/behavior_tree/icons/btrevert.svg",
+"BTSelector": "res://addons/behavior_tree/icons/btselector.svg",
+"BTSequence": "res://addons/behavior_tree/icons/btsequence.svg",
+"BTTest": "",
+"BTWait": "res://addons/behavior_tree/icons/btwait.svg",
 "BattleAbilityManager": "",
 "BattleAttributeSet": "",
 "BattleConfig": "",
@@ -708,7 +780,7 @@ window/size/test_height=600
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/q_framework/plugin.cfg", "res://addons/quentincaffeino/console/plugin.cfg")
+enabled=PackedStringArray("res://addons/q_framework/plugin.cfg", "res://addons/quentincaffeino/console/plugin.cfg", "res://addons/behavior_tree/plugin.cfg")
 
 [importer_defaults]
 

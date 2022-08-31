@@ -20,25 +20,25 @@ extends BTDecorator
 # 您还可以选择永久锁定或启动时锁定。
 # 锁定的BTGuard将始终返回fail（）
 
-export(bool) var start_locked = false
-export(bool) var permanent = false
-export(NodePath) var _locker
-export(int, "Failure", "Success", "Always") var lock_if
-export(NodePath) var _unlocker
-export(int, "Failure", "Success") var unlock_if
-export(float) var lock_time = 0.05
+@export var start_locked : bool = false
+@export var permanent : bool = false
+@export_node_path(Node) var _locker : NodePath
+@export_enum("Failure", "Success", "Always") var lock_if : int
+@export_node_path(Node) var _unlocker : NodePath
+@export_enum("Failure", "Success") var unlock_if : int
+@export var lock_time : float = 0.05
 
 var locked: bool = false
 
-onready var unlocker: BTNode = get_node_or_null(_unlocker)
-onready var locker: BTNode = get_node_or_null(_locker)
+@onready var unlocker: BTNode = get_node_or_null(_unlocker)
+@onready var locker: BTNode = get_node_or_null(_locker)
 
 func _ready():
 	if start_locked:
 		lock()
 	
 	if locker:
-		locker.connect("tick", self, "_on_locker_tick")
+		locker.connect("tick", self._on_locker_tick)
 
 func _on_locker_tick(_result):
 	check_lock(locker)
@@ -48,21 +48,23 @@ func lock():
 	locked = true
 	
 	if debug:
-		print(name + " locked for " + str(lock_time) + " seconds")
+		print(str(name) + " locked for " + str(lock_time) + " seconds")
 	
 	if permanent:
 		return
 	elif unlocker:
 		while locked:
-			var result = yield(unlocker, "tick")
-			if result == bool(unlock_if):
-				locked = false
+#			var result = yield(unlocker, "tick")
+#			var result = unlocker.tick(agent, blackbord)
+#			if result == bool(unlock_if):
+#				locked = false
+			pass
 	else:
-		yield(get_tree().create_timer(lock_time, false), "timeout")
+		await (get_tree().create_timer(lock_time, false).timeout)
 		locked = false
 	
 	if debug:
-		print(name + " unlocked")
+		print(str(name) + " unlocked")
 
 func check_lock(current_locker: BTNode):
 	if ((lock_if == 2 and not current_locker.running()) 
@@ -73,7 +75,7 @@ func check_lock(current_locker: BTNode):
 func _tick(agent: Node, blackboard: Blackboard) -> bool:
 	if locked:
 		return fail()
-	return ._tick(agent, blackboard)
+	return super._tick(agent, blackboard)
 
 func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
 	if not locker:

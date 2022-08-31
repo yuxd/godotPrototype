@@ -4,16 +4,13 @@ extends BTDecorator
 # Executes the child and always either succeeds or fails.
 # 执行子级，并且总是任何一个成功或失败
 
-export(int, "Fail", "Succeed") var always_what
+@export_enum("Fail", "Succeed") var always_what : int
 
-onready var return_func: String = "fail" if always_what == 0 else "succeed"
-
+@onready var return_func: String = "fail" if always_what == 0 else "succeed"
 
 
 func _tick(agent: Node, blackboard: Blackboard) -> bool:
 	var result = bt_child.tick(agent, blackboard)
-	
-	if result is GDScriptFunctionState:
-		result = yield(result, "completed")
-	
+#	if result is GDScriptFunctionState:
+#		result = yield(result, "completed")
 	return call(return_func)

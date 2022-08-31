@@ -15,27 +15,27 @@ enum BTNodeState {
 }
 
 # (Optional) Emitted after a tick() call. True is success, false is failure. 
-signal tick(result)
+signal ticked(result)
 
 # Emitted if abort_tree is set to true
-signal abort_tree()
+signal tree_aborted()
 
 # Turn this off to make the node fail at each tick.
-export(bool) var is_active: bool = true 
+@export var is_active: bool = true 
 
 # Turn this on to print the name of the node at each tick.
-export(bool) var debug: bool = false 
+@export var debug: bool = false 
 
 # Turn this on to abort the tree after completion.
-export(bool) var abort_tree: bool
+@export var abort_tree: bool
 
-var state: int setget set_state
+var state: int : set = set_state
 
 func _ready():
 	if is_active:
 		succeed()
 	else:
-		push_warning("Deactivated BTNode '" + name + "', path: '" + get_path() + "'")
+		push_warning("Deactivated BTNode '" + str(name) + "', path: '" + str(get_path()) + "'")
 		fail()
 
 ### OVERRIDE THE FOLLOWING FUNCTIONS ###
@@ -124,9 +124,9 @@ func tick(agent: Node, blackboard: Blackboard) -> bool:
 	
 	var result = _tick(agent, blackboard)
 	
-	if result is GDScriptFunctionState:
-		assert(running(), "BTNode execution was suspended but it's not running. Did you succeed() or fail() before yield?")
-		result = yield(result, "completed")
+#	if result is GDScriptFunctionState:
+	assert(running(), "BTNode execution was suspended but it's not running. Did you succeed() or fail() before yield?")
+#	result = await result.completed
 	
 	assert(not running(), "BTNode execution was completed but it's still running. Did you forget to return succeed() or fail()?") 
 	
@@ -134,10 +134,10 @@ func tick(agent: Node, blackboard: Blackboard) -> bool:
 	_post_tick(agent, blackboard, result)
 	
 	# Notify completion and new state (i.e. the result of the execution)
-	emit_signal("tick", result)
+	emit_signal("ticked", result)
 	
 	# Queue tree abortion at the end of current tick
 	if abort_tree:
-		emit_signal("abort_tree")
+		emit_signal("tree_aborted")
 	
 	return result

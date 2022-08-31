@@ -17,7 +17,7 @@ extends Node
 # 这是一种将数据与行为分离的好方法，这一点至关重要
 # 为了避免讨厌的BUG
 
-export(Dictionary) var data: Dictionary
+@export var data: Dictionary
 
 func _enter_tree() -> void:
 	data = data.duplicate()

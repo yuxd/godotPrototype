@@ -6,17 +6,17 @@ extends Node
 # 这是你的主要节点。将其中一个放置在场景的根部，然后开始添加BTNodes。
 # 行为树只接受一个入口点（因此只有一个子项），例如BTSequence或BTSelector。
 
-export(bool) var is_active: bool = false
-export(NodePath) var _blackboard
-export(NodePath) var _agent
-export(int, "Idle", "Physics") var sync_mode
-export(bool) var debug = false
+@export var is_active: bool = false
+@export var _blackboard : NodePath
+@export var _agent : NodePath
+@export_enum("Idle", "Physics") var sync_mode : int
+@export var debug : bool = false
 
 var tick_result
 
-onready var agent = get_node(_agent) as Node
-onready var blackboard = get_node(_blackboard) as Blackboard
-onready var bt_root = get_child(0) as BTNode
+@onready var agent : Node = get_node(_agent) as Node
+@onready var blackboard : Blackboard = get_node(_blackboard) as Blackboard
+@onready var bt_root : BTNode = get_child(0) as BTNode
 
 func _ready() -> void:
 	assert(get_child_count() == 1, "A Behavior Tree can only have one entry point.")
@@ -31,10 +31,10 @@ func _process(delta: float) -> void:
 		print()
 	tick_result = bt_root.tick(agent, blackboard)
 	
-	if tick_result is GDScriptFunctionState:
-		set_process(false)
-		yield(tick_result, "completed")
-		set_process(true)
+#	if tick_result is GDScriptFunctionState:
+	set_process(false)
+	await tick_result.completed
+	set_process(true)
 
 func _physics_process(delta: float) -> void:
 	if not is_active:
@@ -46,10 +46,10 @@ func _physics_process(delta: float) -> void:
 	
 	tick_result = bt_root.tick(agent, blackboard)
 	
-	if tick_result is GDScriptFunctionState:
-		set_physics_process(false)
-		yield(tick_result, "completed")
-		set_physics_process(true)
+#	if tick_result is GDScriptFunctionState:
+	set_physics_process(false)
+	await tick_result.completed
+	set_physics_process(true)
 
 func start() -> void:
 	if not is_active:

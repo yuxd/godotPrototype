@@ -29,7 +29,10 @@ signal tree_aborted()
 # Turn this on to abort the tree after completion.
 @export var abort_tree: bool
 
-var state: int : set = set_state
+var _state : BTNodeState
+var state: int : 
+	set = set_state,
+	get = _state_getter
 
 func _ready():
 	if is_active:
@@ -42,15 +45,18 @@ func _ready():
 # You just need to implement them. DON'T CALL THEM MANUALLY.
 
 func _pre_tick(agent: Node, blackboard: Blackboard) -> void:
+	'''预tick'''
 	pass
 
 # This is where the core behavior goes and where the node state is changed.
 # You must return either succeed() or fail() (check below), not just set the state.
 func _tick(agent: Node, blackboard: Blackboard) -> bool:
+	'''tick'''
 	return succeed()
 
 
 func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
+	'''tick后处理'''	
 	pass
 
 ### DO NOT OVERRIDE ANYTHING FROM HERE ON ###
@@ -61,12 +67,12 @@ func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
 
 # Return this to set the state to success.
 func succeed() -> bool:
-	state = BTNodeState.SUCCESS
+	_state = BTNodeState.SUCCESS
 	return true
 
 # Return this to set the state to failure.
 func fail() -> bool:
-	state = BTNodeState.FAILURE
+	_state = BTNodeState.FAILURE
 	return false
 
 # Return this to match the state to another state.
@@ -84,17 +90,17 @@ func set_state(rhs: int) -> bool:
 
 # Don't call this.
 func run():
-	state = BTNodeState.RUNNING
+	_state = BTNodeState.RUNNING
 
 # You can use the following to recover the state of the node
 func succeeded() -> bool:
-	return state == BTNodeState.SUCCESS
+	return _state == BTNodeState.SUCCESS
 
 func failed() -> bool:
-	return state == BTNodeState.FAILURE
+	return _state == BTNodeState.FAILURE
 
 func running() -> bool:
-	return state == BTNodeState.RUNNING
+	return _state == BTNodeState.RUNNING
 
 # Or this, as a string.
 func get_state() -> String:
@@ -121,12 +127,8 @@ func tick(agent: Node, blackboard: Blackboard) -> bool:
 	
 	run() 
 	
-	var result = await _tick(agent, blackboard)
-	
-#	if result is GDScriptFunctionState:
 	assert(running(), "BTNode execution was suspended but it's not running. Did you succeed() or fail() before yield?")
-#	result = await result.completed
-	
+	var result = await _tick(agent, blackboard)
 	assert(not running(), "BTNode execution was completed but it's still running. Did you forget to return succeed() or fail()?") 
 	
 	# Do stuff after core behavior depending on the result
@@ -140,3 +142,6 @@ func tick(agent: Node, blackboard: Blackboard) -> bool:
 		emit_signal("tree_aborted")
 	
 	return result
+
+func _state_getter() -> int:
+	return _state

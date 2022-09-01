@@ -7,7 +7,6 @@ extends BTNode
 # Instead, just use them to do a single action or condition check, and use a composite node
 # (BTSequence, BTSelector or BTParallel) to define the flow between multiple leaf nodes.
 
-
 func _ready():
 	assert(get_child_count() == 0, "A BTLeaf cannot have children.")
 

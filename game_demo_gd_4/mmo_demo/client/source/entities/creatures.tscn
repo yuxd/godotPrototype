@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://1pcjwwxa5gh7"]
+[gd_scene load_steps=21 format=3 uid="uid://1pcjwwxa5gh7"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_80yai"]
 [ext_resource type="Texture2D" uid="uid://dxcx12jb35wa2" path="res://assets/textures/creatures/creature_beast_bat_idle.png" id="1_eunoi"]
@@ -12,9 +12,11 @@
 [ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="10_8b7e5"]
 [ext_resource type="Script" path="res://addons/behavior_tree/src/blackboard.gd" id="11_r54yg"]
 [ext_resource type="Script" path="res://addons/behavior_tree/src/behavior_tree.gd" id="12_vhar8"]
-[ext_resource type="Script" path="res://addons/behavior_tree/src/btnodes/composites/bt_sequence.gd" id="14_sepgi"]
 [ext_resource type="Script" path="res://addons/behavior_tree/src/btnodes/leaves/bt_wait.gd" id="14_wnnjp"]
+[ext_resource type="Script" path="res://addons/behavior_tree/src/btnodes/composites/bt_parallel.gd" id="16_15qlj"]
+[ext_resource type="Script" path="res://source/components/c_locomotion_animation.gd" id="16_73j82"]
 [ext_resource type="Script" path="res://source/BTNodes/bt_test.gd" id="16_rjnuy"]
+[ext_resource type="Script" path="res://source/components/c_locomotion.gd" id="17_qqi2l"]
 
 [sub_resource type="Animation" id="Animation_77dxx"]
 length = 0.001
@@ -130,6 +132,7 @@ radius = 4.0
 height = 10.0
 
 [node name="creature" type="CharacterBody2D"]
+collision_layer = 8
 script = ExtResource("1_80yai")
 
 [node name="body" type="Sprite2D" parent="."]
@@ -165,12 +168,18 @@ _blackboard = NodePath("../Blackboard")
 _agent = NodePath("..")
 debug = true
 
-[node name="BTSequence" type="Node" parent="BehaviorTree"]
-script = ExtResource("14_sepgi")
+[node name="BTParallel" type="Node" parent="BehaviorTree"]
+script = ExtResource("16_15qlj")
 
-[node name="BTWait" type="Node" parent="BehaviorTree/BTSequence"]
+[node name="BTWait" type="Node" parent="BehaviorTree/BTParallel"]
 script = ExtResource("14_wnnjp")
 wait_time = 1.0
 
-[node name="BTTest" type="Node" parent="BehaviorTree/BTSequence"]
+[node name="BTTest" type="Node" parent="BehaviorTree/BTParallel"]
 script = ExtResource("16_rjnuy")
+
+[node name="C_LocomotionAnimation" type="Node" parent="."]
+script = ExtResource("16_73j82")
+
+[node name="C_Locomotion" type="Node" parent="."]
+script = ExtResource("17_qqi2l")

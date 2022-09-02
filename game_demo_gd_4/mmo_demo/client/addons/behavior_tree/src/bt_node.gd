@@ -17,6 +17,7 @@ enum BTNodeState {
 # (Optional) Emitted after a tick() call. True is success, false is failure. 
 signal ticked(result)
 
+
 # Emitted if abort_tree is set to true
 signal tree_aborted()
 

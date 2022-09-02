@@ -21,8 +21,9 @@ func _tick(agent: Node, blackboard: Blackboard) -> bool:
 		verified = not verified
 	
 	if verified:
-		return super._tick(agent, blackboard)
+		return await super(agent, blackboard)
 	return fail()
+
 
 func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
 	pass

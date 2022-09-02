@@ -469,7 +469,7 @@ script = ExtResource("6_68exr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_gk6o1")
 
-[node name="Position2D" type="Position2D" parent="."]
+[node name="Position2D" type="Marker2D" parent="."]
 
 [node name="Area2D_attack_ranged" type="Area2D" parent="."]
 collision_layer = 4
@@ -500,7 +500,7 @@ script = ExtResource("10_dx7w0")
 [node name="C_Inventory" type="Node" parent="."]
 script = ExtResource("13_2358o")
 
-[node name="PresceneComponent" type="Node" parent="."]
+[node name="C_Prescene" type="Node" parent="."]
 script = ExtResource("15_wk67e")
 
 [node name="C_AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -75,7 +75,7 @@ func check_lock(current_locker: BTNode):
 func _tick(agent: Node, blackboard: Blackboard) -> bool:
 	if locked:
 		return fail()
-	return super._tick(agent, blackboard)
+	return await super(agent, blackboard)
 
 func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
 	if not locker:

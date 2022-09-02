@@ -16,9 +16,14 @@ func _ready() -> void:
 	# warning-ignore: return_value_discarded
 	tree.connect("node_removed", _on_node_removed)
 
+
 # Returns an Array of all entities that have the components defined in query_list
 # Assumes that the query_list is sorted
 func query(query_list: Array, entity_filter := []) -> Array:
+	'''
+	返回具有query_list中定义的组件的所有实体的数组
+	假设query_list已排序
+	'''
 	var results := []
 	var entity_list: Array = component_groups.get(query_list, [])
 	for entity_id in entity_list:
@@ -31,21 +36,35 @@ func query(query_list: Array, entity_filter := []) -> Array:
 
 	return results
 
+
 # Goes through all the existing entities in the SceneTree and updates the local component_group cache
 func ready() -> void:
+	'''
+	遍历SceneTree中的所有现有实体并更新本地component_group缓存
+	'''
 	for entity in get_tree().get_nodes_in_group("Entity"):
 		update_component_groups(entity)
+
 
 func register_requirements(system_requirements: Array) -> void:
 	# system_requirements must be sorted
 	# component groups are just groups of different components as required by systems
+	'''
+	必须对system_requirements进行排序
+	组件组只是系统所需的不同组件的组
+	'''
 	if not system_requirements in component_groups:
 		var entity_list := []
 		component_groups[system_requirements] = entity_list
 
+
 # Update the component_group cache for a given entity. Adds/removes an entity from the cache depending on whether it meets the group's requirements.
 # The number of unique component groups should be <= number of unique systems
 func update_component_groups(entity: Entity) -> void:
+	'''
+	更新给定实体的component_group缓存。根据实体是否满足组的要求，从缓存中添加/删除实体。
+	唯一组件组的数量应<=唯一系统的数量
+	'''
 	for component_group in component_groups:
 		var entity_list: Array = component_groups[component_group]
 		# TODO: keep the entity list sorted? for faster searching
@@ -55,6 +74,7 @@ func update_component_groups(entity: Entity) -> void:
 		else:
 			entity_list.erase(entity.id)
 
+
 func _on_node_added(node: Node) -> void:
 	if ECS.is_component(node):
 		var entity: Entity = node.get_parent()
@@ -62,6 +82,7 @@ func _on_node_added(node: Node) -> void:
 		update_component_groups(entity)
 	elif ECS.is_entity(node):
 		update_component_groups(node)
+
 
 func _on_node_removed(node: Node) -> void:
 	if ECS.is_component(node):
@@ -74,6 +95,7 @@ func _on_node_removed(node: Node) -> void:
 		for component_group in component_groups:
 			var entity_list: Array = component_groups[component_group]
 			entity_list.erase(node.id)
+
 
 func _on_tree_exiting() -> void:
 	var tree: SceneTree = get_tree()

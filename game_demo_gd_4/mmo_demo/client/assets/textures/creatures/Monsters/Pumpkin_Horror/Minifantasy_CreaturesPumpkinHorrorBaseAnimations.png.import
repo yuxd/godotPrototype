@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8dmc0hp5lg8s"
-path="res://.godot/imported/Minifantasy_CreaturesPumpkinHorrorBaseAnimations.png-43bd99bfbd21758d5526079024d88619.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesPumpkinHorrorBaseAnimations.png-71deb817fc7a9af3d93c18be02bcf3fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Pumpkin_Horror/Minifantasy_CreaturesPumpkinHorrorBaseAnimations.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesPumpkinHorrorBaseAnimations.png-43bd99bfbd21758d5526079024d88619.ctex"]
+source_file="res://assets/textures/creatures/monsters/Pumpkin_Horror/Minifantasy_CreaturesPumpkinHorrorBaseAnimations.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesPumpkinHorrorBaseAnimations.png-71deb817fc7a9af3d93c18be02bcf3fc.ctex"]
 
 [params]
 

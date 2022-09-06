@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cynw6t7vk4fku"
-path="res://.godot/imported/Minifantasy_CreaturesSkeletonIdle.png-673c0484e0bb23c9e1fde5c78f3a98e7.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesSkeletonIdle.png-277f3c4549552dc5ee147f36a781e6d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Skeleton/Minifantasy_CreaturesSkeletonIdle.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesSkeletonIdle.png-673c0484e0bb23c9e1fde5c78f3a98e7.ctex"]
+source_file="res://assets/textures/creatures/monsters/Skeleton/Minifantasy_CreaturesSkeletonIdle.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesSkeletonIdle.png-277f3c4549552dc5ee147f36a781e6d6.ctex"]
 
 [params]
 

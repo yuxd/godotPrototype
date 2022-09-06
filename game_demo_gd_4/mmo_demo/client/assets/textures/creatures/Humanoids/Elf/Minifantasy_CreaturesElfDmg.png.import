@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwcdoxh4lve3g"
-path="res://.godot/imported/Minifantasy_CreaturesElfDmg.png-954b38f01814a87ceab648055c6a0a72.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesElfDmg.png-579c521664f480882277f12767febd22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Elf/Minifantasy_CreaturesElfDmg.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesElfDmg.png-954b38f01814a87ceab648055c6a0a72.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Elf/Minifantasy_CreaturesElfDmg.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesElfDmg.png-579c521664f480882277f12767febd22.ctex"]
 
 [params]
 

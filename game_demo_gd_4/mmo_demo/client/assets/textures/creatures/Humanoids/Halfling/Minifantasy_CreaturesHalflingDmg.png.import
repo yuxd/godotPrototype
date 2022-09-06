@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkxqs437bnqye"
-path="res://.godot/imported/Minifantasy_CreaturesHalflingDmg.png-00dc6d5c667d05261ca327d53f9b8173.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesHalflingDmg.png-6385690dd651de25c6b4b44b981d00b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Halfling/Minifantasy_CreaturesHalflingDmg.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesHalflingDmg.png-00dc6d5c667d05261ca327d53f9b8173.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Halfling/Minifantasy_CreaturesHalflingDmg.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesHalflingDmg.png-6385690dd651de25c6b4b44b981d00b9.ctex"]
 
 [params]
 

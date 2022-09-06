@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bswi71xycclvy"
-path="res://.godot/imported/Minifantasy_CreaturesWildfireDie.png-00b96d77e7453164d2d3e67238efd7d3.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesWildfireDie.png-bcc49112bc0a2fd9859606a18f732916.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Wildfire/Minifantasy_CreaturesWildfireDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesWildfireDie.png-00b96d77e7453164d2d3e67238efd7d3.ctex"]
+source_file="res://assets/textures/creatures/monsters/Wildfire/Minifantasy_CreaturesWildfireDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesWildfireDie.png-bcc49112bc0a2fd9859606a18f732916.ctex"]
 
 [params]
 

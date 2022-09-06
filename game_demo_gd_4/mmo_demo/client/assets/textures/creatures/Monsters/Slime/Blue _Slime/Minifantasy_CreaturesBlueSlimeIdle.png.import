@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5i37u1vbdgof"
-path="res://.godot/imported/Minifantasy_CreaturesBlueSlimeIdle.png-6676d64ae27f1597186fc5a8bff937d3.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesBlueSlimeIdle.png-2edcada30a26c80c8a338990a440b0af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Slime/Blue _Slime/Minifantasy_CreaturesBlueSlimeIdle.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesBlueSlimeIdle.png-6676d64ae27f1597186fc5a8bff937d3.ctex"]
+source_file="res://assets/textures/creatures/monsters/Slime/Blue _Slime/Minifantasy_CreaturesBlueSlimeIdle.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesBlueSlimeIdle.png-2edcada30a26c80c8a338990a440b0af.ctex"]
 
 [params]
 

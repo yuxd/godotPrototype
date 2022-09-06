@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0b5rpm2j7hqu"
-path="res://.godot/imported/Minifantasy_CreaturesWildOrcIdle.png-1132daf44858746ae83eaae94e512fb0.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesWildOrcIdle.png-d9a704d4aa1e75ae2ded824eba787a3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Orc/Wild Orc/Minifantasy_CreaturesWildOrcIdle.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesWildOrcIdle.png-1132daf44858746ae83eaae94e512fb0.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Orc/Wild Orc/Minifantasy_CreaturesWildOrcIdle.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesWildOrcIdle.png-d9a704d4aa1e75ae2ded824eba787a3d.ctex"]
 
 [params]
 

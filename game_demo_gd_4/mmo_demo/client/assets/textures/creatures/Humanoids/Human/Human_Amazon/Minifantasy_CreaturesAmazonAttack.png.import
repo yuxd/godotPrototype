@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs6yqnrg6fk0k"
-path="res://.godot/imported/Minifantasy_CreaturesAmazonAttack.png-dca5828f2fa9b7a67579a67c28605fa4.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesAmazonAttack.png-cceddac5bb90a686ca173e5e8fb75d1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Human/Human_Amazon/Minifantasy_CreaturesAmazonAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesAmazonAttack.png-dca5828f2fa9b7a67579a67c28605fa4.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Human/Human_Amazon/Minifantasy_CreaturesAmazonAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesAmazonAttack.png-cceddac5bb90a686ca173e5e8fb75d1b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwj8himlkl53g"
-path="res://.godot/imported/Minifantasy_CreaturesShadowSkeletonPumkinHorrorWalk.png-e7d68960068b665d31eee663a0709dec.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowSkeletonPumkinHorrorWalk.png-0075b2f095ff7aebc32f48491a59e6be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/_Shadows/Skeleton, Pumkin Horror/Minifantasy_CreaturesShadowSkeletonPumkinHorrorWalk.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowSkeletonPumkinHorrorWalk.png-e7d68960068b665d31eee663a0709dec.ctex"]
+source_file="res://assets/textures/creatures/monsters/_Shadows/Skeleton, Pumkin Horror/Minifantasy_CreaturesShadowSkeletonPumkinHorrorWalk.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowSkeletonPumkinHorrorWalk.png-0075b2f095ff7aebc32f48491a59e6be.ctex"]
 
 [params]
 

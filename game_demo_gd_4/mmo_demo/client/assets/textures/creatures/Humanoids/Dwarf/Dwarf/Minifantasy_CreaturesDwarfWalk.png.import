@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qmuvpvxwhdfs"
-path="res://.godot/imported/Minifantasy_CreaturesDwarfWalk.png-25218a33275f0a8b82f19e79bfb88475.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesDwarfWalk.png-4a7073453b218343bb9a8cd6593583f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Dwarf/Dwarf/Minifantasy_CreaturesDwarfWalk.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesDwarfWalk.png-25218a33275f0a8b82f19e79bfb88475.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Dwarf/Dwarf/Minifantasy_CreaturesDwarfWalk.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesDwarfWalk.png-4a7073453b218343bb9a8cd6593583f7.ctex"]
 
 [params]
 

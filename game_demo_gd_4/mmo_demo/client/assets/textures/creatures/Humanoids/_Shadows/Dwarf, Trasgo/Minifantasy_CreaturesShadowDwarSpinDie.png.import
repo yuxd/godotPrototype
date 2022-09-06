@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck1c26f0oomm3"
-path="res://.godot/imported/Minifantasy_CreaturesShadowDwarSpinDie.png-655730e0b0e60fb88eb3c5b8f23ebe1b.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowDwarSpinDie.png-8c4999077836749b2433193be0d8d881.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/_Shadows/Dwarf, Trasgo/Minifantasy_CreaturesShadowDwarSpinDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowDwarSpinDie.png-655730e0b0e60fb88eb3c5b8f23ebe1b.ctex"]
+source_file="res://assets/textures/creatures/humanoids/_Shadows/Dwarf, Trasgo/Minifantasy_CreaturesShadowDwarSpinDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowDwarSpinDie.png-8c4999077836749b2433193be0d8d881.ctex"]
 
 [params]
 

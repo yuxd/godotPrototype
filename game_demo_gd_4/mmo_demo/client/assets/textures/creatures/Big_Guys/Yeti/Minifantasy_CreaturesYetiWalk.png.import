@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgpauawagn8v0"
-path="res://.godot/imported/Minifantasy_CreaturesYetiWalk.png-bde59a9b7efc7926722281fa125fd389.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesYetiWalk.png-5787e9827538a160e65982ddb5ddaa50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/Yeti/Minifantasy_CreaturesYetiWalk.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesYetiWalk.png-bde59a9b7efc7926722281fa125fd389.ctex"]
+source_file="res://assets/textures/creatures/big_guys/Yeti/Minifantasy_CreaturesYetiWalk.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesYetiWalk.png-5787e9827538a160e65982ddb5ddaa50.ctex"]
 
 [params]
 

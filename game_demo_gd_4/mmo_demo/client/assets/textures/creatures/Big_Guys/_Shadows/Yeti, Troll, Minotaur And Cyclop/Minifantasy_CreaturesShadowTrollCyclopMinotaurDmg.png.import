@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diile8kntvdc4"
-path="res://.godot/imported/Minifantasy_CreaturesShadowTrollCyclopMinotaurDmg.png-3489dbbac024aa6441994c0fd8c24399.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowTrollCyclopMinotaurDmg.png-049a5a2efdb70e3c0dda437d46a66f26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/_Shadows/Yeti, Troll, Minotaur And Cyclop/Minifantasy_CreaturesShadowTrollCyclopMinotaurDmg.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowTrollCyclopMinotaurDmg.png-3489dbbac024aa6441994c0fd8c24399.ctex"]
+source_file="res://assets/textures/creatures/big_guys/_Shadows/Yeti, Troll, Minotaur And Cyclop/Minifantasy_CreaturesShadowTrollCyclopMinotaurDmg.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowTrollCyclopMinotaurDmg.png-049a5a2efdb70e3c0dda437d46a66f26.ctex"]
 
 [params]
 

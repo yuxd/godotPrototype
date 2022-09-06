@@ -1,14 +1,14 @@
 [gd_scene load_steps=18 format=3]
 
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/premade/npc_alchemist_die.png" id="1_1t13o"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/premade/npc_alchemist_idle.png" id="1_8php8"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/_shadow/npc_dmg_sd.png" id="2_c3upf"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/premade/npc_alchemist_walk.png" id="2_kda1r"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/premade/npc_alchemist_dmg.png" id="2_nbtmp"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/_shadow/npc_idle_sd.png" id="3_1b1g1"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/premade/npc_alchemist_working.png" id="3_rwk21"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/_shadow/npc_walk_sd.png" id="5_3yyr4"]
-[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/_shadow/npc_die_sd.png" id="6_c26d2"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/premade/npc_alchemist_die.png" id="1_1t13o"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/premade/npc_alchemist_idle.png" id="1_8php8"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/_shadow/npc_dmg_sd.png" id="2_c3upf"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/premade/npc_alchemist_walk.png" id="2_kda1r"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/premade/npc_alchemist_dmg.png" id="2_nbtmp"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/_shadow/npc_idle_sd.png" id="3_1b1g1"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/premade/npc_alchemist_working.png" id="3_rwk21"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/_shadow/npc_walk_sd.png" id="5_3yyr4"]
+[ext_resource type="Texture2D" path="res://assets/character/NPCs/_shadow/npc_die_sd.png" id="6_c26d2"]
 
 
 

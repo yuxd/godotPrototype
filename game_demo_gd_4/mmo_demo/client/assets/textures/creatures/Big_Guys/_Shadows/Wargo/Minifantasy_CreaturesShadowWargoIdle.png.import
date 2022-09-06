@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kajm3crvfpc"
-path="res://.godot/imported/Minifantasy_CreaturesShadowWargoIdle.png-9081b2667f662646ca5f9c6fca0dbb46.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowWargoIdle.png-cae62f928732ef64c8c036e895fb7c44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/_Shadows/Wargo/Minifantasy_CreaturesShadowWargoIdle.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowWargoIdle.png-9081b2667f662646ca5f9c6fca0dbb46.ctex"]
+source_file="res://assets/textures/creatures/big_guys/_Shadows/Wargo/Minifantasy_CreaturesShadowWargoIdle.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowWargoIdle.png-cae62f928732ef64c8c036e895fb7c44.ctex"]
 
 [params]
 

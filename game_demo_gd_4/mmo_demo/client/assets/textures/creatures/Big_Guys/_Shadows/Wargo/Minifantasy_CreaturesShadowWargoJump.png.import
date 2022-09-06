@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc3k6xuk0trjr"
-path="res://.godot/imported/Minifantasy_CreaturesShadowWargoJump.png-0a364ba4463c910e9fc74a17f8d46f00.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowWargoJump.png-6aa5b313c34299a6a0ba79b8592325fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/_Shadows/Wargo/Minifantasy_CreaturesShadowWargoJump.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowWargoJump.png-0a364ba4463c910e9fc74a17f8d46f00.ctex"]
+source_file="res://assets/textures/creatures/big_guys/_Shadows/Wargo/Minifantasy_CreaturesShadowWargoJump.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowWargoJump.png-6aa5b313c34299a6a0ba79b8592325fd.ctex"]
 
 [params]
 

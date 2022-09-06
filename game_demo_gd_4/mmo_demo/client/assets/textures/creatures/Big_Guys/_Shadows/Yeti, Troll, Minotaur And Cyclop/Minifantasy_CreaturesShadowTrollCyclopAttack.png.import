@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://o4e7tvtw5d2f"
-path="res://.godot/imported/Minifantasy_CreaturesShadowTrollCyclopAttack.png-3737d7b49e62e7261602761300e7dbaf.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowTrollCyclopAttack.png-3bb58c28a55ef183d69f484708e3be53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/_Shadows/Yeti, Troll, Minotaur And Cyclop/Minifantasy_CreaturesShadowTrollCyclopAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowTrollCyclopAttack.png-3737d7b49e62e7261602761300e7dbaf.ctex"]
+source_file="res://assets/textures/creatures/big_guys/_Shadows/Yeti, Troll, Minotaur And Cyclop/Minifantasy_CreaturesShadowTrollCyclopAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowTrollCyclopAttack.png-3bb58c28a55ef183d69f484708e3be53.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-class_name BTRandomSequence, "res://addons/behavior_tree/icons/btrndsequence.svg"
+class_name BTRandomSequence, "res://addons/q_framework/behavior_tree_ecs/icons/btrndsequence.svg"
 extends BTSequence
 
 # Just like a BTSequence, but the children are executed in random order.

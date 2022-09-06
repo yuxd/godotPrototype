@@ -27,7 +27,7 @@ func _ready() -> void:
 func start() -> void:
 	if not is_active:
 		return
-	bt_root.run()
+	bt_root.tick(agent, blackboard)
 
 func abort() -> void:
 	is_active = false

@@ -1,8 +1,9 @@
-class_name BTParallel, "res://addons/q_framework/behavior_tree_ecs/icons/btparallel.svg"
+class_name BTParallelSelector
 extends BTComposite
 
 # Executes each child. doesn't wait for completion, always succeeds.
-var result_count := 0
+@export var is_succeed := true
+
 func _tick(agent: Node, blackboard: Blackboard) -> void:
 	'''
 	Executes each child. doesn\'t wait for completion, always succeeds.
@@ -14,8 +15,10 @@ func _tick(agent: Node, blackboard: Blackboard) -> void:
 
 
 func _on_child_ticked(result : bool) -> void:
-	if result_count >= children.size() :
-		result_count = 0
-		ticked.emit(succeed())
-	else:
-		result_count += 1
+	if result == is_succeed :
+		for c in children:
+			c.cancel()
+		if result:
+			ticked.emit(succeed())
+		else:
+			ticked.emit(fail())

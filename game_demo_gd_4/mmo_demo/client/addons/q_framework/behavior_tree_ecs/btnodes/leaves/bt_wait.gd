@@ -1,4 +1,4 @@
-class_name BTWait, "res://addons/behavior_tree/icons/btwait.svg"
+class_name BTWait, "res://addons/q_framework/behavior_tree_ecs/icons/btwait.svg"
 extends BTLeaf
 
 # Waits for wait_time seconds, then succeeds. time_in_bb is the key where, 
@@ -9,8 +9,9 @@ extends BTLeaf
 @export var time_in_bb: String
 
 
-func _tick(agent: Node, blackboard: Blackboard) -> bool:
+func _tick(agent: Node, blackboard: Blackboard) -> void:
 	if time_in_bb:
 		wait_time = blackboard.get_data(time_in_bb)
 	await get_tree().create_timer(wait_time, false).timeout
-	return succeed()
+	if not canceled():
+		ticked.emit(succeed())

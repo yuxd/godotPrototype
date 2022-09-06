@@ -9,6 +9,7 @@ enum BTNodeState {
 	FAILURE,
 	SUCCESS,
 	RUNNING,
+	CANCEL,
 }
 
 # (Optional) Emitted after a tick() call. True is success, false is failure. 
@@ -89,6 +90,9 @@ func set_state(rhs: int) -> bool:
 func run():
 	_state = BTNodeState.RUNNING
 
+func cancel():
+	_state = BTNodeState.CANCEL
+
 # You can use the following to recover the state of the node
 func succeeded() -> bool:
 	return _state == BTNodeState.SUCCESS
@@ -98,6 +102,10 @@ func failed() -> bool:
 
 func running() -> bool:
 	return _state == BTNodeState.RUNNING
+
+func canceled() -> bool:
+	return _state == BTNodeState.CANCEL
+
 
 # Or this, as a string.
 func get_state() -> String:
@@ -128,9 +136,9 @@ func tick(agent: Node, blackboard: Blackboard) -> void:
 	
 	run() 
 	
-	assert(running(), "BTNode execution was suspended but it's not running. Did you succeed() or fail() before yield?")
+#	assert(running(), "BTNode execution was suspended but it's not running. Did you succeed() or fail() before yield?")
 	_tick(agent, blackboard)
-	assert(not running(), "BTNode execution was completed but it's still running. Did you forget to return succeed() or fail()?") 
+#	assert(not running(), "BTNode execution was completed but it's still running. Did you forget to return succeed() or fail()?") 
 	
 #	_post_tick(agent, blackboard, result)
 	

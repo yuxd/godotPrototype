@@ -8,7 +8,7 @@ extends BTNode
 # 您可以扩展这个脚本并自己定义它
 
 @onready var children: Array = get_children() as Array
-
+var current_child_index := 0
 var bt_child: BTNode # Used to iterate over children
 
 func _ready():
@@ -20,3 +20,19 @@ func _tick(agent: Node, blackboard: Blackboard) -> void:
 	for c in children:
 		bt_child = c
 		bt_child.tick(agent, blackboard)
+
+
+func tick_current_child() -> bool:
+	if current_child_index <= children.size():
+		var c = children[current_child_index]
+		c.ticked.connect(self._on_child_ticked)
+		c.tick(agent, blackboard)
+		current_child_index += 1
+		return true
+	else:
+		current_child_index = 0
+		return false
+
+
+func _on_child_ticked(result : bool) -> void:
+	pass

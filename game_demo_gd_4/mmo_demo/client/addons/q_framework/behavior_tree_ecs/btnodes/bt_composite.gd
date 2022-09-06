@@ -16,7 +16,6 @@ func _ready():
 
 func _tick(agent: Node, blackboard: Blackboard) -> void:
 	var result
-	
 	for c in children:
 		bt_child = c
 		bt_child.tick(agent, blackboard)

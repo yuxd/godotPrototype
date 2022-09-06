@@ -1,4 +1,4 @@
-class_name BTRevert, "res://addons/behavior_tree/icons/btrevert.svg"
+class_name BTRevert, "res://addons/q_framework/behavior_tree_ecs/icons/btrevert.svg"
 extends BTDecorator
 
 # Succeeds if the child fails and viceversa.

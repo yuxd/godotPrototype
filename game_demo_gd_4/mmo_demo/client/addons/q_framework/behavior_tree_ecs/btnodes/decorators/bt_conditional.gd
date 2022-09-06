@@ -1,4 +1,4 @@
-class_name BTConditional, "res://addons/behavior_tree/icons/btconditional.png"
+class_name BTConditional, "res://addons/q_framework/behavior_tree_ecs/icons/btconditional.png"
 extends BTDecorator
 
 # 用来创造条件。在 tick() 之前，先检查情况，
@@ -16,14 +16,16 @@ var ignore_reverse: bool = false
 func _pre_tick(agent: Node, blackboard: Blackboard) -> void:
 	verified = true
 
-func _tick(agent: Node, blackboard: Blackboard) -> bool:
+func _tick(agent: Node, blackboard: Blackboard) -> void:
 	if reverse and not ignore_reverse:
 		verified = not verified
 	
 	if verified:
 		return await super(agent, blackboard)
-	return fail()
 
 
 func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
 	pass
+
+func _on_child_ticked(result : bool) -> void:
+	ticked.emit(fail())

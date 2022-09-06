@@ -1,15 +1,5 @@
-class_name BTGuard, "res://addons/behavior_tree/icons/btguard.svg"
+class_name BTGuard, "res://addons/q_framework/behavior_tree_ecs/icons/btguard.svg"
 extends BTDecorator
-
-# Can lock the whole branch below itself. The lock happens either after the child ticks, 
-# or after any other BTNode ticks. Then it stays locked for a given time, or until another
-# specified BTNode ticks. You can set all this from the inspector.
-# If you don't specify a locker, the lock_if variable will be based on the child.
-# If you don't specify an unlocker, the unlock_if variable is useless and only the lock_time will 
-# be considered, and viceversa.
-# You can also choose to lock permanently or to lock on startup.
-#
-# A locked BTGuard will always return fail().
 
 # 可以把整根树枝都锁在下面。锁发生在孩子发出 tick() 之后，
 # 或者在任何其他BTNode滴答声之后。然后它会在给定的时间内保持锁定，或者直到下一个时间
@@ -72,11 +62,16 @@ func check_lock(current_locker: BTNode):
 	or ( lock_if == 0 and current_locker.failed())):
 		lock()
 
-func _tick(agent: Node, blackboard: Blackboard) -> bool:
+func _tick(agent: Node, blackboard: Blackboard) -> void:
 	if locked:
-		return fail()
-	return await super(agent, blackboard)
+		ticked.emit(fail())
+	await super(agent, blackboard)
+
 
 func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
 	if not locker:
 		check_lock(bt_child)
+
+
+func _on_child_ticked(result : bool) -> void:
+	ticked.emit(fail())

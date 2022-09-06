@@ -1,16 +1,9 @@
-class_name BTAlways, "res://addons/behavior_tree/icons/btalways.svg"
+class_name BTAlways, "res://addons/q_framework/behavior_tree_ecs/icons/btalways.svg"
 extends BTDecorator
 
-# Executes the child and always either succeeds or fails.
 # 执行子级，并且总是任何一个成功或失败
-
 @export_enum("Fail", "Succeed") var always_what : int
-
 @onready var return_func: String = "fail" if always_what == 0 else "succeed"
 
-
-func _tick(agent: Node, blackboard: Blackboard) -> bool:
-	var result = await bt_child.tick(agent, blackboard)
-#	if result is GDScriptFunctionState:
-#		result = yield(result, "completed")
+func _on_child_ticked(result : bool) -> void:
 	return call(return_func)

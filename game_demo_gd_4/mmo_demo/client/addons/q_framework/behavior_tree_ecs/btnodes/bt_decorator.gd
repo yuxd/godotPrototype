@@ -11,8 +11,17 @@ extends BTNode
 func _ready():
 	assert(get_child_count() == 1, "A BTDecorator can only have one child.")
 
-func _tick(agent: Node, blackboard: Blackboard) -> bool:
-	var result = await bt_child.tick(agent, blackboard)
-#	if result is GDScriptFunctionState:
-#		result = yield(result, "completed")
-	return set_state(bt_child.state)
+
+func _tick(agent: Node, blackboard: Blackboard) -> void:
+	tick_current_child()
+
+
+func tick_current_child() -> bool:
+	var c = get_child(0)
+	c.ticked.connect(self._on_child_ticked)
+	c.tick(agent, blackboard)
+	return true
+
+
+func _on_child_ticked(result : bool) -> void:
+	pass

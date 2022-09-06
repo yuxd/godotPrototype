@@ -12,6 +12,9 @@ func enter(msg : Dictionary = {}) -> void:
 
 func exit() -> void:
 	print_debug("》》》》退出状态： 1 吃饭！")
+#
+#func _process(delta):
+#	pass
 
-func _process(delta):
+func update(delta):
 	pass

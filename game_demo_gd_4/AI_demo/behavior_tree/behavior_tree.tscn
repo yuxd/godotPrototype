@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctox8yrvo7qlq"]
+
+[ext_resource type="Script" path="res://behavior_tree/behavior_tree.gd" id="1_wnf3c"]
+[ext_resource type="Script" path="res://behavior_tree/BTSelector.gd" id="2_h86g4"]
+[ext_resource type="Script" path="res://behavior_tree/BTChifan.gd" id="3_piv10"]
+[ext_resource type="Script" path="res://behavior_tree/BTshuijiao.gd" id="4_65jjh"]
+[ext_resource type="Script" path="res://behavior_tree/BTSequence.gd" id="5_jr0dq"]
+[ext_resource type="Script" path="res://behavior_tree/BTdadoudou.gd" id="6_xo8oe"]
+[ext_resource type="Script" path="res://behavior_tree/BTdamiaomiao.gd" id="7_v3amk"]
+
+[node name="BehaviorTree" type="Node"]
+script = ExtResource("1_wnf3c")
+
+[node name="BTSelector" type="Node" parent="."]
+script = ExtResource("2_h86g4")
+
+[node name="BTChifan" type="Node" parent="BTSelector"]
+script = ExtResource("3_piv10")
+
+[node name="BTShuijiao" type="Node" parent="BTSelector"]
+script = ExtResource("4_65jjh")
+
+[node name="BTSequence" type="Node" parent="BTSelector"]
+script = ExtResource("5_jr0dq")
+
+[node name="BTDadoudou" type="Node" parent="BTSelector/BTSequence"]
+script = ExtResource("6_xo8oe")
+
+[node name="BTDamiaomiao" type="Node" parent="BTSelector/BTSequence"]
+script = ExtResource("7_v3amk")

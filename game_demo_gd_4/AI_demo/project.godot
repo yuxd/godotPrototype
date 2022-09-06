@@ -9,18 +9,78 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "BTLeaf",
+"class": &"BTChifan",
+"language": &"GDScript",
+"path": "res://behavior_tree/BTChifan.gd"
+}, {
+"base": "BTNode",
+"class": &"BTComposite",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/bt_composite.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTDadoudou",
+"language": &"GDScript",
+"path": "res://behavior_tree/BTdadoudou.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTDamiaomiao",
+"language": &"GDScript",
+"path": "res://behavior_tree/BTdamiaomiao.gd"
+}, {
+"base": "BTNode",
+"class": &"BTLeaf",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/bt_leaf.gd"
+}, {
+"base": "Node",
+"class": &"BTNode",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/bt_node.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTSelector",
+"language": &"GDScript",
+"path": "res://behavior_tree/BTSelector.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTSequence",
+"language": &"GDScript",
+"path": "res://behavior_tree/BTSequence.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTShuijiao",
+"language": &"GDScript",
+"path": "res://behavior_tree/BTshuijiao.gd"
+}, {
+"base": "Node",
+"class": &"BehaviorTree",
+"language": &"GDScript",
+"path": "res://behavior_tree/behavior_tree.gd"
+}, {
 "base": "Node",
 "class": &"StateBase",
 "language": &"GDScript",
-"path": "res://state_base.gd"
+"path": "res://state_machine/state_base.gd"
 }]
 _global_script_class_icons={
+"BTChifan": "",
+"BTComposite": "",
+"BTDadoudou": "",
+"BTDamiaomiao": "",
+"BTLeaf": "",
+"BTNode": "",
+"BTSelector": "",
+"BTSequence": "",
+"BTShuijiao": "",
+"BehaviorTree": "",
 "StateBase": ""
 }
 
 [application]
 
 config/name="AI_demo"
-run/main_scene="res://state_machine.tscn"
+run/main_scene="res://state_machine/state_machine.tscn"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
 config/icon="res://icon.svg"

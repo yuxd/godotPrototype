@@ -62,6 +62,7 @@ func check_lock(current_locker: BTNode):
 	or ( lock_if == 0 and current_locker.failed())):
 		lock()
 
+
 func _tick(agent: Node, blackboard: Blackboard) -> void:
 	if locked:
 		ticked.emit(fail())

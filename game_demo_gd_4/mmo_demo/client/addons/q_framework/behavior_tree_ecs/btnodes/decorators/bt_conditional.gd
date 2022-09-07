@@ -16,16 +16,18 @@ var ignore_reverse: bool = false
 func _pre_tick(agent: Node, blackboard: Blackboard) -> void:
 	verified = true
 
+
 func _tick(agent: Node, blackboard: Blackboard) -> void:
 	if reverse and not ignore_reverse:
 		verified = not verified
 	
 	if verified:
-		return await super(agent, blackboard)
+		await super(agent, blackboard)
 
 
 func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
 	pass
 
+
 func _on_child_ticked(result : bool) -> void:
-	ticked.emit(fail())
+	ticked.emit(set_state(bt_child.state))

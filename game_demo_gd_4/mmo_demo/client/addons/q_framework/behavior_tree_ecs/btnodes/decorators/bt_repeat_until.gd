@@ -10,15 +10,14 @@ extends BTDecorator
 @onready var expected_result : bool = bool(until_what)
 
 
-func _tick(agent: Node, blackboard: Blackboard) -> bool:
+func _tick(agent: Node, blackboard: Blackboard) -> void:
 	var result = not expected_result
-	
-	while result != expected_result:
-		result = await bt_child.tick(agent, blackboard)
-		
-#		if result is GDScriptFunctionState:
-#			result = yield(result, "completed")
-		
+	bt_child.tick(agent, blackboard)
+
+
+func _on_child_ticked(result : bool) -> void:
+	if result == expected_result:
+		ticked.emit(set_state(bt_child.state))
+	else:
 		await (get_tree().create_timer(frequency, false).timeout)
-	
-	return set_state(bt_child.state)
+		bt_child.tick(agent, blackboard)

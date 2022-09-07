@@ -1,8 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://c6yc7jfvhh1ru"]
+[gd_scene load_steps=26 format=3 uid="uid://da1m37u50dbfd"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_61bi2"]
 [ext_resource type="Script" path="res://source/components/c_quest_system.gd" id="1_kwdo3"]
-[ext_resource type="Texture2D" uid="uid://3r3hrbnhwawg" path="res://assets/character/character_human_idle.png" id="2_x5e6l"]
+[ext_resource type="Texture2D" uid="uid://3r3hrbnhwawg" path="res://assets/textures/character/character_human_idle.png" id="2_x5e6l"]
 [ext_resource type="Script" path="res://source/components/c_input.gd" id="3_8uvn8"]
 [ext_resource type="Script" path="res://source/components/c_player.gd" id="4_utbpu"]
 [ext_resource type="Script" path="res://source/components/c_locomotion.gd" id="5_fm4yf"]
@@ -10,10 +10,10 @@
 [ext_resource type="Script" path="res://source/components/c_locomotion_animation.gd" id="7_74ufu"]
 [ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="7_sg47u"]
 [ext_resource type="Script" path="res://source/components/c_jump.gd" id="10_dx7w0"]
-[ext_resource type="Texture2D" uid="uid://huc7fq36mrj7" path="res://assets/character/character_human_walk.png" id="10_enhka"]
-[ext_resource type="Texture2D" uid="uid://cyi4hr2lbfr8j" path="res://assets/character/character_human_mining.png" id="11_faop7"]
+[ext_resource type="Texture2D" uid="uid://huc7fq36mrj7" path="res://assets/textures/character/character_human_walk.png" id="10_enhka"]
+[ext_resource type="Texture2D" uid="uid://cyi4hr2lbfr8j" path="res://assets/textures/character/character_human_mining.png" id="11_faop7"]
 [ext_resource type="Script" path="res://source/components/c_inventory.gd" id="13_2358o"]
-[ext_resource type="Texture2D" uid="uid://bl65m8dqfnw7d" path="res://assets/character/character_human_attack.png" id="13_fv1go"]
+[ext_resource type="Texture2D" uid="uid://bl65m8dqfnw7d" path="res://assets/textures/character/character_human_attack.png" id="13_fv1go"]
 [ext_resource type="Script" path="res://source/components/c_prescene.gd" id="15_wk67e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gk6o1"]
@@ -460,6 +460,9 @@ _data = {
 collision_mask = 2
 script = ExtResource("1_61bi2")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_gk6o1")
+
 [node name="Position2D" type="Marker2D" parent="."]
 
 [node name="C_Sprite" type="Sprite2D" parent="Position2D"]
@@ -467,9 +470,6 @@ texture = ExtResource("2_x5e6l")
 hframes = 16
 vframes = 4
 script = ExtResource("6_68exr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Position2D"]
-shape = SubResource("CapsuleShape2D_gk6o1")
 
 [node name="attack_area" type="Area2D" parent="Position2D"]
 collision_layer = 4

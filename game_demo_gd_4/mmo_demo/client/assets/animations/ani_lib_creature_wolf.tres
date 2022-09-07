@@ -1,121 +1,20 @@
-[gd_resource type="AnimationLibrary" load_steps=19 format=3 uid="uid://cimxignic2cwx"]
+[gd_resource type="AnimationLibrary" load_steps=19 format=3 uid="uid://c2xira0ugtgt0"]
 
-[ext_resource type="Texture2D" uid="uid://tuasjkovhwsb" path="res://assets/textures/creatures/beast/creature_wolf_idle.png" id="1_2owgu"]
-[ext_resource type="Texture2D" uid="uid://b84chyuc0waf7" path="res://assets/textures/creatures/beast/creature_wolf_idle_sd.png" id="2_bwjdx"]
-[ext_resource type="Texture2D" uid="uid://dfgo66x6mubpj" path="res://assets/textures/creatures/beast/creature_wolf_dmg.png" id="3_qatpc"]
-[ext_resource type="Texture2D" uid="uid://cgutnwml1mhki" path="res://assets/textures/creatures/beast/creature_wolf_dmg_sd.png" id="4_gutcc"]
-[ext_resource type="Texture2D" uid="uid://37xvuxvhv1la" path="res://assets/textures/creatures/beast/creature_wolf_die.png" id="5_ybc60"]
-[ext_resource type="Texture2D" uid="uid://ot0afoxco30c" path="res://assets/textures/creatures/beast/creature_wolf_die_sd.png" id="6_27sai"]
-[ext_resource type="Texture2D" uid="uid://bj78qdijxnunj" path="res://assets/textures/creatures/beast/creature_wolf_attack.png" id="7_aurs3"]
-[ext_resource type="Texture2D" uid="uid://14ivtoi2tl6e" path="res://assets/textures/creatures/beast/creature_wolf_attack_sd.png" id="8_q3k55"]
-[ext_resource type="Texture2D" uid="uid://ct84ibw82l0es" path="res://assets/textures/creatures/beast/creature_wolf_jump.png" id="9_df5jb"]
-[ext_resource type="Texture2D" uid="uid://buhjyc1lctxc3" path="res://assets/textures/creatures/beast/creature_wolf_jump_sd.png" id="10_qiygk"]
-[ext_resource type="Texture2D" uid="uid://bg7cs7egxogi" path="res://assets/textures/creatures/beast/creature_wolf_walk.png" id="11_wnj6n"]
-[ext_resource type="Texture2D" uid="uid://c82qxvx7mljvb" path="res://assets/textures/creatures/beast/creature_wolf_walk_sd.png" id="12_l5a5h"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_idle.png" id="1_2owgu"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_idle_sd.png" id="2_bwjdx"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_dmg.png" id="3_qatpc"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_dmg_sd.png" id="4_gutcc"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_die.png" id="5_ybc60"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_die_sd.png" id="6_27sai"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_attack.png" id="7_aurs3"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_attack_sd.png" id="8_q3k55"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_jump.png" id="9_df5jb"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_jump_sd.png" id="10_qiygk"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_walk.png" id="11_wnj6n"]
+[ext_resource type="Texture2D" path="res://assets/textures/creatures/beast/creature_wolf_walk_sd.png" id="12_l5a5h"]
 
-[sub_resource type="Animation" id="Animation_k6wf0"]
-resource_name = "idle"
-length = 1.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Position2D/body:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_2owgu")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Position2D/body:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [12]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Position2D/body:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Position2D/shadow:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_bwjdx")]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Position2D/shadow:hframes")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [12]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Position2D/shadow:vframes")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Position2D/shadow:frame")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Position2D/body:frame")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_qp62v"]
-resource_name = "dmg"
+[sub_resource type="Animation" id="Animation_hyj5c"]
+resource_name = "attack"
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -128,7 +27,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_qatpc")]
+"values": [ExtResource("7_aurs3")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -176,7 +75,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_gutcc")]
+"values": [ExtResource("8_q3k55")]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -316,8 +215,8 @@ tracks/7/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
 
-[sub_resource type="Animation" id="Animation_hyj5c"]
-resource_name = "attack"
+[sub_resource type="Animation" id="Animation_qp62v"]
+resource_name = "dmg"
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -330,7 +229,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_aurs3")]
+"values": [ExtResource("3_qatpc")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -378,7 +277,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("8_q3k55")]
+"values": [ExtResource("4_gutcc")]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -415,6 +314,107 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_k6wf0"]
+resource_name = "idle"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Position2D/body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_2owgu")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Position2D/body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Position2D/body:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Position2D/shadow:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_bwjdx")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Position2D/shadow:hframes")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Position2D/shadow:vframes")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Position2D/shadow:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Position2D/body:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 }
 
 [sub_resource type="Animation" id="Animation_qknk0"]

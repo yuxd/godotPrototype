@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://k654tutgnp8h" path="res://source/widget/form_main.tscn" id="5_hxj4s"]
 [ext_resource type="PackedScene" uid="uid://b0kyfn2k25bfb" path="res://source/entities/camera.tscn" id="6_0l7gl"]
 [ext_resource type="PackedScene" uid="uid://8rhr6g6r4pn7" path="res://source/scenes/main_map.tscn" id="7_xuq5w"]
-[ext_resource type="PackedScene" uid="uid://djg4hmiw1122w" path="res://source/entities/refresher.tscn" id="8_hudf3"]
+[ext_resource type="PackedScene" path="res://source/entities/refresher.tscn" id="8_hudf3"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_vhn0y")
@@ -22,6 +22,8 @@ script = ExtResource("2_2ppna")
 
 [node name="form_main" parent="." instance=ExtResource("5_hxj4s")]
 visible = false
+layout_mode = 3
+anchors_preset = 15
 
 [node name="order_group" type="Node" parent="."]
 

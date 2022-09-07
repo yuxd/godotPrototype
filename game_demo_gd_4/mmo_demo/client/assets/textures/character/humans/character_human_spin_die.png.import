@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btfmre47fopau"
-path="res://.godot/imported/character_human_soul_die.png-73000b3399aa4fbe3690cf2681072a9a.ctex"
+uid="uid://bmpemqcl8vbd3"
+path="res://.godot/imported/character_human_spin_die.png-79dc127c9ece58d97391f9c0ce1c1938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/character/character_human_soul_die.png"
-dest_files=["res://.godot/imported/character_human_soul_die.png-73000b3399aa4fbe3690cf2681072a9a.ctex"]
+source_file="res://assets/textures/character/humans/character_human_spin_die.png"
+dest_files=["res://.godot/imported/character_human_spin_die.png-79dc127c9ece58d97391f9c0ce1c1938.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyi4hr2lbfr8j"
-path="res://.godot/imported/character_human_mining.png-1f07d12890fcaab9077f6c59eea30f48.ctex"
+uid="uid://x7fchdryknov"
+path="res://.godot/imported/character_human_charged_attack.png-1c91bfea4612b6903a34db458e850b2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/character/character_human_mining.png"
-dest_files=["res://.godot/imported/character_human_mining.png-1f07d12890fcaab9077f6c59eea30f48.ctex"]
+source_file="res://assets/textures/character/humans/character_human_charged_attack.png"
+dest_files=["res://.godot/imported/character_human_charged_attack.png-1c91bfea4612b6903a34db458e850b2e.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

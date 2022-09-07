@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmpemqcl8vbd3"
-path="res://.godot/imported/character_human_spin_die.png-c185cd902672d730bdc1da8bffd5a50c.ctex"
+uid="uid://huc7fq36mrj7"
+path="res://.godot/imported/character_human_walk.png-2bbb411d7880b6faf9994990448fa797.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/character/character_human_spin_die.png"
-dest_files=["res://.godot/imported/character_human_spin_die.png-c185cd902672d730bdc1da8bffd5a50c.ctex"]
+source_file="res://assets/textures/character/humans/character_human_walk.png"
+dest_files=["res://.godot/imported/character_human_walk.png-2bbb411d7880b6faf9994990448fa797.ctex"]
 
 [params]
 

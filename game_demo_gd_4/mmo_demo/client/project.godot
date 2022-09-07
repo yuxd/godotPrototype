@@ -831,6 +831,7 @@ camera_zoom_down={
 [layer_names]
 
 2d_physics/layer_1="player"
+2d_navigation/layer_1="main_navigation"
 2d_physics/layer_2="static"
 2d_physics/layer_3="attack"
 2d_physics/layer_4="enemy"

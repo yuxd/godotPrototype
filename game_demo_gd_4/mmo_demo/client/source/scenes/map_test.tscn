@@ -2,12 +2,13 @@
 
 [ext_resource type="TileSet" uid="uid://buau6cifxpod3" path="res://assets/tilesets/ts_main.tres" id="1_26x4i"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_4nhj1"]
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ydo5e"]
 
 [node name="map_test" type="Node2D"]
 
 [node name="NavigationRegion2d" type="NavigationRegion2D" parent="."]
-navpoly = SubResource("NavigationPolygon_4nhj1")
+position = Vector2(-94, -1)
+navpoly = SubResource("NavigationPolygon_ydo5e")
 
 [node name="tilemap" type="TileMap" parent="."]
 tile_set = ExtResource("1_26x4i")

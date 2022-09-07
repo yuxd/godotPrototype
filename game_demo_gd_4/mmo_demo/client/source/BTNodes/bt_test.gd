@@ -1,6 +1,6 @@
 class_name BTTest
 extends BTLeaf
 
-func _tick(agent: Node, blackboard: Blackboard) -> bool:
+func _tick(agent: Node, blackboard: Blackboard) -> void:
 	print_debug("bt_test")
-	return succeed()
+	ticked.emit(succeed()) 

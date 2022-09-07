@@ -209,6 +209,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://addons/q_framework/behavior_tree_ecs/btnodes/bt_decorator.gd"
 }, {
+"base": "BTLeaf",
+"class": &"BTGetRandomPosition",
+"language": &"GDScript",
+"path": "res://source/BTNodes/bt_get_random_position.gd"
+}, {
 "base": "BTDecorator",
 "class": &"BTGuard",
 "language": &"GDScript",
@@ -218,6 +223,11 @@ _global_script_classes=[{
 "class": &"BTLeaf",
 "language": &"GDScript",
 "path": "res://addons/q_framework/behavior_tree_ecs/btnodes/bt_leaf.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTMoveTo",
+"language": &"GDScript",
+"path": "res://source/BTNodes/bt_move_to.gd"
 }, {
 "base": "Node",
 "class": &"BTNode",
@@ -640,8 +650,10 @@ _global_script_class_icons={
 "BTComposite": "res://addons/q_framework/behavior_tree_ecs/icons/btcomposite.svg",
 "BTConditional": "res://addons/q_framework/behavior_tree_ecs/icons/btconditional.png",
 "BTDecorator": "res://addons/behavior_tree/icons/btdecorator.svg",
+"BTGetRandomPosition": "",
 "BTGuard": "res://addons/q_framework/behavior_tree_ecs/icons/btguard.svg",
 "BTLeaf": "res://addons/behavior_tree/icons/btleaf.svg",
+"BTMoveTo": "",
 "BTNode": "res://addons/behavior_tree/icons/btnode.svg",
 "BTParallel": "res://addons/behavior_tree/icons/btparallel.svg",
 "BTRandomSelector": "res://addons/behavior_tree/icons/btrndselector.svg",

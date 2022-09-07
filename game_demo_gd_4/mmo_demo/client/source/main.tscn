@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cybyi8amkkles" path="res://source/procedure/procedure.tscn" id="3_i0235"]
 [ext_resource type="PackedScene" uid="uid://k654tutgnp8h" path="res://source/widget/form_main.tscn" id="5_hxj4s"]
 [ext_resource type="PackedScene" uid="uid://b0kyfn2k25bfb" path="res://source/entities/camera.tscn" id="6_0l7gl"]
-[ext_resource type="PackedScene" uid="uid://8rhr6g6r4pn7" path="res://source/scenes/main_map.tscn" id="7_xuq5w"]
-[ext_resource type="PackedScene" path="res://source/entities/refresher.tscn" id="8_hudf3"]
+[ext_resource type="PackedScene" uid="uid://dcy2jc5p2pwpj" path="res://source/entities/refresher.tscn" id="8_hudf3"]
+[ext_resource type="PackedScene" uid="uid://dtxlqgpqcthsn" path="res://source/scenes/map_test.tscn" id="8_nuxit"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_vhn0y")
@@ -32,9 +32,9 @@ spawn_path = NodePath("..")
 
 [node name="camera" parent="." instance=ExtResource("6_0l7gl")]
 
-[node name="mian_map" parent="." instance=ExtResource("7_xuq5w")]
-
 [node name="Refresher" parent="." instance=ExtResource("8_hudf3")]
 position = Vector2(148, 94)
+
+[node name="map_test" parent="." instance=ExtResource("8_nuxit")]
 
 [editable path="ProcedureManager"]

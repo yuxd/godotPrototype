@@ -1,13 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://rtd2yu244fhr"]
+[gd_scene load_steps=18 format=3 uid="uid://rtd2yu244fhr"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_mkfpr"]
 [ext_resource type="Texture2D" uid="uid://cqefrb0p6ijm1" path="res://assets/textures/creatures/beast/creature_beast_bat_sleep.png" id="2_gqep8"]
 [ext_resource type="Script" path="res://source/components/c_sprite.gd" id="3_oitr6"]
 [ext_resource type="Texture2D" uid="uid://0n6f8v2g1wfr" path="res://assets/textures/creatures/beast/creature_beast_bat_fly_sd.png" id="4_8rxwc"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/c_behavior_tree.gd" id="6_klglg"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/btnodes/composites/bt_sequence.gd" id="7_owyrw"]
 [ext_resource type="AnimationLibrary" uid="uid://cmeo0u6j2utur" path="res://assets/animations/ani_lib_creature_bat.tres" id="7_sn0ga"]
 [ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="10_t1bm0"]
 [ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/blackboard.gd" id="11_frwpy"]
-[ext_resource type="Script" path="res://addons/behavior_tree/src/behavior_tree.gd" id="12_y6i84"]
+[ext_resource type="Script" path="res://source/BTNodes/bt_get_random_position.gd" id="11_her2o"]
+[ext_resource type="Script" path="res://source/BTNodes/bt_move_to.gd" id="12_13bot"]
 [ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/btnodes/composites/bt_parallel.gd" id="13_kdou1"]
 [ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/btnodes/leaves/bt_wait.gd" id="14_1ps3t"]
 [ext_resource type="Script" path="res://source/BTNodes/bt_test.gd" id="15_2ldfy"]
@@ -44,17 +47,32 @@ script = ExtResource("11_frwpy")
 data = {}
 
 [node name="BehaviorTree" type="Node" parent="."]
-script = ExtResource("12_y6i84")
+script = ExtResource("6_klglg")
 
-[node name="BTParallel" type="Node" parent="BehaviorTree"]
-script = ExtResource("13_kdou1")
+[node name="BTSequence" type="Node" parent="BehaviorTree"]
+script = ExtResource("7_owyrw")
+debug = true
 
-[node name="BTWait" type="Node" parent="BehaviorTree/BTParallel"]
+[node name="BTWait" type="Node" parent="BehaviorTree/BTSequence"]
 script = ExtResource("14_1ps3t")
 wait_time = 1.0
+debug = true
 
-[node name="BTTest" type="Node" parent="BehaviorTree/BTParallel"]
+[node name="BTGetRandomPosition" type="Node" parent="BehaviorTree/BTSequence"]
+script = ExtResource("11_her2o")
+debug = true
+
+[node name="BTParallel" type="Node" parent="BehaviorTree/BTSequence"]
+script = ExtResource("13_kdou1")
+debug = true
+
+[node name="BTTest" type="Node" parent="BehaviorTree/BTSequence/BTParallel"]
 script = ExtResource("15_2ldfy")
+debug = true
+
+[node name="BTMoveTo" type="Node" parent="BehaviorTree/BTSequence/BTParallel"]
+script = ExtResource("12_13bot")
+debug = true
 
 [node name="C_LocomotionAnimation" type="Node" parent="."]
 script = ExtResource("16_lrumd")

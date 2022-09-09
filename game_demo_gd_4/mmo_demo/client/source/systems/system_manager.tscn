@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ckbxk3ofnndxd"]
+[gd_scene load_steps=14 format=3 uid="uid://d3w84an5bv7rk"]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/SystemManager.gd" id="1_mybdw"]
 [ext_resource type="Script" path="res://source/systems/s_game_manager.gd" id="2_gfwhs"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://source/systems/s_scene_manager.gd" id="10_bhoeo"]
 [ext_resource type="Script" path="res://source/systems/s_camera_manager.gd" id="11_xai0k"]
 [ext_resource type="Script" path="res://source/systems/s_refresh.gd" id="12_t6s8l"]
-[ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/s_behavior_tree.gd" id="13_sciuy"]
+[ext_resource type="Script" path="res://source/systems/s_AI_input.gd" id="13_sciuy"]
 
 [node name="SystemManager" type="Node"]
 script = ExtResource("1_mybdw")
@@ -50,5 +50,5 @@ script = ExtResource("11_xai0k")
 [node name="RefreshSystem" type="Node" parent="."]
 script = ExtResource("12_t6s8l")
 
-[node name="BehaviorTreeSystem" type="Node" parent="."]
+[node name="AIInputSystem" type="Node" parent="."]
 script = ExtResource("13_sciuy")

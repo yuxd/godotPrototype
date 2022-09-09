@@ -1,4 +1,4 @@
-[gd_resource type="AnimationLibrary" load_steps=12 format=3 uid="uid://cmeo0u6j2utur"]
+[gd_resource type="AnimationLibrary" load_steps=12 format=3 uid="uid://bndefpwg7jjge"]
 
 [ext_resource type="Texture2D" uid="uid://4pcfmy2rvokd" path="res://assets/textures/creatures/beast/creature_beast_bat_die.png" id="1_us85u"]
 [ext_resource type="Texture2D" uid="uid://deymj1gpd0l83" path="res://assets/textures/creatures/beast/creature_beast_bat_dmg.png" id="2_ohi4g"]

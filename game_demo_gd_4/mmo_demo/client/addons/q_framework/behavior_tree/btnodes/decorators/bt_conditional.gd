@@ -1,0 +1,33 @@
+class_name BTConditional, "res://addons/q_framework/behavior_tree/icons/btconditional.png"
+extends BTDecorator
+
+# 用来创造条件。在 tick() 之前，先检查情况，
+# 如果满足条件，则执行子节点。
+# 然后，条件返回与子节点相同的状态，如下所示：
+# 一个普通的装饰师，而不是条件的结果。
+# 如果你想知道条件的结果，把它存储在黑板上
+# 在_pre_tick（）期间。
+
+@export var reverse: bool = false
+
+var verified: bool = false
+var ignore_reverse: bool = false
+
+func _pre_tick(agent: Node, blackboard: Blackboard) -> void:
+	verified = true
+
+
+func _tick(agent: Node, blackboard: Blackboard) -> void:
+	if reverse and not ignore_reverse:
+		verified = not verified
+	
+	if verified:
+		await super(agent, blackboard)
+
+
+func _post_tick(agent: Node, blackboard: Blackboard, result: bool) -> void:
+	pass
+
+
+func _on_child_ticked(result : bool) -> void:
+	ticked.emit(set_state(bt_child.state))

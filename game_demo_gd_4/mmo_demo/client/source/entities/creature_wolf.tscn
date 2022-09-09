@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c25aomkl6wuvp"]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_80yai"]
 [ext_resource type="Script" path="res://source/components/c_sprite.gd" id="3_f5yhe"]
@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bj78qdijxnunj" path="res://assets/textures/creatures/beast/creature_wolf_attack.png" id="16_o6mab"]
 [ext_resource type="Texture2D" uid="uid://14ivtoi2tl6e" path="res://assets/textures/creatures/beast/creature_wolf_attack_sd.png" id="17_hg0jt"]
 [ext_resource type="Script" path="res://source/components/c_locomotion.gd" id="17_qqi2l"]
-[ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/c_behavior_tree.gd" id="19_3jb61"]
-[ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/btnodes/composites/bt_selector.gd" id="20_7jki7"]
-[ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/btnodes/leaves/bt_wait.gd" id="21_04s50"]
-[ext_resource type="Script" path="res://addons/q_framework/behavior_tree_ecs/blackboard.gd" id="21_p2p6p"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/behavior_tree.gd" id="19_3jb61"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/btnodes/composites/bt_selector.gd" id="20_7jki7"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/btnodes/leaves/bt_wait.gd" id="21_04s50"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/blackboard.gd" id="21_p2p6p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cddm"]
 size = Vector2(6, 12)

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://source/widget/form_main.gd" id="1_51i1s"]
 [ext_resource type="Script" path="res://source/widget/w_main_body.gd" id="2_pm7im"]
 [ext_resource type="PackedScene" path="res://source/widget/w_buildings.tscn" id="3_cdq8s"]
-[ext_resource type="PackedScene" uid="uid://g8ig3t3yy8f" path="res://source/widget/w_item_slot.tscn" id="4_jwq76"]
+[ext_resource type="PackedScene" uid="uid://8djgnvgm0g5n" path="res://source/widget/w_item_slot.tscn" id="4_jwq76"]
 
 [sub_resource type="SystemFont" id="SystemFont_kirxs"]
 font_names = PackedStringArray("SimSun")

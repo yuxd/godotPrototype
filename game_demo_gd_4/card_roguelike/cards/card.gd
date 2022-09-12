@@ -14,7 +14,7 @@ var can_release : bool = false
 @export var is_back : bool
 
 @onready var card : TextureRect = $t_card
-@onready var tween : Tween = get_tree().create_tween()
+#@onready var tween : Tween = get_tree().create_tween()
 @onready var timer_preview = $timer_preview
 @onready var timer_release = $timer_release
 
@@ -48,44 +48,42 @@ func preview():
 	var item = card.get_canvas_item()
 	match card_state:
 		CardState.normal:
-			# print(self.rect_rotation)
+			# print(self.rotation)
 			self.card_state = CardState.preview
 			var target_position = position - card_resource.preview_position
 			var target_scale = scale + card_resource.preview_scale
 			# print("preview",target_position,target_scale)
-			# tween.interpolate_property(card,"rect_position",
-			# 	card.rect_position, target_position,card_resource.tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-			tween.interpolate_property(card,"rect_rotation",
-				card.rotation, - rotation, card_resource.tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-			tween.interpolate_property(card,"rect_scale",
-				card.rect_scale,target_scale,card_resource.tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-			tween.start()
+			# tween.interpolate_property(card,"position",
+			# 	card.position, target_position,card_resource.tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+			var tween : Tween = get_tree().create_tween()
+			tween.tween_property(card, "rotation", - rotation, card_resource.tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+			tween.tween_property(card, "scale", target_scale, card_resource.tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+			tween.play()
 #			z_index = VisualServer.canvas_item_get_z_index(item)
 			RenderingServer.canvas_item_set_z_index(item, 1)
 		CardState.preview:
-			# print(self.rect_rotation)
-			tween.interpolate_property(card,"rect_rotation",
-				card.rect_rotation, 0,card_resource.tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-			tween.interpolate_property(card,"rect_scale",
-				card.rect_scale, Vector2(1,1),card_resource.tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-			tween.start()
+			# print(self.rotation)
+			var tween : Tween = get_tree().create_tween()
+			tween.tween_property(card,"rotation", 0, card_resource.tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+			tween.tween_property(card,"scale", Vector2(1,1), card_resource.tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+			tween.play()
 			self.card_state = CardState.normal
 			RenderingServer.canvas_item_set_z_index(item, 0)
 
 func predragging():
 	if card_state == CardState.prerelease:
 		print("predragging")
-		tween.interpolate_property(card,"rect_scale",
-			card.rect_scale, Vector2(1,1),card_resource.tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-		tween.start()
+		var tween : Tween = get_tree().create_tween()
+		tween.tween_property(card, "scale", Vector2(1,1), card_resource.tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+		tween.play()
 		card_state = CardState.dragging
 
 func prerelease():
 	if card_state != CardState.prerelease:
 		# print("prerelease")
-		tween.interpolate_property(card,"rect_scale",
-			card.rect_scale, Vector2(1.5,1.5),card_resource.tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-		tween.start()
+		var tween : Tween = get_tree().create_tween()
+		tween.interpolate_property(card, "scale", Vector2(1.5,1.5), card_resource.tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+		tween.play()
 		card_state = CardState.prerelease
 
 func release():

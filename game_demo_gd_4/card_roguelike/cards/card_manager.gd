@@ -11,13 +11,16 @@ extends Control
 @onready var deck : Control = $deck
 @onready var cemetery : Control = $cemetery
 # onready var card_preview = $card_preview
-@onready var tween : Tween = get_tree().create_tween()
+#@onready var tween : Tween = get_tree().create_tween()
 @onready var arrow :Node2D = $bessel_arrow
-@onready var tween_remove_card : Tween = get_tree().create_tween()
+#@onready var tween_remove_card : Tween = get_tree().create_tween()
 
-@onready var max_card_amount : int = 13
+@onready var max_card_amount : int = 12
 
-var cards = []
+var card_remove_index := 0
+
+var cards : Array : 
+	get : return hand_card.get_children()
 var card_amount : int = 0
 var offset_x
 
@@ -32,6 +35,12 @@ var can_release_card : bool = false
 func _ready():
 #	card_preview.pivot_offset = Vector2(card_preview.size.x/2,card_preview.size.y)
 #	card_preview.hide()
+	for c in cards:
+		c.queue_free()
+	for i in range(0, 5):
+		var card : Card = t_card.instantiate()
+		hand_card.add_child(card)
+		printerr(card.rotation)
 	update_card_position()
 
 func _process(delta):
@@ -48,7 +57,8 @@ func _process(delta):
 				arrow.reset(click_pisition,get_viewport().get_mouse_position())
 				# selected_card.card.hide()
 
-func _input(event):
+
+func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if not dragging and event.pressed:
 			dragging = true
@@ -71,46 +81,51 @@ func _input(event):
 					pass 
 				selected_card = null
 				
-			update_card_position()			
+			update_card_position()
+
 
 func update_card_position():
-	cards = hand_card.get_children()
 	if cards.size() == 0:
 		return
 	card_amount = cards.size()
 	offset_x = cards[0].size.x
-	for i in range(0, card_amount):
-		var card_offset = card_amount * -0.5 + 0.5 + 1* i
-		cards[i].pivot_offset = Vector2(cards[i].size.x/2,cards[i].size.y)		
+	for i in cards.size():
+		var card : Card = cards[i]
+		var card_offset = card_amount * -0.5 + 0.5 + 1 * i
+#		card.pivot_offset = Vector2(cards[i].size.x/2,cards[i].size.y)
 		# 位置偏移
-		# cards[i].position.x = card_offset * offset_x * offset_x_proportion
+#		card.position.x = card_offset * offset_x * offset_x_proportion
+#		printerr(" card position x: ", card.position.x, " card_offset: ", card_offset, \
+#			" offset_x_proportion: ", offset_x_proportion, " offset_x: ", offset_x)
 		# 旋转偏移
 		# cards[i].rotation = card_offset * rotation_proportion
-		var target_position = Vector2(card_offset * offset_x * offset_x_proportion * max_card_amount/card_amount , 0)
+		var target_position = Vector2(card_offset * offset_x * offset_x_proportion * (1 if card_amount <= max_card_amount else max_card_amount/card_amount) , 0) 
 		var target_rotation = card_offset * rotation_proportion
 		var target_scale = Vector2(1,1)
-
-		tween.tween_property(cards[i],"position", target_position,tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-		tween.tween_property(cards[i],"rotation", target_rotation,tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-		tween.tween_property(cards[i],"scale", target_scale, tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+#		assert(tween, '没找到 tween')
+		var tween : Tween = get_tree().create_tween()
+		tween.finished.connect(_on_tween_update_position_completed)
+		tween.tween_property(card, "position", target_position, tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+#TODO		tween.tween_property(cards[i],"rotation", target_rotation,tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+		tween.tween_property(card, "scale", target_scale, tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 		tween.play()
-
-		if cards[i].card_manager == null:
-			cards[i].card_manager = self
+#		card.rotation = i * rotation_proportion
+#		printerr("card rotation: ", card.rotation, "i: ", i, "rotation_proportion: ", rotation_proportion)
+		if card.card_manager != self:
+			card.card_manager = self
 		# cards[i].card_state = cards[i].CardState.normal
-		cards[i].card.show()
+		card.card.show()
 		
 
 func _add_card(pos:Vector2):
-	var card = t_card.instance()
+	var card = t_card.instantiate()
 	hand_card.add_child(card)
-	cards.append(card)
 	card.scale = Vector2(0,0)
 	card.position = pos - hand_card.position
 	update_card_position()
 	card_wait_for_add -= 1
 
-func add_cards(n:int,pos:Vector2):
+func add_cards(n:int, pos:Vector2):
 	card_wait_for_add = n
 	_add_card(pos)
 
@@ -120,10 +135,12 @@ func remove_card(card):
 	var target_position = cemetery.position - hand_card.position
 	# var target_rotation = card_offset * rotation_proportion
 	var target_scale = Vector2(0,0)
-	tween_remove_card.interpolate_property(card,"position",card.position,target_position,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
+	var tween_remove_card : Tween = get_tree().create_tween()
+	tween_remove_card.finished.connect(_on_tween_remove_card_tween_completed)
+	tween_remove_card.tween_property(card, "position", target_position, tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	# tween.interpolate_property(card,"rotation",card.rotation,target_rotation,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-	tween_remove_card.interpolate_property(card,"scale",card.scale,target_scale,tween_speed,Tween.TRANS_BACK,Tween.EASE_IN)
-	tween_remove_card.start()
+	tween_remove_card.tween_property(card, "scale", target_scale, tween_speed).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	tween_remove_card.play()
 
 
 func get_card_position(card_index : int) -> Vector2:
@@ -165,18 +182,19 @@ func _on_card_dragging(card):
 	card.position = get_viewport().get_mouse_position() - hand_card.position
 
 func _on_btn_add_card_pressed():
-	add_cards(2,deck.position)
+	add_cards(2, deck.position)
 
 func _on_btn_remove_card_pressed():
-	remove_card(cards[1])
+	card_remove_index = 1
+	remove_card(cards[card_remove_index])
 
-func _on_Tween_tween_completed(object, key):
+func _on_tween_update_position_completed():
 	if card_wait_for_add != 0:
 		_add_card(deck.position)
 
 
-func _on_tween_remove_card_tween_completed(object, key):
-	if object is Card:
-		cards.erase(object)
-		hand_card.remove_child(object)
-		update_card_position()
+func _on_tween_remove_card_tween_completed():
+	var card : Card = cards[card_remove_index]
+	hand_card.remove_child(card)	
+	card.queue_free()
+	update_card_position()

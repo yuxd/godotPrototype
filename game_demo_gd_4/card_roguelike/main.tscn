@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbwynmmumjpdd"]
+
+[ext_resource type="PackedScene" uid="uid://b1b4kbiuf2mnq" path="res://cards/card_manager.tscn" id="1"]
+
+[node name="Main" type="CanvasLayer"]
+
+[node name="CardManager" parent="." instance=ExtResource("1")]

@@ -1,0 +1,12 @@
+SceneManagerSystem (s_scene_manager.gd)
+SceneManager (manager_scene.gd)
+Node
+TextureRect
+MarginContainer
+HBoxContainer
+SpriteComponent (c_sprite.gd)
+InventoryItemComponent (c_inventory_item.gd)
+Sprite2D
+InventoryComponent (c_inventory.gd)
+InventorySystem (s_inventory.gd)
+CollisionShape2D

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckdq3nv2fe3v1"
-path="res://.godot/imported/Minifantasy_CreaturesMotherSlimeGreenDie.png-48656324c60a377723d67880ccfb2ea6.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesMotherSlimeGreenDie.png-97f742bd5d86daf0f38198765abff9f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/Mother_Slime/Green_Mother_Slime/Minifantasy_CreaturesMotherSlimeGreenDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesMotherSlimeGreenDie.png-48656324c60a377723d67880ccfb2ea6.ctex"]
+source_file="res://assets/textures/creatures/big_guys/Mother_Slime/Green_Mother_Slime/Minifantasy_CreaturesMotherSlimeGreenDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesMotherSlimeGreenDie.png-97f742bd5d86daf0f38198765abff9f3.ctex"]
 
 [params]
 

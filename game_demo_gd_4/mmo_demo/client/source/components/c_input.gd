@@ -10,7 +10,9 @@ var state: Dictionary = {
 	Globals.InputAction.MOVE_DOWN: false,
 	Globals.InputAction.MOVE_LEFT: false,
 	Globals.InputAction.MOVE_RIGHT: false,
-	Globals.InputAction.JUMP: false,
+#	Globals.InputAction.JUMP: false,
+	Globals.InputAction.CAMREA_ZOOM_UP : false,
+	Globals.InputAction.CAMREA_ZOOM_DOWN : false,
 }
 
 func is_action_pressed(action: int) -> bool:

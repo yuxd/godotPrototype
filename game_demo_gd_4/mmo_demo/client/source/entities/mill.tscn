@@ -1,6 +1,7 @@
 [gd_scene load_steps=7 format=3]
 
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/wooden_plank_windmill/Indoor/Minifantasy_TownsIIWindmillPremadeIndoorMill.png" id="1_5ahhn"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/wooden_plank_windmill/Indoor/Minifantasy_TownsIIWindmillPremadeIndoorMill.png" id="1_5ahhn"]
+
 
 
 

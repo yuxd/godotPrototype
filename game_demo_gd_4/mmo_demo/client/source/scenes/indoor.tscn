@@ -1,11 +1,10 @@
 [gd_scene load_steps=12 format=3]
 
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/ts_building_brick_indoor.png" id="1_pyduq"]
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/ts_building_stucco_indoor.png" id="2_r3iv6"]
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/ts_building_wooden_plank_indoor.png" id="3_0v0ks"]
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/ts_props_01.png" id="4_q6430"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/ts_building_brick_indoor.png" id="1_pyduq"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/ts_building_stucco_indoor.png" id="2_r3iv6"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/ts_building_wooden_plank_indoor.png" id="3_0v0ks"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/ts_props_01.png" id="4_q6430"]
 [ext_resource type="PackedScene" path="res://source/entities/anvil.tscn" id="5_87vvr"]
-
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0vh04"]
 texture = ExtResource("1_pyduq")

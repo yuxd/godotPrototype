@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr5qoh6ulwup4"
-path="res://.godot/imported/Minifantasy_CreaturesDwarfYellowBearJump.png-f9aef94ba3cc8c4655473d03fa103ca8.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesDwarfYellowBearJump.png-b61a5170eb5726647e598305fbc7fdbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Dwarf/Dwarf_Yellow_Beard/Minifantasy_CreaturesDwarfYellowBearJump.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesDwarfYellowBearJump.png-f9aef94ba3cc8c4655473d03fa103ca8.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Dwarf/Dwarf_Yellow_Beard/Minifantasy_CreaturesDwarfYellowBearJump.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesDwarfYellowBearJump.png-b61a5170eb5726647e598305fbc7fdbe.ctex"]
 
 [params]
 

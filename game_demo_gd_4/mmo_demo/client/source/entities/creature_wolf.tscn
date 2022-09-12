@@ -1,0 +1,85 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_80yai"]
+[ext_resource type="Script" path="res://source/components/c_sprite.gd" id="3_f5yhe"]
+[ext_resource type="AnimationLibrary" uid="uid://c2xira0ugtgt0" path="res://assets/animations/ani_lib_creature_wolf.tres" id="7_sn0ga"]
+[ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="10_8b7e5"]
+[ext_resource type="Script" path="res://source/components/c_locomotion_animation.gd" id="16_73j82"]
+[ext_resource type="Texture2D" uid="uid://bj78qdijxnunj" path="res://assets/textures/creatures/beast/creature_wolf_attack.png" id="16_o6mab"]
+[ext_resource type="Texture2D" uid="uid://14ivtoi2tl6e" path="res://assets/textures/creatures/beast/creature_wolf_attack_sd.png" id="17_hg0jt"]
+[ext_resource type="Script" path="res://source/components/c_locomotion.gd" id="17_qqi2l"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/behavior_tree.gd" id="19_3jb61"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/btnodes/composites/bt_selector.gd" id="20_7jki7"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/btnodes/leaves/bt_wait.gd" id="21_04s50"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/blackboard.gd" id="21_p2p6p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cddm"]
+size = Vector2(6, 12)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kk7y2"]
+radius = 4.0
+height = 10.0
+
+[node name="creature_wolf" type="CharacterBody2D"]
+collision_layer = 8
+script = ExtResource("1_80yai")
+
+[node name="Position2D" type="Marker2D" parent="."]
+
+[node name="body" type="Sprite2D" parent="Position2D"]
+texture = ExtResource("16_o6mab")
+hframes = 4
+vframes = 4
+script = ExtResource("3_f5yhe")
+
+[node name="shadow" type="Sprite2D" parent="Position2D"]
+texture = ExtResource("17_hg0jt")
+hframes = 4
+vframes = 4
+script = ExtResource("3_f5yhe")
+
+[node name="attack_area" type="Area2D" parent="Position2D"]
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Position2D/attack_area"]
+position = Vector2(6, -1)
+shape = SubResource("RectangleShape2D_8cddm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kk7y2")
+
+[node name="C_LocomotionAnimation" type="Node" parent="."]
+script = ExtResource("16_73j82")
+
+[node name="C_Locomotion" type="Node" parent="."]
+script = ExtResource("17_qqi2l")
+
+[node name="C_AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+libraries = {
+"ani_library_creature_wolf": ExtResource("7_sn0ga")
+}
+script = ExtResource("10_8b7e5")
+
+[node name="Blackboard" type="Node" parent="."]
+script = ExtResource("21_p2p6p")
+
+[node name="C_BehaviorTree" type="Node" parent="."]
+script = ExtResource("19_3jb61")
+is_active = true
+_blackboard = NodePath("../Blackboard")
+_agent = NodePath("..")
+debug = true
+
+[node name="BTSelector" type="Node" parent="C_BehaviorTree"]
+script = ExtResource("20_7jki7")
+debug = true
+
+[node name="BTWait" type="Node" parent="C_BehaviorTree/BTSelector"]
+script = ExtResource("21_04s50")
+wait_time = 1.0
+debug = true
+
+[node name="BTWait2" type="Node" parent="C_BehaviorTree/BTSelector"]
+script = ExtResource("21_04s50")
+wait_time = 2.0
+debug = true

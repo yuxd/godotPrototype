@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2fwi42lenoa7"
-path="res://.godot/imported/Minifantasy_CreaturesZombieBaseIdleShadow.png-a3f2c11ed2be3965c3ddd7695bc0bcc8.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesZombieBaseIdleShadow.png-6402738870efb8149fc2fb7467e5df7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/_Shadows/Zombie/Minifantasy_CreaturesZombieBaseIdleShadow.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesZombieBaseIdleShadow.png-a3f2c11ed2be3965c3ddd7695bc0bcc8.ctex"]
+source_file="res://assets/textures/creatures/monsters/_Shadows/Zombie/Minifantasy_CreaturesZombieBaseIdleShadow.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesZombieBaseIdleShadow.png-6402738870efb8149fc2fb7467e5df7a.ctex"]
 
 [params]
 

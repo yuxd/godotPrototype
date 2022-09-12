@@ -1,9 +1,10 @@
 [gd_scene load_steps=27 format=3]
 
-[ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_leatherwork_prop.png" id="1_r4x85"]
-[ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_leatherwork_prop_work.png" id="2_g7lqh"]
-[ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_leatherwork_prop_sd.png" id="2_v4chi"]
-[ext_resource type="Texture2D" path="res://assets/textures/crafting/crafting_leatherwork_prop_work_sd.png" id="4_03hhn"]
+[ext_resource type="Texture2D" path="res://assets/textures/statics/crafting/crafting_leatherwork_prop.png" id="1_r4x85"]
+[ext_resource type="Texture2D" path="res://assets/textures/statics/crafting/crafting_leatherwork_prop_work.png" id="2_g7lqh"]
+[ext_resource type="Texture2D" path="res://assets/textures/statics/crafting/crafting_leatherwork_prop_sd.png" id="2_v4chi"]
+[ext_resource type="Texture2D" path="res://assets/textures/statics/crafting/crafting_leatherwork_prop_work_sd.png" id="4_03hhn"]
+
 
 
 

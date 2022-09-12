@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ye8mrmuv5088"
-path="res://.godot/imported/Minifantasy_CreaturesMinotaurDie.png-752fbc2a7a64755565cfe3d38518d5c8.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesMinotaurDie.png-def4d7954e4790ed72059cf5fd274fe9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/Minotaur/Minifantasy_CreaturesMinotaurDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesMinotaurDie.png-752fbc2a7a64755565cfe3d38518d5c8.ctex"]
+source_file="res://assets/textures/creatures/big_guys/Minotaur/Minifantasy_CreaturesMinotaurDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesMinotaurDie.png-def4d7954e4790ed72059cf5fd274fe9.ctex"]
 
 [params]
 

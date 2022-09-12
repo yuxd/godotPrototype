@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di60dmnnvc3d4"
-path="res://.godot/imported/Minifantasy_CreaturesShadowSlimeDie.png-231bfa84d157f2e22e9923cee7f8d058.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowSlimeDie.png-9ecd85167490dbe224a06bf61e9f0226.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/_Shadows/Slime/Green/Minifantasy_CreaturesShadowSlimeDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowSlimeDie.png-231bfa84d157f2e22e9923cee7f8d058.ctex"]
+source_file="res://assets/textures/creatures/monsters/_Shadows/Slime/Green/Minifantasy_CreaturesShadowSlimeDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowSlimeDie.png-9ecd85167490dbe224a06bf61e9f0226.ctex"]
 
 [params]
 

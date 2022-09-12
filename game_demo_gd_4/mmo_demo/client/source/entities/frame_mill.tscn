@@ -1,9 +1,10 @@
 [gd_scene load_steps=41 format=3]
 
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/wooden_plank_windmill/Outdoor/Minifantasy_TownsIIWindmillFrames.png" id="1_6vwsv"]
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/wooden_plank_windmill/Outdoor/Minifantasy_TownsIIWindmillSpeedLines.png" id="2_ljgnh"]
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/wooden_plank_windmill/Outdoor/Minifantasy_TownsIIWindmillBladesShadow.png" id="3_yav51"]
-[ext_resource type="Texture2D" path="res://assets/textures/tilesets/wooden_plank_windmill/Outdoor/Minifantasy_TownsIIWindmillBuildingShadow.png" id="4_r5ufd"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/wooden_plank_windmill/Outdoor/Minifantasy_TownsIIWindmillFrames.png" id="1_6vwsv"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/wooden_plank_windmill/Outdoor/Minifantasy_TownsIIWindmillSpeedLines.png" id="2_ljgnh"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/wooden_plank_windmill/Outdoor/Minifantasy_TownsIIWindmillBladesShadow.png" id="3_yav51"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/textures/wooden_plank_windmill/Outdoor/Minifantasy_TownsIIWindmillBuildingShadow.png" id="4_r5ufd"]
+
 
 
 

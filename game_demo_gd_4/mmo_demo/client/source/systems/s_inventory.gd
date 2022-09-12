@@ -1,7 +1,7 @@
 extends System
 class_name InventorySystem
 
-@onready var event_item_changed : EventResource = preload("res://source/events/event_item_changed.tres")
+var event_item_changed : EventResource = load("res://source/events/event_item_changed.tres")
 var event_add_item : EventResource = load("res://source/events/event_add_item.tres")
 
 signal item_chanage(slot_index, item, new_item)
@@ -20,15 +20,16 @@ func _system_ready():
 
 func _add_item(inventory_entity, item_entity):
 	printerr("inventorySystem _add_item: ", inventory_entity, item_entity)
-	
+	add_item(inventory_entity, item_entity)
+
 
 static func add_item(inventory_entity : Entity, item_entity : Entity) -> bool:
 	'''
 	添加道具
 	'''
-	if not item_entity.has_component("inventory_item"):
-		printerr("connot add item ,it hasnot component inventory_item : ", item_entity.name)
-		return false
+#	if not item_entity.has_component("inventory_item"):
+#		printerr("connot add item ,it hasnot component inventory_item : ", item_entity.name)
+#		return false
 
 	var inventory : InventoryComponent = inventory_entity.get_component("C_Inventory")
 	var item : InventoryItemComponent = item_entity.get_component("C_InventoryItem")
@@ -135,16 +136,19 @@ static func give_item(inventory_entity : Entity, item_entity : Entity, slot_inde
 		# old_item.emit_signal("on_dropped", self)
 		old_item.remove_entity()
 
-	inventory.item_slots[slot_index] = item
+	inventory.item_slots[slot_index] = item_entity
 	# 这里发射信号会导致错误，改为直接调用方法
 	# inventory_item.emit_signal("on_pickup")
 #	inventory_item.on_pickup(entity)
 	
 	# active_item = inventory_item
 #	emit_signal("item_chanage", slot_index, old_item, inventory_item)
-	InventorySystem.event_item_changed.emit([inventory_entity, slot_index, old_item, item_entity])
+	var event_item_changed : EventResource = load("res://source/events/event_item_changed.tres")
+	event_item_changed.emit([inventory_entity, slot_index, old_item, item])
+	var event_remove_from_scene :EventResource = load("res://source/events/event_remove_from_scene.tres")
+	event_remove_from_scene.emit(item_entity)
 	# 获得道具，指定slot
-	print_debug("give item ", item, " on ", inventory,"slot_index: ", slot_index)
+	print_debug("give item ", item, " on ", inventory, "slot_index: ", slot_index)
 
 
 static func remove_selected_item(inventory_entity : Entity):

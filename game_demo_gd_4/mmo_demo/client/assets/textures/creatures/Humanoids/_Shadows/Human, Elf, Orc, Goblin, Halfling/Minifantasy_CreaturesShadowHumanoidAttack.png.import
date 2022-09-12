@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d28yorgdsefi1"
-path="res://.godot/imported/Minifantasy_CreaturesShadowHumanoidAttack.png-5ed0b4026d1e2f9b1a24d75965c7a330.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowHumanoidAttack.png-73f0bccc98ec8ca377a989a392205eba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/_Shadows/Human, Elf, Orc, Goblin, Halfling/Minifantasy_CreaturesShadowHumanoidAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowHumanoidAttack.png-5ed0b4026d1e2f9b1a24d75965c7a330.ctex"]
+source_file="res://assets/textures/creatures/humanoids/_Shadows/Human, Elf, Orc, Goblin, Halfling/Minifantasy_CreaturesShadowHumanoidAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowHumanoidAttack.png-73f0bccc98ec8ca377a989a392205eba.ctex"]
 
 [params]
 

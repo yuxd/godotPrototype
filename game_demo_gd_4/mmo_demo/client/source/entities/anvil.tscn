@@ -1,8 +1,9 @@
 [gd_scene load_steps=18 format=3]
 
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_6507p"]
-[ext_resource type="Texture2D" uid="uid://bijd8seg72caa" path="res://assets/textures/crafting/crafting_blacksmith_anvil_work.png" id="1_tcmfk"]
-[ext_resource type="Texture2D" uid="uid://bjyk75xego2a5" path="res://assets/textures/crafting/crafting_blacksmith_anvil_work_sd.png" id="2_ht7t4"]
+[ext_resource type="Texture2D" path="res://assets/textures/statics/crafting/crafting_blacksmith_anvil_work.png" id="1_tcmfk"]
+[ext_resource type="Texture2D" path="res://assets/textures/statics/crafting/crafting_blacksmith_anvil_work_sd.png" id="2_ht7t4"]
+
 
 
 

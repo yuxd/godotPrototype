@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qx4jpd1ntmbl"
-path="res://.godot/imported/Minifantasy_CreaturesGoblinAnimations.png-ab041463546461399c350419ba04c1af.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesGoblinAnimations.png-ffecfaba5a0dcb6e95fbfb7dfe1d34a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Goblin/Minifantasy_CreaturesGoblinAnimations.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesGoblinAnimations.png-ab041463546461399c350419ba04c1af.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Goblin/Minifantasy_CreaturesGoblinAnimations.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesGoblinAnimations.png-ffecfaba5a0dcb6e95fbfb7dfe1d34a2.ctex"]
 
 [params]
 

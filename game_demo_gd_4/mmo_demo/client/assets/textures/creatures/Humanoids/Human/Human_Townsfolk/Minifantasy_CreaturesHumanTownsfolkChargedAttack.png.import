@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wnoqc87cddun"
-path="res://.godot/imported/Minifantasy_CreaturesHumanTownsfolkChargedAttack.png-dfd99a29fa907c973040102974df0688.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesHumanTownsfolkChargedAttack.png-a01e63f41ff58f6031bb4f25b756730b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Human/Human_Townsfolk/Minifantasy_CreaturesHumanTownsfolkChargedAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesHumanTownsfolkChargedAttack.png-dfd99a29fa907c973040102974df0688.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Human/Human_Townsfolk/Minifantasy_CreaturesHumanTownsfolkChargedAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesHumanTownsfolkChargedAttack.png-a01e63f41ff58f6031bb4f25b756730b.ctex"]
 
 [params]
 

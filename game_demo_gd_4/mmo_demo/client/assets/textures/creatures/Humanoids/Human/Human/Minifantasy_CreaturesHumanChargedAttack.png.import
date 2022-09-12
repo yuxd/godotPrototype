@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbjnu8ql1cl6f"
-path="res://.godot/imported/Minifantasy_CreaturesHumanChargedAttack.png-f9f65106ed2654a6146bcbdcf2e68ff8.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesHumanChargedAttack.png-ca96742a5876153ee3165df7e9d521e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Human/Human/Minifantasy_CreaturesHumanChargedAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesHumanChargedAttack.png-f9f65106ed2654a6146bcbdcf2e68ff8.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Human/Human/Minifantasy_CreaturesHumanChargedAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesHumanChargedAttack.png-ca96742a5876153ee3165df7e9d521e2.ctex"]
 
 [params]
 

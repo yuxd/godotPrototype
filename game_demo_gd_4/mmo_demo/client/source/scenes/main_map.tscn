@@ -1,7 +1,8 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://dw05206lgp0n4"]
 
-[ext_resource type="TileSet" path="res://assets/tilesets/ts_main.tres" id="1_gqn0p"]
+[ext_resource type="TileSet" uid="uid://buau6cifxpod3" path="res://assets/tilesets/ts_main.tres" id="1_gqn0p"]
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4nhj1"]
 
 [node name="mian_map" type="TileMap"]
 tile_set = ExtResource("1_gqn0p")
@@ -15,3 +16,6 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(524295, 1441795, 5, 589831, 1441795, 6, 524296, 1507331, 5, 589832, 1507331, 6, 524297, 1572867, 5, 589833, 1572867, 6, 589830, 65539, 18, 655366, 65539, 19, 720902, 65539, 19, 786438, 65539, 19, 851974, 65539, 20, 589835, 196611, 18, 589836, 196611, 18, 589837, 196611, 18, 589838, 262147, 18, 655374, 262147, 19, 720910, 262147, 19, 786446, 262147, 19, 851982, 262147, 20, 851981, 196611, 20, 851980, 196611, 20, 851979, 196611, 20, 851978, 196611, 20, 851977, 196611, 20, 851976, 196611, 20, 851975, 131075, 20, 589834, 196611, 18)
+
+[node name="NavigationRegion2d" type="NavigationRegion2D" parent="."]
+navpoly = SubResource("NavigationPolygon_4nhj1")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpwygvixecabh"
-path="res://.godot/imported/Minifantasy_CreaturesMotherSlimeGreenJumpAttack.png-a0b4219321575a83170a7703075584dd.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesMotherSlimeGreenJumpAttack.png-249614ac1e8bd60f23dd22fb2e510ee1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/Mother_Slime/Green_Mother_Slime/Minifantasy_CreaturesMotherSlimeGreenJumpAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesMotherSlimeGreenJumpAttack.png-a0b4219321575a83170a7703075584dd.ctex"]
+source_file="res://assets/textures/creatures/big_guys/Mother_Slime/Green_Mother_Slime/Minifantasy_CreaturesMotherSlimeGreenJumpAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesMotherSlimeGreenJumpAttack.png-249614ac1e8bd60f23dd22fb2e510ee1.ctex"]
 
 [params]
 

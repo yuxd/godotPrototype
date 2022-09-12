@@ -29,10 +29,12 @@ func _ready():
 			+ card_resource.card_name + ".png"
 		card.texture = load(card_res_file)
 
+
 func _on_Card_mouse_entered():
-	if card_manager != null:
-		timer_preview.start()
-		card_manager.selected_card = self
+	assert(card_manager != null, "card manager is null!")
+	timer_preview.start()
+	card_manager.selected_card = self
+
 
 func _on_Card_mouse_exited():
 	timer_preview.stop()

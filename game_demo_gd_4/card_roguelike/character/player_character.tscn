@@ -1,0 +1,209 @@
+[gd_scene load_steps=48 format=3 uid="uid://ecqetq0ot6oc"]
+
+[ext_resource type="Texture2D" uid="uid://btn6cqpmcj16g" path="res://character/adventurer/adventurer-idle-00.png" id="1_ekxgr"]
+[ext_resource type="Texture2D" uid="uid://d26vbo46lrcj8" path="res://character/adventurer/adventurer-idle-01.png" id="2_vxu4d"]
+[ext_resource type="Texture2D" uid="uid://rodyj5aj6awe" path="res://character/adventurer/adventurer-idle-02.png" id="3_qftu5"]
+[ext_resource type="Texture2D" uid="uid://dnyoysreiek2e" path="res://character/adventurer/adventurer-idle-03.png" id="4_cv7gf"]
+[ext_resource type="Texture2D" uid="uid://ceqcxuh4wcbkj" path="res://character/adventurer/adventurer-idle-2-00.png" id="5_6855j"]
+[ext_resource type="Texture2D" uid="uid://bncfmnvxkl361" path="res://character/adventurer/adventurer-idle-2-01.png" id="6_8ihsu"]
+[ext_resource type="Texture2D" uid="uid://cusiugxt4mw74" path="res://character/adventurer/adventurer-idle-2-02.png" id="7_6r53q"]
+[ext_resource type="Texture2D" uid="uid://dsahsw4b8kmr1" path="res://character/adventurer/adventurer-idle-2-03.png" id="8_m2p30"]
+[ext_resource type="Texture2D" uid="uid://csdylaedyes2w" path="res://character/adventurer/adventurer-items-00.png" id="9_6qst7"]
+[ext_resource type="Texture2D" uid="uid://cskyuqksaq15t" path="res://character/adventurer/adventurer-items-01.png" id="10_itlna"]
+[ext_resource type="Texture2D" uid="uid://c7eqx4ey50iag" path="res://character/adventurer/adventurer-items-02.png" id="11_fmjqu"]
+[ext_resource type="Texture2D" uid="uid://c2jynkfba73kb" path="res://character/adventurer/adventurer-run-00.png" id="12_nv0eb"]
+[ext_resource type="Texture2D" uid="uid://cukhcb86dprju" path="res://character/adventurer/adventurer-run-01.png" id="13_emtid"]
+[ext_resource type="Texture2D" uid="uid://fiojduy5vgbn" path="res://character/adventurer/adventurer-run-02.png" id="14_id87i"]
+[ext_resource type="Texture2D" uid="uid://vdms4c7jnt35" path="res://character/adventurer/adventurer-run-03.png" id="15_ykn8w"]
+[ext_resource type="Texture2D" uid="uid://dj112il1ije6n" path="res://character/adventurer/adventurer-run-04.png" id="16_bmecq"]
+[ext_resource type="Texture2D" uid="uid://dcd20c18prns6" path="res://character/adventurer/adventurer-run-05.png" id="17_pj8uc"]
+[ext_resource type="Texture2D" uid="uid://c3eikf50icbdo" path="res://character/adventurer/adventurer-stand-00.png" id="18_j1in8"]
+[ext_resource type="Texture2D" uid="uid://dumwo2sk05mxg" path="res://character/adventurer/adventurer-stand-01.png" id="19_ofth2"]
+[ext_resource type="Texture2D" uid="uid://cank8itcf0y0b" path="res://character/adventurer/adventurer-stand-02.png" id="20_fdgmb"]
+[ext_resource type="Texture2D" uid="uid://ck2xgnb610qt7" path="res://character/adventurer/adventurer-attack1-00.png" id="21_agd44"]
+[ext_resource type="Texture2D" uid="uid://b7pb6jrq3xyn5" path="res://character/adventurer/adventurer-attack1-01.png" id="22_gyc7x"]
+[ext_resource type="Texture2D" uid="uid://cj24h38mdy78k" path="res://character/adventurer/adventurer-attack1-02.png" id="23_4qvfk"]
+[ext_resource type="Texture2D" uid="uid://b3d3mqf37w35u" path="res://character/adventurer/adventurer-attack1-03.png" id="24_8ab5r"]
+[ext_resource type="Texture2D" uid="uid://c7tdsh7dxoh3k" path="res://character/adventurer/adventurer-attack1-04.png" id="25_qlnkx"]
+[ext_resource type="Texture2D" uid="uid://d052x1utq5vkl" path="res://character/adventurer/adventurer-attack2-00.png" id="26_g6n0c"]
+[ext_resource type="Texture2D" uid="uid://c8hnwy3i7yfku" path="res://character/adventurer/adventurer-attack2-01.png" id="27_e1tti"]
+[ext_resource type="Texture2D" uid="uid://crbjitdpp1w8j" path="res://character/adventurer/adventurer-attack2-02.png" id="28_htw56"]
+[ext_resource type="Texture2D" uid="uid://dtyh35nhyrf4t" path="res://character/adventurer/adventurer-attack2-03.png" id="29_vt1sq"]
+[ext_resource type="Texture2D" uid="uid://dsjiyyteuu1ri" path="res://character/adventurer/adventurer-attack2-04.png" id="30_8t54x"]
+[ext_resource type="Texture2D" uid="uid://bncnux624e2qn" path="res://character/adventurer/adventurer-attack2-05.png" id="31_65ly7"]
+[ext_resource type="Texture2D" uid="uid://c1hw3exu0mwoa" path="res://character/adventurer/adventurer-attack3-00.png" id="32_2isyd"]
+[ext_resource type="Texture2D" uid="uid://bjvqlnfkc71w2" path="res://character/adventurer/adventurer-attack3-01.png" id="33_1fb6v"]
+[ext_resource type="Texture2D" uid="uid://dx2q4n3mr61xf" path="res://character/adventurer/adventurer-attack3-02.png" id="34_d13bs"]
+[ext_resource type="Texture2D" uid="uid://c1v6qqnrwbk3o" path="res://character/adventurer/adventurer-attack3-03.png" id="35_5istt"]
+[ext_resource type="Texture2D" uid="uid://0hy8johvoxx4" path="res://character/adventurer/adventurer-attack3-04.png" id="36_jw0iw"]
+[ext_resource type="Texture2D" uid="uid://cdmthnxsibr0r" path="res://character/adventurer/adventurer-attack3-05.png" id="37_i7seb"]
+
+[sub_resource type="Animation" id="Animation_bhj12"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_ekxgr"), ExtResource("2_vxu4d"), ExtResource("3_qftu5"), ExtResource("4_cv7gf")]
+}
+
+[sub_resource type="Animation" id="Animation_tmx7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ekxgr")]
+}
+
+[sub_resource type="Animation" id="Animation_k0bd0"]
+resource_name = "idle2"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_6855j"), ExtResource("6_8ihsu"), ExtResource("7_6r53q"), ExtResource("8_m2p30")]
+}
+
+[sub_resource type="Animation" id="Animation_jd53s"]
+resource_name = "items"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("9_6qst7"), ExtResource("10_itlna"), ExtResource("11_fmjqu")]
+}
+
+[sub_resource type="Animation" id="Animation_wd023"]
+resource_name = "run"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_nv0eb"), ExtResource("13_emtid"), ExtResource("14_id87i"), ExtResource("15_ykn8w"), ExtResource("16_bmecq"), ExtResource("17_pj8uc")]
+}
+
+[sub_resource type="Animation" id="Animation_fdvw7"]
+resource_name = "stand"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_j1in8"), ExtResource("19_ofth2"), ExtResource("20_fdgmb")]
+}
+
+[sub_resource type="Animation" id="Animation_fsyef"]
+resource_name = "attack1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("21_agd44"), ExtResource("22_gyc7x"), ExtResource("23_4qvfk"), ExtResource("24_8ab5r"), ExtResource("25_qlnkx")]
+}
+
+[sub_resource type="Animation" id="Animation_83dif"]
+resource_name = "attack2"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("26_g6n0c"), ExtResource("27_e1tti"), ExtResource("28_htw56"), ExtResource("29_vt1sq"), ExtResource("30_8t54x"), ExtResource("31_65ly7")]
+}
+
+[sub_resource type="Animation" id="Animation_u5ykf"]
+resource_name = "attack3"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("32_2isyd"), ExtResource("33_1fb6v"), ExtResource("34_d13bs"), ExtResource("35_5istt"), ExtResource("36_jw0iw"), ExtResource("37_i7seb")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ggqx"]
+_data = {
+"RESET": SubResource("Animation_tmx7a"),
+"attack1": SubResource("Animation_fsyef"),
+"attack2": SubResource("Animation_83dif"),
+"attack3": SubResource("Animation_u5ykf"),
+"idle": SubResource("Animation_bhj12"),
+"idle2": SubResource("Animation_k0bd0"),
+"items": SubResource("Animation_jd53s"),
+"run": SubResource("Animation_wd023"),
+"stand": SubResource("Animation_fdvw7")
+}
+
+[node name="player_character" type="Node2D"]
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_ekxgr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2d")
+autoplay = "idle"
+libraries = {
+"": SubResource("AnimationLibrary_6ggqx")
+}

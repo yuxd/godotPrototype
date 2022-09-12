@@ -1,0 +1,143 @@
+[gd_scene load_steps=29 format=3 uid="uid://dnhuqwarwd8sf"]
+
+[ext_resource type="Texture2D" uid="uid://bejgi8p6de4rq" path="res://character/slime/slime-idle-0.png" id="1_s03wx"]
+[ext_resource type="Texture2D" uid="uid://bhicyncxaxqto" path="res://character/slime/slime-idle-1.png" id="2_lru8k"]
+[ext_resource type="Texture2D" uid="uid://4jq66nshg62p" path="res://character/slime/slime-idle-2.png" id="3_y5pxx"]
+[ext_resource type="Texture2D" uid="uid://u6y6llufrjh3" path="res://character/slime/slime-idle-3.png" id="4_8kygs"]
+[ext_resource type="Texture2D" uid="uid://l31svj8cmc1e" path="res://character/slime/slime-move-0.png" id="5_xscih"]
+[ext_resource type="Texture2D" uid="uid://ceguv3f7rggjo" path="res://character/slime/slime-move-1.png" id="6_b85kk"]
+[ext_resource type="Texture2D" uid="uid://5ovc5tsdmtf5" path="res://character/slime/slime-move-2.png" id="7_o0d2h"]
+[ext_resource type="Texture2D" uid="uid://c5o8igyeb7t5m" path="res://character/slime/slime-move-3.png" id="8_38dho"]
+[ext_resource type="Texture2D" uid="uid://dlo5l7lc3ebv8" path="res://character/slime/slime-attack-0.png" id="9_obial"]
+[ext_resource type="Texture2D" uid="uid://2rfvc615wrxh" path="res://character/slime/slime-attack-1.png" id="10_b03c6"]
+[ext_resource type="Texture2D" uid="uid://bvpthv4iggq1r" path="res://character/slime/slime-attack-2.png" id="11_pglym"]
+[ext_resource type="Texture2D" uid="uid://pxixjngwcgq5" path="res://character/slime/slime-attack-3.png" id="12_ig5m6"]
+[ext_resource type="Texture2D" uid="uid://domninpu3ud" path="res://character/slime/slime-attack-4.png" id="13_kk82s"]
+[ext_resource type="Texture2D" uid="uid://b3d7l0yii1eur" path="res://character/slime/slime-die-0.png" id="14_kgqoc"]
+[ext_resource type="Texture2D" uid="uid://byw3cm38cv32h" path="res://character/slime/slime-die-1.png" id="15_vut5t"]
+[ext_resource type="Texture2D" uid="uid://bhec6ffam0dny" path="res://character/slime/slime-die-2.png" id="16_frod2"]
+[ext_resource type="Texture2D" uid="uid://iaix65mqybo4" path="res://character/slime/slime-die-3.png" id="17_pwmbl"]
+[ext_resource type="Texture2D" uid="uid://d13enghjfqk7i" path="res://character/slime/slime-hurt-0.png" id="18_ac43v"]
+[ext_resource type="Texture2D" uid="uid://b2f1q21davkvv" path="res://character/slime/slime-hurt-1.png" id="19_ki04w"]
+[ext_resource type="Texture2D" uid="uid://buppdgjsgpujx" path="res://character/slime/slime-hurt-2.png" id="20_7dosk"]
+[ext_resource type="Texture2D" uid="uid://c831haw5pdlwb" path="res://character/slime/slime-hurt-3.png" id="21_sd4dh"]
+
+[sub_resource type="Animation" id="Animation_p58iu"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2d:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_s03wx"), ExtResource("2_lru8k"), ExtResource("3_y5pxx"), ExtResource("4_8kygs")]
+}
+
+[sub_resource type="Animation" id="Animation_utxl1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2d:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_s03wx")]
+}
+
+[sub_resource type="Animation" id="Animation_3457d"]
+resource_name = "move"
+length = 0.8
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2d:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_xscih"), ExtResource("6_b85kk"), ExtResource("7_o0d2h"), ExtResource("8_38dho")]
+}
+
+[sub_resource type="Animation" id="Animation_uksrl"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2d:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("9_obial"), ExtResource("10_b03c6"), ExtResource("11_pglym"), ExtResource("12_ig5m6"), ExtResource("13_kk82s")]
+}
+
+[sub_resource type="Animation" id="Animation_8oct2"]
+resource_name = "die"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2d:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_kgqoc"), ExtResource("15_vut5t"), ExtResource("16_frod2"), ExtResource("17_pwmbl")]
+}
+
+[sub_resource type="Animation" id="Animation_thjnq"]
+resource_name = "hurt"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2d:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_ac43v"), ExtResource("19_ki04w"), ExtResource("20_7dosk"), ExtResource("21_sd4dh")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jxnsw"]
+_data = {
+"RESET": SubResource("Animation_utxl1"),
+"attack": SubResource("Animation_uksrl"),
+"die": SubResource("Animation_8oct2"),
+"hurt": SubResource("Animation_thjnq"),
+"idle": SubResource("Animation_p58iu"),
+"move": SubResource("Animation_3457d")
+}
+
+[node name="slime" type="Node2D"]
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_s03wx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+libraries = {
+"": SubResource("AnimationLibrary_jxnsw")
+}

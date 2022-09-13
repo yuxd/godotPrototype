@@ -38,6 +38,68 @@
 [ext_resource type="Texture2D" uid="uid://0hy8johvoxx4" path="res://character/adventurer/adventurer-attack3-04.png" id="36_jw0iw"]
 [ext_resource type="Texture2D" uid="uid://cdmthnxsibr0r" path="res://character/adventurer/adventurer-attack3-05.png" id="37_i7seb"]
 
+[sub_resource type="Animation" id="Animation_tmx7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ekxgr")]
+}
+
+[sub_resource type="Animation" id="Animation_fsyef"]
+resource_name = "attack1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("21_agd44"), ExtResource("22_gyc7x"), ExtResource("23_4qvfk"), ExtResource("24_8ab5r"), ExtResource("25_qlnkx")]
+}
+
+[sub_resource type="Animation" id="Animation_83dif"]
+resource_name = "attack2"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("26_g6n0c"), ExtResource("27_e1tti"), ExtResource("28_htw56"), ExtResource("29_vt1sq"), ExtResource("30_8t54x"), ExtResource("31_65ly7")]
+}
+
+[sub_resource type="Animation" id="Animation_u5ykf"]
+resource_name = "attack3"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("32_2isyd"), ExtResource("33_1fb6v"), ExtResource("34_d13bs"), ExtResource("35_5istt"), ExtResource("36_jw0iw"), ExtResource("37_i7seb")]
+}
+
 [sub_resource type="Animation" id="Animation_bhj12"]
 resource_name = "idle"
 length = 0.8
@@ -53,21 +115,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("1_ekxgr"), ExtResource("2_vxu4d"), ExtResource("3_qftu5"), ExtResource("4_cv7gf")]
-}
-
-[sub_resource type="Animation" id="Animation_tmx7a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_ekxgr")]
 }
 
 [sub_resource type="Animation" id="Animation_k0bd0"]
@@ -134,53 +181,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("18_j1in8"), ExtResource("19_ofth2"), ExtResource("20_fdgmb")]
-}
-
-[sub_resource type="Animation" id="Animation_fsyef"]
-resource_name = "attack1"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("21_agd44"), ExtResource("22_gyc7x"), ExtResource("23_4qvfk"), ExtResource("24_8ab5r"), ExtResource("25_qlnkx")]
-}
-
-[sub_resource type="Animation" id="Animation_83dif"]
-resource_name = "attack2"
-length = 1.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("26_g6n0c"), ExtResource("27_e1tti"), ExtResource("28_htw56"), ExtResource("29_vt1sq"), ExtResource("30_8t54x"), ExtResource("31_65ly7")]
-}
-
-[sub_resource type="Animation" id="Animation_u5ykf"]
-resource_name = "attack3"
-length = 1.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("32_2isyd"), ExtResource("33_1fb6v"), ExtResource("34_d13bs"), ExtResource("35_5istt"), ExtResource("36_jw0iw"), ExtResource("37_i7seb")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ggqx"]

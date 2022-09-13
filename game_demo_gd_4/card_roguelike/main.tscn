@@ -1,17 +1,99 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbwynmmumjpdd"]
+[gd_scene load_steps=16 format=3 uid="uid://dbwynmmumjpdd"]
 
 [ext_resource type="PackedScene" uid="uid://b1b4kbiuf2mnq" path="res://cards/card_manager.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://ecqetq0ot6oc" path="res://character/player_character.tscn" id="2_nkkfn"]
 [ext_resource type="PackedScene" uid="uid://dnhuqwarwd8sf" path="res://character/slime.tscn" id="3_focbp"]
+[ext_resource type="Texture2D" uid="uid://6fawcdnvkcqt" path="res://background/Layer_0000_9.png" id="4_cki6k"]
+[ext_resource type="Texture2D" uid="uid://cn7igau1ewgqc" path="res://background/Layer_0011_0.png" id="4_cx4f6"]
+[ext_resource type="Texture2D" uid="uid://df5lmhr6y7xmh" path="res://background/Layer_0010_1.png" id="5_mjd8m"]
+[ext_resource type="Texture2D" uid="uid://b2u8nf0d0d0ws" path="res://background/Layer_0009_2.png" id="6_m1fqc"]
+[ext_resource type="Texture2D" uid="uid://b1nsabm8d7hr7" path="res://background/Layer_0008_3.png" id="7_lm7px"]
+[ext_resource type="Texture2D" uid="uid://c0mwppce04g50" path="res://background/Layer_0007_Lights.png" id="8_l8e0h"]
+[ext_resource type="Texture2D" uid="uid://c2ob1ste0w5w0" path="res://background/Layer_0006_4.png" id="9_ll5qr"]
+[ext_resource type="Texture2D" uid="uid://fkjfxtc1x4ih" path="res://background/Layer_0005_5.png" id="10_c3ix7"]
+[ext_resource type="Texture2D" uid="uid://crngn18jhq1p5" path="res://background/Layer_0004_Lights.png" id="11_w7tt4"]
+[ext_resource type="Texture2D" uid="uid://dnjgq84gactyg" path="res://background/Layer_0003_6.png" id="12_vdedu"]
+[ext_resource type="Texture2D" uid="uid://1jsedd3ejovd" path="res://background/Layer_0002_7.png" id="13_1osal"]
+[ext_resource type="Texture2D" uid="uid://062sompa2pml" path="res://background/Layer_0001_8.png" id="14_u5k5u"]
 
 [node name="Main" type="CanvasLayer"]
 
-[node name="card_manager" parent="." instance=ExtResource("1")]
+[node name="background" type="Node2D" parent="."]
+position = Vector2(480, 258)
+scale = Vector2(1.5, 1)
+metadata/_edit_group_ = true
+
+[node name="Layer00110" type="Sprite2D" parent="background"]
+texture = ExtResource("4_cx4f6")
+
+[node name="Layer00101" type="Sprite2D" parent="background"]
+texture = ExtResource("5_mjd8m")
+
+[node name="Layer00092" type="Sprite2D" parent="background"]
+texture = ExtResource("6_m1fqc")
+
+[node name="Layer00083" type="Sprite2D" parent="background"]
+texture = ExtResource("7_lm7px")
+
+[node name="Layer0007Lights" type="Sprite2D" parent="background"]
+texture = ExtResource("8_l8e0h")
+
+[node name="Layer00064" type="Sprite2D" parent="background"]
+texture = ExtResource("9_ll5qr")
+
+[node name="Layer00055" type="Sprite2D" parent="background"]
+texture = ExtResource("10_c3ix7")
+
+[node name="Layer0004Lights" type="Sprite2D" parent="background"]
+texture = ExtResource("11_w7tt4")
+
+[node name="Layer00036" type="Sprite2D" parent="background"]
+texture = ExtResource("12_vdedu")
+
+[node name="Layer00027" type="Sprite2D" parent="background"]
+texture = ExtResource("13_1osal")
 
 [node name="player_character" parent="." instance=ExtResource("2_nkkfn")]
-position = Vector2(318, 319)
+position = Vector2(290, 508)
 scale = Vector2(5, 5)
+metadata/_edit_group_ = true
 
 [node name="slime" parent="." instance=ExtResource("3_focbp")]
-position = Vector2(842, 360)
+position = Vector2(779, 534)
 scale = Vector2(5, 5)
+metadata/_edit_group_ = true
+
+[node name="foreground" type="Node2D" parent="."]
+position = Vector2(480, 258)
+scale = Vector2(1.5, 1)
+metadata/_edit_group_ = true
+
+[node name="Layer_0001_8" type="Sprite2D" parent="foreground"]
+texture = ExtResource("14_u5k5u")
+
+[node name="Layer_0000_9" type="Sprite2D" parent="foreground"]
+texture = ExtResource("4_cki6k")
+
+[node name="card_manager" parent="." instance=ExtResource("1")]
+
+[node name="hand_card" parent="card_manager" index="1"]
+layout_mode = 1
+offset_top = 575.0
+offset_bottom = 615.0
+
+[node name="cemetery" parent="card_manager" index="2"]
+layout_mode = 1
+
+[node name="deck" parent="card_manager" index="3"]
+layout_mode = 1
+
+[node name="button" parent="card_manager" index="4"]
+layout_mode = 0
+
+[node name="btn_add_card" parent="card_manager/button" index="0"]
+layout_mode = 2
+
+[node name="btn_remove_card" parent="card_manager/button" index="1"]
+layout_mode = 2
+
+[editable path="card_manager"]

@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://dhoxyqcb7gaas"]
+[gd_scene load_steps=2 format=3 uid="uid://dhoxyqcb7gaas"]
+
+[ext_resource type="Script" path="res://Sources/EntityManager.gd" id="1_d3ste"]
 
 [node name="Main" type="CanvasLayer"]
+
+[node name="EntityManager" type="Node" parent="."]
+script = ExtResource( "1_d3ste" )

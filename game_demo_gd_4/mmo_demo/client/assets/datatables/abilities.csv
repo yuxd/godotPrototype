@@ -1,0 +1,4 @@
+﻿ID,ability_name,ability_descript,ability_icon,is_passive,condition_id,cost_type,cost_args,cool_down_time,target_type,target_args,tasks,effects
+ID,技能名,技能描述,技能图标,是否被动,触发条件集,消耗类型,消耗参数集,冷却时间,目标类型,目标参数集,任务集,效果集
+string,string,string,string,bool,string[],string,string[],int,string,string[],string[],string[]
+attack,attack,attack ...,,false,,0,0,0,4,1,,damage

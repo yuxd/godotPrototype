@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://crcysxyn6sq4l"
+
+[deps]
+
+files=["res://assets/datatables/order.item.translation", "res://assets/datatables/order.weight.translation", "res://assets/datatables/order.number.translation", "res://assets/datatables/order.sort.translation"]
+
+source_file="res://assets/datatables/order.csv"
+dest_files=["res://assets/datatables/order.item.translation", "res://assets/datatables/order.weight.translation", "res://assets/datatables/order.number.translation", "res://assets/datatables/order.sort.translation"]
+
+[params]
+
+compress=true
+delimiter=0

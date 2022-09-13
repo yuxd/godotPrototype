@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://0413nte8165x"]
+
+[ext_resource type="Script" path="res://addons/q_framework/q_instance.gd" id="1"]
+[ext_resource type="Script" path="res://addons/event_system_plugin/nodes/event_manager/event_manager.gd" id="2"]
+[ext_resource type="Script" path="res://addons/q_framework/managers/q_ui_manager.gd" id="3"]
+[ext_resource type="Script" path="res://addons/q_framework/entities_and_components/manager_entity.gd" id="4"]
+[ext_resource type="Script" path="res://addons/q_framework/resource/resource_async_loader.gd" id="5"]
+[ext_resource type="Script" path="res://addons/q_framework/scene/manager_scene.gd" id="6"]
+[ext_resource type="Script" path="res://addons/q_framework/datatable/csv_datatable_manager.gd" id="7_jp155"]
+
+[node name="QInstance" type="Node"]
+script = ExtResource("1")
+
+[node name="EventManager" type="Node" parent="."]
+script = ExtResource("2")
+
+[node name="SceneManager" type="Node" parent="."]
+script = ExtResource("6")
+
+[node name="CanvasLayer" type="Node" parent="SceneManager"]
+
+[node name="EntityManager" type="Node" parent="."]
+script = ExtResource("4")
+
+[node name="CanvasLayer" type="Node" parent="EntityManager"]
+
+[node name="UIManager" type="Node" parent="."]
+script = ExtResource("3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UIManager"]
+layer = 16
+
+[node name="CanvasLayer_pop" type="CanvasLayer" parent="UIManager"]
+layer = 18
+
+[node name="CanvasLayer_dialogic" type="CanvasLayer" parent="UIManager"]
+layer = 20
+
+[node name="ResourceAsyncLoader" type="Node" parent="."]
+script = ExtResource("5")
+
+[node name="CSVDatatableManager" type="Node" parent="."]
+script = ExtResource("7_jp155")

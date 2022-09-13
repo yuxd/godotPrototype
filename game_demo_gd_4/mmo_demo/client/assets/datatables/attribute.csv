@@ -1,0 +1,7 @@
+﻿ID,attribute_name,attribute_describe,attribute_variable_name,is_percentage,max_value,min_value
+ID,属性名,属性描述,属性变量名,是否为百分数,最大值,最小值
+string,string,string,string,bool,int,int
+max_health,生命值,max_health,max_health,0,-1,0
+attack_interval,攻击间隔,attack_interval,attack_interval,0,-1,0
+defen_power,防御力,defen_power,defen_power,0,-1,0
+attack_power,攻击力,attack_power,attack_power,0,-1,0

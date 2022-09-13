@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1460xfnd46yp"]
+
+[ext_resource type="Script" path="res://source/widget/w_main_body.gd" id="1_8j2u6"]
+[ext_resource type="PackedScene" path="res://source/widget/w_buildings.tscn" id="2_wg2s1"]
+
+[sub_resource type="SystemFont" id="SystemFont_kirxs"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
+
+[node name="form_main" type="VBoxContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="mc3" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 30)
+offset_right = 1024.0
+offset_bottom = 30.0
+
+[node name="w_main_body" type="MarginContainer" parent="."]
+offset_top = 34.0
+offset_right = 1024.0
+offset_bottom = 556.0
+size_flags_vertical = 3
+script = ExtResource("1_8j2u6")
+
+[node name="tc_main" type="TabContainer" parent="w_main_body"]
+offset_right = 1024.0
+offset_bottom = 522.0
+tabs_visible = false
+
+[node name="w_buildings" parent="w_main_body/tc_main" instance=ExtResource("2_wg2s1")]
+visible = false
+
+[node name="w_heros" type="MarginContainer" parent="w_main_body/tc_main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="w_world" type="MarginContainer" parent="w_main_body/tc_main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="mc" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 40)
+offset_top = 560.0
+offset_right = 1024.0
+offset_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="hb" type="HBoxContainer" parent="mc"]
+offset_right = 1024.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="tb_main" type="TabBar" parent="mc/hb"]
+offset_right = 1024.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("SystemFont_kirxs")
+tab_count = 3
+tab_0/title = "建筑"
+tab_1/title = "世界"
+tab_2/title = "人事"

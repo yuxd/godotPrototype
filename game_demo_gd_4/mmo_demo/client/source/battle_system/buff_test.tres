@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://source/ability_sysem/core/config/buff_config.gd" id="1"]
+
+
+[resource]
+script = ExtResource( 1 )
+buff_name = "testBuff"
+buff_descript = "一个测试用BUFF"
+can_stack = false
+max_stack = 1
+duration_type = 2
+duration_arg1 = 10
+condition_id = ""
+target_type = 1
+target_arg1 = 1
+tasks = [  ]
+effects = [ "attackpower10" ]
+follow_buff_condition_ids = [  ]
+follow_buff_ids = [  ]

@@ -55,12 +55,10 @@ texture = ExtResource("13_1osal")
 
 [node name="player_character" parent="." instance=ExtResource("2_nkkfn")]
 position = Vector2(290, 508)
-scale = Vector2(5, 5)
 metadata/_edit_group_ = true
 
 [node name="slime" parent="." instance=ExtResource("3_focbp")]
 position = Vector2(779, 534)
-scale = Vector2(5, 5)
 metadata/_edit_group_ = true
 
 [node name="foreground" type="Node2D" parent="."]

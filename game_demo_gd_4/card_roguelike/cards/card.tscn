@@ -1,8 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnpe41whoaeed"]
+[gd_scene load_steps=17 format=3 uid="uid://dsbhwqn5fyjvh"]
 
 [ext_resource type="Script" path="res://cards/card.gd" id="1_w6maa"]
-[ext_resource type="Texture2D" uid="uid://brq5b6tnkh4wf" path="res://cards/texture/1C.png" id="2"]
 [ext_resource type="Resource" path="res://cards/tres/10S.tres" id="2_i2mwn"]
+[ext_resource type="Texture2D" uid="uid://brq5b6tnkh4wf" path="res://cards/texture/card_config/1C.png" id="3_sd176"]
+[ext_resource type="Texture2D" uid="uid://01gei1sefme1" path="res://cards/texture/card_sheen_fx/sheen__0000_sheen01.png" id="4_ndnvs"]
+[ext_resource type="Texture2D" uid="uid://bog0xu5mq0ea1" path="res://cards/texture/card_sheen_fx/sheen__0001_sheen02.png" id="5_r7cpx"]
+[ext_resource type="Texture2D" uid="uid://28xksyndb7ym" path="res://cards/texture/card_sheen_fx/sheen__0002_sheen03.png" id="6_84hpy"]
+[ext_resource type="Texture2D" uid="uid://b3d7blo01g5hq" path="res://cards/texture/card_sheen_fx/sheen__0003_sheen04.png" id="7_ypbo1"]
+[ext_resource type="Texture2D" uid="uid://bhnhjcyx26sf6" path="res://cards/texture/card_sheen_fx/sheen__0004_sheen05.png" id="8_a7nmc"]
+[ext_resource type="Texture2D" uid="uid://duhwfpqrjm77v" path="res://cards/texture/card_sheen_fx/sheen__0005_sheen06.png" id="9_mynb1"]
+[ext_resource type="Texture2D" uid="uid://dgx5rxnfujyyt" path="res://cards/texture/card_sheen_fx/sheen__0006_sheen07.png" id="10_7hig2"]
+[ext_resource type="Texture2D" uid="uid://co8bpeu6axgr1" path="res://cards/texture/card_sheen_fx/sheen__0007_sheen08.png" id="11_urx1c"]
+[ext_resource type="Texture2D" uid="uid://dorlof3tbleoq" path="res://cards/texture/card_sheen_fx/sheen__0008_sheen09.png" id="12_83c6s"]
+[ext_resource type="Texture2D" uid="uid://dxxfb3kv4c6tp" path="res://cards/texture/card_sheen_fx/sheen__0009_sheen010.png" id="13_cc82h"]
+
+[sub_resource type="Animation" id="Animation_2abhc"]
+resource_name = "fx_sheen"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sheenFX:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_ndnvs"), ExtResource("5_r7cpx"), ExtResource("6_84hpy"), ExtResource("7_ypbo1"), ExtResource("8_a7nmc"), ExtResource("9_mynb1"), ExtResource("10_7hig2"), ExtResource("11_urx1c"), ExtResource("12_83c6s"), ExtResource("13_cc82h")]
+}
+
+[sub_resource type="Animation" id="Animation_jfck6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sheenFX:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_ndnvs")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_axa8x"]
+_data = {
+"RESET": SubResource("Animation_jfck6"),
+"fx_sheen": SubResource("Animation_2abhc")
+}
 
 [node name="card" type="Control"]
 custom_minimum_size = Vector2(64, 89)
@@ -15,14 +62,30 @@ script = ExtResource("1_w6maa")
 card_resource = ExtResource("2_i2mwn")
 
 [node name="t_card" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 64.0
 offset_bottom = 89.0
-texture = ExtResource("2")
+texture = ExtResource("3_sd176")
 
 [node name="timer_preview" type="Timer" parent="."]
 wait_time = 0.3
 
 [node name="timer_release" type="Timer" parent="."]
+
+[node name="sheenFX" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ndnvs")
+ignore_texture_size = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_axa8x")
+}
 
 [connection signal="mouse_entered" from="." to="." method="_on_Card_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Card_mouse_exited"]

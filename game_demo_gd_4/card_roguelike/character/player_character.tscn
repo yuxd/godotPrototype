@@ -199,6 +199,7 @@ _data = {
 [node name="player_character" type="Node2D"]
 
 [node name="Sprite2d" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
 texture = ExtResource("1_ekxgr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

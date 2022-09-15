@@ -87,6 +87,9 @@ layout_mode = 1
 
 [node name="button" parent="card_manager" index="4"]
 layout_mode = 0
+offset_left = -1.0
+offset_right = 105.0
+offset_bottom = 66.0
 
 [node name="btn_add_card" parent="card_manager/button" index="0"]
 layout_mode = 2

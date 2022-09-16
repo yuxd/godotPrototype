@@ -61,7 +61,7 @@ _data = {
 }
 
 [node name="card" type="Control"]
-custom_minimum_size = Vector2(64, 89)
+custom_minimum_size = Vector2i(64, 89)
 layout_mode = 3
 anchor_right = 0.056
 anchor_bottom = 0.137
@@ -98,7 +98,7 @@ offset_bottom = 87.0
 theme_override_constants/separation = 0
 
 [node name="tr_name" type="TextureRect" parent="t_card/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 15)
+custom_minimum_size = Vector2i(0, 15)
 layout_mode = 2
 offset_right = 60.0
 offset_bottom = 15.0
@@ -124,7 +124,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="tr_icon" type="TextureRect" parent="t_card/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(55, 40)
+custom_minimum_size = Vector2i(55, 40)
 layout_mode = 2
 offset_left = 2.0
 offset_top = 15.0

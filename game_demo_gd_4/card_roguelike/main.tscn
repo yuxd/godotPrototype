@@ -75,26 +75,12 @@ texture = ExtResource("4_cki6k")
 [node name="card_manager" parent="." instance=ExtResource("1")]
 
 [node name="hand_card" parent="card_manager" index="1"]
-layout_mode = 1
 offset_top = 575.0
 offset_bottom = 615.0
 
-[node name="cemetery" parent="card_manager" index="2"]
-layout_mode = 1
-
-[node name="deck" parent="card_manager" index="3"]
-layout_mode = 1
-
 [node name="button" parent="card_manager" index="4"]
-layout_mode = 0
 offset_left = -1.0
 offset_right = 105.0
 offset_bottom = 66.0
-
-[node name="btn_add_card" parent="card_manager/button" index="0"]
-layout_mode = 2
-
-[node name="btn_remove_card" parent="card_manager/button" index="1"]
-layout_mode = 2
 
 [editable path="card_manager"]

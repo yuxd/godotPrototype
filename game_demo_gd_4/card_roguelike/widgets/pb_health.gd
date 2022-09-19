@@ -6,6 +6,10 @@ extends ColorRect
 @onready var progress_bar : ProgressBar = $ProgressBar
 @onready var label : Label = $Label
 
+func _init() -> void:
+	var item = self.get_canvas_item()
+	RenderingServer.canvas_item_set_z_index(item, 10)
+
 func _ready() -> void:
 	await agent.ready
 	label.text = agent.current_health + " / " + agent.max_health

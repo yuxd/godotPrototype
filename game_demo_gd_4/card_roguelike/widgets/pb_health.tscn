@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cs1nfu8sxpe1v"]
+[gd_scene load_steps=3 format=3 uid="uid://cs1nfu8sxpe1v"]
 
 [ext_resource type="Script" path="res://widgets/pb_health.gd" id="1_4ufn0"]
+
+[sub_resource type="SystemFont" id="SystemFont_alq17"]
+font_names = PackedStringArray("SimSun")
 
 [node name="pb_health" type="ColorRect"]
 offset_left = -71.0
@@ -30,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_alq17")
 text = "1260/1280"
 horizontal_alignment = 1
 vertical_alignment = 1

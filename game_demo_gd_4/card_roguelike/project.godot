@@ -28,12 +28,18 @@ _global_script_classes=[{
 "class": &"Character",
 "language": &"GDScript",
 "path": "res://character/character.gd"
+}, {
+"base": "Node",
+"class": &"UtilityAI",
+"language": &"GDScript",
+"path": "res://utilityAI.gd"
 }]
 _global_script_class_icons={
 "Card": "",
 "CardConfig": "",
 "CardManager": "",
-"Character": ""
+"Character": "",
+"UtilityAI": ""
 }
 
 [application]

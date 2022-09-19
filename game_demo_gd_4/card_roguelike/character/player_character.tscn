@@ -213,4 +213,6 @@ libraries = {
 }
 
 [node name="pb_health" parent="." instance=ExtResource("39_3oqgo")]
+offset_top = 102.0
+offset_bottom = 129.0
 agent_path = NodePath("..")

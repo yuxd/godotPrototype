@@ -58,12 +58,11 @@ texture = ExtResource("12_vdedu")
 texture = ExtResource("13_1osal")
 
 [node name="player_character" parent="." instance=ExtResource("2_nkkfn")]
-position = Vector2(290, 508)
+position = Vector2(299, 502)
 metadata/_edit_group_ = true
 
 [node name="slime" parent="." instance=ExtResource("3_focbp")]
 position = Vector2(779, 534)
-max_health = null
 metadata/_edit_group_ = true
 
 [node name="foreground" type="Node2D" parent="."]
@@ -78,14 +77,29 @@ texture = ExtResource("14_u5k5u")
 texture = ExtResource("4_cki6k")
 
 [node name="card_manager" parent="." instance=ExtResource("1")]
+metadata/_edit_lock_ = true
 
 [node name="hand_card" parent="card_manager" index="1"]
+layout_mode = 1
 offset_top = 575.0
 offset_bottom = 615.0
 
+[node name="cemetery" parent="card_manager" index="2"]
+layout_mode = 1
+
+[node name="deck" parent="card_manager" index="3"]
+layout_mode = 1
+
 [node name="button" parent="card_manager" index="4"]
+layout_mode = 0
 offset_left = -1.0
 offset_right = 105.0
 offset_bottom = 66.0
+
+[node name="btn_add_card" parent="card_manager/button" index="0"]
+layout_mode = 2
+
+[node name="btn_remove_card" parent="card_manager/button" index="1"]
+layout_mode = 2
 
 [editable path="card_manager"]

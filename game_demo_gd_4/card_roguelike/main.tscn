@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://dbwynmmumjpdd"]
+[gd_scene load_steps=17 format=3 uid="uid://dbwynmmumjpdd"]
 
 [ext_resource type="PackedScene" uid="uid://b1b4kbiuf2mnq" path="res://cards/card_manager.tscn" id="1"]
+[ext_resource type="Script" path="res://main.gd" id="1_a7x6l"]
 [ext_resource type="PackedScene" uid="uid://ecqetq0ot6oc" path="res://character/player_character.tscn" id="2_nkkfn"]
 [ext_resource type="PackedScene" uid="uid://dnhuqwarwd8sf" path="res://character/slime.tscn" id="3_focbp"]
 [ext_resource type="Texture2D" uid="uid://6fawcdnvkcqt" path="res://background/Layer_0000_9.png" id="4_cki6k"]
@@ -16,7 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://1jsedd3ejovd" path="res://background/Layer_0002_7.png" id="13_1osal"]
 [ext_resource type="Texture2D" uid="uid://062sompa2pml" path="res://background/Layer_0001_8.png" id="14_u5k5u"]
 
-[node name="Main" type="CanvasLayer"]
+[node name="Main" type="CanvasLayer" node_paths=PackedStringArray("player_node")]
+script = ExtResource("1_a7x6l")
+player_node = NodePath("player_character")
+enemies = [NodePath("slime")]
 
 [node name="background" type="Node2D" parent="."]
 position = Vector2(480, 258)
@@ -59,6 +63,7 @@ metadata/_edit_group_ = true
 
 [node name="slime" parent="." instance=ExtResource("3_focbp")]
 position = Vector2(779, 534)
+max_health = null
 metadata/_edit_group_ = true
 
 [node name="foreground" type="Node2D" parent="."]

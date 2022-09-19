@@ -1,5 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://dnhuqwarwd8sf"]
+[gd_scene load_steps=32 format=3 uid="uid://dnhuqwarwd8sf"]
 
+[ext_resource type="Script" path="res://character/character.gd" id="1_bnvml"]
 [ext_resource type="Texture2D" uid="uid://bejgi8p6de4rq" path="res://character/slime/slime-idle-0.png" id="1_s03wx"]
 [ext_resource type="Texture2D" uid="uid://bhicyncxaxqto" path="res://character/slime/slime-idle-1.png" id="2_lru8k"]
 [ext_resource type="Texture2D" uid="uid://4jq66nshg62p" path="res://character/slime/slime-idle-2.png" id="3_y5pxx"]
@@ -21,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b2f1q21davkvv" path="res://character/slime/slime-hurt-1.png" id="19_ki04w"]
 [ext_resource type="Texture2D" uid="uid://buppdgjsgpujx" path="res://character/slime/slime-hurt-2.png" id="20_7dosk"]
 [ext_resource type="Texture2D" uid="uid://c831haw5pdlwb" path="res://character/slime/slime-hurt-3.png" id="21_sd4dh"]
+[ext_resource type="PackedScene" uid="uid://cs1nfu8sxpe1v" path="res://widgets/pb_health.tscn" id="23_d4hrb"]
 
 [sub_resource type="Animation" id="Animation_utxl1"]
 length = 0.001
@@ -135,6 +137,8 @@ _data = {
 size = Vector2(28, 14)
 
 [node name="slime" type="CharacterBody2D"]
+script = ExtResource("1_bnvml")
+max_health = null
 
 [node name="Sprite2d" type="Sprite2D" parent="."]
 scale = Vector2(5, 5)
@@ -151,31 +155,5 @@ position = Vector2(0, 22)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_eqkme")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -71.0
-offset_top = 68.0
-offset_right = 71.0
-offset_bottom = 95.0
-color = Color(0.129412, 0.129412, 0.129412, 1)
-metadata/_edit_group_ = true
-
-[node name="ProgressBar" type="ProgressBar" parent="ColorRect"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-step = 1.0
-value = 30.0
-show_percentage = false
-metadata/_edit_lock_ = true
-
-[node name="Label" type="Label" parent="ColorRect"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "1260/1280"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="pb_health" parent="." instance=ExtResource("23_d4hrb")]
+agent_path = NodePath("..")

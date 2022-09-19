@@ -18,10 +18,22 @@ _global_script_classes=[{
 "class": &"CardConfig",
 "language": &"GDScript",
 "path": "res://cards/tres/card_config.gd"
+}, {
+"base": "Control",
+"class": &"CardManager",
+"language": &"GDScript",
+"path": "res://cards/card_manager.gd"
+}, {
+"base": "Node2D",
+"class": &"Character",
+"language": &"GDScript",
+"path": "res://character/character.gd"
 }]
 _global_script_class_icons={
 "Card": "",
-"CardConfig": ""
+"CardConfig": "",
+"CardManager": "",
+"Character": ""
 }
 
 [application]

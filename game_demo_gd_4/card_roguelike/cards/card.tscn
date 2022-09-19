@@ -71,14 +71,12 @@ script = ExtResource("1_w6maa")
 card_resource = ExtResource("2_i2mwn")
 
 [node name="t_card" type="TextureRect" parent="."]
-layout_mode = 0
 offset_right = 64.0
 offset_bottom = 89.0
 texture = ExtResource("3_2clou")
 ignore_texture_size = true
 
 [node name="MarginContainer" type="MarginContainer" parent="t_card"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -90,7 +88,6 @@ theme_override_constants/margin_right = 2
 theme_override_constants/margin_bottom = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="t_card/MarginContainer"]
-layout_mode = 2
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 62.0
@@ -99,14 +96,12 @@ theme_override_constants/separation = 0
 
 [node name="tr_name" type="TextureRect" parent="t_card/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2i(0, 15)
-layout_mode = 2
 offset_right = 60.0
 offset_bottom = 15.0
 texture = ExtResource("4_bpcc8")
 ignore_texture_size = true
 
 [node name="Label" type="Label" parent="t_card/MarginContainer/VBoxContainer/tr_name"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -125,7 +120,6 @@ vertical_alignment = 1
 
 [node name="tr_icon" type="TextureRect" parent="t_card/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2i(55, 40)
-layout_mode = 2
 offset_left = 2.0
 offset_top = 15.0
 offset_right = 57.0
@@ -135,7 +129,6 @@ texture = ExtResource("5_p1p02")
 ignore_texture_size = true
 
 [node name="tr_description" type="NinePatchRect" parent="t_card/MarginContainer/VBoxContainer"]
-layout_mode = 2
 offset_top = 55.0
 offset_right = 60.0
 offset_bottom = 85.0
@@ -149,7 +142,6 @@ patch_margin_right = 16
 patch_margin_bottom = 14
 
 [node name="lab_description" type="RichTextLabel" parent="t_card/MarginContainer/VBoxContainer/tr_description"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -172,7 +164,6 @@ wait_time = 0.3
 
 [node name="sheenFX" type="TextureRect" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

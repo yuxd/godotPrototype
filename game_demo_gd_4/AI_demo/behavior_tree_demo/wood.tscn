@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://de1kvvaoremj8"]
+
+[ext_resource type="Texture2D" uid="uid://cvbbelr7vsiw3" path="res://assets/wood.tres" id="1_10iqa"]
+
+[node name="wood" type="Node2D"]
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_10iqa")

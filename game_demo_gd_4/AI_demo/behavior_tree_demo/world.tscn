@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ep4dig0ohp7l"]
+[gd_scene load_steps=10 format=3 uid="uid://ep4dig0ohp7l"]
 
+[ext_resource type="Script" path="res://behavior_tree_demo/world.gd" id="1_606yq"]
 [ext_resource type="Texture2D" uid="uid://d24r0ug8u2mdi" path="res://assets/tileset.png" id="1_jmtk0"]
 [ext_resource type="Texture2D" uid="uid://sujvof0wkj0o" path="res://assets/tree.tres" id="2_4kp8t"]
 [ext_resource type="PackedScene" uid="uid://cgtfhpqjov8vv" path="res://behavior_tree_demo/goblin.tscn" id="3_kqu86"]
 [ext_resource type="PackedScene" uid="uid://dqemfx1mye1ye" path="res://behavior_tree_demo/box.tscn" id="4_mxjo7"]
+[ext_resource type="Texture2D" uid="uid://b41to3ln45es3" path="res://assets/pickaxe.png" id="6_pjq8k"]
+[ext_resource type="Texture2D" uid="uid://cvbbelr7vsiw3" path="res://assets/wood.tres" id="7_aab4e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5q3sd"]
 texture = ExtResource("1_jmtk0")
@@ -430,6 +433,7 @@ texture = ExtResource("1_jmtk0")
 sources/0 = SubResource("TileSetAtlasSource_5q3sd")
 
 [node name="world" type="Node2D"]
+script = ExtResource("1_606yq")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_gekg1")
@@ -511,7 +515,7 @@ texture = ExtResource("2_4kp8t")
 position = Vector2(507, 171)
 texture = ExtResource("2_4kp8t")
 
-[node name="goblin" parent="." instance=ExtResource("3_kqu86")]
+[node name="Player" parent="." instance=ExtResource("3_kqu86")]
 position = Vector2(416, 376)
 
 [node name="box" parent="." instance=ExtResource("4_mxjo7")]
@@ -521,3 +525,49 @@ position = Vector2(475, 404)
 position = Vector2(576, 328)
 current = true
 zoom = Vector2(1.5, 1.5)
+
+[node name="form_main" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="form_main"]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 48.0
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="form_main"]
+offset_left = 72.0
+offset_top = 64.0
+offset_right = 144.0
+offset_bottom = 136.0
+texture = ExtResource("6_pjq8k")
+
+[node name="Panel" type="Panel" parent="form_main"]
+offset_left = 232.0
+offset_top = 11.0
+offset_right = 328.0
+offset_bottom = 44.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="form_main/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="icon_wood" type="TextureRect" parent="form_main/Panel/HBoxContainer"]
+custom_minimum_size = Vector2i(32, 32)
+layout_mode = 2
+offset_right = 32.0
+offset_bottom = 33.0
+texture = ExtResource("7_aab4e")
+
+[node name="wood_amount" type="Label" parent="form_main/Panel/HBoxContainer"]
+layout_mode = 2
+offset_left = 36.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 29.0
+text = "0"

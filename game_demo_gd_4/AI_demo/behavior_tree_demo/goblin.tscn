@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://cgtfhpqjov8vv"]
+[gd_scene load_steps=12 format=3 uid="uid://cgtfhpqjov8vv"]
 
 [ext_resource type="Texture2D" uid="uid://7souir8readt" path="res://assets/goblin/spr_idle_strip9.png" id="1_8ecgj"]
+[ext_resource type="Script" path="res://behavior_tree_demo/goblin.gd" id="1_gyj6q"]
 [ext_resource type="Texture2D" uid="uid://bahlnf0r4budd" path="res://assets/goblin/spr_run_strip8.png" id="2_lfh5r"]
 [ext_resource type="Texture2D" uid="uid://bi38gn88nnr6e" path="res://assets/goblin/spr_axe_strip10.png" id="3_i2qvw"]
 
@@ -224,41 +225,11 @@ _data = {
 "run": SubResource("Animation_sqx0s")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vfxfk"]
-animation = &"axe"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c11dd"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ht4ph"]
-animation = &"run"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1qdel"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bp4nm"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gpmil"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dvhfg"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cbcqd"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7163c"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pqqpt"]
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0hv65"]
-states/axe/node = SubResource("AnimationNodeAnimation_vfxfk")
-states/axe/position = Vector2(713, 85)
-states/idle/node = SubResource("AnimationNodeAnimation_c11dd")
-states/idle/position = Vector2(451, 85)
-states/run/node = SubResource("AnimationNodeAnimation_ht4ph")
-states/run/position = Vector2(581, 244)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_1qdel"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_bp4nm"), "run", "axe", SubResource("AnimationNodeStateMachineTransition_gpmil"), "axe", "idle", SubResource("AnimationNodeStateMachineTransition_dvhfg"), "idle", "axe", SubResource("AnimationNodeStateMachineTransition_cbcqd"), "axe", "run", SubResource("AnimationNodeStateMachineTransition_7163c"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_pqqpt")]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_eewji"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_vptnj"]
+radius = 32.0
 
 [node name="goblin" type="CharacterBody2D"]
+script = ExtResource("1_gyj6q")
 
 [node name="Sprite2d" type="Sprite2D" parent="."]
 texture = ExtResource("1_8ecgj")
@@ -273,8 +244,7 @@ libraries = {
 "": SubResource("AnimationLibrary_lus12")
 }
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_0hv65")
-anim_player = NodePath("../AnimationPlayer")
-advance_expression_base_node = NodePath("../AnimationPlayer")
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_eewji")
+[node name="Detect" type="Area2D" parent="."]
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Detect"]
+shape = SubResource("CircleShape2D_vptnj")

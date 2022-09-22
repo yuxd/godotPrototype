@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://t4pvp6rlae6o"]
+[gd_scene load_steps=4 format=3 uid="uid://t4pvp6rlae6o"]
 
+[ext_resource type="Script" path="res://behavior_tree_demo/tree.gd" id="1_g1ych"]
 [ext_resource type="Texture2D" uid="uid://sujvof0wkj0o" path="res://assets/tree.tres" id="1_idpkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqkem"]
 size = Vector2(25, 34)
 
 [node name="tree" type="StaticBody2D"]
+script = ExtResource("1_g1ych")
 
 [node name="Sprite2d" type="Sprite2D" parent="."]
 texture = ExtResource("1_idpkr")

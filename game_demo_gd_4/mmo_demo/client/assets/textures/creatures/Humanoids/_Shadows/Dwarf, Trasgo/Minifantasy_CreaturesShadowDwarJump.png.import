@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2cgdy8tfv44i"
-path="res://.godot/imported/Minifantasy_CreaturesShadowDwarJump.png-093b81cbbeb384e2c5edfc302e607d54.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowDwarJump.png-dbe19097ccb68b40af1d48860f9d62ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/_Shadows/Dwarf, Trasgo/Minifantasy_CreaturesShadowDwarJump.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowDwarJump.png-093b81cbbeb384e2c5edfc302e607d54.ctex"]
+source_file="res://assets/textures/creatures/humanoids/_Shadows/Dwarf, Trasgo/Minifantasy_CreaturesShadowDwarJump.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowDwarJump.png-dbe19097ccb68b40af1d48860f9d62ac.ctex"]
 
 [params]
 

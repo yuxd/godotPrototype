@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcy2jc5p2pwpj"]
+
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_c2nid"]
+[ext_resource type="Script" path="res://source/components/c_refreshable.gd" id="2_43a8p"]
+[ext_resource type="Script" path="res://source/components/c_prescene.gd" id="3_fsjja"]
+[ext_resource type="PackedScene" uid="uid://rtd2yu244fhr" path="res://source/entities/creature_bat.tscn" id="3_ojful"]
+
+[node name="Refresher" type="Node2D"]
+script = ExtResource("1_c2nid")
+
+[node name="RefreshableComponent" type="Node" parent="."]
+script = ExtResource("2_43a8p")
+subordinate_random_pool = [ExtResource("3_ojful")]
+subordinate_random_widget = PackedInt32Array(1)
+
+[node name="PresceneComponent" type="Node" parent="."]
+script = ExtResource("3_fsjja")

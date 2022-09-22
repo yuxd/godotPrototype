@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2kltus7ieugg"
-path="res://.godot/imported/Minifantasy_CreaturesSkeletonWalk.png-cd1b1957387dda3d7065a9f8b4ff5680.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesSkeletonWalk.png-ba570bb32ae333fc8a54ddf8e77a3695.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Skeleton/Minifantasy_CreaturesSkeletonWalk.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesSkeletonWalk.png-cd1b1957387dda3d7065a9f8b4ff5680.ctex"]
+source_file="res://assets/textures/creatures/monsters/Skeleton/Minifantasy_CreaturesSkeletonWalk.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesSkeletonWalk.png-ba570bb32ae333fc8a54ddf8e77a3695.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2akru5f04ypv"
-path="res://.godot/imported/Minifantasy_CreaturesShadowBlueSlimeJump.png-9dd2e4e278c903934ef7c92fa0c1c299.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowBlueSlimeJump.png-22de94450a213adc18be1072eb0c97e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/_Shadows/Slime/Blue/Minifantasy_CreaturesShadowBlueSlimeJump.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowBlueSlimeJump.png-9dd2e4e278c903934ef7c92fa0c1c299.ctex"]
+source_file="res://assets/textures/creatures/monsters/_Shadows/Slime/Blue/Minifantasy_CreaturesShadowBlueSlimeJump.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowBlueSlimeJump.png-22de94450a213adc18be1072eb0c97e4.ctex"]
 
 [params]
 

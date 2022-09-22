@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1g01qe7m614n"
-path="res://.godot/imported/Minifantasy_CreaturesAmazonJump.png-3c56204d8b4f5f22447f56b0b29bb4d2.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesAmazonJump.png-5da3a571f35185a5e9c6ce08d16b175b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Human/Human_Amazon/Minifantasy_CreaturesAmazonJump.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesAmazonJump.png-3c56204d8b4f5f22447f56b0b29bb4d2.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Human/Human_Amazon/Minifantasy_CreaturesAmazonJump.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesAmazonJump.png-5da3a571f35185a5e9c6ce08d16b175b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2s1i45v3r7wo"
-path="res://.godot/imported/Minifantasy_CreaturesTrollAttack.png-c7ae2f48674794b8806578807f12bc2c.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesTrollAttack.png-50ebf3d4b1950233fe5790805cd3e4ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/Troll/Minifantasy_CreaturesTrollAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesTrollAttack.png-c7ae2f48674794b8806578807f12bc2c.ctex"]
+source_file="res://assets/textures/creatures/big_guys/Troll/Minifantasy_CreaturesTrollAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesTrollAttack.png-50ebf3d4b1950233fe5790805cd3e4ff.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pgbccujhlr4l"
-path="res://.godot/imported/Minifantasy_CreaturesShadowSkeletonPumkinHorrorDmg.png-c7e00b2acdde4c0fd58e956b5c38f8a7.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowSkeletonPumkinHorrorDmg.png-e5a22c7c3a3fa0c626d2716a48223caf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/_Shadows/Skeleton, Pumkin Horror/Minifantasy_CreaturesShadowSkeletonPumkinHorrorDmg.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowSkeletonPumkinHorrorDmg.png-c7e00b2acdde4c0fd58e956b5c38f8a7.ctex"]
+source_file="res://assets/textures/creatures/monsters/_Shadows/Skeleton, Pumkin Horror/Minifantasy_CreaturesShadowSkeletonPumkinHorrorDmg.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowSkeletonPumkinHorrorDmg.png-e5a22c7c3a3fa0c626d2716a48223caf.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ var b_dragging : bool = false
 func _ready():
 	self.hide()
 
-func show_tile(new_item : InventoryItemComponent):	
+func show_tile(new_item : ):	
 	self.inventory_item = new_item
 	if new_item == null:
 		self.hide()

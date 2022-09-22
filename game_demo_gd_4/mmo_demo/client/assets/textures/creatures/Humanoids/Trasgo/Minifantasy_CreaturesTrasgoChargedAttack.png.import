@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp3p7mbpvu62o"
-path="res://.godot/imported/Minifantasy_CreaturesTrasgoChargedAttack.png-0af9f8cd4c69d384b9b1881c0e5ed838.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesTrasgoChargedAttack.png-fee85e22b37b2b347d5f8ff608047cb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Trasgo/Minifantasy_CreaturesTrasgoChargedAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesTrasgoChargedAttack.png-0af9f8cd4c69d384b9b1881c0e5ed838.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Trasgo/Minifantasy_CreaturesTrasgoChargedAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesTrasgoChargedAttack.png-fee85e22b37b2b347d5f8ff608047cb6.ctex"]
 
 [params]
 

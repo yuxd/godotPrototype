@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcfg5wncdwmbj"
-path="res://.godot/imported/Minifantasy_CreaturesEvilSnowmanAttackShadows.png-7de9f5895958c9c0b1a9724190a2d7ed.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesEvilSnowmanAttackShadows.png-7fda06e61b706b10ff083a25d52a8593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/_Shadows/Evil Snowman/Minifantasy_CreaturesEvilSnowmanAttackShadows.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesEvilSnowmanAttackShadows.png-7de9f5895958c9c0b1a9724190a2d7ed.ctex"]
+source_file="res://assets/textures/creatures/monsters/_Shadows/Evil Snowman/Minifantasy_CreaturesEvilSnowmanAttackShadows.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesEvilSnowmanAttackShadows.png-7fda06e61b706b10ff083a25d52a8593.ctex"]
 
 [params]
 

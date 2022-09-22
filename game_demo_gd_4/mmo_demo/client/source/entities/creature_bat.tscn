@@ -1,0 +1,99 @@
+[gd_scene load_steps=20 format=3 uid="uid://iqly0y6m7i86"]
+
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_mkfpr"]
+[ext_resource type="Texture2D" uid="uid://cqefrb0p6ijm1" path="res://assets/textures/creatures/beast/creature_beast_bat_sleep.png" id="2_gqep8"]
+[ext_resource type="Script" path="res://source/components/c_sprite.gd" id="3_oitr6"]
+[ext_resource type="Texture2D" uid="uid://0n6f8v2g1wfr" path="res://assets/textures/creatures/beast/creature_beast_bat_fly_sd.png" id="4_8rxwc"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/behavior_tree.gd" id="6_klglg"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/btnodes/composites/bt_sequence.gd" id="7_owyrw"]
+[ext_resource type="AnimationLibrary" uid="uid://bndefpwg7jjge" path="res://assets/animations/ani_lib_creature_bat.tres" id="7_sn0ga"]
+[ext_resource type="Script" path="res://source/components/c_animation_player.gd" id="10_t1bm0"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/blackboard.gd" id="11_frwpy"]
+[ext_resource type="Script" path="res://source/BTNodes/bt_get_random_position.gd" id="11_her2o"]
+[ext_resource type="Script" path="res://source/BTNodes/bt_move_to.gd" id="12_13bot"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/btnodes/composites/bt_parallel.gd" id="13_kdou1"]
+[ext_resource type="Script" path="res://addons/q_framework/behavior_tree/btnodes/leaves/bt_wait.gd" id="14_1ps3t"]
+[ext_resource type="Script" path="res://source/BTNodes/bt_test.gd" id="15_2ldfy"]
+[ext_resource type="Script" path="res://source/components/c_locomotion_animation.gd" id="16_lrumd"]
+[ext_resource type="Script" path="res://source/components/c_navigation_agent.gd" id="17_6vo0u"]
+[ext_resource type="Script" path="res://source/components/c_locomotion.gd" id="17_qoyot"]
+[ext_resource type="Script" path="res://source/components/c_AI_input.gd" id="18_a7ivk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kk7y2"]
+radius = 4.0
+height = 10.0
+
+[node name="creature_bat" type="CharacterBody2D"]
+collision_layer = 8
+script = ExtResource("1_mkfpr")
+
+[node name="body" type="Sprite2D" parent="."]
+texture = ExtResource("2_gqep8")
+hframes = 8
+vframes = 3
+frame = 7
+script = ExtResource("3_oitr6")
+
+[node name="shadow" type="Sprite2D" parent="."]
+texture = ExtResource("4_8rxwc")
+hframes = 2
+vframes = 4
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kk7y2")
+
+[node name="C_NavigationAgent" type="NavigationAgent2D" parent="."]
+script = ExtResource("17_6vo0u")
+
+[node name="Blackboard" type="Node" parent="."]
+script = ExtResource("11_frwpy")
+data = {}
+
+[node name="BehaviorTree" type="Node" parent="."]
+script = ExtResource("6_klglg")
+is_active = true
+_blackboard = NodePath("../Blackboard")
+_agent = NodePath("..")
+debug = true
+
+[node name="BTSequence" type="Node" parent="BehaviorTree"]
+script = ExtResource("7_owyrw")
+debug = true
+
+[node name="BTWait" type="Node" parent="BehaviorTree/BTSequence"]
+script = ExtResource("14_1ps3t")
+wait_time = 1.0
+debug = true
+
+[node name="BTGetRandomPosition" type="Node" parent="BehaviorTree/BTSequence"]
+script = ExtResource("11_her2o")
+debug = true
+
+[node name="BTParallel" type="Node" parent="BehaviorTree/BTSequence"]
+script = ExtResource("13_kdou1")
+debug = true
+
+[node name="BTTest" type="Node" parent="BehaviorTree/BTSequence/BTParallel"]
+script = ExtResource("15_2ldfy")
+debug = true
+
+[node name="BTMoveTo" type="Node" parent="BehaviorTree/BTSequence/BTParallel"]
+script = ExtResource("12_13bot")
+debug = true
+
+[node name="C_AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "ani_lib_creature_bat/creature_bat_idle"
+libraries = {
+"ani_lib_creature_bat": ExtResource("7_sn0ga")
+}
+script = ExtResource("10_t1bm0")
+
+[node name="C_LocomotionAnimation" type="Node" parent="."]
+script = ExtResource("16_lrumd")
+
+[node name="C_Locomotion" type="Node" parent="."]
+script = ExtResource("17_qoyot")
+
+[node name="C_AIInput" type="Node" parent="."]
+script = ExtResource("18_a7ivk")

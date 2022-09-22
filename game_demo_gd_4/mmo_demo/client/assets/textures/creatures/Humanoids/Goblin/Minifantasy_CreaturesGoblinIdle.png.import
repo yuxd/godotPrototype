@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfwq3teeh5pv7"
-path="res://.godot/imported/Minifantasy_CreaturesGoblinIdle.png-bc9b6451ea48118e701a266dbd801a7b.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesGoblinIdle.png-848585e34884b5070da9627c0cbeb4ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Goblin/Minifantasy_CreaturesGoblinIdle.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesGoblinIdle.png-bc9b6451ea48118e701a266dbd801a7b.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Goblin/Minifantasy_CreaturesGoblinIdle.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesGoblinIdle.png-848585e34884b5070da9627c0cbeb4ae.ctex"]
 
 [params]
 

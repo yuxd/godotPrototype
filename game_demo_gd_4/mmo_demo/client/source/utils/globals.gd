@@ -1,6 +1,6 @@
 extends Node
 
-enum InputAction { MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, JUMP }
+enum InputAction { MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, JUMP, CAMREA_ZOOM_UP, CAMREA_ZOOM_DOWN }
 const INPUT_TPS := 20
 
 const component_path : String = "res://source/components/"

@@ -7,6 +7,7 @@ var query_manager := QueryManager.new(self)
 var systems: Array = []
 var _tps_map: Dictionary
 
+
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
@@ -27,6 +28,7 @@ func _ready() -> void:
 		if system.has_method("_system_ready"):
 			system.call("_system_ready")
 
+
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
@@ -45,6 +47,7 @@ func _process(delta: float) -> void:
 		else:
 			system.call("_system_process", query_entities(system), delta)
 
+
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
@@ -53,11 +56,13 @@ func _physics_process(delta: float) -> void:
 			continue
 		system.call("_system_physics_process", query_entities(system), delta)
 
+
 func _get_configuration_warning() -> String:
 	var _systems := get_systems()
 	if _systems.size() == 0:
 		return "This node has no Systems, so it will have nothing to operate on. Add child Systems for functionality."
 	return ""
+
 
 # Emits a payload to a destination. Any subscribed components will receive the payload
 func emit(destination: String, payload) -> void:
@@ -65,6 +70,7 @@ func emit(destination: String, payload) -> void:
 		payload = [payload]
 	payload.insert(0, get_destination_signal(destination))
 	callv("emit_signal", payload)
+
 
 func get_systems() -> Array:
 	var results := []
@@ -76,15 +82,18 @@ func get_systems() -> Array:
 				results.append(child)
 	return results
 
+
 func get_destination_signal(destination: String) -> String:
 	var dest_signal: String = "EventBus|%s" % destination
 	if not has_user_signal(dest_signal):
 		add_user_signal(dest_signal)
 	return dest_signal
 
+
 func query_entities(system: Node) -> Array:
 	var entity_filter: Array = system.get("entity_filter") if "entity_filter" in system else []
 	return query_manager.query(system.requirements, entity_filter)
+
 
 # Subscribes to a destination. callback_name is the method to be called.
 func subscribe(destination: String, callback: Callable) -> void:
@@ -92,6 +101,7 @@ func subscribe(destination: String, callback: Callable) -> void:
 	if not is_connected(dest_signal, callback):
 		# warning-ignore: return_value_discarded
 		connect(dest_signal, callback)
+
 
 func validate_system(system: Node) -> bool:
 	if not system.has_method("_system_init"):

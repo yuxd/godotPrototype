@@ -17,3 +17,4 @@ func start_game():
 
 func _add_item(player, tool):
 	printerr("game mode _add_item")
+

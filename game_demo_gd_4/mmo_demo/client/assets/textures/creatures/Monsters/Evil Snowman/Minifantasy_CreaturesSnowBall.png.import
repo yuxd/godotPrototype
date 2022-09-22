@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0v06mj5gc2pp"
-path="res://.godot/imported/Minifantasy_CreaturesSnowBall.png-d22eb93c1ede52e9db2d0ac1b0bf5a67.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesSnowBall.png-9c9f76232b744165415b7e1aee301862.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Evil Snowman/Minifantasy_CreaturesSnowBall.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesSnowBall.png-d22eb93c1ede52e9db2d0ac1b0bf5a67.ctex"]
+source_file="res://assets/textures/creatures/monsters/Evil Snowman/Minifantasy_CreaturesSnowBall.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesSnowBall.png-9c9f76232b744165415b7e1aee301862.ctex"]
 
 [params]
 

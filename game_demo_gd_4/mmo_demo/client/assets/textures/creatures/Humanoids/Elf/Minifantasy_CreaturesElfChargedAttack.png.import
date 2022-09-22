@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bayhkscofk3sy"
-path="res://.godot/imported/Minifantasy_CreaturesElfChargedAttack.png-0cb618b67195d77a9ea365d3781ee763.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesElfChargedAttack.png-2e09e711a57fdc9262462f277112a83f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Elf/Minifantasy_CreaturesElfChargedAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesElfChargedAttack.png-0cb618b67195d77a9ea365d3781ee763.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Elf/Minifantasy_CreaturesElfChargedAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesElfChargedAttack.png-2e09e711a57fdc9262462f277112a83f.ctex"]
 
 [params]
 

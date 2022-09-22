@@ -9,6 +9,16 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "Node",
+"class": &"AIInputComponent",
+"language": &"GDScript",
+"path": "res://source/components/c_AI_input.gd"
+}, {
+"base": "System",
+"class": &"AIInputSystem",
+"language": &"GDScript",
+"path": "res://source/systems/s_AI_input.gd"
+}, {
 "base": "RefCounted",
 "class": &"AbilityAttribute",
 "language": &"GDScript",
@@ -58,11 +68,6 @@ _global_script_classes=[{
 "class": &"ActionEventEmitterSystem",
 "language": &"GDScript",
 "path": "res://source/systems/s_action_event_emitter.gd"
-}, {
-"base": "Task",
-"class": &"AlwaysFail",
-"language": &"GDScript",
-"path": "res://addons/q_framework/behavior_tree/decorator/decorator_always_fail.gd"
 }, {
 "base": "RefCounted",
 "class": &"AnimaAnimationsUtils",
@@ -194,25 +199,100 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://source/ability_sysem/core/config/attribute_set_config.gd"
 }, {
+"base": "BTDecorator",
+"class": &"BTAlways",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/decorators/bt_always.gd"
+}, {
+"base": "BTNode",
+"class": &"BTComposite",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/bt_composite.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTConditional",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/decorators/bt_conditional.gd"
+}, {
+"base": "BTNode",
+"class": &"BTDecorator",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/bt_decorator.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTGetRandomPosition",
+"language": &"GDScript",
+"path": "res://source/BTNodes/bt_get_random_position.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTGuard",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/decorators/bt_guard.gd"
+}, {
 "base": "BTNode",
 "class": &"BTLeaf",
 "language": &"GDScript",
-"path": "res://addons/behavior_tree/src/btnodes/bt_leaf.gd"
+"path": "res://addons/q_framework/behavior_tree/btnodes/bt_leaf.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTMoveTo",
+"language": &"GDScript",
+"path": "res://source/BTNodes/bt_move_to.gd"
+}, {
+"base": "Node",
+"class": &"BTNode",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/bt_node.gd"
 }, {
 "base": "BTComposite",
 "class": &"BTParallel",
 "language": &"GDScript",
-"path": "res://addons/behavior_tree/src/btnodes/composites/bt_parallel.gd"
+"path": "res://addons/q_framework/behavior_tree/btnodes/composites/bt_parallel.gd"
 }, {
 "base": "BTSelector",
 "class": &"BTRandomSelector",
 "language": &"GDScript",
-"path": "res://addons/behavior_tree/src/btnodes/composites/bt_random_selector.gd"
+"path": "res://addons/q_framework/behavior_tree/btnodes/composites/bt_random_selector.gd"
 }, {
 "base": "BTSequence",
 "class": &"BTRandomSequence",
 "language": &"GDScript",
-"path": "res://addons/behavior_tree/src/btnodes/composites/bt_random_sequence.gd"
+"path": "res://addons/q_framework/behavior_tree/btnodes/composites/bt_random_sequence.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRepeat",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/decorators/bt_repeat.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRepeatUntil",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/decorators/bt_repeat_until.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRevert",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/decorators/bt_revert.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTSelector",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/composites/bt_selector.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTSequence",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/composites/bt_sequence.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTTest",
+"language": &"GDScript",
+"path": "res://source/BTNodes/bt_test.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTWait",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/btnodes/leaves/bt_wait.gd"
 }, {
 "base": "AbilityManager",
 "class": &"BattleAbilityManager",
@@ -238,6 +318,16 @@ _global_script_classes=[{
 "class": &"BattleEntityConfig",
 "language": &"GDScript",
 "path": "res://source/battle_system/config/battle_entity_config.gd"
+}, {
+"base": "Node",
+"class": &"BehaviorTree",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/behavior_tree.gd"
+}, {
+"base": "Node",
+"class": &"Blackboard",
+"language": &"GDScript",
+"path": "res://addons/q_framework/behavior_tree/blackboard.gd"
 }, {
 "base": "Resource",
 "class": &"BuffConfig",
@@ -273,11 +363,6 @@ _global_script_classes=[{
 "class": &"CameraManagerSystem",
 "language": &"GDScript",
 "path": "res://source/systems/s_camera_manager.gd"
-}, {
-"base": "Task",
-"class": &"Counter",
-"language": &"GDScript",
-"path": "res://addons/q_framework/behavior_tree/leaf/leaf_counter.gd"
 }, {
 "base": "Node",
 "class": &"DatatableManager",
@@ -354,11 +439,6 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://source/systems/s_inventory.gd"
 }, {
-"base": "Task",
-"class": &"Invert",
-"language": &"GDScript",
-"path": "res://addons/q_framework/behavior_tree/decorator/decorator_invert.gd"
-}, {
 "base": "Resource",
 "class": &"ItemData",
 "language": &"GDScript",
@@ -378,11 +458,6 @@ _global_script_classes=[{
 "class": &"JumpComponent",
 "language": &"GDScript",
 "path": "res://source/components/c_jump.gd"
-}, {
-"base": "Task",
-"class": &"Leaf",
-"language": &"GDScript",
-"path": "res://addons/q_framework/behavior_tree/leaf/leaf_task.gd"
 }, {
 "base": "Node",
 "class": &"LocomotionAnimationComponent",
@@ -404,6 +479,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://source/systems/s_locomotion.gd"
 }, {
+"base": "NavigationAgent2D",
+"class": &"NavigationAgentComponent",
+"language": &"GDScript",
+"path": "res://source/components/c_navigation_agent.gd"
+}, {
 "base": "Node",
 "class": &"OrderComponent",
 "language": &"GDScript",
@@ -414,6 +494,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://source/systems/s_order.gd"
 }, {
+"base": "Area2D",
+"class": &"PickableComponent",
+"language": &"GDScript",
+"path": "res://source/components/c_pickable.gd"
+}, {
 "base": "Node",
 "class": &"PlayerComponent",
 "language": &"GDScript",
@@ -423,6 +508,11 @@ _global_script_classes=[{
 "class": &"PlayerInputSystem",
 "language": &"GDScript",
 "path": "res://source/systems/s_player_input.gd"
+}, {
+"base": "Node",
+"class": &"PresceneComponent",
+"language": &"GDScript",
+"path": "res://source/components/c_prescene.gd"
 }, {
 "base": "Node",
 "class": &"ProcedureBase",
@@ -464,10 +554,15 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://source/components/c_quest_system.gd"
 }, {
-"base": "Task",
-"class": &"RandomSelector",
+"base": "System",
+"class": &"RefreshSystem",
 "language": &"GDScript",
-"path": "res://addons/q_framework/behavior_tree/composite/composite_random_selector.gd"
+"path": "res://source/systems/s_refresh.gd"
+}, {
+"base": "Node",
+"class": &"RefreshableComponent",
+"language": &"GDScript",
+"path": "res://source/components/c_refreshable.gd"
 }, {
 "base": "Node",
 "class": &"ResourceAsyncLoader",
@@ -488,11 +583,6 @@ _global_script_classes=[{
 "class": &"SceneManagerSystem",
 "language": &"GDScript",
 "path": "res://source/systems/s_scene_manager.gd"
-}, {
-"base": "Task",
-"class": &"Sequence",
-"language": &"GDScript",
-"path": "res://addons/q_framework/behavior_tree/composite/composite_sequence.gd"
 }, {
 "base": "Sprite2D",
 "class": &"SpriteComponent",
@@ -515,11 +605,6 @@ _global_script_classes=[{
 "path": "res://addons/q_framework/gd-ecs/SystemManager.gd"
 }, {
 "base": "Node",
-"class": &"Task",
-"language": &"GDScript",
-"path": "res://addons/q_framework/behavior_tree/task_base.gd"
-}, {
-"base": "Node",
 "class": &"TimeManager",
 "language": &"GDScript",
 "path": "res://addons/q_framework/managers/manager_time.gd"
@@ -535,6 +620,8 @@ _global_script_classes=[{
 "path": "res://source/utils/utils.gd"
 }]
 _global_script_class_icons={
+"AIInputComponent": "",
+"AIInputSystem": "",
 "AbilityAttribute": "",
 "AbilityBase": "",
 "AbilityBuff": "",
@@ -545,7 +632,6 @@ _global_script_class_icons={
 "AbilityEffectConfig": "",
 "AbilityManager": "",
 "ActionEventEmitterSystem": "",
-"AlwaysFail": "",
 "AnimaAnimationsUtils": "",
 "AnimaAwaitableAddChild": "",
 "AnimaDeclarationBase": "",
@@ -572,15 +658,32 @@ _global_script_class_icons={
 "AttributeModifierCollector": "",
 "AttributeModifierEffect": "",
 "AttributeSetConfig": "",
-"BTLeaf": "res://addons/behavior_tree/icons/btleaf.svg",
-"BTParallel": "res://addons/behavior_tree/icons/btparallel.svg",
-"BTRandomSelector": "res://addons/behavior_tree/icons/btrndselector.svg",
-"BTRandomSequence": "res://addons/behavior_tree/icons/btrndsequence.svg",
+"BTAlways": "res://addons/q_framework/behavior_tree/icons/btalways.svg",
+"BTComposite": "res://addons/q_framework/behavior_tree/icons/btcomposite.svg",
+"BTConditional": "res://addons/q_framework/behavior_tree/icons/btconditional.png",
+"BTDecorator": "res://addons/behavior_tree/icons/btdecorator.svg",
+"BTGetRandomPosition": "",
+"BTGuard": "res://addons/q_framework/behavior_tree/icons/btguard.svg",
+"BTLeaf": "res://addons/q_framework/behavior_tree/icons/btleaf.svg",
+"BTMoveTo": "",
+"BTNode": "res://addons/behavior_tree/icons/btnode.svg",
+"BTParallel": "res://addons/q_framework/behavior_tree/icons/btparallel.svg",
+"BTRandomSelector": "res://addons/q_framework/behavior_tree/icons/btrndselector.svg",
+"BTRandomSequence": "res://addons/q_framework/behavior_tree/icons/btrndsequence.svg",
+"BTRepeat": "res://addons/q_framework/behavior_tree/icons/btrepeat.svg",
+"BTRepeatUntil": "res://addons/q_framework/behavior_tree/icons/btrepeatuntil.svg",
+"BTRevert": "res://addons/q_framework/behavior_tree/icons/btrevert.svg",
+"BTSelector": "res://addons/q_framework/behavior_tree/icons/btselector.svg",
+"BTSequence": "res://addons/q_framework/behavior_tree/icons/btsequence.svg",
+"BTTest": "",
+"BTWait": "res://addons/q_framework/behavior_tree/icons/btwait.svg",
 "BattleAbilityManager": "",
 "BattleAttributeSet": "",
 "BattleConfig": "",
 "BattleEntity": "",
 "BattleEntityConfig": "",
+"BehaviorTree": "res://addons/q_framework/behavior_tree/icons/bt.svg",
+"Blackboard": "res://addons/q_framework/behavior_tree/icons/blackboard.svg",
 "BuffConfig": "",
 "BuildingComponent": "",
 "BuildingData": "",
@@ -588,7 +691,6 @@ _global_script_class_icons={
 "CSVDatatableManager": "",
 "CameraComponent": "",
 "CameraManagerSystem": "",
-"Counter": "",
 "DatatableManager": "",
 "ECS": "",
 "EnemyEntity": "",
@@ -604,20 +706,21 @@ _global_script_class_icons={
 "InventoryComponent": "",
 "InventoryItemComponent": "",
 "InventorySystem": "",
-"Invert": "",
 "ItemData": "",
 "ItemSlot": "",
 "ItemTile": "",
 "JumpComponent": "",
-"Leaf": "",
 "LocomotionAnimationComponent": "",
 "LocomotionAnimationSystem": "",
 "LocomotionComponent": "",
 "LocomotionSystem": "",
+"NavigationAgentComponent": "",
 "OrderComponent": "",
 "OrderSystem": "",
+"PickableComponent": "",
 "PlayerComponent": "",
 "PlayerInputSystem": "",
+"PresceneComponent": "",
 "ProcedureBase": "",
 "ProcedureLaunch": "",
 "ProcedureLoadResource": "",
@@ -626,17 +729,16 @@ _global_script_class_icons={
 "QueryManager": "",
 "QuestData": "",
 "QuestSystemComponent": "",
-"RandomSelector": "",
+"RefreshSystem": "",
+"RefreshableComponent": "",
 "ResourceAsyncLoader": "",
 "SceneBase": "",
 "SceneManager": "",
 "SceneManagerSystem": "",
-"Sequence": "",
 "SpriteComponent": "",
 "StateMachine": "",
 "System": "",
 "SystemManager": "",
-"Task": "",
 "TimeManager": "",
 "UIManager": "",
 "Utils": ""
@@ -658,8 +760,8 @@ Console="*res://addons/quentincaffeino/console/src/Console.tscn"
 
 [display]
 
-window/size/viewport_width=324
-window/size/viewport_height=183
+window/size/viewport_width=648
+window/size/viewport_height=366
 window/stretch/mode="viewport"
 window/size/test_width=1024
 window/size/test_height=600
@@ -727,11 +829,24 @@ quentincaffeino_console_history_down={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
 ]
 }
+camera_zoom_up={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":true,"meta_pressed":false,"command_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":4,"pressed":false,"double_click":false,"script":null)
+]
+}
+camera_zoom_down={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":true,"meta_pressed":false,"command_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":5,"pressed":false,"double_click":false,"script":null)
+]
+}
 
 [layer_names]
 
 2d_physics/layer_1="player"
+2d_navigation/layer_1="main_navigation"
 2d_physics/layer_2="static"
+2d_physics/layer_3="attack"
+2d_physics/layer_4="enemy"
 
 [physics]
 

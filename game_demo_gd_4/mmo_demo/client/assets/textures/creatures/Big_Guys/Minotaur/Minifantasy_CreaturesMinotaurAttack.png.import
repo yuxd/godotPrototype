@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6xvwhcaspav7"
-path="res://.godot/imported/Minifantasy_CreaturesMinotaurAttack.png-8c3ee053b31da9d86069ccad85afa40a.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesMinotaurAttack.png-579e9bdba14984df4d7425ab738c772e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/Minotaur/Minifantasy_CreaturesMinotaurAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesMinotaurAttack.png-8c3ee053b31da9d86069ccad85afa40a.ctex"]
+source_file="res://assets/textures/creatures/big_guys/Minotaur/Minifantasy_CreaturesMinotaurAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesMinotaurAttack.png-579e9bdba14984df4d7425ab738c772e.ctex"]
 
 [params]
 

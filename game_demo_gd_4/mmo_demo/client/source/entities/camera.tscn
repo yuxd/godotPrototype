@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bph48fp1p3j7u"]
+[gd_scene load_steps=3 format=3 uid="uid://b0kyfn2k25bfb"]
 
 [ext_resource type="Script" path="res://source/components/c_camera.gd" id="1_8wyps"]
 [ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_dexrv"]
@@ -8,4 +8,5 @@ script = ExtResource("1_dexrv")
 
 [node name="CameraComponent" type="Camera2D" parent="."]
 current = true
+zoom = Vector2(2, 2)
 script = ExtResource("1_8wyps")

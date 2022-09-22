@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mdrtxuf8t2oe"
-path="res://.godot/imported/Minifantasy_CreaturesZombieWalk.png-e437348be730151e91c754472b2ad154.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesZombieWalk.png-c045cd8ac923ad486a464ccb028c30cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Zombie/Minifantasy_CreaturesZombieWalk.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesZombieWalk.png-e437348be730151e91c754472b2ad154.ctex"]
+source_file="res://assets/textures/creatures/monsters/Zombie/Minifantasy_CreaturesZombieWalk.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesZombieWalk.png-c045cd8ac923ad486a464ccb028c30cf.ctex"]
 
 [params]
 

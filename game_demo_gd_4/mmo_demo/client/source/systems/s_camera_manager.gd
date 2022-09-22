@@ -5,6 +5,7 @@ const system_name := "S_CameraManager"
 var requirements = ["C_Camera"]
 var system_manager : SystemManager
 var player_cha : Entity
+var c_input : InputComponent
 
 var event_player_cha_changed : EventResource = preload("res://source/events/event_player_cha_changed.tres")
 
@@ -15,19 +16,22 @@ func _system_init(_system_manager: SystemManager) -> bool:
 
 func _system_ready() -> void:
 	player_cha = GameInstance.player_character
+	if player_cha: c_input = player_cha.get_component("C_Input")
 	event_player_cha_changed.subscribe(_on_player_cha_changed)
 	print_debug("camera manager system ready")
 
 
 func _system_process(_entities: Array, _delta: float) -> void:
-#	print_debug(_entities)
 	if(player_cha == null):
 		printerr("player_cha is null!") 
 		return
 	for e in _entities:
-		e.position = lerp(e.position, player_cha.position, _delta)
-#		e.position = player_cha.position
-
+		var camera : CameraComponent = e.get_component("C_Camera")		
+		if e.position.distance_to(player_cha.position) >= 5.0:
+			e.position = e.position.lerp(player_cha.position, _delta * camera.speed)
+#		var mu: float = 1 if c_input.is_action_pressed(Globals.InputAction.MOVE_UP) else 0
+#		var md: float = 1 if c_input.is_action_pressed(Globals.InputAction.MOVE_DOWN) else 0
+#		camera.zoom += Vector2(md - mu, md - mu)
 
 static func auto_set_limits(camera_entity : Entity) -> void:
 	var camera : CameraComponent = camera_entity.get_component("C_Camera")
@@ -46,4 +50,6 @@ static func auto_set_limits(camera_entity : Entity) -> void:
 
 
 func _on_player_cha_changed(old_player, new_player) -> void:
+	if new_player: c_input = new_player.get_component("C_Input")	
 	player_cha = new_player
+

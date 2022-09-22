@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv0trj1aofxwi"
-path="res://.godot/imported/Minifantasy_CreaturesSlimeGreenJumpAttack.png-72d3e97daa4890f086de7abcf44b1b2a.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesSlimeGreenJumpAttack.png-2a479d76606c5d5564adae5bc0dc56e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Slime/Green_Slime/Minifantasy_CreaturesSlimeGreenJumpAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesSlimeGreenJumpAttack.png-72d3e97daa4890f086de7abcf44b1b2a.ctex"]
+source_file="res://assets/textures/creatures/monsters/Slime/Green_Slime/Minifantasy_CreaturesSlimeGreenJumpAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesSlimeGreenJumpAttack.png-2a479d76606c5d5564adae5bc0dc56e3.ctex"]
 
 [params]
 

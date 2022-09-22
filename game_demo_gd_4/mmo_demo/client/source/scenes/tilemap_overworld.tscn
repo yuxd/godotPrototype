@@ -1,7 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cy0lrtargx45c"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8ipa5"]
-load_path = "res://.godot/imported/ts_overworld.png-4ecedb80959b095821d2856377e78f2f.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kie5a"]
 texture = SubResource("CompressedTexture2D_8ipa5")

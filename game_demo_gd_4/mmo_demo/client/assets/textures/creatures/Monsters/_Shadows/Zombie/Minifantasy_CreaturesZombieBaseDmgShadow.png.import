@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bec3u0jiofoa3"
-path="res://.godot/imported/Minifantasy_CreaturesZombieBaseDmgShadow.png-851d0343eca82d025b3284412bb5a827.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesZombieBaseDmgShadow.png-7640bc5659a27b2fe3c413e0fb11febc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/_Shadows/Zombie/Minifantasy_CreaturesZombieBaseDmgShadow.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesZombieBaseDmgShadow.png-851d0343eca82d025b3284412bb5a827.ctex"]
+source_file="res://assets/textures/creatures/monsters/_Shadows/Zombie/Minifantasy_CreaturesZombieBaseDmgShadow.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesZombieBaseDmgShadow.png-7640bc5659a27b2fe3c413e0fb11febc.ctex"]
 
 [params]
 

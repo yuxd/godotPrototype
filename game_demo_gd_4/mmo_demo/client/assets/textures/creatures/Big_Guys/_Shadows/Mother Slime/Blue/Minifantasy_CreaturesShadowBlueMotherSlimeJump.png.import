@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blvjdtup7vte3"
-path="res://.godot/imported/Minifantasy_CreaturesShadowBlueMotherSlimeJump.png-3ff44f63e827869710c055b3ef6865d8.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesShadowBlueMotherSlimeJump.png-67deb97c274c4b75abe5c255130fb37e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/_Shadows/Mother Slime/Blue/Minifantasy_CreaturesShadowBlueMotherSlimeJump.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowBlueMotherSlimeJump.png-3ff44f63e827869710c055b3ef6865d8.ctex"]
+source_file="res://assets/textures/creatures/big_guys/_Shadows/Mother Slime/Blue/Minifantasy_CreaturesShadowBlueMotherSlimeJump.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesShadowBlueMotherSlimeJump.png-67deb97c274c4b75abe5c255130fb37e.ctex"]
 
 [params]
 

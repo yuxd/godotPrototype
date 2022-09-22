@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://07iu3qe5eea0"
-path="res://.godot/imported/Minifantasy_CreaturesBlueMotherSlimeDie.png-1965b9a077a65bae20a6b52dba2ff521.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesBlueMotherSlimeDie.png-c31373cd393d598b3d68a90f119c1109.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Big_Guys/Mother_Slime/Blue_Mother_Slime/Minifantasy_CreaturesBlueMotherSlimeDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesBlueMotherSlimeDie.png-1965b9a077a65bae20a6b52dba2ff521.ctex"]
+source_file="res://assets/textures/creatures/big_guys/Mother_Slime/Blue_Mother_Slime/Minifantasy_CreaturesBlueMotherSlimeDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesBlueMotherSlimeDie.png-c31373cd393d598b3d68a90f119c1109.ctex"]
 
 [params]
 

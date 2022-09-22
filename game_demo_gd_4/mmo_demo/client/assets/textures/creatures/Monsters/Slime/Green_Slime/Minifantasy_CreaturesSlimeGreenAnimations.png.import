@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://10rupqpdeuqk"
-path="res://.godot/imported/Minifantasy_CreaturesSlimeGreenAnimations.png-e569621fe3e4bb37f33cd7204684765c.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesSlimeGreenAnimations.png-819226defedf84bd95af30a1f9aa1694.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Monsters/Slime/Green_Slime/Minifantasy_CreaturesSlimeGreenAnimations.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesSlimeGreenAnimations.png-e569621fe3e4bb37f33cd7204684765c.ctex"]
+source_file="res://assets/textures/creatures/monsters/Slime/Green_Slime/Minifantasy_CreaturesSlimeGreenAnimations.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesSlimeGreenAnimations.png-819226defedf84bd95af30a1f9aa1694.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxwqw5c1u82pm"
-path="res://.godot/imported/Minifantasy_CreaturesDwarfYellowBearSpinDie.png-8491e3a4b15d4c969c5fb2dab55240ae.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesDwarfYellowBearSpinDie.png-041d01af6e7c5d5832f00f5372f2b78e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Dwarf/Dwarf_Yellow_Beard/Minifantasy_CreaturesDwarfYellowBearSpinDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesDwarfYellowBearSpinDie.png-8491e3a4b15d4c969c5fb2dab55240ae.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Dwarf/Dwarf_Yellow_Beard/Minifantasy_CreaturesDwarfYellowBearSpinDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesDwarfYellowBearSpinDie.png-041d01af6e7c5d5832f00f5372f2b78e.ctex"]
 
 [params]
 

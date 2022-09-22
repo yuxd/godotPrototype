@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btnmgqitmfwlh"
-path="res://.godot/imported/Minifantasy_CreaturesGoblinAttack.png-2f47661532412d9ac83768722f15f69f.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesGoblinAttack.png-2c5745ab2fdefa383ba6af173c9565c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Goblin/Minifantasy_CreaturesGoblinAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesGoblinAttack.png-2f47661532412d9ac83768722f15f69f.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Goblin/Minifantasy_CreaturesGoblinAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesGoblinAttack.png-2c5745ab2fdefa383ba6af173c9565c1.ctex"]
 
 [params]
 

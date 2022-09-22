@@ -1,13 +1,14 @@
 [gd_scene load_steps=17 format=3]
 
-[ext_resource type="Texture2D" path="res://assets/textures/NPCs/generic/Idle/Body/Blouses/Minifantasy_NPCsIdle_Blouse_black.png" id="2_a1qur"]
-[ext_resource type="Texture2D" path="res://assets/textures/NPCs/generic/Idle/_Characters/Human/Minifantasy_NPCsIdle_Human_blackskin.png" id="4_7i7y6"]
-[ext_resource type="Texture2D" path="res://assets/textures/NPCs/generic/Idle/Head/Facial_Hair/Goatee/Minifantasy_NPCsIdle_FacialHair_Goatee_black.png" id="4_n1nce"]
-[ext_resource type="Texture2D" path="res://assets/textures/NPCs/generic/Idle/Head/Hats/Bandana/Minifantasy_NPCsIdle_Hat_Bandana_black.png" id="5_dtmnf"]
-[ext_resource type="Texture2D" path="res://assets/textures/NPCs/generic/Idle/Head/Hairstyles/Bold/Minifantasy_NPCsIdle_HumanHair_Bold_black.png" id="5_vcyi3"]
-[ext_resource type="Texture2D" path="res://assets/textures/NPCs/_shadow/npc_dmg_sd.png" id="6_b2mof"]
-[ext_resource type="Texture2D" path="res://assets/textures/NPCs/_shadow/npc_die_sd.png" id="7_3xulk"]
-[ext_resource type="Texture2D" path="res://assets/textures/NPCs/premade/npc_alchemist_dmg.png" id="8_nkqf8"]
+[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/generic/Idle/Body/Blouses/Minifantasy_NPCsIdle_Blouse_black.png" id="2_a1qur"]
+[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/generic/Idle/_Characters/Human/Minifantasy_NPCsIdle_Human_blackskin.png" id="4_7i7y6"]
+[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/generic/Idle/Head/Facial_Hair/Goatee/Minifantasy_NPCsIdle_FacialHair_Goatee_black.png" id="4_n1nce"]
+[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/generic/Idle/Head/Hats/Bandana/Minifantasy_NPCsIdle_Hat_Bandana_black.png" id="5_dtmnf"]
+[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/generic/Idle/Head/Hairstyles/Bold/Minifantasy_NPCsIdle_HumanHair_Bold_black.png" id="5_vcyi3"]
+[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/_shadow/npc_dmg_sd.png" id="6_b2mof"]
+[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/_shadow/npc_die_sd.png" id="7_3xulk"]
+[ext_resource type="Texture2D" path="res://assets/textures/character/NPCs/premade/npc_alchemist_dmg.png" id="8_nkqf8"]
+
 
 
 [sub_resource type="Animation" id="Animation_doo2s"]

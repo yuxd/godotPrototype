@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqjqm2ndwe3hn"
-path="res://.godot/imported/Minifantasy_CreaturesGoblinChargedAttack.png-790d4b94d4edf3f8a469ff5909baa38f.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesGoblinChargedAttack.png-74c7c98c32cf811b82d133dbf81849c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Goblin/Minifantasy_CreaturesGoblinChargedAttack.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesGoblinChargedAttack.png-790d4b94d4edf3f8a469ff5909baa38f.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Goblin/Minifantasy_CreaturesGoblinChargedAttack.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesGoblinChargedAttack.png-74c7c98c32cf811b82d133dbf81849c1.ctex"]
 
 [params]
 

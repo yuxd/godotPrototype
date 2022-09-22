@@ -13,7 +13,7 @@ var is_lock := false
 
 @onready var lab_key : Label = $lab_key
 @onready var selected_node : Control = $MarginContainer/selected
-@onready var item_tile : ItemTile = $w_item_tile
+@onready var item_tile :  = $w_item_tile
 @onready var item_use_tip = $item_use_tip
 @onready var img_invalid = $img_invalid
 

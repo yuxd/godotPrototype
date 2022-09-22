@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtl53t6tdj72g"
-path="res://.godot/imported/Minifantasy_CreaturesHumanTownsfolkIdle.png-b37b61d7c7b3fd755fb02b52a0ec1a7a.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesHumanTownsfolkIdle.png-94d9fc9570d4ad501de29dea1612bdd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Human/Human_Townsfolk/Minifantasy_CreaturesHumanTownsfolkIdle.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesHumanTownsfolkIdle.png-b37b61d7c7b3fd755fb02b52a0ec1a7a.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Human/Human_Townsfolk/Minifantasy_CreaturesHumanTownsfolkIdle.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesHumanTownsfolkIdle.png-94d9fc9570d4ad501de29dea1612bdd0.ctex"]
 
 [params]
 

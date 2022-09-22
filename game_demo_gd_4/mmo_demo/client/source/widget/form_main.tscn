@@ -1,17 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://k654tutgnp8h"]
+[gd_scene load_steps=6 format=3 uid="uid://k654tutgnp8h"]
 
 [ext_resource type="Script" path="res://source/widget/form_main.gd" id="1_51i1s"]
-[ext_resource type="PackedScene" uid="uid://cxiv77c666tav" path="res://source/widget/w_inventory.tscn" id="4_232mn"]
-[ext_resource type="Texture2D" path="res://assets/textures/widgets/menus/panel_04.tres" id="5_c0ot2"]
-[ext_resource type="PackedScene" uid="uid://xp0l36pgeuwo" path="res://source/widget/w_setting_bar.tscn" id="5_kilty"]
-[ext_resource type="Texture2D" uid="uid://bvmhjfkrj6kop" path="res://assets/textures/widgets/menus/label_bookmark_01.tres" id="6_63hl3"]
-[ext_resource type="Texture2D" path="res://assets/textures/widgets/menus/panel_01.tres" id="6_qdc6a"]
-[ext_resource type="PackedScene" uid="uid://d3jmpmuith4ph" path="res://source/widget/w_state_bar.tscn" id="7_ihaoc"]
-[ext_resource type="Texture2D" uid="uid://pu1vh26ns0c2" path="res://assets/textures/widgets/icons/common/icon_satiety.tres" id="9_0pbf3"]
-[ext_resource type="Texture2D" uid="uid://cv3yglw2k1j2q" path="res://assets/textures/widgets/menus/bar_03.tres" id="10_8ay7b"]
-[ext_resource type="Texture2D" uid="uid://dtajchsssqm25" path="res://assets/textures/widgets/icons/common/icon_mana.tres" id="10_htigx"]
-[ext_resource type="Texture2D" uid="uid://k3p6da3swpv5" path="res://assets/textures/widgets/menus/bar_p_03.tres" id="11_ampof"]
-[ext_resource type="Texture2D" uid="uid://bj0y72px6e670" path="res://assets/textures/widgets/menus/bar_p_02.tres" id="11_sk0rx"]
+[ext_resource type="Script" path="res://source/widget/w_main_body.gd" id="2_pm7im"]
+[ext_resource type="PackedScene" path="res://source/widget/w_buildings.tscn" id="3_cdq8s"]
+[ext_resource type="PackedScene" uid="uid://8djgnvgm0g5n" path="res://source/widget/w_item_slot.tscn" id="4_jwq76"]
+
+[sub_resource type="SystemFont" id="SystemFont_kirxs"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
 
 [node name="form_main" type="Control"]
 anchor_right = 1.0
@@ -19,6 +15,64 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_51i1s")
+
+[node name="vb" type="VBoxContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="mc3" type="MarginContainer" parent="vb"]
+custom_minimum_size = Vector2(0, 30)
+offset_right = 1024.0
+offset_bottom = 30.0
+
+[node name="w_main_body" type="MarginContainer" parent="vb"]
+offset_top = 34.0
+offset_right = 1024.0
+offset_bottom = 556.0
+size_flags_vertical = 3
+script = ExtResource("2_pm7im")
+
+[node name="tc_main" type="TabContainer" parent="vb/w_main_body"]
+offset_right = 1024.0
+offset_bottom = 522.0
+tabs_visible = false
+
+[node name="w_buildings" parent="vb/w_main_body/tc_main" instance=ExtResource("3_cdq8s")]
+
+[node name="w_heros" type="MarginContainer" parent="vb/w_main_body/tc_main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="w_world" type="MarginContainer" parent="vb/w_main_body/tc_main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="mc" type="MarginContainer" parent="vb"]
+custom_minimum_size = Vector2(0, 40)
+offset_top = 560.0
+offset_right = 1024.0
+offset_bottom = 600.0
+size_flags_horizontal = 3
+
+[node name="hb" type="HBoxContainer" parent="vb/mc"]
+offset_right = 1024.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="tb_main" type="TabBar" parent="vb/mc/hb"]
+offset_right = 1024.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("SystemFont_kirxs")
+tab_count = 3
+tab_0/title = "建筑"
+tab_1/title = "世界"
+tab_2/title = "人事"
 
 [node name="btn_server" type="Button" parent="."]
 visible = false
@@ -47,148 +101,68 @@ grow_vertical = 2
 text = "client"
 metadata/_edit_layout_mode = 1
 
-[node name="w_inventory" parent="." instance=ExtResource("4_232mn")]
-
-[node name="w_setting_bar" parent="." instance=ExtResource("5_kilty")]
-
-[node name="Control" type="Control" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -58.5
-offset_right = 96.0
-offset_bottom = 58.5
-
-[node name="btn_info" type="TextureButton" parent="Control"]
-offset_left = 4.0
-offset_top = -17.0
-offset_right = 18.0
-offset_bottom = 31.0
-texture_normal = ExtResource("6_63hl3")
-
-[node name="TextureRect" type="NinePatchRect" parent="Control"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_c0ot2")
-patch_margin_left = 13
-patch_margin_top = 7
-patch_margin_right = 13
-patch_margin_bottom = 14
-metadata/_edit_layout_mode = 1
-metadata/_edit_lock_ = true
-
-[node name="TextureRect2" type="NinePatchRect" parent="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 2.0
-offset_right = -114.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_c0ot2")
-patch_margin_left = 13
-patch_margin_top = 7
-patch_margin_right = 13
-patch_margin_bottom = 14
-metadata/_edit_layout_mode = 1
-
-[node name="TextureRect3" type="NinePatchRect" parent="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 79.0
-offset_top = 2.0
-offset_right = -5.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_c0ot2")
-patch_margin_left = 13
-patch_margin_top = 7
-patch_margin_right = 13
-patch_margin_bottom = 14
-metadata/_edit_layout_mode = 1
-
-[node name="w_state_plane" type="Control" parent="."]
-offset_right = 57.0
-offset_bottom = 19.0
-
-[node name="TextureRect" type="NinePatchRect" parent="w_state_plane"]
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -48.5
-offset_right = -13.5
-offset_bottom = 11.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_qdc6a")
-patch_margin_left = 4
-patch_margin_top = 4
-patch_margin_right = 4
-patch_margin_bottom = 4
-metadata/_edit_layout_mode = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="w_state_plane"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 2.0
-offset_bottom = 7.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 1
+offset_left = 59.5
+offset_top = -16.0
+offset_right = -59.5
 metadata/_edit_group_ = true
 metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = true
+metadata/_edit_use_anchors_ = true
 
-[node name="w_state_bar" parent="w_state_plane/VBoxContainer" instance=ExtResource("7_ihaoc")]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+offset_right = 192.0
+offset_bottom = 16.0
+theme_override_constants/separation = 0
 
-[node name="w_state_bar2" parent="w_state_plane/VBoxContainer" instance=ExtResource("7_ihaoc")]
-offset_top = 8.0
-offset_bottom = 15.0
+[node name="item_slot" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
 
-[node name="TextureRect" parent="w_state_plane/VBoxContainer/w_state_bar2" index="0"]
-texture = ExtResource("10_htigx")
+[node name="item_slot2" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 16.0
+offset_right = 32.0
 
-[node name="MarginContainer" parent="w_state_plane/VBoxContainer/w_state_bar2" index="1"]
-theme_override_constants/margin_top = 1
-theme_override_constants/margin_bottom = 1
+[node name="item_slot3" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 32.0
+offset_right = 48.0
 
-[node name="TextureProgressBar" parent="w_state_plane/VBoxContainer/w_state_bar2/MarginContainer" index="0"]
-offset_top = 1.0
-offset_bottom = 6.0
-texture_progress = ExtResource("11_sk0rx")
+[node name="item_slot4" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 48.0
+offset_right = 64.0
 
-[node name="w_state_bar3" parent="w_state_plane/VBoxContainer" instance=ExtResource("7_ihaoc")]
-offset_top = 16.0
-offset_bottom = 24.0
+[node name="item_slot5" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 64.0
+offset_right = 80.0
 
-[node name="TextureRect" parent="w_state_plane/VBoxContainer/w_state_bar3" index="0"]
-offset_right = 8.0
-offset_bottom = 8.0
-texture = ExtResource("9_0pbf3")
+[node name="item_slot6" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 80.0
+offset_right = 96.0
 
-[node name="MarginContainer" parent="w_state_plane/VBoxContainer/w_state_bar3" index="1"]
-offset_left = 12.0
-offset_bottom = 8.0
-theme_override_constants/margin_top = 2
-theme_override_constants/margin_bottom = 2
+[node name="item_slot7" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 96.0
+offset_right = 112.0
 
-[node name="TextureProgressBar" parent="w_state_plane/VBoxContainer/w_state_bar3/MarginContainer" index="0"]
-offset_top = 2.0
-offset_right = 45.0
-offset_bottom = 6.0
-texture_under = ExtResource("10_8ay7b")
-texture_progress = ExtResource("11_ampof")
+[node name="item_slot8" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 112.0
+offset_right = 128.0
+
+[node name="item_slot9" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 128.0
+offset_right = 144.0
+
+[node name="item_slot10" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 144.0
+offset_right = 160.0
+
+[node name="item_slot11" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 160.0
+offset_right = 176.0
+
+[node name="item_slot12" parent="MarginContainer/HBoxContainer" instance=ExtResource("4_jwq76")]
+offset_left = 176.0
+offset_right = 192.0
 
 [connection signal="pressed" from="btn_server" to="." method="_on_btn_server_pressed"]
 [connection signal="pressed" from="btn_client" to="." method="_on_btn_client_pressed"]
-
-[editable path="w_state_plane/VBoxContainer/w_state_bar2"]
-[editable path="w_state_plane/VBoxContainer/w_state_bar3"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpba78k5atf4w"]
+
+[sub_resource type="GDScript" id="GDScript_o51i7"]
+script/source = "extends Node
+
+var t : int = 1 : set = _t_setter
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	t += 1
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	t += 1
+
+func _t_setter(v : int):
+	print(\"_t_setter:\", v)
+	t = v
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_o51i7")

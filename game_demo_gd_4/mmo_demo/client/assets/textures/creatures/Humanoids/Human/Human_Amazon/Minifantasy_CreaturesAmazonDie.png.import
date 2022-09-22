@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcgm5kp712spe"
-path="res://.godot/imported/Minifantasy_CreaturesAmazonDie.png-39c544f483ce05204d1ae091463c9b44.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesAmazonDie.png-a23a4a73dfc73ee0662198cca5656ce9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Human/Human_Amazon/Minifantasy_CreaturesAmazonDie.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesAmazonDie.png-39c544f483ce05204d1ae091463c9b44.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Human/Human_Amazon/Minifantasy_CreaturesAmazonDie.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesAmazonDie.png-a23a4a73dfc73ee0662198cca5656ce9.ctex"]
 
 [params]
 

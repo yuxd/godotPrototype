@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chr11rs1ar1x2"
-path="res://.godot/imported/Minifantasy_CreaturesHumanAnimations.png-d9d356cd49cb376da655c5edde509a3a.ctex"
+path="res://.godot/imported/Minifantasy_CreaturesHumanAnimations.png-125e2ca70950681bdb70638117fe9f59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/creatures/Humanoids/Human/Human/Minifantasy_CreaturesHumanAnimations.png"
-dest_files=["res://.godot/imported/Minifantasy_CreaturesHumanAnimations.png-d9d356cd49cb376da655c5edde509a3a.ctex"]
+source_file="res://assets/textures/creatures/humanoids/Human/Human/Minifantasy_CreaturesHumanAnimations.png"
+dest_files=["res://.godot/imported/Minifantasy_CreaturesHumanAnimations.png-125e2ca70950681bdb70638117fe9f59.ctex"]
 
 [params]
 

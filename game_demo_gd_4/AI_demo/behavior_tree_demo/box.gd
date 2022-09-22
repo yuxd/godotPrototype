@@ -1,22 +1,16 @@
-extends StaticBody2D
+extends RigidBody2D
 
 
-var count = 0
-
-func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+var count := 0
 
 
-func get_object_type():
+func get_object_type() -> String:
 	return "box"
 
 
-func action(character):
+func action(character) -> bool:
 	if character.store_held("wood"):
 		count += 1
-		$CanvasLayer/Label.text = str(count)
 		return true
 	else:
 		return false

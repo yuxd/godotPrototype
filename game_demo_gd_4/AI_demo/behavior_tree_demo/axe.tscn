@@ -7,6 +7,7 @@
 size = Vector2(16, 16)
 
 [node name="axe" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_db8s0")
 
 [node name="Sprite2d" type="Sprite2D" parent="."]

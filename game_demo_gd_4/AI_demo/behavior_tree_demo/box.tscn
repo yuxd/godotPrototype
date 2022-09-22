@@ -6,7 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqkem"]
 size = Vector2(16, 16)
 
-[node name="box" type="StaticBody2D"]
+[node name="box" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_cv6wl")
 
 [node name="Sprite2d" type="Sprite2D" parent="."]
@@ -14,3 +15,5 @@ texture = ExtResource("1_4b3dy")
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rqkem")
+
+[node name="NavigationObstacle2d" type="NavigationObstacle2D" parent="."]

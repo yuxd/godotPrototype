@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctox8yrvo7qlq"]
+[gd_scene load_steps=9 format=3 uid="uid://y1vah5cw6avi"]
 
 [ext_resource type="Script" path="res://behavior_tree/behavior_tree.gd" id="1_wnf3c"]
-[ext_resource type="Script" path="res://behavior_tree/BTSelector.gd" id="2_h86g4"]
-[ext_resource type="Script" path="res://behavior_tree/BTChifan.gd" id="3_piv10"]
-[ext_resource type="Script" path="res://behavior_tree/BTshuijiao.gd" id="4_65jjh"]
-[ext_resource type="Script" path="res://behavior_tree/BTSequence.gd" id="5_jr0dq"]
-[ext_resource type="Script" path="res://behavior_tree/BTdadoudou.gd" id="6_xo8oe"]
-[ext_resource type="Script" path="res://behavior_tree/BTdamiaomiao.gd" id="7_v3amk"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/composites/bt_selector.gd" id="2_h86g4"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/leaves/BTChifan.gd" id="3_piv10"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/leaves/BTshuijiao.gd" id="4_65jjh"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/composites/bt_sequence.gd" id="5_jr0dq"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/leaves/BTdadoudou.gd" id="6_xo8oe"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/leaves/BTdamiaomiao.gd" id="7_v3amk"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/decorator/bt_always.gd" id="8_mnrc8"]
 
 [node name="BehaviorTree" type="Node"]
 script = ExtResource("1_wnf3c")
@@ -28,3 +29,6 @@ script = ExtResource("6_xo8oe")
 
 [node name="BTDamiaomiao" type="Node" parent="BTSelector/BTSequence"]
 script = ExtResource("7_v3amk")
+
+[node name="BTAlways" type="Node" parent="BTSelector/BTSequence"]
+script = ExtResource("8_mnrc8")

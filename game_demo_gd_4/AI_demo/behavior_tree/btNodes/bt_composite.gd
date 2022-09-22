@@ -2,6 +2,7 @@ extends BTNode
 class_name BTComposite
 
 var current_child_node : int = 0
+@onready var children := get_children()
 
 func _ready():
 	assert(get_child_count() > 1, "复合节点必须有多个子节点！")

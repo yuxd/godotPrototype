@@ -14,7 +14,7 @@ func set_grown():
 	$AnimationPlayer.play("Grown")
 
 
-func cut(character):
+func action(character):
 	if !can_cut:
 		print("This tree cannot be cut")
 	elif (character.position - position).length() > 1:
@@ -25,3 +25,14 @@ func cut(character):
 	else:
 		print("you need an axe to cut a tree")
 	return false
+
+
+func drop_items():
+	for c in [ preload("res://behavior_tree_demo/wood.tscn"), preload("res://behavior_tree_demo/fruit.tscn") ]:
+		for i in range(randi() % 6):
+			var object = c.instance()
+			var direction = Vector2(randf_range(-2.0, 2.0), randf_range(-2.0, 2.0))
+			object.position = position + direction + Vector3(0, 4.0, 0)
+#			object.rotation = Vector3(rand_range(-3.0, 3.0), rand_range(-3.0, 3.0), rand_range(-3.0, 3.0))
+			object.apply_impulse(Vector3(0.0, 0.0, 0.0), direction)
+			get_parent().add_child(object)

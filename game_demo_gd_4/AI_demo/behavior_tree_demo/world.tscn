@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://ep4dig0ohp7l"]
+[gd_scene load_steps=14 format=3 uid="uid://ep4dig0ohp7l"]
 
 [ext_resource type="Script" path="res://behavior_tree_demo/world.gd" id="1_606yq"]
 [ext_resource type="Texture2D" uid="uid://d24r0ug8u2mdi" path="res://assets/tileset.png" id="1_jmtk0"]
 [ext_resource type="Texture2D" uid="uid://sujvof0wkj0o" path="res://assets/tree.tres" id="2_4kp8t"]
 [ext_resource type="PackedScene" uid="uid://cgtfhpqjov8vv" path="res://behavior_tree_demo/goblin.tscn" id="3_kqu86"]
 [ext_resource type="PackedScene" uid="uid://dqemfx1mye1ye" path="res://behavior_tree_demo/box.tscn" id="4_mxjo7"]
+[ext_resource type="Script" path="res://behavior_tree/behavior_tree.gd" id="5_3lnq0"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/composites/bt_sequence.gd" id="6_neg8c"]
 [ext_resource type="Texture2D" uid="uid://b41to3ln45es3" path="res://assets/pickaxe.png" id="6_pjq8k"]
 [ext_resource type="Texture2D" uid="uid://cvbbelr7vsiw3" path="res://assets/wood.tres" id="7_aab4e"]
 
@@ -529,6 +531,12 @@ texture = ExtResource("2_4kp8t")
 position = Vector2(348, 292)
 run_speed = 50.0
 
+[node name="BehaviorTree" type="Node" parent="Player"]
+script = ExtResource("5_3lnq0")
+
+[node name="BTSequence" type="Node" parent="Player/BehaviorTree"]
+script = ExtResource("6_neg8c")
+
 [node name="box" parent="." instance=ExtResource("4_mxjo7")]
 position = Vector2(475, 404)
 
@@ -548,7 +556,7 @@ offset_right = 200.0
 offset_bottom = 48.0
 show_percentage = false
 
-[node name="TextureRect" type="TextureRect" parent="form_main"]
+[node name="icon_held" type="TextureRect" parent="form_main"]
 offset_left = 72.0
 offset_top = 64.0
 offset_right = 144.0

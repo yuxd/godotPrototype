@@ -99,20 +99,10 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://behavior_tree/behavior_tree.gd"
 }, {
-"base": "CharacterBody2D",
-"class": &"PlayerCharacter",
-"language": &"GDScript",
-"path": "res://behavior_tree_demo/goblin.gd"
-}, {
 "base": "Node",
 "class": &"StateBase",
 "language": &"GDScript",
 "path": "res://state_machine/state_base.gd"
-}, {
-"base": "Node2D",
-"class": &"World",
-"language": &"GDScript",
-"path": "res://behavior_tree_demo/world.gd"
 }]
 _global_script_class_icons={
 "BTAlways": "",
@@ -133,9 +123,7 @@ _global_script_class_icons={
 "BTSequence": "",
 "BTShuijiao": "",
 "BehaviorTree": "",
-"PlayerCharacter": "",
-"StateBase": "",
-"World": ""
+"StateBase": ""
 }
 
 [application]
@@ -143,8 +131,3 @@ _global_script_class_icons={
 config/name="AI_demo"
 run/main_scene="res://behavior_tree_demo/world.tscn"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
-config/icon="res://icon.svg"
-
-[display]
-
-window/stretch/mode="canvas_items"

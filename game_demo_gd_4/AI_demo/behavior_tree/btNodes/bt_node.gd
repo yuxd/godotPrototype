@@ -8,6 +8,8 @@ enum BTState {
 	CANCELED
 }
 
+@export var active : bool = true
+
 signal completed
 var _state : BTState = BTState.CANCELED
 

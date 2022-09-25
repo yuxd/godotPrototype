@@ -9,8 +9,8 @@ func _ready():
 	child.completed.connect(_on_child_completed)
 
 
-func run() -> void:
-	child.run()
+func run(agent : Node) -> void:
+	child.run(agent)
 
 
 func _on_child_completed(result : bool) -> void:

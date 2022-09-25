@@ -5,12 +5,11 @@ class_name World
 @onready var icon_held : TextureRect = $form_main/icon_held
 @onready var lefe_progress_bar : ProgressBar = $form_main/ProgressBar
 @onready var label_wood_amount : Label = $form_main/Panel/HBoxContainer/wood_amount
-var game_objects : Array = []
+@onready var game_objects : Array = get_children()
 
 
 func _ready() -> void:
 	seed(Time.get_unix_time_from_system())
-	game_objects.append($box)
 	var tree_positions = PackedVector2Array()
 	for i in range(5):
 		var tree = preload("res://behavior_tree_demo/tree.tscn").instantiate()
@@ -26,14 +25,17 @@ func _ready() -> void:
 				tree_positions.append(p)
 				break
 		add_child(tree)
-		game_objects.append(tree)
-		tree.set_grown()
-	player.run_to($box)
+	var axe : Node = load("res://behavior_tree_demo/axe.tscn").instantiate()
+	player.held = axe
+#	player.run_to($box)
 
 
 func _process(delta: float) -> void:
 	lefe_progress_bar.value = player.life
 	label_wood_amount.text = str($box.count)
+	update_held_icon()
+
+
 func update_held_icon():
 	if player.held == null:
 		icon_held.visible = false

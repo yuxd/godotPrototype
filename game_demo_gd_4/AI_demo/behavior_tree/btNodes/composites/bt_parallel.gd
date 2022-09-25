@@ -3,11 +3,11 @@ class_name BTParallel
 
 var result_count := 0
 
-func run() -> void:
+func run(agent : Node) -> void:
 	var bt_child : BTNode
 	for c in children:
 		bt_child = c
-		bt_child.run()
+		bt_child.run(agent)
 
 
 func _on_child_completed(result : bool) -> void:

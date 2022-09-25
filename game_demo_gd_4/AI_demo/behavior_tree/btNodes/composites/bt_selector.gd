@@ -1,7 +1,8 @@
 extends BTComposite
 class_name BTSelector
 
-func run() -> void:
+func run(agent : Node) -> void:
+	super(agent)
 	run_current_child_node()
 
 func _on_child_completed(result : bool) -> void:

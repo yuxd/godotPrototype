@@ -20,5 +20,5 @@ func run_current_child_node() -> bool:
 		var current_node = get_child(current_child_node)
 		current_node.completed.connect(_on_child_completed)
 		current_child_node += 1
-		current_node.run()
+		current_node.run(agent)
 		return true

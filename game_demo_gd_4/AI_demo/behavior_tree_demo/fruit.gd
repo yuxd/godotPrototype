@@ -1,8 +1,8 @@
-extends Node
+extends Node2D
 
 
 func get_object_type() -> String:
-	return "axe"
+	return "fruit"
 
 
 func action(character):

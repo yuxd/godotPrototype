@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ep4dig0ohp7l"]
+[gd_scene load_steps=22 format=3 uid="uid://ep4dig0ohp7l"]
 
 [ext_resource type="Script" path="res://behavior_tree_demo/world.gd" id="1_606yq"]
 [ext_resource type="Texture2D" uid="uid://d24r0ug8u2mdi" path="res://assets/tileset.png" id="1_jmtk0"]
@@ -6,8 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://cgtfhpqjov8vv" path="res://behavior_tree_demo/goblin.tscn" id="3_kqu86"]
 [ext_resource type="PackedScene" uid="uid://dqemfx1mye1ye" path="res://behavior_tree_demo/box.tscn" id="4_mxjo7"]
 [ext_resource type="Script" path="res://behavior_tree/behavior_tree.gd" id="5_3lnq0"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/composites/bt_selector.gd" id="6_bewqg"]
 [ext_resource type="Texture2D" uid="uid://b41to3ln45es3" path="res://assets/pickaxe.png" id="6_pjq8k"]
 [ext_resource type="Texture2D" uid="uid://cvbbelr7vsiw3" path="res://assets/wood.tres" id="7_aab4e"]
+[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_store_wood.gd" id="7_btpr2"]
+[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_pickup_fruit.gd" id="7_c45cr"]
+[ext_resource type="Script" path="res://behavior_tree/btNodes/composites/bt_sequence.gd" id="7_dseoy"]
+[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_grow_tree.gd" id="7_hhg0g"]
+[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_need_grow.gd" id="8_2pfij"]
+[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_pickup_wood.gd" id="8_udsqh"]
+[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_cut_tree.gd" id="9_t20mi"]
+[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_pickup_axe.gd" id="10_2k3sj"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vawwg"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -527,15 +536,48 @@ position = Vector2(507, 171)
 texture = ExtResource("2_4kp8t")
 
 [node name="Player" parent="." instance=ExtResource("3_kqu86")]
-position = Vector2(591, 505)
-run_speed = 50.0
+position = Vector2(298, 267)
+run_speed = 100.0
 
 [node name="BehaviorTree" type="Node" parent="Player"]
 script = ExtResource("5_3lnq0")
-active = false
+_agent = NodePath("..")
+
+[node name="BTSelector" type="Node" parent="Player/BehaviorTree"]
+script = ExtResource("6_bewqg")
+
+[node name="BTSequence" type="Node" parent="Player/BehaviorTree/BTSelector"]
+script = ExtResource("7_dseoy")
+
+[node name="BTNeedGrow" type="Node" parent="Player/BehaviorTree/BTSelector/BTSequence"]
+script = ExtResource("8_2pfij")
+
+[node name="BTSelector" type="Node" parent="Player/BehaviorTree/BTSelector/BTSequence"]
+script = ExtResource("6_bewqg")
+
+[node name="BTGrowTree" type="Node" parent="Player/BehaviorTree/BTSelector/BTSequence/BTSelector"]
+script = ExtResource("7_hhg0g")
+
+[node name="BTPickupFruit" type="Node" parent="Player/BehaviorTree/BTSelector/BTSequence/BTSelector"]
+script = ExtResource("7_c45cr")
+
+[node name="Selector_CutTree" type="Node" parent="Player/BehaviorTree/BTSelector"]
+script = ExtResource("6_bewqg")
+
+[node name="BTStoreWood" type="Node" parent="Player/BehaviorTree/BTSelector/Selector_CutTree"]
+script = ExtResource("7_btpr2")
+
+[node name="BTPickupWood" type="Node" parent="Player/BehaviorTree/BTSelector/Selector_CutTree"]
+script = ExtResource("8_udsqh")
+
+[node name="BTCutTree" type="Node" parent="Player/BehaviorTree/BTSelector/Selector_CutTree"]
+script = ExtResource("9_t20mi")
+
+[node name="BTPickupAxe" type="Node" parent="Player/BehaviorTree/BTSelector/Selector_CutTree"]
+script = ExtResource("10_2k3sj")
 
 [node name="box" parent="." instance=ExtResource("4_mxjo7")]
-position = Vector2(475, 404)
+position = Vector2(360, 277)
 
 [node name="Camera2d" type="Camera2D" parent="."]
 position = Vector2(576, 328)
@@ -589,3 +631,12 @@ offset_top = 3.0
 offset_right = 46.0
 offset_bottom = 29.0
 text = "0"
+
+[node name="BTSelector" type="Node" parent="."]
+script = ExtResource("6_bewqg")
+
+[node name="BTStoreWood" type="Node" parent="BTSelector"]
+script = ExtResource("7_btpr2")
+
+[node name="BTPickupWood" type="Node" parent="BTSelector"]
+script = ExtResource("8_udsqh")

@@ -15,4 +15,4 @@ func _on_child_completed(result : bool) -> void:
 	else :
 		result_count -= 1
 		await get_tree().create_timer(frequency).timeout
-		child.run()
+		child.run(agent)

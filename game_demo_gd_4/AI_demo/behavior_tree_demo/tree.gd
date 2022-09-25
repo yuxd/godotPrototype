@@ -3,6 +3,10 @@ extends StaticBody2D
 @export var can_cut : bool = false
 
 
+func _ready():
+	self.set_grown()
+
+
 func get_object_type():
 	if can_cut:
 		return "tree"
@@ -15,9 +19,10 @@ func set_grown():
 
 
 func action(character):
+	printerr(position.distance_to(character.position))	
 	if !can_cut:
 		print("This tree cannot be cut")
-	elif (character.position - position).length() > 1:
+	elif position.distance_to(character.position) > 30:
 		print("This tree is too far")
 	elif character.held != null and character.held.get_object_type() == "axe":
 		$AnimationPlayer.play("Cut")
@@ -30,9 +35,7 @@ func action(character):
 func drop_items():
 	for c in [ preload("res://behavior_tree_demo/wood.tscn"), preload("res://behavior_tree_demo/fruit.tscn") ]:
 		for i in range(randi() % 6):
-			var object = c.instance()
-			var direction = Vector2(randf_range(-2.0, 2.0), randf_range(-2.0, 2.0))
-			object.position = position + direction + Vector3(0, 4.0, 0)
-#			object.rotation = Vector3(rand_range(-3.0, 3.0), rand_range(-3.0, 3.0), rand_range(-3.0, 3.0))
-			object.apply_impulse(Vector3(0.0, 0.0, 0.0), direction)
+			var object = c.instantiate()
+			var direction = Vector2(randf_range(-16.0, 16.0), randf_range(-16.0, 16.0))
+			object.position = position + direction
 			get_parent().add_child(object)

@@ -1,0 +1,3 @@
+﻿ID,item,weight,number,sort
+订单ID,道具ID,权重,基数,排序
+string,string,int,int,int

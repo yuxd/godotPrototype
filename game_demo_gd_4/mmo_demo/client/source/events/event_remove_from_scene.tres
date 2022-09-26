@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dioep75r8e1um"]
+
+[ext_resource type="Script" path="res://addons/q_framework/event/event_resource.gd" id="1_wlogb"]
+
+[resource]
+script = ExtResource("1_wlogb")
+destination = "remove_from_scene"

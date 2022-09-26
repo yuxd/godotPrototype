@@ -1,0 +1,265 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://source/widget/w_buildings.gd" id="1_u8g40"]
+[ext_resource type="PackedScene" path="res://source/widget/w_btn_building_tab.tscn" id="2_bct2i"]
+[ext_resource type="Script" path="res://source/widget/vb_building_tab_bar.gd" id="2_e4mws"]
+
+
+[sub_resource type="SystemFont" id="SystemFont_d78r1"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_s72sd"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_ly1ta"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_4efqh"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_ptnei"]
+font_names = PackedStringArray("SimSun")
+subpixel_positioning = 0
+
+[node name="w_buildings" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_u8g40")
+
+[node name="hb" type="HBoxContainer" parent="."]
+offset_right = 1536.0
+offset_bottom = 900.0
+
+[node name="mc" type="MarginContainer" parent="hb"]
+offset_right = 120.0
+offset_bottom = 900.0
+
+[node name="ColorRect" type="ColorRect" parent="hb/mc"]
+offset_right = 120.0
+offset_bottom = 900.0
+color = Color(0.113725, 0.133333, 0.160784, 1)
+
+[node name="sc" type="ScrollContainer" parent="hb/mc"]
+custom_minimum_size = Vector2(120, 0)
+offset_right = 120.0
+offset_bottom = 900.0
+
+[node name="vb_building_tab_bar" type="VBoxContainer" parent="hb/mc/sc"]
+offset_right = 56.0
+offset_bottom = 378.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_e4mws")
+
+[node name="btn_main_building" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_right = 120.0
+offset_bottom = 25.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "主城"
+
+[node name="btn_logging" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 29.0
+offset_right = 120.0
+offset_bottom = 54.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "伐木场"
+
+[node name="Button3" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 58.0
+offset_right = 120.0
+offset_bottom = 83.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button4" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 87.0
+offset_right = 120.0
+offset_bottom = 112.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button5" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 116.0
+offset_right = 120.0
+offset_bottom = 141.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button6" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 145.0
+offset_right = 120.0
+offset_bottom = 170.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button7" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 174.0
+offset_right = 120.0
+offset_bottom = 199.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button8" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 203.0
+offset_right = 120.0
+offset_bottom = 228.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button9" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 232.0
+offset_right = 120.0
+offset_bottom = 257.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button10" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 261.0
+offset_right = 120.0
+offset_bottom = 286.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button11" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 290.0
+offset_right = 120.0
+offset_bottom = 315.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="Button12" type="Button" parent="hb/mc/sc/vb_building_tab_bar"]
+offset_top = 319.0
+offset_right = 120.0
+offset_bottom = 344.0
+theme_override_fonts/font = SubResource("SystemFont_d78r1")
+text = "main"
+
+[node name="w_btn_building_tab" parent="hb/mc/sc/vb_building_tab_bar" instance=ExtResource("2_bct2i")]
+
+[node name="tc_buildings" type="TabContainer" parent="hb"]
+offset_left = 124.0
+offset_right = 1536.0
+offset_bottom = 900.0
+size_flags_horizontal = 3
+tabs_visible = false
+
+[node name="w_main" type="MarginContainer" parent="hb/tc_buildings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+
+[node name="w_logging" type="MarginContainer" parent="hb/tc_buildings"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="hb/tc_buildings/w_logging"]
+offset_right = 1412.0
+offset_bottom = 900.0
+
+[node name="MarginContainer" type="MarginContainer" parent="hb/tc_buildings/w_logging/VBoxContainer"]
+offset_right = 900.0
+offset_bottom = 29.0
+
+[node name="Label" type="Label" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer"]
+offset_right = 900.0
+offset_bottom = 29.0
+theme_override_fonts/font = SubResource("SystemFont_s72sd")
+theme_override_font_sizes/font_size = 25
+text = "伐木场"
+
+[node name="MarginContainer2" type="MarginContainer" parent="hb/tc_buildings/w_logging/VBoxContainer"]
+offset_top = 33.0
+offset_right = 900.0
+offset_bottom = 33.0
+
+[node name="MarginContainer3" type="MarginContainer" parent="hb/tc_buildings/w_logging/VBoxContainer"]
+offset_top = 37.0
+offset_right = 900.0
+offset_bottom = 518.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3"]
+offset_right = 900.0
+offset_bottom = 481.0
+
+[node name="w_resource" type="MarginContainer" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(180, 160)
+offset_right = 900.0
+offset_bottom = 427.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/w_resource"]
+offset_right = 900.0
+offset_bottom = 427.0
+color = Color(0.207843, 0.207843, 0.207843, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/w_resource"]
+offset_right = 900.0
+offset_bottom = 427.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/w_resource/ScrollContainer"]
+offset_right = 900.0
+offset_bottom = 50.0
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/w_resource/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+offset_right = 900.0
+offset_bottom = 50.0
+
+[node name="ProgressBar" type="ProgressBar" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/w_resource/ScrollContainer/VBoxContainer/MarginContainer"]
+offset_right = 900.0
+offset_bottom = 50.0
+size_flags_vertical = 1
+percent_visible = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/w_resource/ScrollContainer/VBoxContainer/MarginContainer"]
+offset_right = 900.0
+offset_bottom = 50.0
+
+[node name="Label" type="Label" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/w_resource/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+offset_top = 15.0
+offset_right = 32.0
+offset_bottom = 35.0
+theme_override_fonts/font = SubResource("SystemFont_ly1ta")
+text = "张三"
+
+[node name="Button" type="Button" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/w_resource/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+offset_left = 36.0
+offset_top = 12.0
+offset_right = 76.0
+offset_bottom = 37.0
+size_flags_vertical = 4
+theme_override_fonts/font = SubResource("SystemFont_4efqh")
+text = "取消"
+
+[node name="MarginContainer" type="MarginContainer" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+offset_top = 431.0
+offset_right = 900.0
+offset_bottom = 481.0
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="hb/tc_buildings/w_logging/VBoxContainer/MarginContainer3/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(50, 30)
+offset_left = 414.0
+offset_top = 10.0
+offset_right = 486.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = SubResource("SystemFont_ptnei")
+text = "添加工人"
+
+[node name="MarginContainer4" type="MarginContainer" parent="hb/tc_buildings/w_logging/VBoxContainer"]
+offset_top = 522.0
+offset_right = 900.0
+offset_bottom = 522.0

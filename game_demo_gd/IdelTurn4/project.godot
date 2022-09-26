@@ -94,3 +94,7 @@ config/features=PackedStringArray("4.0", "Vulkan Clustered")
 
 GameInstance="*res://Sources/GameInstance.gd"
 Events="*res://Sources/Events.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/QFramework/plugin.cfg")

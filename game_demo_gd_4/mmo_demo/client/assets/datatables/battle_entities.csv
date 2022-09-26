@@ -1,0 +1,6 @@
+﻿ID,entity_name,attribute_set,abilities
+ID,名称,资源ID,生命值
+string,string,string,int
+alang, 阿郎, max_health*500*10*attack_power*50*5*defen_power*40*4*attack_interval*1700*0, attack
+ali, 阿狸, max_health*500*10*attack_power*50*5*defen_power*40*4*attack_interval*1700*0, attack
+aming, 阿明, max_health*500*10*attack_power*50*5*defen_power*40*4*attack_interval*1700*0, attack

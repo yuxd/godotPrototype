@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3jmpmuith4ph"]
+
+[ext_resource type="Texture2D" uid="uid://b1jtyd0ck7psa" path="res://assets/textures/widgets/icons/common/icon_health.tres" id="1_ivepn"]
+[ext_resource type="Texture2D" uid="uid://bdop44q520w6f" path="res://assets/textures/widgets/menus/bar_01.tres" id="2_45nxw"]
+[ext_resource type="Texture2D" uid="uid://dmu6lf33lbf6j" path="res://assets/textures/widgets/menus/bar_p_01.tres" id="3_s60uo"]
+
+[node name="w_state_bar" type="HBoxContainer"]
+offset_right = 57.0
+offset_bottom = 7.0
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 7.0
+offset_bottom = 7.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_ivepn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 11.0
+offset_right = 57.0
+offset_bottom = 7.0
+size_flags_horizontal = 3
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer"]
+offset_right = 46.0
+offset_bottom = 7.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 55.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_45nxw")
+texture_progress = ExtResource("3_s60uo")
+tint_over = Color(0.257813, 0.257813, 0.257813, 1)
+tint_progress = Color(0.992157, 0.937255, 0.909804, 1)

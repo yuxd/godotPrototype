@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://xp0l36pgeuwo"]
+
+[ext_resource type="Texture2D" uid="uid://c8o70dgmutknn" path="res://assets/textures/widgets/menus/panel_paper_06.tres" id="1_w3w0d"]
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/common/icon_setting.tres" id="2_xjot6"]
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/common/icon_table.tres" id="3_a1cej"]
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/common/icon_info.tres" id="4_ch35c"]
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/common/icon_skill.tres" id="4_qsjd8"]
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/common/icon_inventory.tres" id="5_7ph07"]
+[ext_resource type="Texture2D" path="res://assets/textures/widgets/icons/common/icon_quest.tres" id="5_qsfn7"]
+
+[node name="w_setting_bar" type="MarginContainer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = -68.0
+offset_right = -5.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="bg" type="NinePatchRect" parent="."]
+offset_right = 16.0
+offset_bottom = 78.0
+texture = ExtResource("1_w3w0d")
+patch_margin_left = 6
+patch_margin_top = 8
+patch_margin_right = 5
+patch_margin_bottom = 11
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 16.0
+offset_bottom = 78.0
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+offset_left = 4.0
+offset_top = 12.0
+offset_right = 12.0
+offset_bottom = 78.0
+size_flags_horizontal = 4
+theme_override_constants/separation = 1
+
+[node name="btn_setting" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+offset_right = 8.0
+offset_bottom = 8.0
+texture_normal = ExtResource("2_xjot6")
+
+[node name="btn_info" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+offset_top = 9.0
+offset_right = 8.0
+offset_bottom = 17.0
+texture_normal = ExtResource("4_ch35c")
+
+[node name="btn_skill" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+offset_top = 18.0
+offset_right = 8.0
+offset_bottom = 26.0
+texture_normal = ExtResource("4_qsjd8")
+
+[node name="btn_quest" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+offset_top = 27.0
+offset_right = 8.0
+offset_bottom = 35.0
+texture_normal = ExtResource("5_qsfn7")
+
+[node name="btn_table" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+offset_top = 36.0
+offset_right = 8.0
+offset_bottom = 44.0
+texture_normal = ExtResource("3_a1cej")
+
+[node name="btn_inventory" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+offset_top = 45.0
+offset_right = 8.0
+offset_bottom = 53.0
+texture_normal = ExtResource("5_7ph07")

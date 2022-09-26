@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1b4kbiuf2mnq"]
+
+[ext_resource type="Script" path="res://cards/card_manager.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://cr6m8l2ohohdc" path="res://cards/bessel_arrow.tscn" id="4"]
+
+[node name="CardManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")
+rotation_proportion = 10.0
+tween_speed = 0.1
+
+[node name="bessel_arrow" parent="." instance=ExtResource("4")]
+
+[node name="hand_card" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 480.0
+offset_top = 510.0
+offset_right = 520.0
+offset_bottom = 550.0
+
+[node name="cemetery" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="deck" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="button" type="VBoxContainer" parent="."]
+alignment = 1
+
+[node name="btn_add_card" type="Button" parent="button"]
+offset_right = 106.0
+offset_bottom = 31.0
+text = "add card"
+
+[node name="btn_remove_card" type="Button" parent="button"]
+offset_top = 35.0
+offset_right = 106.0
+offset_bottom = 66.0
+text = "remove card"
+
+[connection signal="pressed" from="button/btn_add_card" to="." method="_on_btn_add_card_pressed"]
+[connection signal="pressed" from="button/btn_remove_card" to="." method="_on_btn_remove_card_pressed"]

@@ -1,0 +1,100 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "DatatableManager",
+"class": &"CSVDatatableManager",
+"language": &"GDScript",
+"path": "res://addons/QFramework/datatable/csv_datatable_manager.gd"
+}, {
+"base": "Node",
+"class": &"ComponentBase",
+"language": &"GDScript",
+"path": "res://addons/QFramework/components/component_base.gd"
+}, {
+"base": "Node",
+"class": &"EntityBase",
+"language": &"GDScript",
+"path": "res://addons/QFramework/entities/entity_base.gd"
+}, {
+"base": "Node",
+"class": &"EntityManager",
+"language": &"GDScript",
+"path": "res://Sources/EntityManager.gd"
+}, {
+"base": "StateBase",
+"class": &"ProcedureBase",
+"language": &"GDScript",
+"path": "res://addons/QFramework/procedure/procedure_base.gd"
+}, {
+"base": "StateMachine",
+"class": &"ProcedureManager",
+"language": &"GDScript",
+"path": "res://addons/QFramework/procedure/manager_procedure.gd"
+}, {
+"base": "Node",
+"class": &"SceneManager",
+"language": &"GDScript",
+"path": "res://addons/QFramework/manager_scene.gd"
+}, {
+"base": "Node",
+"class": &"StateBase",
+"language": &"GDScript",
+"path": "res://addons/QFramework/state_machie/state_base.gd"
+}, {
+"base": "Node",
+"class": &"StateMachine",
+"language": &"GDScript",
+"path": "res://addons/QFramework/state_machie/state_machine.gd"
+}, {
+"base": "Node",
+"class": &"TimeManager",
+"language": &"GDScript",
+"path": "res://addons/QFramework/manager_time.gd"
+}, {
+"base": "Control",
+"class": &"UIFormBase",
+"language": &"GDScript",
+"path": "res://addons/QFramework/UI/UI_form_base.gd"
+}, {
+"base": "Node",
+"class": &"UIManager",
+"language": &"GDScript",
+"path": "res://addons/QFramework/UI/manager_UI.gd"
+}]
+_global_script_class_icons={
+"CSVDatatableManager": "",
+"ComponentBase": "",
+"EntityBase": "",
+"EntityManager": "",
+"ProcedureBase": "",
+"ProcedureManager": "",
+"SceneManager": "",
+"StateBase": "",
+"StateMachine": "",
+"TimeManager": "",
+"UIFormBase": "",
+"UIManager": ""
+}
+
+[application]
+
+config/name="IdelTurn4"
+config/icon="res://icon.png"
+config/features=PackedStringArray("4.0", "Vulkan Clustered")
+
+[autoload]
+
+GameInstance="*res://Sources/GameInstance.gd"
+Events="*res://Sources/Events.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/QFramework/plugin.cfg")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=3 uid="uid://ktgim3bmuc4d"]
+
+[ext_resource type="Script" path="res://addons/q_framework/gd-ecs/Entity.gd" id="1_igumk"]
+[ext_resource type="Script" path="res://source/game_mode.gd" id="1_vhn0y"]
+[ext_resource type="Script" path="res://source/components/c_game_mode.gd" id="2_2ppna"]
+[ext_resource type="PackedScene" uid="uid://cybyi8amkkles" path="res://source/procedure/procedure.tscn" id="3_i0235"]
+[ext_resource type="PackedScene" uid="uid://k654tutgnp8h" path="res://source/widget/form_main.tscn" id="5_hxj4s"]
+[ext_resource type="PackedScene" uid="uid://b0kyfn2k25bfb" path="res://source/entities/camera.tscn" id="6_0l7gl"]
+[ext_resource type="PackedScene" uid="uid://dcy2jc5p2pwpj" path="res://source/entities/refresher.tscn" id="8_hudf3"]
+[ext_resource type="PackedScene" uid="uid://dtxlqgpqcthsn" path="res://source/scenes/map_test.tscn" id="8_nuxit"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_vhn0y")
+
+[node name="GameMode" type="Node" parent="."]
+script = ExtResource("1_igumk")
+
+[node name="GameModeComponent" type="Node" parent="GameMode"]
+script = ExtResource("2_2ppna")
+
+[node name="ProcedureManager" parent="." instance=ExtResource("3_i0235")]
+
+[node name="form_main" parent="." instance=ExtResource("5_hxj4s")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+
+[node name="order_group" type="Node" parent="."]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("..")
+
+[node name="camera" parent="." instance=ExtResource("6_0l7gl")]
+
+[node name="Refresher" parent="." instance=ExtResource("8_hudf3")]
+position = Vector2(148, 94)
+
+[node name="map_test" parent="." instance=ExtResource("8_nuxit")]
+
+[editable path="ProcedureManager"]

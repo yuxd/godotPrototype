@@ -1,0 +1,3 @@
+﻿ID,name,quest_type,slot,b_show,active_condition,npc_id,target,deliver_npc_id,deliver_item,award_id,follow_quest,events
+ID,任务名,任务类型,排序,是否显示,激活条件,接取NPC,目标,提交npc,提交道具,奖励,后置任务,触发事件
+string,string,string,string,bool,string[],string,string[],string,string,string,string[],string[]

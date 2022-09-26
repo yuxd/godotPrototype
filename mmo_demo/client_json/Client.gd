@@ -6,6 +6,9 @@ const server_port : int = 8999
 
 var revice_thread : Thread
 
+const REQ_LOGIN_ID = 1
+
+
 func _ready():
 	conn.connect_to_host(server_IP,server_port)
 	if conn.is_connected_to_host():
@@ -14,6 +17,26 @@ func _ready():
 		revice_thread.start(self,"revice")
 	else:
 		print("连接服务器失败")
-
+	
+	# var d = {}
+	# d["username"] = "weimin"
+	# send_message(1,d)
+	
 func revice():
-	pass
+	while true:
+		var msg_len = conn.get_u32()
+		var msg_ID = conn.get_u32()
+		var msg = conn.get_partial_data(msg_len)
+		var err = msg[0]
+		var data : String= msg[1].get_string_from_utf8()
+		match msg_ID :
+			101:
+				var json_data = JSON.parse(data).result
+				print(json_data)
+
+func send_message(data_id :int, data : Dictionary):
+	var json_packet: String = JSON.print(data)
+	var data_len = json_packet.length()
+	conn.put_u32(data_len)
+	conn.put_u32(data_id)
+	conn.put_partial_data(json_packet.to_utf8())

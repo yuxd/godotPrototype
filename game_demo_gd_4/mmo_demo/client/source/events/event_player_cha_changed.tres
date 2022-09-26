@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cn6u1qs5smmin"]
+
+[ext_resource type="Script" path="res://addons/q_framework/event/event_resource.gd" id="1_gt0ck"]
+
+[resource]
+script = ExtResource("1_gt0ck")
+destination = "player_cha_changed"
